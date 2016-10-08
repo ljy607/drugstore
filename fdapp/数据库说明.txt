@@ -1,0 +1,71 @@
+--会员表
+create table t_member
+(
+code		varchar(10)  not null,	--
+name		varchar(10)  null,	-- 姓名
+sex		char(1) null,		-- 性别
+phone		varchar(15) null,	-- 电话
+address		varchar(30) null,	-- 地址
+jine		decimal(10,2) default 0 null, --累计购买额
+flag		char(1) default 'N' null,--启用标志			
+CONSTRAINT PK_t_member_KEY PRIMARY KEY CLUSTERED(code)
+);
+
+--折扣表
+create table t_klb
+(
+id		int	not null,
+sx		int	default 0 null,	-- 上限
+xx		int	default 0 null,	-- 下限
+kl		decimal(5,2) default	1 null,	-- 扣率
+constraint pk_t_klb_key primary key clustered(id)
+);
+
+
+alter table t_jgxx 
+add hyj decimal(8,2) default 0 null;
+
+update t_jgxx
+set hyj=0;
+
+alter table t_bjdmxb 
+add jhyj decimal(8,2) default 0 null;
+
+update t_bjdmxb
+set jhyj=0;
+
+alter table t_lsdzb
+add   member_code varchar(10) default '' null;
+
+update t_lsdzb
+set    member_code='';
+
+alter table t_lsdzb_ls
+add   member_code varchar(10) default '' null;
+
+
+update t_lsdzb_ls
+set    member_code='';
+
+--修改分店价格表，增加更新日期字段，为了总部同步价格使用
+alter table T_JGxx
+add GXRQ Datetime default(getdate())
+
+update T_JGxx
+set GXRQ = GetDate()
+
+CREATE   TRIGGER TRI_JGXX_IN ON dbo.T_JGXX FOR UPdate AS
+
+update T_JGXX
+set GXRQ = GetDate()
+from inserted 
+where T_JGXX.spbh = inserted.spbh
+
+--零售汇总表，为了记录零售数据是否已经上传
+create table t_lshzb
+(
+rq		datetime  not null,	--
+jine		decimal(14,2) default 0 null, --零售汇总金额
+flag		char(1) default 'N' null,--上传标识 			
+CONSTRAINT PK_t_lshzb_KEY PRIMARY KEY CLUSTERED(rq)
+);

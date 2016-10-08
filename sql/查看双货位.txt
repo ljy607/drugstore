@@ -1,0 +1,90 @@
+--查看双货位
+select * from t_chxx_hw where spbh in(
+		select a.spbh
+		from   t_chxx_hw a,
+				 t_sphw h
+		where  a.spbh=h.spbh and
+				 a.hwbh<>h.jhhw)
+order by spbh;
+
+--查看数量为负数的情况
+select * from t_chxx_pc
+where spbh in( select spbh from t_chxx_hw where chsl < 0) 
+order by spbh,pcbh;
+
+select * from t_chxx_hw 
+where spbh in( select spbh from t_chxx_hw where chsl < 0) 
+order by spbh,pcbh;
+
+查看数量不同步
+select *
+from t_chxx_pc a,
+ 		t_chxx_hw b 
+where a.spbh=b.spbh and 
+		a.pcbh = b.pcbh and
+		b.chsl <> a.shul - a.yxsl;
+
+select *
+from  t_chxx_pc 
+where spbh not in(select spbh from t_chxx_hw ) and 
+		shul - yxsl <> 0
+order by spbh;
+
+--查看两表中品种不对等的情况
+select * from t_chxx_hw 
+where spbh not in(select spbh from t_chxx_pc) order by spbh;
+
+
+UPDATE T_CKDMXB 
+SET   JHJ = (SELECT ISNULL(SUM(SL*JHJ)/SUM(SL),0)
+		FROM  T_JHDMXB WHERE SPBH = T_CKDMXB.SPBH AND PCBH = T_CKDMXB.PCBH)
+WHERE SPBH = '72472';
+
+
+declare @i int,@id varchar(6)
+set @i = 1;
+while @i <= 10000
+begin
+set @id = '0' + cast( @i + 30000 as varchar(6) )
+insert into t_member values(@id,'','','','',0,'N','')
+set @i = @i + 1
+end
+
+--更新有效期是空和1900的情况
+
+--select * from t_chxx_pc where yxrq = '1900-01-01'
+
+SET NOCOUNT ON
+
+DECLARE @spbh varchar(20), @pcbh varchar(20),@yxrq datetime
+
+DECLARE cur CURSOR FOR 
+select spbh,pcbh 
+from t_chxx_pc 
+where yxrq = '1900-01-01' or yxrq is null
+
+OPEN cur
+
+FETCH NEXT FROM cur 
+INTO @spbh, @pcbh
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+   select top 1 @yxrq = yxrq from t_ckdmxb where spbh = @spbh and pcbh = @pcbh and isnull(yxrq,'1900-01-01') <> '1900-01-01'
+
+   update t_chxx_pc
+   set yxrq = @yxrq
+   where spbh = @spbh and pcbh = @pcbh
+   
+   FETCH NEXT FROM cur 
+   INTO @spbh, @pcbh
+END
+
+CLOSE cur
+
+DEALLOCATE cur
+
+GO
+
+select * from t_chxx_pc where yxrq is null or yxrq = '1900-01-01'
+

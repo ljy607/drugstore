@@ -1,0 +1,4 @@
+DELETE e
+FROM t_ckdzb e
+LEFT JOIN t_ckdmxb e1 ON e.CKDBH=e1.CKDBH
+WHERE e1.CKDBH IS NULL

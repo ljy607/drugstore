@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+
+<!-- ==========================================================================
+
+ James build file
+
+Authors:
+ Federico Barbieri <scoobie@systemy.it>
+ Serge
+ Charles Benett (charles@benet1.demon.co.uk>
+ Peter Donald <donaldp@apache.org>
+
+Legal:
+  Copyright (c) 1999-2001 The Apache Software Foundation. All Rights Reserved.
+
+==============================================================================
+ -->
+
+<project default="main" basedir=".">
+
+  <!--
+    Give user a chance to override without editing this file
+    (and without typing -D each time he compiles it)
+  -->
+  <property file=".ant.properties"/>
+  <property file="${user.home}/.ant.properties"/>
+
+  <property name="name" value="james"/>
+  <property name="Name" value="James"/>
+  <property name="version" value="1.2.2-dev"/>
+  <property name="year" value="1999-2001"/>
+
+  <!-- There should be no need to override default compiler but need to change
+    javac task to run without this -->
+  <property name="build.compiler" value="classic"/> 
+
+  <!--
+    these are here only for those who use jikes compiler. For other
+    developers this part makes no difference.
+  -->
+  <property name="build.compiler.emacs" value="on"/>
+  <property name="build.compiler.warnings" value="true"/>
+  <property name="build.compiler.pedantic" value="true"/>
+  <property name="build.compiler.depend" value="true"/>
+  <property name="build.compiler.fulldepend" value="true"/>
+
+  <property name="debug" value="on"/>
+  <property name="optimize" value="on"/>
+  <property name="deprecation" value="on"/>
+
+
+  <!--
+       ===================================================================
+       Set the properties for intermediate directory
+       ===================================================================
+  -->
+  <property name="build.dir" value="build"/>
+  <property name="build.lib" value="${build.dir}/lib"/>
+  <property name="build.src" value="${build.dir}/src"/>
+  <property name="build.classes" value="${build.dir}/classes"/>
+  <property name="build.javadocs" value="${build.dir}/javadocs"/>
+  <property name="build.docs" value="${build.dir}/docs"/>
+  <property name="build.xdocs" value="${build.dir}/xdocs"/>
+  <property name="build.mailetdocs" value="${build.dir}/mailetdocs"/>
+  <property name="build.conf" value="${build.dir}/conf"/>
+
+  <!--
+       ===================================================================
+       Set the properties for source directories
+       ===================================================================
+  -->
+
+  <property name="src.dir" value="src"/>
+  <property name="java.dir" value="${src.dir}/java"/>
+  <property name="conf.dir" value="${src.dir}/conf"/>
+  <property name="scripts.dir" value="${src.dir}/script"/>
+  <property name="sql.dir" value="${src.dir}/sql"/>
+  <property name="proposal.base" value="proposals"/>
+  <property name="proposal.dir" value="${proposal.base}/v1.3"/>
+  <property name="java.proposal.dir" value="${proposal.dir}/java"/>
+  <property name="conf.proposal.dir" value="${proposal.dir}/conf"/>
+  <property name="lib.dir" value="lib"/>
+  <property name="tools.dir" value="tools"/>
+  <property name="xdocs.dir" value="${src.dir}/xdocs"/>
+  <property name="docs.src" value="${xdocs.dir}"/>
+  <property name="docs.dir" value="docs"/>
+  <property name="www.dir" value="www"/>
+  <property name="javadocs.dir" value="${docs.dir}/api"/>
+  <property name="mailetdocs.dir" value="${docs.dir}/mailet"/>
+  <property name="rfcs.dir" value="${docs.dir}/rfclist"/>
+  <property name="dist.name" value="${name}-${version}"/>
+
+  <property name="constants.file" value="org/apache/james/Constants.java"/>
+  <property name="conf.file" value="james.conf.xml"/>
+  <property name="server.file" value="james.server.xml"/>
+
+  <property name="site.dir" value="../xml-site/sources/james"/>
+  <property name="site.docs" value="../xml-site/targets/james"/>
+
+
+
+  <!--
+       ===================================================================
+       Set the classpath
+       ===================================================================
+  -->
+  <property name="xerces.jar" value="${lib.dir}/xerces.jar"/>
+  <property name="framework.jar" value="${lib.dir}/avalon-framework.jar"/>
+  <property name="excalibur.jar" value="${lib.dir}/avalon-excalibur.jar"/>
+  <property name="scratchpad.jar" value="${lib.dir}/avalon-scratchpad.jar"/>
+  <property name="logkit.jar" value="${lib.dir}/logkit.jar"/>
+  <property name="cornerstone.bar" value="${lib.dir}/cornerstone.bar"/>
+  <property name="phoenix.client.jar" value="${lib.dir}/phoenix-client.jar"/>
+  <!--
+    <property name="activation.jar" value="${lib.dir}/activation.jar"/>
+  -->
+  <path id="project.class.path">
+    <pathelement location="${xerces.jar}"/>
+    <pathelement location="${framework.jar}"/>
+    <pathelement location="${excalibur.jar}"/>
+    <pathelement location="${scratchpad.jar}"/>
+    <pathelement location="${logkit.jar}"/>
+    <pathelement location="${phoenix.client.jar}"/>
+    <pathelement location="${cornerstone.bar}"/>
+    <pathelement path="${java.class.path}" />
+    <fileset dir="${lib.dir}">
+      <include name="*.jar" />
+      <exclude name="xerces.jar"/>
+      <exclude name="framework.jar"/>
+      <exclude name="excalibur.jar"/>
+      <exclude name="scratchpad.jar"/>
+      <exclude name="logkit.jar"/>
+      <exclude name="phoenix.client.jar"/>
+    </fileset>
+    <pathelement path="${build.classes}" />
+  </path>
+
+  <!--
+       ===================================================================
+                                  Main target
+       ===================================================================
+  -->
+  <target name="main" depends="dist-lite" />
+
+  <!-- =================================================================== -->
+  <!-- Help on usage                                                       -->
+  <!-- =================================================================== -->
+  <target name="usage">
+    <echo message=""/>
+    <echo message=""/>
+    <echo message="JAMES Build file"/>
+    <echo message="-------------------------------------------------------------"/>
+    <echo message=""/>
+    <echo message=" available targets are:"/>
+    <echo message=""/>
+    <echo message="   block-archive  --> generates the James.bar file (default)"/>
+    <echo message="   auxiliary-jars --> generates the mailet.jar"/>
+    <echo message="   compile        --> compiles the source code"/>
+    <echo message="   dist-lite      --> generates the JAMES distribution, unpacked"/>
+    <echo message="   dist           --> generates the JAMES distribution, packed"/>
+    <echo message="   clean          --> cleans up the directory"/>
+    <echo message="   docs           --> created the documentaion for James"/>
+    <echo message="   javadoc        --> creates the Javadoc"/>
+    <echo message="   javadocmailet  --> creates the Javadoc for the mailet API"/>
+    <echo message=""/>
+    <echo message=" See the comments inside the build.xml file for more details."/>
+    <echo message="-------------------------------------------------------------"/>
+    <echo message=""/>
+    <echo message=""/>
+  </target>
+
+  <target name="help" depends="usage"/>
+
+  <!--
+       ===================================================================
+       Set up dist properties
+       ===================================================================
+  -->
+  <target name="setup-properties" >
+
+    <tstamp/>
+
+    <property name="dist.dir" value="dist"/>
+    <property name="dist.bin" value="${dist.dir}/bin"/>
+    <property name="dist.apps" value="${dist.dir}/apps"/>
+    <property name="dist.lib" value="${dist.dir}/lib"/>
+    <property name="dist.docs" value="${dist.dir}/docs"/>
+    <property name="dist.javadocs" value="${dist.dir}/docs/api"/>
+
+    <property name="src.dist.dir" value="dist-src"/>
+    <property name="src.dist.src" value="${src.dist.dir}/src"/>
+    <property name="src.dist.docs" value="${src.dist.dir}/docs"/>
+    <property name="src.dist.javadocs" value="${src.dist.dir}/docs/api"/>
+    <property name="src.dist.lib" value="${src.dist.dir}/lib"/>
+    <property name="src.dist.tools" value="${src.dist.dir}/tools"/>
+    <property name="src.dist.proposals" value="${src.dist.dir}/proposals"/>
+  </target>
+
+
+  <!-- =================================================================== -->
+  <!-- Prepares the build directory                                        -->
+  <!-- =================================================================== -->
+  <target name="prepare" depends="setup-properties">
+
+    <mkdir dir="${build.src}"/>
+    <copy todir="${build.src}">
+      <fileset dir="${java.dir}">
+        <exclude name="**/*.properties"/>
+        <exclude name="**/*.xinfo"/>
+      </fileset>
+    </copy>
+    <copy todir="${build.conf}">
+      <fileset dir="${conf.dir}">
+      </fileset>
+    </copy>
+
+    <available classname="org.apache.velocity.anakia.AnakiaTask"
+        property="AnakiaTask.present"/>
+
+    <replace file="${build.src}/${constants.file}" token="@@VERSION@@" value="${version}"/>
+    <replace file="${build.src}/${constants.file}" token="@@NAME@@" value="${Name}"/>
+    <replace file="${build.src}/${constants.file}" token="@@DATE@@" value="${TODAY}"/>
+
+  </target>
+
+  <target name="prepare-proposal" depends="prepare" if="with.proposal">
+    <echo>Building with proposal </echo>
+    <copy todir="${build.src}" overwrite="on">
+      <fileset dir="${java.proposal.dir}">
+        <exclude name="**/*.properties"/>
+        <exclude name="**/*.xinfo"/>
+      </fileset>
+    </copy>
+    <copy todir="${build.conf}" overwrite="on">
+      <fileset dir="${conf.proposal.dir}">
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="prepare-error" depends="prepare" unless="AnakiaTask.present">
+    <echo>
+        AnakiaTask is not present! Please check to make sure that
+        velocity.jar is in your classpath.
+    </echo>
+  </target>
+
+
+  <!-- =================================================================== -->
+  <!-- Compiles the source directory                                       -->
+  <!-- =================================================================== -->
+  <target name="compile" depends="prepare-proposal">
+  <!--  <mkdir dir="${build.dir}"/> -->
+    <available property="jndi.present" classname="javax.naming.InitialContext" />
+
+    <mkdir dir="${build.classes}"/>
+ 
+    <javac srcdir="${build.src}" 
+           destdir="${build.classes}" 
+           debug="${debug}"
+           optimize="${optimize}"
+           deprecation="${deprecation}">
+      <classpath refid="project.class.path" />
+      <src path="${build.src}" />
+      <exclude name="${constants.file}" />
+      <exclude name="org/apache/james/userrepository/UsersLDAPRepository.java"
+               unless="jndi.present" />
+    </javac>
+
+    <copy todir="${build.classes}">
+      <fileset dir="${java.dir}">
+        <include name="**/*.properties"/>
+        <include name="**/*.xinfo"/>
+      </fileset>
+    </copy>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the JAMES.bar archive                                       -->
+  <!-- =================================================================== -->
+  <target name="block-archive" depends="compile">
+
+    <mkdir dir="${build.lib}"/>
+
+    <jar jarfile="${build.lib}/${name}.bar"
+         basedir="${build.classes}"
+         manifest="${src.dir}/Manifest.mf">
+       <include name="org/**"/>
+    </jar>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the mailet.jar                                              -->
+  <!-- =================================================================== -->
+  <target name="auxiliary-jars" depends="compile">
+    <jar jarfile="${build.lib}/mailet.jar" basedir="${build.classes}"
+         manifest="${src.dir}/Manifest.mf" includes="org/apache/mailet/**"/>
+  </target>
+
+
+  <!--
+       ===================================================================
+                           Creates the .sar file
+       ===================================================================
+  -->
+  <target name="sar" depends="block-archive,auxiliary-jars">
+
+    <jar jarfile="${build.lib}/${name}.sar">
+
+      <zipfileset dir="${lib.dir}/" prefix="blocks/">
+        <include name="*.bar"/>
+      </zipfileset>
+
+      <zipfileset dir="${build.lib}/" prefix="blocks/">
+        <include name="*.bar"/>
+      </zipfileset>
+
+      <zipfileset dir="${build.lib}" prefix="lib">
+        <include name="*.jar"/>
+      </zipfileset>
+
+      <zipfileset dir="${lib.dir}/" prefix="lib">
+        <include name="dnsjava.jar"/>
+        <include name="town.jar"/>
+        <include name="activation.jar"/>
+        <include name="mail_1_2.jar"/>
+        <include name="jakarta-oro-2.0.1.jar"/>
+      </zipfileset>
+
+      <zipfileset dir="${build.conf}" fullpath="conf/config.xml">
+        <include name="james-config.xml"/>
+      </zipfileset>
+
+      <zipfileset dir="${build.conf}" fullpath="conf/assembly.xml">
+        <include name="james-assembly.xml"/>
+      </zipfileset>
+
+      <zipfileset dir="${build.conf}" fullpath="conf/server.xml">
+        <include name="james-server.xml"/>
+      </zipfileset>
+
+    </jar>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the unpacked binary distribution                            -->
+  <!-- =================================================================== -->
+
+  <target name="dist-lite" depends="sar">
+    <mkdir dir="${dist.dir}"/>
+    <mkdir dir="${dist.dir}/bin"/>
+
+    <delete dir="${dist.dir}/apps/${name}"/>
+    <copy file="${build.lib}/${name}.sar" todir="${dist.dir}/apps"/>
+
+    <copy todir="${dist.dir}/bin">
+      <fileset dir="lib">
+        <include name="phoenix-engine.jar"/>
+        <include name="phoenix-loader.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${dist.dir}/lib">
+      <fileset dir="lib">
+        <include name="phoenix-client.jar"/>
+        <include name="avalon-framework.jar"/>
+        <include name="avalon-excalibur.jar"/>
+        <include name="avalon-scratchpad.jar"/>
+        <include name="avalon-jmx.jar"/>
+        <include name="jmxri.jar"/>
+        <include name="jmxtools.jar"/>
+        <include name="logkit.jar"/>
+        <include name="xerces.jar"/>
+      </fileset>
+    </copy>
+
+    <copy file="${scripts.dir}/run.bat" tofile="${dist.dir}/bin/run.bat"/>
+    <copy file="${scripts.dir}/run.sh" tofile="${dist.dir}/bin/run.sh"/>
+    <copy file="${conf.dir}/avalonTestKeys" tofile="${dist.dir}/conf/avalonTestKeys"/>
+    <chmod dir="${dist.dir}" perm="go-rwx" />
+    <chmod file="${dist.dir}/bin/run.sh" perm="u+x"/>
+    <fixcrlf srcdir="${dist.dir}" cr="add" includes="**/*.bat" />
+    <fixcrlf srcdir="${dist.dir}" cr="remove" includes="**/*.sh" />
+
+    <copy todir="${dist.dir}/conf">
+      <fileset dir="${conf.dir}">
+        <include name="inet*"/>
+        <include name="maildatabase*"/>
+      </fileset>
+    </copy>
+
+    <copy file="README" tofile="${dist.dir}/README"/>
+    <replace file="${dist.dir}/README" token="@@version@@" value="${version}"/>
+    <copy file="LICENSE.txt" tofile="${dist.dir}/LICENSE"/>
+    <copy file="build.xml" tofile="${dist.dir}/build.xml"/>
+  </target>
+
+
+  <!-- =================================================================== -->
+  <!-- Cleans everything                                                   -->
+  <!-- =================================================================== -->
+  <target name="clean" depends="setup-properties">
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
+    <delete file="${name}-${version}-${DSTAMP}.zip"/>
+    <delete file="${name}-${version}-${DSTAMP}.tar"/>
+    <delete file="${name}-${version}-${DSTAMP}.tar.gz"/>
+  </target>
+
+  <!-- Cleans absolutely everything up -->
+  <target name="real-clean" depends="clean">
+    <delete dir="${docs.dir}" />
+    <delete dir="${src.dist.dir}" />
+    <delete file="${name}-${version}-${DSTAMP}-src.zip"/>
+    <delete file="${name}-${version}-${DSTAMP}-src.tar"/>
+    <delete file="${name}-${version}-${DSTAMP}-src.tar.gz"/>
+  </target>
+
+
+  <!-- =================================================================== -->
+  <!-- Documentation                                                       -->
+  <!-- =================================================================== -->
+  <!-- Docs are generated from xml sources in src/xdocs, javadocs from     -->
+  <!-- source files in src/java.                                           -->
+  <!-- Docs for most recent release are on the website and in www dir.     -->
+  <!-- Docs for cvs state are generated on demand and can, optionally,     -->
+  <!-- be placed in docs dir.                                              -->
+  <!-- =================================================================== -->
+
+
+
+  <!-- =================================================================== -->
+  <!-- Generates the javadoc                                               -->
+  <!-- =================================================================== -->
+  <target name="javadocs">
+
+    <delete dir="${build.javadocs}"/>
+    <mkdir dir="${build.javadocs}"/>
+
+    <javadoc packagenames="org.apache.*"
+             sourcepath="${java.dir}"
+             destdir="${build.javadocs}">
+      <classpath refid="project.class.path" />
+      <doclet name="com.sun.tools.doclets.standard.Standard">
+       <param name="-author"/>
+       <param name="-version"/>
+       <param name="-use"/>
+       <param name="-doctitle" value="${Name}"/>
+       <param name="-windowtitle" value="${Name} API"/>
+       <param name="-bottom" 
+              value="&quot;Copyright &#169; 2001 Apache Jakarta Project. All Rights Reserved.&quot;"/>
+      </doclet>
+    </javadoc>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Generates the javadoc for just the mailet API                       -->
+  <!-- =================================================================== -->
+  <target name="javadocmailet">
+
+    <delete dir="${build.mailetdocs}"/>
+    <mkdir dir="${build.mailetdocs}"/>
+
+    <javadoc sourcepath="${java.dir}"
+        destdir="${build.mailetdocs}"
+        packagenames="org.apache.mailet.*">
+      <classpath refid="project.class.path" />
+      <doclet name="com.sun.tools.doclets.standard.Standard">
+       <param name="-author"/>
+       <param name="-version"/>
+       <param name="-use"/>
+       <param name="-doctitle" value="Mailet"/>
+       <param name="-windowtitle" value="$Mailet API"/>
+       <param name="-bottom" 
+              value="&quot;Copyright &#169; 2001 Apache Jakarta Project. All Rights Reserved.&quot;"/>
+      </doclet>
+    </javadoc>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Generates the documentation for James                               -->
+  <!-- =================================================================== -->
+  <target name="xdocs" depends="prepare-error" if="AnakiaTask.present">
+    <taskdef name="anakia" classname="org.apache.velocity.anakia.AnakiaTask"/>
+    <anakia basedir="${docs.src}" destdir="${build.docs}/"
+         extension=".html" style="./site.vsl"
+         projectFile="stylesheets/project.xml"
+         excludes="**/stylesheets/** empty.xml"
+         includes="**/*.xml"
+         lastModifiedCheck="true"
+         templatePath="../jakarta-site2/xdocs/stylesheets">
+    </anakia>
+
+    <copy todir="${build.docs}/images" filtering="no">
+        <fileset dir="${docs.src}/images">
+            <include name="**/*.gif"/>
+            <include name="**/*.jpeg"/>
+            <include name="**/*.jpg"/>
+        </fileset>
+    </copy>
+  </target>
+
+
+  <target name="docs" depends="javadocs,xdocs"/>
+
+  <!--
+       ===================================================================
+       Create the Local site documentation
+       ===================================================================
+  -->
+  <target name="local-xdocs" depends="xdocs">
+
+    <delete>
+      <fileset dir="${docs.dir}">
+        <exclude name="api/**"/>
+      </fileset>
+    </delete>
+    <mkdir dir="${docs.dir}"/>
+
+    <copy todir="${docs.dir}">
+      <fileset dir="${build.docs}" />
+    </copy>
+
+  </target>
+
+  <!--
+       ===================================================================
+       Create the Local API documentation
+       ===================================================================
+  -->
+  <target name="local-javadocs" depends="javadocs">
+
+    <delete dir="${javadocs.dir}"/>
+    <mkdir dir="${javadocs.dir}"/>
+
+    <copy todir="${javadocs.dir}">
+      <fileset dir="${build.javadocs}" />
+    </copy>
+
+  </target>
+
+  <!--
+       ===================================================================
+       Create the Local documentation
+       ===================================================================
+  -->
+  <target name="local-docs" depends="local-javadocs,local-xdocs,javadocmailet">
+
+   <copy todir="${mailetdocs.dir}">
+      <fileset dir="${build.mailetdocs}" />
+    </copy>
+
+  </target>
+
+
+  <!--
+       ===================================================================
+       Update the www directory
+       ===================================================================
+  -->
+  <target name="site-docs" depends="local-xdocs">
+
+    <!-- delete old documents but keep CVS directories, rfclist and mailet
+         api -->
+    <delete>
+      <fileset dir="${www.dir}">
+        <exclude name="CVS/**"/>
+        <exclude name="rfclist/**"/>
+        <exclude name="mailet/**"/>
+      </fileset>
+    </delete>
+
+    <!-- copy new generated docs, but not mailet api or rfclist -->
+    <!-- exclude CVS dir until docs dir removed from CVS -->
+    <mkdir dir="${www.dir}"/>
+    <copy todir="${www.dir}">
+      <fileset dir="${docs.dir}">
+        <exclude name="api/**"/>
+        <exclude name="rfclist/**"/>
+        <exclude name="CVS/**"/>
+        <exclude name="mailet/**"/>
+      </fileset>
+    </copy>
+
+  </target>
+
+
+  <!--
+       ===================================================================
+                            Create the binary distribution
+       ===================================================================
+  -->
+
+  <target name="dist" depends="dist-lite, docs">
+
+    <mkdir dir="${dist.docs}"/>
+    <mkdir dir="${dist.javadocs}"/>
+
+    <copy todir="${dist.docs}">
+      <fileset dir="${build.docs}"/>
+    </copy>
+
+    <copy todir="${dist.javadocs}">
+      <fileset dir="${build.javadocs}"/>
+    </copy>
+
+    <zip zipfile="${name}-${version}-${DSTAMP}.zip" basedir="${dist.dir}" includes="**"/>
+    <tar tarfile="${name}-${version}-${DSTAMP}.tar" basedir="${dist.dir}" includes="**"/>
+    <gzip zipfile="${name}-${version}-${DSTAMP}.tar.gz" src="${name}-${version}-${DSTAMP}.tar"/>
+  </target>
+
+
+  <!--
+       ===================================================================
+                            Create the source distribution
+       ===================================================================
+  -->
+  <target name="src-dist" depends="javadocs,xdocs,setup-properties">
+
+    <mkdir dir="${src.dist.dir}" />
+    <mkdir dir="${src.dist.docs}"/>
+    <mkdir dir="${src.dist.javadocs}"/>
+
+    <copy todir="${src.dist.tools}">
+      <fileset dir="${tools.dir}"/>
+    </copy>
+
+    <copy todir="${src.dist.lib}">
+      <fileset dir="${lib.dir}"/>
+    </copy>
+
+    <copy todir="${src.dist.src}">
+      <fileset dir="${src.dir}"/>
+    </copy>
+
+    <copy todir="${src.dist.proposals}">
+      <fileset dir="${proposal.base}"/>
+    </copy>
+
+    <copy todir="${src.dist.docs}">
+      <fileset dir="${build.docs}"/>
+    </copy>
+
+    <copy todir="${src.dist.javadocs}">
+      <fileset dir="${build.javadocs}"/>
+    </copy>
+
+    <copy todir="${src.dist.dir}">
+      <fileset dir=".">
+        <include name="build.bat"/>
+        <include name="build.sh"/>
+        <include name="build.xml"/>
+        <include name="README"/>
+        <include name="LICENSE.txt"/>
+      </fileset>
+    </copy>
+
+    <fixcrlf srcdir="${src.dist.dir}" includes="build.sh" cr="remove"/>
+    <fixcrlf srcdir="${src.dist.dir}" includes="build.bat" cr="add"/>
+
+    <chmod perm="+x">
+      <fileset dir="${src.dist.dir}">
+        <include name="build.sh" />
+      </fileset>
+    </chmod>
+
+    <fixcrlf srcdir="${src.dist.src}/java" includes="**/*.java" cr="remove"/>
+
+    <chmod dir="${src.dist.dir}" perm="go-rwx" />
+
+    <zip zipfile="${name}-${version}-${DSTAMP}-src.zip" basedir="${src.dist.dir}" includes="**"/>
+    <tar tarfile="${name}-${version}-${DSTAMP}-src.tar" basedir="${src.dist.dir}" includes="**"/>
+    <gzip zipfile="${name}-${version}-${DSTAMP}-src.tar.gz" src="${name}-${version}-${DSTAMP}.tar"/>
+
+  </target>
+
+
+  <!--
+       ===================================================================
+                 Completely build all dists
+       ===================================================================
+  -->
+  <target name="distributions" depends="dist, src-dist">
+
+  </target>
+
+</project>
+

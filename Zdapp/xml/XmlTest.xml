@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<!-- TEST XML -->
+<!-- Order Information -->
+<!DOCTYPE Order PUBLIC "Order.dtd">  
+<info type="internal">
+	<Table Name="ProductOrder" Update="True"></Table>
+	<Contact CustomerCode="01110">
+		<ShipTo>
+			<FirstName>Blue</FirstName>
+			<LastName>Sky</LastName>
+			<Address>111 No Street BKK. Thailand.</Address>
+		</ShipTo>
+		<EMailTo>
+			<FirstName>Yuthasak</FirstName>
+			<LastName>Buasuwan</LastName>
+			<Email>buasuwan@se-ed.net</Email>
+		</EMailTo>
+	</Contact>
+	<Orders>
+		<Order id="100">
+			<Product Name="PC" Number="1" />
+			<Model Type="Extra" />
+		</Order>
+		<Order id="101">
+			<Product Name="PoketPC" Number="10" />
+			<Model Type="Maximize" />
+		</Order>
+		<Order id="102">
+			<Product Name="MobilePC" Number="20" />
+			<Model Type="Extra" />
+		</Order>
+	</Orders>
+	<KEYWORDS>
+		<KEYWORD id="1">Extra</KEYWORD>
+		<KEYWORD id="2">Maximize</KEYWORD>
+	</KEYWORDS>
+</info>

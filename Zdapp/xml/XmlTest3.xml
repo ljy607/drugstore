@@ -1,0 +1,16 @@
+ <xsd:complexType name="PurchaseOrderType">
+  <xsd:sequence>
+   <xsd:element name="shipTo" type="USAddress"/>
+   <xsd:element name="billTo" type="USAddress"/>
+   <xsd:element ref="comment" minOccurs="0"/>
+   <xsd:element name="items"  type="Items"/>
+  </xsd:sequence>
+  <xsd:attribute name="orderDate" type="xsd:date"/>
+<xsd:simpleType name="USState">
+  <xsd:restriction base="xsd:string">
+    <xsd:enumeration value="AK"/>
+    <xsd:enumeration value="AL"/>
+    <xsd:enumeration value="AR"/>
+  </xsd:restriction>
+</xsd:simpleType>
+ </xsd:complexType>

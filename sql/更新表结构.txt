@@ -1,0 +1,13 @@
+--公司库
+alter table T_GYSXX
+add ZZYXQ datetime null;
+
+--分店库
+alter table T_SPXX
+add GB varchar(10)
+
+alter table T_SPXX
+add CD varchar(10)
+
+INSERT INTO [T_FUNCS]([FUNCID], [FUNNM], [FUNTP], [GRPID], [FUNMS], [TPLJ], [FUNFM], [FLAG], [UFLAG])
+VALUES(11,'商品信息',3,0,'商品信息','image\tom_wap.gif','w_spxxwh_main',1,1)

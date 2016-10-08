@@ -1,0 +1,10 @@
+SELECT *
+FROM T_TJSP tt WHERE tt.flag=0
+
+ALTER TABLE T_TJSP
+ADD flag TINYINT DEFAULT 1
+GO
+
+UPDATE t_tjsp SET flag=1
+
+SELECT * FROM T_hosts

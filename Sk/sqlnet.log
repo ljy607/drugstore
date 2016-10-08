@@ -1,0 +1,20 @@
+
+
+***********************************************************************
+Fatal NI connect error 12505, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.87.169)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 28-11月-02 11:54:50
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12204
+    TNS-12204: TNS：从应用程序中收到拒绝数据
+    ns main err code: 12564
+    TNS-12564: TNS：拒绝连接
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0

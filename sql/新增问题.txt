@@ -1,0 +1,7 @@
+查询分店盘点货位，月为单位
+
+
+换货区查询，显示退货单号
+
+INSERT INTO T_FUNCS(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG)
+VALUES(24,'未盘点货位查询',4,0,'未盘点货位查询','image\tom_wap.gif','w_cx_pphw',0,1)

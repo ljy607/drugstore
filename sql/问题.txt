@@ -1,0 +1,16 @@
+1、供货商增加证照有效期。
+2、分店增加基础信息查询功能。
+
+2010年8月11日19:54:40
+1、损益单批号只能选择
+2、出库单弹出窗口显示备注
+
+
+
+insert into t_funcs(funcid,funnm,funtp,grpid,funms,tplj,funfm,flag,uflag)
+values(12,'商品价签打印',3,2,'商品价签打印','image\tom_wap.gif','w_printjq',0,1)
+
+2011年4月15日
+1、增加反药管理
+2、增加药品状态，自己维护，下发分店
+3、提奖商品维护，提奖额计算。

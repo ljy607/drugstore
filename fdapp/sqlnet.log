@@ -1,0 +1,190 @@
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ljy)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 29-11月-02 21:01:51
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS：无监听器
+    ns main err code: 12541
+    TNS-12541: TNS：无监听器
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: 无监听器
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12203, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.87.169)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 12-2月 -03 09:30:26
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12203
+    TNS-12203: TNS：无法连接到终点
+    ns main err code: 12535
+    TNS-12535: TNS：操作超时
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: 操作超时
+    nt secondary err code: 60
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12203, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.87.169)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 12-2月 -03 09:31:14
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12203
+    TNS-12203: TNS：无法连接到终点
+    ns main err code: 12535
+    TNS-12535: TNS：操作超时
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: 操作超时
+    nt secondary err code: 60
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12203, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.87.169)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 12-2月 -03 09:32:15
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12203
+    TNS-12203: TNS：无法连接到终点
+    ns main err code: 12535
+    TNS-12535: TNS：操作超时
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: 操作超时
+    nt secondary err code: 60
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ljy)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 20-10月-03 09:49:06
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS：无监听器
+    ns main err code: 12541
+    TNS-12541: TNS：无监听器
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: 无监听器
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12203, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.113.86)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=D:\pb7\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.0.5.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.0.5.0.0 - Production
+  Time: 24-10月-03 21:05:12
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12203
+    TNS-12203: TNS：无法连接到终点
+    ns main err code: 12560
+    TNS-12560: TNS：协议适配器出现错误
+    ns secondary err code: 0
+    nt main err code: 538
+    TNS-00538: Message 538 not found;  product=NET80; facility=TNS
+
+    nt secondary err code: 65
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12535, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.113.86)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=C:\Program Files\Sybase\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.1.6.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 8.1.6.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.1.6.0.0 - Production
+  Time: 14-11月-2003 09:46:23
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 0
+    ns main err code: 12535
+    TNS-12535: TNS：操作超时
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: 操作超时
+    nt secondary err code: 60
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12535, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.113.86)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=C:\Program Files\Sybase\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.1.6.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 8.1.6.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.1.6.0.0 - Production
+  Time: 14-11月-2003 09:47:37
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 0
+    ns main err code: 12535
+    TNS-12535: TNS：操作超时
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: 操作超时
+    nt secondary err code: 60
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.1.113.86)(PORT=1521))(CONNECT_DATA=(SID=jkyy)(CID=(PROGRAM=C:\Program Files\Sybase\PowerBuilder 7.0\pb70.exe)(HOST=LJY)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 8.1.6.0.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 8.1.6.0.0 - Production
+  Time: 17-12月-2003 19:02:38
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 0
+    ns main err code: 12560
+    TNS-12560: TNS：协议适配器出现错误
+    ns secondary err code: 0
+    nt main err code: 538
+    TNS-00538: Message 538 not found;  product=NETWORK; facility=TNS
+
+    nt secondary err code: 65
+    nt OS err code: 0
