@@ -1,0 +1,4 @@
+E:\药店原程序\DrugstoreWeb\DBAccess\bin\Debug\DBAccess.dll
+E:\药店原程序\DrugstoreWeb\DBAccess\bin\Debug\DBAccess.pdb
+E:\药店原程序\DrugstoreWeb\DBAccess\obj\Debug\DBAccess.dll
+E:\药店原程序\DrugstoreWeb\DBAccess\obj\Debug\DBAccess.pdb

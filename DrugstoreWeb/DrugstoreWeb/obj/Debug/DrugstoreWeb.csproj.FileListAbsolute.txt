@@ -1,0 +1,7 @@
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\bin\DrugstoreWeb.dll
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\bin\DrugstoreWeb.pdb
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\bin\DBAccess.dll
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\bin\DBAccess.pdb
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\obj\Debug\DrugstoreWeb.csprojResolveAssemblyReference.cache
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\obj\Debug\DrugstoreWeb.dll
+E:\药店原程序\DrugstoreWeb\DrugstoreWeb\obj\Debug\DrugstoreWeb.pdb

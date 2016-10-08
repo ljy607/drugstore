@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" runat="server">
+        /**
+         *CreateFile: 测试在电脑上创建一个文件，并在文件夹里写进一些数据。
+         *
+         */
+        function CreateFile() {
+           
+            var fso, tf;
+            var filespec = "myfile.txt";
+            alert(filespec);
+            fso = new ActiveXObject("Scripting.FileSystemObject"); //获取对象
+            
+           if (fso.FileExists(filespec)) {
+               tf = fso.OpenTextFile(filename, 1);
+                alert('ok1');
+           }
+           else
+           {
+               tf = fso.CreateTextFile(filespec, true); //创建一个文件夹
+               alert('ok2');
+           }
+           // 写一行，并且带有新行字符。
+           tf.WriteLine("Testing 1, 2, 3.") ;
+           // 向文件写三个新行字符。  
+           tf.WriteBlankLines(3) ;
+           // 写一行。
+           tf.Write ("This is a test.");
+           tf.Close();//关闭
+       }
+
+
+    </script>
+</head>
+<body>
+    <p>
+        <input id="Button1" type="button" value="button" onclick="javascript:CreateFile();alert('ok1111');" /></p>
+</body>
+</html>
