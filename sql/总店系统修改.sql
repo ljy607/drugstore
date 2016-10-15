@@ -1,3 +1,12 @@
+--------2016.10.15-----------------
+-----修改库存增加药品生产日期,到货日期
+--ALTER TABLE t_chxx 
+--ADD scrq DATETIME NULL,dhrq DATETIME
+
+-----修改出库单增加药品生产日期
+--ALTER TABLE t_ckdmxb
+--ADD scrq DATETIME NULL
+
 --------2016.9.29-----------------
 -----修改全部单据审批三步走
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
