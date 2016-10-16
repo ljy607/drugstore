@@ -7,6 +7,16 @@
 --ALTER TABLE t_ckdmxb
 --ADD scrq DATETIME NULL
 
+------反药商品增加数量，用来记录超剂量限制
+--ALTER TABLE T_FYSP
+--ADD sl INT NULL,	--单剂限制数量		
+--lx TINYINT NULL		--类型 1-反药记录 2-饮片单剂限制数量记录
+--GO
+--UPDATE T_FYSP
+--SET lx = 1
+
+
+
 --------2016.9.29-----------------
 -----修改全部单据审批三步走
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
