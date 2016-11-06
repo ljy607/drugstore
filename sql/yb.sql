@@ -200,19 +200,36 @@
 --)
 
 -------记录挂起的医保销售记录
+--DROP TABLE t_yb_lsdzb
+--GO
+--CREATE TABLE T_YB_LSDZB(
+--	[tradeno] [varchar](24) NOT NULL,
+--	[RQ] [datetime] NULL,
+--	[JS] [int] NULL DEFAULT 1,
+--	[DJHJ] [decimal](10, 2) NULL DEFAULT 0,
+--	[HJJE] [decimal](10, 2) NULL DEFAULT 0,
+--	[ZDZK] [tinyint] NULL DEFAULT 100,
+--	[YSJE] [decimal](10, 2) NULL DEFAULT 0,
+--	[BZ] [varchar](60) NULL,
+--	[member_code] [varchar](10) NULL DEFAULT '',
+--	[IDNumber] [varchar](32) NULL,
+--	[CustomerName] [varchar](16) NULL,
+--	[SWBZ] [tinyint] NULL DEFAULT 0,
+--	[cash] [decimal](10, 2) NULL,
+--	[fund] [decimal](10, 2) NULL,
+--	[personcountpay] [decimal](10, 2) NULL,
+--	PRIMARY KEY(tradeno)
+--)
 --DROP TABLE t_yb_lsdmxb
 --GO
 --CREATE TABLE [T_YB_LSDMXB](
 --	id INT IDENTITY(1,1) NOT NULL,
---	[LSDBH] [varchar](15) NOT NULL,
---	[ORDR] [tinyint] NOT NULL,
 --	[SPBH] [varchar](15) NOT NULL,
---	[SL] [decimal](10, 4) NOT NULL DEFAULT 0,
---	[LSJ] [decimal](10, 4) NOT NULL DEFAULT 0,
+--	[SL] [decimal](10, 4) NULL DEFAULT 0,
+--	[LSJ] [decimal](10, 4) NULL DEFAULT 0,
 --	[YYYBH] [varchar](12) NULL,
---	[GUIT] [varchar](12) NULL,
 --	[YSBH] [varchar](12) NULL,
---	[ZK] [tinyint] NOT NULL DEFAULT 100,
+--	[ZK] [tinyint] NULL DEFAULT 100,
 --	[pcbh] [varchar](20) NULL,
 --	[jhj] [decimal](10, 4) NULL DEFAULT 0,
 --	[bz] [nvarchar](128) NULL,
