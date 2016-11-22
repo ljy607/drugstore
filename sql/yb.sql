@@ -244,6 +244,29 @@
 --	PRIMARY KEY (id)
 --)
 
+-------医保商品信息
+--CREATE TABLE t_spxx_yb
+--(
+--	spbh VARCHAR(16) NOT NULL,
+--	pm VARCHAR(100) NULL DEFAULT '',
+--	ybbm VARCHAR(50) NULL DEFAULT '',
+--	ybpm VARCHAR(100) NULL DEFAULT '',
+--	jx VARCHAR(20) NULL DEFAULT '',
+--	gg VARCHAR(40) NULL DEFAULT '',
+--	jldw VARCHAR(20) NULL DEFAULT '',
+--	jiag DECIMAL(12,4) NULL DEFAULT 0,
+--	sfdj VARCHAR(4) NULL DEFAULT '',
+--	sflb VARCHAR(8) NULL DEFAULT '',
+--	bz VARCHAR(250) NULL DEFAULT '',
+--	pzwh VARCHAR(50) NULL DEFAULT '',
+--	yblx TINYINT DEFAULT 1,     ----1 医保内 2 医保外 0 未对照
+--	PRIMARY KEY (spbh)
+--)
+
+
+
+
+
 
 
 

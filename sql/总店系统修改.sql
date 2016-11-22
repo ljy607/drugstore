@@ -1,3 +1,10 @@
+---------------2016年11月19日 16:25:07----------------------
+-----增加医保药品目录
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(21,'医保药品目录',6,0,'医保药品目录','image\tom_wap.gif','w_yb_spxx_main',1,1,1,0)
+
+
 --------2016.10.15-----------------
 -----修改库存增加药品生产日期,到货日期
 --ALTER TABLE t_chxx 
