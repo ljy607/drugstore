@@ -26,6 +26,11 @@
 --ADD feein DECIMAL(10,4) NULL,feeout DECIMAL(10,4) NULL,selfpay2 DECIMAL(10,4) NULL
 --GO
 
+-----2016年12月23日 增加药监码字段 
+--ALTER TABLE t_lsdmxb 
+--ADD yjm varchar(4000) NULL
+--GO
+
 --DROP TABLE t_yb_rxdiagnosisinfo
 --GO
 ------医保外配处方信息 2016年10月29日 12:22:44
@@ -79,6 +84,7 @@
 --	daynum	INT NULL,	--天数
 --	fee	DECIMAL(10,4) NULL DEFAULT 0,	--费用总金额
 --	drugapprovalnumber NVARCHAR(40) NULL,	--药品批准文号
+--	yjm VARCHAR(32) NULL, --药监码
 --	flag TINYINT NULL DEFAULT 0,	--标志 0 未成交 1 已成交
 --	PRIMARY KEY(id)
 --)
@@ -236,6 +242,19 @@
 --	yblx TINYINT DEFAULT 1,     ----1 医保内 2 医保外 0 未对照
 --	PRIMARY KEY (spbh)
 --)
+
+
+------药品基础信息增加		2016年12月23日 16:37:14
+------剂型-取医保字典，用法（howtouse）、单次用量（dosage）、包装单位（packaging）、最小包装（minpackage）、换算率（conversion）、天数（days）
+--ALTER TABLE T_SPXX
+--ADD howtouse VARCHAR(3) NULL,dosage DECIMAL(10,2) NULL,packaging NVARCHAR(32) NULL,
+--minpackage NVARCHAR(32) NULL,conversion DECIMAL(10,2) NULL,days INT NULL
+
+
+
+
+
+
 
 
 
