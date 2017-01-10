@@ -1,3 +1,9 @@
+---------2017年1月8日 17:53:25-----------
+------分店增加经理查询功能-------------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES(11,'经理查询',4,2,'经理查询','image\tom_wap.gif','w_jlcx',1,1,0)
+
+
 ---------2016年10月15日-------------------
 ----出库单增加生产日期、复核标志
 --ALTER TABLE T_CKDMXB

@@ -12,8 +12,3 @@ set djhm = substring(DJHM,1,7)+ '0' + substring(DJHM,8,3)
 where len(djhm) = 10 and substring(djhm,1,2)='DB'; 
 
 
-
-alter table T_BSDMXB 
-Add YXRQ DateTime null
-
-
