@@ -61,7 +61,7 @@ SELECT spbh FROM t_spxx WHERE spbh LIKE '99999%'
 
 -----保健品类 单独提奖 2017.1.11
 INSERT INTO #sp(spbh,flag)
-SELECT spbh,1 FROM t_spxx WHERE lbbh = '06' --经营类别是16的全部商品，单独提奖
+SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
 
 -- A类
 INSERT INTO #tt(yyybh,je)
