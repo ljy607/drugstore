@@ -1,3 +1,12 @@
+---------2017年3月8日 15:52:45-----------
+----分店出库单增加产地字段，记录饮片的产地
+--ALTER TABLE t_ckdmxb 
+--ADD cd NVARCHAR(16) NULL
+
+----商品信息增加功能主治
+--ALTER TABLE T_SPXX
+--ADD gnzz NVARCHAR(64) NULL	--功能主治
+
 ---------2017年1月8日 17:53:25-----------
 ------分店增加经理查询功能-------------------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)

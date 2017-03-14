@@ -1,3 +1,36 @@
+
+----------------2017年3月7日 18:33:44-----------------------------------------
+----增加付款记录查询
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES('07','付款记录查询',3,1,'付款记录查询','image\tom_wap.gif','w_fkjl_cx',1,1,1,0)
+
+----首营品种增加生产标准、生产地址
+--ALTER TABLE T_SYPZSPB 
+--ADD scbz NVARCHAR(64) NULL, --生产标准
+--    scdz NVARCHAR(64) NULL  --生产地址
+
+----首营企业增加业务员、财务人员信息
+--ALTER TABLE T_SYQYSPB
+--ADD ywyxm NVARCHAR(16) NULL,	--业务员姓名
+--	ywydh VARCHAR(16) NULL,		--业务员电话
+--	ywysfzh VARCHAR(18) NULL,	--业务员身份证
+--	ywyyxq	DATETIME NULL,		--业务员有效期
+--	cwxm NVARCHAR(16) NULL,		--财务姓名
+--	cwdh VARCHAR(16) NULL,		--财务电话
+--	cwsfzh VARCHAR(18) NULL,	--财务身份证
+--	cwyxq DATETIME null   		--财务有效期
+
+----出库单增加产地，饮片需要增加产地录入字段
+--ALTER TABLE t_ckdmxb 
+--ADD cd NVARCHAR(16) NULL		--饮片产地
+
+----商品信息增加功能主治
+--ALTER TABLE T_SPXX
+--ADD gnzz NVARCHAR(64) NULL
+
+
+
 ---------------2016年11月19日 16:25:07----------------------
 -----增加医保药品目录
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
