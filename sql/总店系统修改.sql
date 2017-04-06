@@ -1,3 +1,18 @@
+----------------2017年3月30日 18:32:14-----------------------------------------
+----进货单增加产地字段，记录饮片的产地
+--ALTER TABLE t_jhdmxb 
+--ADD cd NVARCHAR(16) NULL
+
+----供应商增加业务员、财务人员信息
+--ALTER TABLE T_GYSXX
+--ADD ywyxm NVARCHAR(16) NULL,	--业务员姓名
+--	ywydh VARCHAR(16) NULL,		--业务员电话
+--	ywysfzh VARCHAR(18) NULL,	--业务员身份证
+--	ywyyxq	DATETIME NULL,		--业务员有效期
+--	cwxm NVARCHAR(16) NULL,		--财务姓名
+--	cwdh VARCHAR(16) NULL,		--财务电话
+--	cwsfzh VARCHAR(18) NULL,	--财务身份证
+--	cwyxq DATETIME null   		--财务有效期
 
 ----------------2017年3月7日 18:33:44-----------------------------------------
 ----增加付款记录查询

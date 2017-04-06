@@ -1,3 +1,65 @@
+if object_id('SP_FKTZ_QK') is not null
+	drop PROCEDURE SP_FKTZ_QK
+GO
+
+
+/******************* 过程说明 ******************
+  供应商欠款台账
+  结果  输出供应商欠款台账表
+************************************************/
+----增加日期，按到货日期统计
+--
+CREATE PROCEDURE SP_FKTZ_QK @jsrq VARCHAR(8) AS
+begin
+
+	DECLARE @table TABLE
+	(
+		gysbh NVARCHAR(32),
+		gysmc NVARCHAR(128),
+		jh DECIMAL(18,2) DEFAULT 0,
+		th DECIMAL(18,2) DEFAULT 0,
+		ye DECIMAL(18,2) DEFAULT 0
+	)
+
+	INSERT INTO @table(gysbh, jh)
+	SELECT a.GYSBH,SUM(ROUND(b.jhj * b.sl,2))
+	FROM T_JHDZB a 
+	JOIN T_JHDMXB b ON b.JHDBH = a.JHDBH 
+	WHERE a.JSBZ = 10 AND isnull(b.fkbz,0) = 0 AND b.fk = 1 AND convert(char(8),a.dhRQ,112) <= @jsrq
+	GROUP BY a.GYSBH
+	
+	DECLARE @t TABLE ( gysbh VARCHAR(32),th DECIMAL(18,2))	
+	INSERT INTO @t(gysbh, th)
+	SELECT a.GYSBH,SUM(ISNULL(ROUND(a.jhj * a.thsl,2),0))
+	FROM T_THDMXB a
+	JOIN T_THDZB b ON b.THDBH = a.THDBH
+	WHERE b.YXBZ = 10 AND ISNULL(a.fkbz,0) = 0 AND a.fk = 1 AND convert(char(8),b.thRQ,112) <= @jsrq
+	GROUP BY a.GYSBH
+	
+	UPDATE a
+	SET a.th = b.th 
+	FROM @table a
+	JOIN @t b ON b.gysbh = a.gysbh
+	
+	UPDATE a
+	SET a.gysmc = b.GYSMC
+	FROM @table a
+	JOIN T_GYSXX b ON b.gysbh = a.gysbh
+	
+	UPDATE @table 
+	SET ye = jh - th
+	
+
+	SELECT * FROM @table ORDER BY gysbh
+END
+
+
+
+
+
+
+
+
 if object_id('SP_ZGSCKMX') is not null
 	drop PROCEDURE SP_ZGSCKMX
 GO
