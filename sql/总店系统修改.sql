@@ -3,6 +3,11 @@
 --ALTER TABLE t_jhdmxb 
 --ADD cd NVARCHAR(16) NULL
 
+----要货计划增加产地
+--ALTER TABLE t_yhjhmx 
+--ADD cd NVARCHAR(16) NULL
+
+
 ----供应商增加业务员、财务人员信息
 --ALTER TABLE T_GYSXX
 --ADD ywyxm NVARCHAR(16) NULL,	--业务员姓名

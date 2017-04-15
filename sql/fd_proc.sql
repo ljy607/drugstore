@@ -90,7 +90,7 @@ GO
 --	bje DECIMAL(14,2) DEFAULT 0,
 --	cje DECIMAL(14,2) DEFAULT 0,
 --	tj DECIMAL(14,2) DEFAULT 0,
---	tstjje DECIMAL(14,2) DEFAULT 0		--单独阶梯提奖品种销售额，目前只有06-保健品类
+--	tstjje DECIMAL(14,2) DEFAULT 0		--单独阶梯提奖品种销售额，目前只有23-保健品类
 --)
 
 --INSERT INTO #t(yyybh)
