@@ -1,3 +1,12 @@
+----------------2017年4月30日 17:48:29--------------
+----退款单增加生产日期
+--ALTER TABLE t_tkdmxb 
+--ADD scrq DATETIME NULL
+
+----进货单转出库单增加生产日期、产地
+--ALTER TABLE t_ckdmxb_temp
+--ADD  scrq DATETIME NULL,cd NVARCHAR(16) NULL
+
 ----------------2017年3月30日 18:32:14-----------------------------------------
 ----进货单增加产地字段，记录饮片的产地
 --ALTER TABLE t_jhdmxb 

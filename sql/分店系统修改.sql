@@ -1,3 +1,28 @@
+------------2017年4月30日 17:29:36--------------------
+----退库单增加生产日期
+--ALTER TABLE t_tkdmxb 
+--ADD scrq DATETIME NULL
+
+-----结账增加 微信、支付宝、其他三项金额
+--ALTER TABLE t_jz
+--ADD jeweixin MONEY NULL, jezhifubao MONEY NULL, jeqita MONEY NULL
+
+--CREATE FUNCTION [dbo].[fn_cfmxConcat](@district nvarchar(255)) 
+--RETURNS varchar(8000) 
+--AS 
+--BEGIN -----处方明细药品列转行
+--    DECLARE @str varchar(8000) 
+--    SET @str = '' 
+  
+--    SELECT @str = @str + ' ' + left(e3.pm + '   ',5) + RIGHT('    ' + cast(e1.sl AS VARCHAR(4)),4) + ' g'
+--	FROM t_ys_cfmx e1
+--	JOIN t_spxx e3 ON e3.spbh=e1.spbh
+--	WHERE e1.cfid = @district
+    
+--    RETURN STUFF( @str, 1, 1, '') 
+--END 
+--GO 
+
 ------------2017年3月31日 18:36:31-----------------
 ----要货计划增加产地
 --ALTER TABLE t_yhjhmx 
