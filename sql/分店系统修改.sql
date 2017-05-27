@@ -1,3 +1,8 @@
+------------2017年5月19日 18:18:11---------------
+----修改要货计划表的yhsl的精度
+--ALTER TABLE t_yhjhmx
+--ALTER COLUMN yhsl DECIMAL(10,2) NOT NULL
+
 ------------2017年4月30日 17:29:36--------------------
 ----退库单增加生产日期
 --ALTER TABLE t_tkdmxb 

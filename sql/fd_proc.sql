@@ -9,6 +9,7 @@ GO
 		@ckdbhs  核对的出库单号，多个单号，逗号分割
   结果
   更新：2017年3月31日 11:50:41 增加更新要货计划产地字段	
+		2017年5月18日 12:51:19 最后增加要货计划时增加判断条件cksl > 0
 **********************************************************************************************/
 CREATE PROCEDURE SP_CKD2YHD @yhdbh NVARCHAR(16), @ckdbhs Nvarchar(4000) AS
 BEGIN
@@ -57,7 +58,7 @@ BEGIN
 	FROM #t e
 	JOIN v_spxx_qtcx e1 ON e.spbh = e1.SPBH
 	LEFT JOIN t_yhjhmx e2 ON e.spbh = e2.SPBH AND e2.YHDBH='''+@yhdbh+'''
-	WHERE e2.spbh IS NULL
+	WHERE e2.spbh IS NULL  
 		
 		
 	drop table #t'

@@ -8,7 +8,7 @@ SELECT dbo.T_SPXX.SPBH, dbo.T_SPXX.PM, dbo.T_SPXX.LBBH, dbo.T_SPXX.GG,
       dbo.T_JLDW.JLDW, dbo.T_SPXX.JC, dbo.T_SPXX.SB, dbo.T_SCCJ.jc AS SCCJ, 
       dbo.T_JGXX.LSJ, dbo.T_JGXX.DBJ, dbo.T_JGXX.PFJ, dbo.T_JGXX.GBJ, 
       dbo.T_JGXX.ZK, dbo.T_SPXX.PZWH, dbo.T_JGXX.hyj,dbo.t_spxx.ypztbh,dbo.t_ypzt.mc as ypztmc,
-      t_spxx.ypfl,t_spxx.jfbz,t_spxx.hxmc,t_splb.SPLB AS splb,t_spxx.ybbm
+      t_spxx.ypfl,t_spxx.jfbz,t_spxx.hxmc,t_splb.SPLB AS splb,t_spxx.ybbm,t_spxx.FLAG
 FROM dbo.T_SPXX LEFT OUTER JOIN
       dbo.T_JLDW ON dbo.T_SPXX.JLDWBH = dbo.T_JLDW.JLDWBH LEFT OUTER JOIN
       dbo.T_SCCJ ON dbo.T_SPXX.CJBH = dbo.T_SCCJ.CJBH LEFT OUTER JOIN
