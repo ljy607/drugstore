@@ -46,9 +46,14 @@
 -------三店-------------------
 ------来货表
 --SELECT *
-----UPDATE z SET fhr = '124' ---'019'
+----UPDATE z SET fhr = '042',ysr = '110'
 --FROM t_ckdzb z
---WHERE ckrq BETWEEN '2016-01-01' AND '2017-07-31 23:59:59'
+--WHERE ckrq BETWEEN '2013-01-01' AND '2015-11-05 23:59:59'
+
+--SELECT *
+----UPDATE z SET fhr = '124',ysr = '110'
+--FROM t_ckdzb z
+--WHERE ckrq BETWEEN '2014-11-08' AND '2017-6-19 23:59:59'
 
 --SELECT *
 ----UPDATE z SET ysr = '124' ---'042'
@@ -96,3 +101,24 @@
 ----UPDATE z SET z.zgr = '124'  ---'042'
 --FROM T_CXZB z
 --WHERE cxrq BETWEEN '2014-11-08' AND GETDATE()
+
+
+
+-------------------弘济-----------------
+------来货表
+--SELECT *
+----UPDATE z SET fhr = '042',ysr = '110'
+--FROM t_ckdzb z
+--WHERE ckrq BETWEEN '2013-01-01' AND '2015-11-05 23:59:59'
+
+--SELECT *
+----UPDATE z SET ysr = '123'
+--FROM t_ckdzb z
+--WHERE ckrq BETWEEN '2017-4-19' AND '2017-9-3 23:59:59'
+
+--SELECT *
+----UPDATE z SET ysr = '089' ---'042'
+--FROM t_ckdzb z
+--WHERE ckrq >= '2017-09-1'
+--------WHERE ckdbh = 'CK17002863'
+--ORDER BY z.CKRQ

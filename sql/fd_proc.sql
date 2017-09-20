@@ -278,7 +278,7 @@ SELECT  T_LSDzB.kpr,
 sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
 FROM T_LSDZB   
 join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
+left JOIN #sp e ON t_lsdmxb.spbh = e.spbh AND e.flag = 0
 where convert(char(6),t_lsdzb.rq,112) = @rq AND e.spbh IS NULL
 GROUP BY t_lsdzb.kpr
 
