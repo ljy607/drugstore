@@ -1,3 +1,20 @@
+--模糊查找商品的工具-------------------------------------------------------------
+--2017年12月2日 15:24:05 增加扫码查询商品
+--
+ALTER PROCEDURE [dbo].[SP_GETSPXX] @spbh varchar(16) AS
+	SELECT  T_SPXX.SPBH, T_SPXX.PM,T_SPXX.GG, T_JLDW.JLDW, T_SPXX.JC, T_SCCJ.JC as SCCJ,T_JGXX.LSJ, T_JGXX.PFJ, T_JGXX.GBJ,T_JGXX.zk
+	FROM T_SPXX LEFT OUTER JOIN
+		  T_JLDW ON T_SPXX.JLDWBH = T_JLDW.JLDWBH LEFT OUTER JOIN
+		  T_SCCJ ON T_SPXX.CJBH = T_SCCJ.CJBH LEFT OUTER JOIN
+		  T_JGXX ON T_SPXX.SPBH = T_JGXX.SPBH
+	WHERE (T_SPXX.SPBH like '%' + @spbh + '%' OR T_SPXX.PM like '%' + @spbh + '%' OR T_SPXX.JC like '%' + @spbh + '%' OR T_SPXX.spbm =  + @spbh )
+	order by t_spxx.spbh
+
+GO
+
+
+
+
 
 --if object_id('SP_CKD2YHD') is not null
 --	drop PROCEDURE SP_CKD2YHD
@@ -74,230 +91,230 @@
 
 
 
-if object_id('sp_tjhz') is not null
-	drop PROCEDURE sp_tjhz
-GO
+--if object_id('sp_tjhz') is not null
+--	drop PROCEDURE sp_tjhz
+--GO
 
-----提奖统计----
---2016.1.10 修改增加保健品类特殊提奖计算规则
---2017.1.11 保健品类 单独提奖 2017.1.11
---2017.7.4  计算c类提奖都采用left join 方式
-CREATE PROCEDURE sp_tjhz @rq CHAR(6)
-AS 
-BEGIN
+------提奖统计----
+----2016.1.10 修改增加保健品类特殊提奖计算规则
+----2017.1.11 保健品类 单独提奖 2017.1.11
+----2017.7.4  计算c类提奖都采用left join 方式
+--CREATE PROCEDURE sp_tjhz @rq CHAR(6)
+--AS 
+--BEGIN
 
-CREATE TABLE #t
-(
-	yyybh char(3),
-	aje DECIMAL(14,2) DEFAULT 0,
-	bje DECIMAL(14,2) DEFAULT 0,
-	cje DECIMAL(14,2) DEFAULT 0,
-	tj DECIMAL(14,2) DEFAULT 0,
-	tstjje DECIMAL(14,2) DEFAULT 0		--单独阶梯提奖品种销售额，目前只有23-保健品类
-)
+--CREATE TABLE #t
+--(
+--	yyybh char(3),
+--	aje DECIMAL(14,2) DEFAULT 0,
+--	bje DECIMAL(14,2) DEFAULT 0,
+--	cje DECIMAL(14,2) DEFAULT 0,
+--	tj DECIMAL(14,2) DEFAULT 0,
+--	tstjje DECIMAL(14,2) DEFAULT 0		--单独阶梯提奖品种销售额，目前只有23-保健品类
+--)
 
-INSERT INTO #t(yyybh)
-SELECT DISTINCT yyybh
-FROM t_lsdzb z
-JOIN t_lsdmxb m ON m.LSDBH = z.LSDBH
-WHERE convert(char(6),z.rq,112) =@rq
+--INSERT INTO #t(yyybh)
+--SELECT DISTINCT yyybh
+--FROM t_lsdzb z
+--JOIN t_lsdmxb m ON m.LSDBH = z.LSDBH
+--WHERE convert(char(6),z.rq,112) =@rq
 
-CREATE TABLE #tt
-(
-	yyybh char(3),
-	je DECIMAL(14,2) DEFAULT 0
-)
+--CREATE TABLE #tt
+--(
+--	yyybh char(3),
+--	je DECIMAL(14,2) DEFAULT 0
+--)
 
-CREATE TABLE #ta
-(
-	yyybh char(3),
-	je DECIMAL(14,2) DEFAULT 0
-)
+--CREATE TABLE #ta
+--(
+--	yyybh char(3),
+--	je DECIMAL(14,2) DEFAULT 0
+--)
 
-CREATE TABLE #tb
-(
-	yyybh char(3),
-	je DECIMAL(14,2) DEFAULT 0
-)
+--CREATE TABLE #tb
+--(
+--	yyybh char(3),
+--	je DECIMAL(14,2) DEFAULT 0
+--)
 
-CREATE TABLE #tc
-(
-	yyybh char(3),
-	je DECIMAL(14,2) DEFAULT 0
-)
+--CREATE TABLE #tc
+--(
+--	yyybh char(3),
+--	je DECIMAL(14,2) DEFAULT 0
+--)
 
-------- 虚拟商品，不参加提奖 挂号、煎药等费用
-CREATE TABLE #sp
-(
-	spbh NVARCHAR(16),
-	flag TINYINT NULL DEFAULT 0
-)
-INSERT INTO #sp( spbh)
-SELECT spbh FROM t_spxx WHERE spbh LIKE '99998%'
-INSERT INTO #sp(spbh)
-SELECT spbh FROM t_spxx WHERE spbh LIKE '99999%'
+--------- 虚拟商品，不参加提奖 挂号、煎药等费用
+--CREATE TABLE #sp
+--(
+--	spbh NVARCHAR(16),
+--	flag TINYINT NULL DEFAULT 0
+--)
+--INSERT INTO #sp( spbh)
+--SELECT spbh FROM t_spxx WHERE spbh LIKE '99998%'
+--INSERT INTO #sp(spbh)
+--SELECT spbh FROM t_spxx WHERE spbh LIKE '99999%'
 
------保健品类 单独提奖 2017.1.11
-INSERT INTO #sp(spbh,flag)
-SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
+-------保健品类 单独提奖 2017.1.11
+--INSERT INTO #sp(spbh,flag)
+--SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
 
--- A类
-INSERT INTO #tt(yyybh,je)
-SELECT  T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
-left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
-where t_lslrl.NameText='A' 
-AND convert(char(6),t_lsdzb.rq,112) = @rq
-AND e.spbh IS NULL
-GROUP BY t_lsdmxb.YYYBH
+---- A类
+--INSERT INTO #tt(yyybh,je)
+--SELECT  T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+--left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
+--where t_lslrl.NameText='A' 
+--AND convert(char(6),t_lsdzb.rq,112) = @rq
+--AND e.spbh IS NULL
+--GROUP BY t_lsdmxb.YYYBH
 
-INSERT INTO #ta(yyybh,je)
-SELECT T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
---JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
---JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON s.LBBH=fstt.[value]
-JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON t_lsdmxb.jylb = fstt.[value]
-where t_lslrl.NameText='A'
-AND convert(char(6),t_lsdzb.rq,112) = @rq
-GROUP BY t_lsdmxb.YYYBH
+--INSERT INTO #ta(yyybh,je)
+--SELECT T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+----JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
+----JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON s.LBBH=fstt.[value]
+--JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON t_lsdmxb.jylb = fstt.[value]
+--where t_lslrl.NameText='A'
+--AND convert(char(6),t_lsdzb.rq,112) = @rq
+--GROUP BY t_lsdmxb.YYYBH
 
-UPDATE a 
-SET a.aje=b.je-isnull(c.je,0)
-FROM #t a
-JOIN #tt b ON a.yyybh=b.yyybh
-left JOIN #ta c ON a.yyybh=c.yyybh
+--UPDATE a 
+--SET a.aje=b.je-isnull(c.je,0)
+--FROM #t a
+--JOIN #tt b ON a.yyybh=b.yyybh
+--left JOIN #ta c ON a.yyybh=c.yyybh
 
-DELETE FROM #tt
+--DELETE FROM #tt
 
---B类
-INSERT INTO #tt(yyybh,je)
-SELECT  T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
-left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
-where t_lslrl.NameText='B'
-AND convert(char(6),t_lsdzb.rq,112) = @rq
-AND e.spbh IS NULL
-GROUP BY t_lsdmxb.YYYBH
+----B类
+--INSERT INTO #tt(yyybh,je)
+--SELECT  T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+--left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
+--where t_lslrl.NameText='B'
+--AND convert(char(6),t_lsdzb.rq,112) = @rq
+--AND e.spbh IS NULL
+--GROUP BY t_lsdmxb.YYYBH
 
-INSERT INTO #tb(yyybh,je)
-SELECT T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
---JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
---JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON s.LBBH=fstt.[value]
-JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON t_lsdmxb.jylb = fstt.[value]
-where t_lslrl.NameText='B'
-AND convert(char(6),t_lsdzb.rq,112) = @rq
-GROUP BY t_lsdmxb.YYYBH
+--INSERT INTO #tb(yyybh,je)
+--SELECT T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+----JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
+----JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON s.LBBH=fstt.[value]
+--JOIN dbo.fn_SplitToTable('14,16,19,21,22,26,29,30',',') fstt ON t_lsdmxb.jylb = fstt.[value]
+--where t_lslrl.NameText='B'
+--AND convert(char(6),t_lsdzb.rq,112) = @rq
+--GROUP BY t_lsdmxb.YYYBH
 
-UPDATE a 
-SET a.bje=b.je- isnull(c.je,0)
-FROM #t a
-JOIN #tt b ON a.yyybh=b.yyybh
-left JOIN #tb c ON a.yyybh=c.yyybh
+--UPDATE a 
+--SET a.bje=b.je- isnull(c.je,0)
+--FROM #t a
+--JOIN #tt b ON a.yyybh=b.yyybh
+--left JOIN #tb c ON a.yyybh=c.yyybh
 
-DELETE FROM #tt
+--DELETE FROM #tt
 
---c类
-INSERT INTO #tt(yyybh,je)
-SELECT  T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
-left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
-where t_lslrl.NameText='C'
-AND convert(char(6),t_lsdzb.rq,112) = @rq
-AND e.spbh IS NULL
-GROUP BY t_lsdmxb.YYYBH
+----c类
+--INSERT INTO #tt(yyybh,je)
+--SELECT  T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+--left JOIN #sp e ON t_lsdmxb.spbh = e.spbh
+--where t_lslrl.NameText='C'
+--AND convert(char(6),t_lsdzb.rq,112) = @rq
+--AND e.spbh IS NULL
+--GROUP BY t_lsdmxb.YYYBH
 
-INSERT INTO #tc(yyybh,je)
-SELECT T_LSDMXB.YYYBH,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
---JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
---JOIN dbo.fn_SplitToTable('14,16',',') fstt ON s.LBBH=fstt.[value]
-JOIN dbo.fn_SplitToTable('14,16',',') fstt ON t_lsdmxb.jylb = fstt.[value]
-where --t_lslrl.NameText='C' AND		--要减去全部的提奖类品种
-convert(char(6),t_lsdzb.rq,112) = @rq
-GROUP BY t_lsdmxb.YYYBH
+--INSERT INTO #tc(yyybh,je)
+--SELECT T_LSDMXB.YYYBH,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left join t_lslrl on round((t_lsdmxb.lsj - isnull(T_LSDMXB.jhjhs,0))/t_lsdmxb.lsj,2) between t_lslrl.sx and t_lslrl.xx
+----JOIN t_spxx s ON t_lsdmxb.spbh=s.spbh 
+----JOIN dbo.fn_SplitToTable('14,16',',') fstt ON s.LBBH=fstt.[value]
+--JOIN dbo.fn_SplitToTable('14,16',',') fstt ON t_lsdmxb.jylb = fstt.[value]
+--where --t_lslrl.NameText='C' AND		--要减去全部的提奖类品种
+--convert(char(6),t_lsdzb.rq,112) = @rq
+--GROUP BY t_lsdmxb.YYYBH
 
---2017.7.4  都改成偏连接模式
-UPDATE a 
-SET a.cje=isnull(b.je,0)+isnull(c.je,0)+isnull(e.je,0) -isnull(d.je,0)
-FROM #t a
-left JOIN #tt b ON a.yyybh=b.yyybh
-left JOIN #tb c ON a.yyybh=c.yyybh
-left JOIN #tc d ON d.yyybh = a.yyybh
-left JOIN #ta e ON e.yyybh=a.yyybh
+----2017.7.4  都改成偏连接模式
+--UPDATE a 
+--SET a.cje=isnull(b.je,0)+isnull(c.je,0)+isnull(e.je,0) -isnull(d.je,0)
+--FROM #t a
+--left JOIN #tt b ON a.yyybh=b.yyybh
+--left JOIN #tb c ON a.yyybh=c.yyybh
+--left JOIN #tc d ON d.yyybh = a.yyybh
+--left JOIN #ta e ON e.yyybh=a.yyybh
 
---单独提奖品种
-DELETE FROM #tt
-INSERT INTO #tt(yyybh,je)
-select a.yyybh,sum(a.sl * c.tjje) tjje
-from t_lsdmxb a
-join t_lsdzb b on a.lsdbh = b.lsdbh
-join t_tjsp c on a.spbh = c.spbh
-where convert(char(6),b.rq,112) = @rq AND c.flag=1
-group by a.YYYBH
-UPDATE e
-SET e.tj = a.je
-FROM #t e
-JOIN #tt a ON a.yyybh = e.yyybh
+----单独提奖品种
+--DELETE FROM #tt
+--INSERT INTO #tt(yyybh,je)
+--select a.yyybh,sum(a.sl * c.tjje) tjje
+--from t_lsdmxb a
+--join t_lsdzb b on a.lsdbh = b.lsdbh
+--join t_tjsp c on a.spbh = c.spbh
+--where convert(char(6),b.rq,112) = @rq AND c.flag=1
+--group by a.YYYBH
+--UPDATE e
+--SET e.tj = a.je
+--FROM #t e
+--JOIN #tt a ON a.yyybh = e.yyybh
 
-------阶梯提奖商品销售金额
-DELETE FROM #tt
-INSERT INTO #tt(yyybh,je)
-select a.yyybh,sum(round(( b.zdzk / 100.0 ) *  a.lsj * a.sl * (a.zk/100.0) * b.js ,2)) as hjje
-from t_lsdmxb a
-join t_lsdzb b on a.lsdbh = b.lsdbh
-join #sp c on a.spbh = c.spbh
-where convert(char(6),b.rq,112) = @rq AND c.flag=1
-group by a.YYYBH
-UPDATE e
-SET e.tstjje = a.je
-FROM #t e
-JOIN #tt a ON a.yyybh = e.yyybh
+--------阶梯提奖商品销售金额
+--DELETE FROM #tt
+--INSERT INTO #tt(yyybh,je)
+--select a.yyybh,sum(round(( b.zdzk / 100.0 ) *  a.lsj * a.sl * (a.zk/100.0) * b.js ,2)) as hjje
+--from t_lsdmxb a
+--join t_lsdzb b on a.lsdbh = b.lsdbh
+--join #sp c on a.spbh = c.spbh
+--where convert(char(6),b.rq,112) = @rq AND c.flag=1
+--group by a.YYYBH
+--UPDATE e
+--SET e.tstjje = a.je
+--FROM #t e
+--JOIN #tt a ON a.yyybh = e.yyybh
 
-----收款员
-INSERT INTO #t(yyybh,tj)
-SELECT  T_LSDzB.kpr,   
-sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
-FROM T_LSDZB   
-join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
-left JOIN #sp e ON t_lsdmxb.spbh = e.spbh AND e.flag = 0
-where convert(char(6),t_lsdzb.rq,112) = @rq AND e.spbh IS NULL
-GROUP BY t_lsdzb.kpr
+------收款员
+--INSERT INTO #t(yyybh,tj)
+--SELECT  T_LSDzB.kpr,   
+--sum(round(( t_lsdzb.zdzk / 100.0 ) *  t_lsdmxb.lsj * t_lsdmxb.sl * (t_lsdmxb.zk/100.0) * t_lsdzb.js ,2)) as hjje
+--FROM T_LSDZB   
+--join T_LSDMXB on  T_LSDZB.LSDBH = T_LSDMXB.LSDBH
+--left JOIN #sp e ON t_lsdmxb.spbh = e.spbh AND e.flag = 0
+--where convert(char(6),t_lsdzb.rq,112) = @rq AND e.spbh IS NULL
+--GROUP BY t_lsdzb.kpr
 
 
 
-DELETE FROM #t WHERE aje=0 AND bje=0 AND cje=0 AND tj = 0
+--DELETE FROM #t WHERE aje=0 AND bje=0 AND cje=0 AND tj = 0
 
-SELECT *
-FROM #t 
+--SELECT *
+--FROM #t 
 
-DROP TABLE #sp
-DROP TABLE #t
-DROP TABLE #tt
-DROP TABLE #ta
-DROP TABLE #tb
-DROP TABLE #tc
+--DROP TABLE #sp
+--DROP TABLE #t
+--DROP TABLE #tt
+--DROP TABLE #ta
+--DROP TABLE #tb
+--DROP TABLE #tc
 
-END
-GO
+--END
+--GO
 
 
 

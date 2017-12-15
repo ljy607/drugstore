@@ -1,3 +1,17 @@
+--------------2017年12月2日 16:16:04---------------
+----商品类别增加超市类
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(2,'09','超市','超市类商品',200,1)
+
+----初始化超市进货录入专用帐号
+--INSERT INTO t_zgxx(BH, XM, XB, SYSID, XL, ZC, ZW, SFZH, BM, QX, MM, JG, LXDZ, YZBM,
+--            CSRQ, DH1, DH2, JBGZ, RZSJ, LZSJ, MEMO, GXRQ, GXZ, FLAG, tjyxrq)
+--SELECT '999', '超市进货', XB, SYSID, XL, ZC, ZW, SFZH, BM, QX, '999', JG, LXDZ, YZBM, CSRQ, DH1,
+--       DH2, JBGZ, RZSJ, LZSJ, MEMO, GXRQ, GXZ, FLAG, tjyxrq
+--FROM t_zgxx
+--WHERE bh = '001'
+
+
 ----------------2017年4月30日 17:48:29--------------
 ----退款单增加生产日期
 --ALTER TABLE t_tkdmxb 
