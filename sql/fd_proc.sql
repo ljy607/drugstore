@@ -1,16 +1,16 @@
---模糊查找商品的工具-------------------------------------------------------------
---2017年12月2日 15:24:05 增加扫码查询商品
---
-ALTER PROCEDURE [dbo].[SP_GETSPXX] @spbh varchar(16) AS
-	SELECT  T_SPXX.SPBH, T_SPXX.PM,T_SPXX.GG, T_JLDW.JLDW, T_SPXX.JC, T_SCCJ.JC as SCCJ,T_JGXX.LSJ, T_JGXX.PFJ, T_JGXX.GBJ,T_JGXX.zk
-	FROM T_SPXX LEFT OUTER JOIN
-		  T_JLDW ON T_SPXX.JLDWBH = T_JLDW.JLDWBH LEFT OUTER JOIN
-		  T_SCCJ ON T_SPXX.CJBH = T_SCCJ.CJBH LEFT OUTER JOIN
-		  T_JGXX ON T_SPXX.SPBH = T_JGXX.SPBH
-	WHERE (T_SPXX.SPBH like '%' + @spbh + '%' OR T_SPXX.PM like '%' + @spbh + '%' OR T_SPXX.JC like '%' + @spbh + '%' OR T_SPXX.spbm =  + @spbh )
-	order by t_spxx.spbh
+----模糊查找商品的工具-------------------------------------------------------------
+----2017年12月2日 15:24:05 增加扫码查询商品
+----
+--ALTER PROCEDURE [dbo].[SP_GETSPXX] @spbh varchar(16) AS
+--	SELECT  T_SPXX.SPBH, T_SPXX.PM,T_SPXX.GG, T_JLDW.JLDW, T_SPXX.JC, T_SCCJ.JC as SCCJ,T_JGXX.LSJ, T_JGXX.PFJ, T_JGXX.GBJ,T_JGXX.zk
+--	FROM T_SPXX LEFT OUTER JOIN
+--		  T_JLDW ON T_SPXX.JLDWBH = T_JLDW.JLDWBH LEFT OUTER JOIN
+--		  T_SCCJ ON T_SPXX.CJBH = T_SCCJ.CJBH LEFT OUTER JOIN
+--		  T_JGXX ON T_SPXX.SPBH = T_JGXX.SPBH
+--	WHERE (T_SPXX.SPBH like '%' + @spbh + '%' OR T_SPXX.PM like '%' + @spbh + '%' OR T_SPXX.JC like '%' + @spbh + '%' OR T_SPXX.spbm =  + @spbh )
+--	order by t_spxx.spbh
 
-GO
+--GO
 
 
 
@@ -99,6 +99,7 @@ GO
 ----2016.1.10 修改增加保健品类特殊提奖计算规则
 ----2017.1.11 保健品类 单独提奖 2017.1.11
 ----2017.7.4  计算c类提奖都采用left join 方式
+----2017.12.21计算超市类单独提交 经营类别09
 --CREATE PROCEDURE sp_tjhz @rq CHAR(6)
 --AS 
 --BEGIN
@@ -110,7 +111,8 @@ GO
 --	bje DECIMAL(14,2) DEFAULT 0,
 --	cje DECIMAL(14,2) DEFAULT 0,
 --	tj DECIMAL(14,2) DEFAULT 0,
---	tstjje DECIMAL(14,2) DEFAULT 0		--单独阶梯提奖品种销售额，目前只有23-保健品类
+--	tstjje DECIMAL(14,2) DEFAULT 0,		--单独阶梯提奖品种销售额，目前只有23-保健品类
+--	cstjje decimal(14,2) default 0		--超市商品单独提奖，09-超市商品
 --)
 
 --INSERT INTO #t(yyybh)
@@ -157,6 +159,11 @@ GO
 -------保健品类 单独提奖 2017.1.11
 --INSERT INTO #sp(spbh,flag)
 --SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
+
+-------超市类 单独提奖 2017.12.21
+--INSERT INTO #sp(spbh,flag)
+--SELECT spbh,2 FROM t_spxx WHERE lbbh = '09' --经营类别是09的超市类全部商品，单独提奖
+
 
 ---- A类
 --INSERT INTO #tt(yyybh,je)
@@ -286,6 +293,20 @@ GO
 --group by a.YYYBH
 --UPDATE e
 --SET e.tstjje = a.je
+--FROM #t e
+--JOIN #tt a ON a.yyybh = e.yyybh
+
+--------2017.12.21 超市商品销售金额
+--DELETE FROM #tt
+--INSERT INTO #tt(yyybh,je)
+--select a.yyybh,sum(round(( b.zdzk / 100.0 ) *  a.lsj * a.sl * (a.zk/100.0) * b.js ,2)) as hjje
+--from t_lsdmxb a
+--join t_lsdzb b on a.lsdbh = b.lsdbh
+--join #sp c on a.spbh = c.spbh
+--where convert(char(6),b.rq,112) = @rq AND c.flag=2
+--group by a.YYYBH
+--UPDATE e
+--SET e.cstjje = a.je
 --FROM #t e
 --JOIN #tt a ON a.yyybh = e.yyybh
 
