@@ -1,3 +1,11 @@
+------------2018年1月24日 17:04:38--------------------
+-------增加供应商供货统计导出功能
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(28,'供货品种统计',4,0,'供货品种统计','image\tom_wap.gif','w_jhpztj',1,1,1,0)
+
+
+
 --------------2017年12月2日 16:16:04---------------
 ----商品类别增加超市类
 --INSERT INTO t_options(pid, code, name, note, sort, flag)
