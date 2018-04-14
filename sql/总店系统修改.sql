@@ -1,3 +1,9 @@
+-----------2018年4月2日 10:34:51---------------
+--------商品信息增加试销有效期，批准文号有效期
+--ALTER TABLE t_spxx 
+--ADD sxyxq DATETIME NULL,   ----试销有效期
+--pzwhyxq DATETIME NULL  ----批准文号有效期
+
 ------------2018年1月24日 17:04:38--------------------
 -------增加供应商供货统计导出功能
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
