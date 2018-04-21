@@ -1,3 +1,4 @@
+-------医保数据字典
 --CREATE TABLE t_yb_sjzd
 --(
 --	id INT IDENTITY(1,1) NOT NULL,
