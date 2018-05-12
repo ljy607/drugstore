@@ -1,3 +1,40 @@
+------------2018年5月12日 11:45:32-----------
+--------商品信息增加经验范围，用于控制某些商品不能出库到某个分店------------
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(5,0,'jyfw',N'经营范围',N'经营范围',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
+------分店经营范围
+--CREATE TABLE t_dwxx_jyfw
+--(
+--	id INT IDENTITY(1,1) NOT NULL,
+--	dwbh VARCHAR(3) NOT NULL,
+--	jyfwid INT NOT NULL,
+--  flag TINYINT NULL,
+--	PRIMARY KEY(id)
+--)
+
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'1',N'药品',N'药品',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'2',N'饮片',N'饮片',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'3',N'一类医疗器械',N'一类医疗器械',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'4',N'二类医疗器械',N'二类医疗器械',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'5',N'三类医疗器械',N'三类医疗器械',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'6',N'百货',N'百货',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(5,'7',N'其他',N'其他',200,1)
+
+------商品增加经营范围属性
+--ALTER TABLE T_SPXX
+--ADD jyfwid INT NULL
+
+
 -----------2018年4月2日 10:34:51---------------
 --------商品信息增加试销有效期，批准文号有效期
 --ALTER TABLE t_spxx 
