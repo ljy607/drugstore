@@ -1,3 +1,17 @@
+-----------2018年7月26日 17:29:11------------
+-------增加商品信息审批功能
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(22,'商品信息审核',6,0,'商品信息审核','image\tom_wap.gif','w_spxxwh_main_sh',1,1,1,0)
+
+-----商品增加 生产企业许可证号
+ALTER TABLE t_spxx 
+ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
+                              		--                              		
+
+
+
+
 ------------2018年5月12日 11:45:32-----------
 --------商品信息增加经验范围，用于控制某些商品不能出库到某个分店------------
 --SET IDENTITY_INSERT t_options ON
