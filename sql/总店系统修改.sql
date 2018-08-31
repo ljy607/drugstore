@@ -4,10 +4,13 @@
 --            fdbz, parameter)
 --VALUES(22,'商品信息审核',6,0,'商品信息审核','image\tom_wap.gif','w_spxxwh_main_sh',1,1,1,0)
 
------商品增加 生产企业许可证号
-ALTER TABLE t_spxx 
-ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
-                              		--                              		
+-------商品增加 生产企业许可证号
+--ALTER TABLE t_spxx 
+--ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
+
+--ALTER TABLE t_jhdmxb 
+--ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
+                              		                              		
 
 
 
