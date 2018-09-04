@@ -1,3 +1,8 @@
+-----------2018年9月1日 10:29:36 ---------
+-------要货计划增加一列 是否调拨
+--ALTER TABLE T_YHJHMX
+--ADD isdb TINYINT NULL		----是否调拨
+
 -----------2018年7月26日 17:29:11------------
 -------增加商品信息审批功能
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
@@ -10,10 +15,7 @@
 
 --ALTER TABLE t_jhdmxb 
 --ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
-                              		                              		
-
-
-
+ 
 
 ------------2018年5月12日 11:45:32-----------
 --------商品信息增加经验范围，用于控制某些商品不能出库到某个分店------------

@@ -3,6 +3,9 @@
 --ALTER TABLE t_spxx 
 --ADD scqyxkzh NVARCHAR(32) NULL		----生产企业许可证号
 
+--ALTER TABLE t_jz
+--ADD jeyibao	DECIMAL(18,2) NULL			----医保支付金额
+
 
 -----------2018年4月2日 10:34:51---------------
 --------商品信息增加试销有效期，批准文号有效期
