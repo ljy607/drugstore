@@ -1,3 +1,9 @@
+-----------2018年9月25日 14:27:31----------------------
+----增加按营业员区间统计零售毛利-----
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES(21,'零售数据分析',2,2,'零售数据分析','image\tom_wap.gif','w_tjfx_ls',1,1,0)
+
+
 ----------2018年8月31日 18:00:45 --------------
 -------商品增加 生产企业许可证号
 --ALTER TABLE t_spxx 
