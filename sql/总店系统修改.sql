@@ -1,3 +1,15 @@
+----------   2018年11月25日 18:24:13 ---------------------------
+------变价单增加变价单位记录表
+--CREATE TABLE t_bjddw
+--(
+--	id INT IDENTITY(1,1) NOT NULL,
+--	bjdbh NvarCHAR(10) NOT NULL,
+--	dwbh NVARCHAR(10) NOT NULL,
+--	flag TINYINT DEFAULT 0,
+--	PRIMARY KEY(id)
+--)
+
+
 -----------2018年9月1日 10:29:36 ---------
 -------要货计划增加一列 是否调拨
 --ALTER TABLE T_YHJHMX
