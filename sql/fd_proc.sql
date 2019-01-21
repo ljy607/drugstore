@@ -100,6 +100,8 @@
 ----2017.1.11 保健品类 单独提奖 2017.1.11
 ----2017.7.4  计算c类提奖都采用left join 方式
 ----2017.12.21计算超市类单独提交 经营类别09
+----2018.12.19 单独提奖修改 保健品类，需要按照零售单里的经营类别进行计算
+
 --CREATE PROCEDURE sp_tjhz @rq CHAR(6)
 --AS 
 --BEGIN
@@ -156,9 +158,9 @@
 --INSERT INTO #sp(spbh)
 --SELECT spbh FROM t_spxx WHERE spbh LIKE '99999%'
 
--------保健品类 单独提奖 2017.1.11
---INSERT INTO #sp(spbh,flag)
---SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
+---------保健品类 单独提奖 2017.1.11
+----INSERT INTO #sp(spbh,flag)
+----SELECT spbh,1 FROM t_spxx WHERE lbbh = '23' --经营类别是23的全部商品，单独提奖
 
 -------超市类 单独提奖 2017.12.21
 --INSERT INTO #sp(spbh,flag)
@@ -288,8 +290,8 @@
 --select a.yyybh,sum(round(( b.zdzk / 100.0 ) *  a.lsj * a.sl * (a.zk/100.0) * b.js ,2)) as hjje
 --from t_lsdmxb a
 --join t_lsdzb b on a.lsdbh = b.lsdbh
---join #sp c on a.spbh = c.spbh
---where convert(char(6),b.rq,112) = @rq AND c.flag=1
+----join #sp c on a.spbh = c.spbh
+--where convert(char(6),b.rq,112) = @rq AND a.jylb = '23'		----目前只有保健品类 2018年12月19日 08:52:31
 --group by a.YYYBH
 --UPDATE e
 --SET e.tstjje = a.je
@@ -302,13 +304,14 @@
 --select a.yyybh,sum(round(( b.zdzk / 100.0 ) *  a.lsj * a.sl * (a.zk/100.0) * b.js ,2)) as hjje
 --from t_lsdmxb a
 --join t_lsdzb b on a.lsdbh = b.lsdbh
---join #sp c on a.spbh = c.spbh
---where convert(char(6),b.rq,112) = @rq AND c.flag=2
+----join #sp c on a.spbh = c.spbh
+--where convert(char(6),b.rq,112) = @rq AND a.jylb = '09'		----超市商品类别  2018年12月19日 08:53:38
 --group by a.YYYBH
 --UPDATE e
 --SET e.cstjje = a.je
 --FROM #t e
 --JOIN #tt a ON a.yyybh = e.yyybh
+
 
 ------收款员
 --INSERT INTO #t(yyybh,tj)

@@ -1,3 +1,18 @@
+----------2019年1月19日 17:11:26------------------
+------增加进货单与要货单比对功能--------
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(30,'进货要货对比',1,0,'进货要货对比','image\tom_wap.gif','w_jh4yh',1,1,1,0)
+
+
+
+----------2018年12月20日 15:38:02------------------
+------增加商品信息修改功能--------
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(23,'商品信息修改',6,0,'商品信息修改','image\tom_wap.gif','w_spxx_bg',0,1,1,0)
+
+
 ----------   2018年11月25日 18:24:13 ---------------------------
 ------变价单增加变价单位记录表
 --CREATE TABLE t_bjddw
