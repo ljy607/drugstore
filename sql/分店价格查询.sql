@@ -1,15 +1,16 @@
---SELECT z.rq, m.spbh,s.pm,s.gg,m.lsj,m.jhjhs,z.ZDZK,m.ZK
+--SELECT z.rq, m.spbh,s.pm,s.gg,m.lsj,m.jhjhs,z.ZDZK,m.ZK,m.SL,z.LSDBH,m.ORDR
 --FROM t_lsdmxb m 
 --JOIN t_lsdzb z ON z.LSDBH = m.LSDBH
 --JOIN t_spxx s ON m.spbh = s.SPBH
---WHERE z.rq > '2018-11-21' --AND m.lsj < m.jhjhs 
---ORDER BY m.SPBH
+----WHERE z.rq > '2018-11-21' --AND m.lsj < m.jhjhs 
+--WHERE m.spbh ='78049' 
+--ORDER BY z.rq DESC
 
-----查询进货价为0
+------查询进货价为0
 --SELECT *
 ----UPDATE c SET c.jiag = 7.8
 --FROM t_chxx c
---WHERE c.spbh = '405103'
+--WHERE c.spbh = '78049'
 
 
 --SELECT *
@@ -26,12 +27,12 @@
 --WHERE z.rq > '2018-3-1' AND m.spbh = '405172'
 --ORDER BY m.SPBH
 
-----更新价格
+------更新价格
 --UPDATE a
---SET a.jhjhs = 187.8261
+--SET a.jhjhs = 870
 ----SELECT a.*
 --FROM t_lsdmxb a
---WHERE a.lsdbh = '1803090117' AND a.ORDR = 1
+--WHERE a.lsdbh = '1902010092' AND a.ORDR = 1
 
 ----查询对应商品历史价格
 --SELECT tl.*

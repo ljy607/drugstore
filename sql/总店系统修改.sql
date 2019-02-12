@@ -1,3 +1,10 @@
+-----------2019年2月12日 09:41:20---------------
+------人员信息增加合同有效期、身份证有效期
+--ALTER TABLE T_ZGXX
+--ADD SFZYXQ DATETIME NULL,HTYXQ DATETIME NULL
+--GO
+
+
 ----------2019年1月19日 17:11:26------------------
 ------增加进货单与要货单比对功能--------
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
