@@ -1,3 +1,22 @@
+-----------2019年2月21日 17:27:42----------------
+------进货单增加检验报告存放路径--------------
+--ALTER TABLE t_jhdmxb 
+--ADD jybgpath NVARCHAR(128) NULL
+--GO
+
+-----------2019年2月20日 17:00:47------------
+------单位信息增加 营业执照，药品经营许可证，发证日期和有效期
+--ALTER TABLE t_dwxx 
+--add yyzzfzrq DATETIME NULL,yyzzyxrq DATETIME NULL,ypjyxkzfzrq DATETIME NULL,ypjyxkzyxrq DATETIME NULL
+--GO
+
+
+-----------2019年2月19日 16:02:49-----------
+------进货单增加要货单号、出库单号字段，用于根据要货单自动拆分出库单
+--ALTER TABLE t_jhdzb 
+--ADD fdyhd NVARCHAR(255) NULL,fdckd NVARCHAR(255) NULL,zdfh tinyint null default 0
+--GO
+
 -----------2019年2月12日 09:41:20---------------
 ------人员信息增加合同有效期、身份证有效期
 --ALTER TABLE T_ZGXX
