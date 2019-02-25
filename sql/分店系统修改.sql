@@ -1,3 +1,54 @@
+
+-------------2019年2月25日 10:34:52-----------------
+------公司创建会员分店表，用于记录同步历史和积分情况
+--ALTER TABLE t_member
+--ADD tbflag TINYINT NULL DEFAULT 0 ;
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('02','同步会员信息',5,0,'同步会员信息','image\tom_wap.gif','w_member_tbsj',1,1,0)
+
+
+------------2019年2月22日 14:25:26-----------
+--------商品信息增加经验范围，用于控制某些商品不能出库到某个分店------------
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort)
+--VALUES(7,0,'jyfw',N'经营范围',N'经营范围',200)
+--SET IDENTITY_INSERT t_options OFF
+
+------分店经营范围
+--CREATE TABLE t_dwxx_jyfw
+--(
+--	id INT IDENTITY(1,1) NOT NULL,
+--	dwbh VARCHAR(3) NOT NULL,
+--	jyfwid INT NOT NULL,
+--  flag TINYINT NULL,
+--	PRIMARY KEY(id)
+--)
+
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'1',N'药品',N'药品',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'2',N'饮片',N'饮片',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'3',N'一类医疗器械',N'一类医疗器械',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'4',N'二类医疗器械',N'二类医疗器械',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'5',N'三类医疗器械',N'三类医疗器械',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'6',N'百货',N'百货',200)
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(7,'7',N'其他',N'其他',200)
+
+------商品增加经营范围属性
+--ALTER TABLE T_SPXX
+--ADD jyfwid INT NULL
+--GO
+
+--UPDATE s SET s.jyfwid = 2
+--FROM t_spxx s
+--WHERE s.SPBH LIKE '7%'
+
 -----------2018年9月25日 14:27:31----------------------
 ----增加按营业员区间统计零售毛利-----
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)

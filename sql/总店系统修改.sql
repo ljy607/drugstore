@@ -1,3 +1,21 @@
+-------------2019年2月25日 10:34:52-----------------
+------公司创建会员分店表，用于记录同步历史和积分情况
+--CREATE TABLE t_member_fd
+--(
+--	dwbh NVARCHAR(8) NOT NULL,
+--	code NVARCHAR(10) NOT NULL,
+--	jine DECIMAL(10,2) NULL,
+--	flag TINYINT NULL DEFAULT 1,
+--	PRIMARY KEY (dwbh,code)
+--)
+
+----------2019年2月22日 17:52:58------------------
+------增加检验报告核验功能--------
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES(14,'进货要货对比',2,0,'检验报告核对','image\tom_wap.gif','w_jybghd',1,1,1,0)
+
+
 -----------2019年2月21日 17:27:42----------------
 ------进货单增加检验报告存放路径--------------
 --ALTER TABLE t_jhdmxb 
