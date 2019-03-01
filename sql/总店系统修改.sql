@@ -1,3 +1,14 @@
+------------2019年2月28日 09:44:15-----------------
+------要货标识、要货单供应商同步功能------
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES('05','要货计划同步要货标志',5,1,'要货计划同步要货标志','image\tom_wap.gif','w_yhd_tbyhbz',1,1,1,0)
+
+--INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
+--            fdbz, parameter)
+--VALUES('06','要货计划同步供应商',5,1,'要货计划同步供应商','image\tom_wap.gif','w_yhd_tbgys',1,1,1,0)
+
+
 -------------2019年2月25日 10:34:52-----------------
 ------公司创建会员分店表，用于记录同步历史和积分情况
 --CREATE TABLE t_member_fd
