@@ -1,3 +1,110 @@
+---------------2019年4月18日 17:20:14-----------
+---------出库单增加生产厂家，解决饮片的厂家不固定问题
+--ALTER TABLE t_ckdmxb 
+--ADD sccj NVARCHAR(32) NULL
+
+ALTER TABLE t_chxx 
+ADD sccj NVARCHAR(32) NULL
+
+--------------2019年4月16日 13:28:34------------
+---------修改系统选项，增加状态字段
+--ALTER TABLE t_options
+--ADD flag TINYINT null DEFAULT 1
+
+--UPDATE t_options
+--SET	flag = 1
+
+--UPDATE t_options
+--SET	flag = 0
+--WHERE pid = 3 AND code = '13'
+
+
+------------2019年4月14日 12:47:05-----------
+---------增加陈列检查计划功能--------
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(3,14,'不合格药品记录','不合格药品记录',0)
+
+--CREATE TABLE [dbo].[t_bhgmxb](
+--	[id] [int] IDENTITY(1,1) NOT NULL,
+--	[bhgbh] [nvarchar](16) NOT NULL,
+--	[spbh] [nvarchar](16) NOT NULL,
+--	[pcbh] [nvarchar](16) NOT NULL,
+--	[yxrq] [datetime] NOT NULL,
+--	[sl] [decimal](16, 2) NOT NULL,
+--	[dqcl] [decimal](16, 2) NOT NULL,
+--	[jg] [decimal](16, 4) NOT NULL,
+--	[hwbh] [nvarchar](8) NOT NULL,
+--	[bz] [nvarchar](64) NULL,
+--	[clbf] [nvarchar](16) NULL,
+--PRIMARY KEY(ID)
+--)
+--CREATE TABLE [dbo].[t_bhgzb](
+--	[bhgbh] [nvarchar](16) NOT NULL,
+--	[dwbh] [char](3) NOT NULL,
+--	[rq] [datetime] NOT NULL,
+--	[zbr] [char](3) NOT NULL,
+--	[shr] [char](3) NULL,
+--	[zxr] [char](3) NULL,
+--	[bz] [nvarchar](32) NULL,
+--	[yxbz] [tinyint] NOT NULL,
+--	PRIMARY KEY([bhgbh] )
+--)
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('29','不合格药品记录',1,0,'不合格药品记录','image\tom_wap.gif','w_bhglr',1,1,0)
+
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('28','陈列药品检查计划',1,0,'陈列药品检查计划','image\tom_wap.gif','w_yhjl_jh',1,1,0)
+
+
+-------------2019年4月3日 15:44:23---------------
+--------增加陈列药品检查记录功能---------
+--INSERT INTO t_options(pid, code, name, note, sort)
+--VALUES(3,13,'陈列药品检查记录','陈列药品检查记录',0)
+
+----陈列药品检查主表
+--CREATE TABLE T_JCDZB
+--(
+--	[JCDBH] [varchar](15) NOT NULL,
+--	[RQ] [datetime] NOT NULL,
+--	[BZ] [nvarchar](64) NULL,
+--	[ZBR] [varchar](12) NULL,
+--	[FLAG] [tinyint] NULL default 0,
+--	PRIMARY KEY(JCDBH)
+--)
+--EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'陈列药品检查主表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JCDZB'
+------陈列药品检查明细表
+--CREATE TABLE T_JCDMXB(
+--	[ID] [int] IDENTITY(1,1) NOT NULL,
+--	[JCDBH] [varchar](16) NOT NULL,
+--	[HWBH] [varchar](8) NOT NULL,
+--	[SPBH] [nvarchar](32) NULL,
+--	[PCBH] [varchar](32) NULL,
+--	[YXRQ] [datetime] NULL,
+--	[SL] [int] NOT NULL,
+--	[JCSL] [int] NOT NULL,
+--	[JL] [nvarchar](128) NULL,
+--	[BZ] [nvarchar](128) NULL,
+--	[CCTJ] [nvarchar](32) NULL,
+--	[BHGSL] [int] NULL,
+--	[lx] TINYINT NULL,
+--	PRIMARY KEY(ID)
+--)
+--EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'陈列药品检查明细表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JCDMXB'
+
+------增加待办事项菜单-------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('27','待办统计',1,0,'待办统计','image\tom_wap.gif','w_timer',0,1,0)
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('28','陈列药品检查',4,0,'陈列药品检查','image\tom_wap.gif','w_jcdlr',1,1,0)
+
+
+--------2019年3月19日 09:57:10----------
+------修改连接信息 地址信息长度  addr
+--ALTER TABLE T_HOSTS
+--ALTER COLUMN addr NVARCHAR(64) NULL
+--GO
+
 ------------2019年3月1日 09:48:06---------------
 ------增加特价商品维护功能
 --CREATE TABLE t_spxx_tj

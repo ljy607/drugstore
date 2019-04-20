@@ -14,23 +14,26 @@
 ----3. 在需要存放备份的分区下创建目录, 比如D:\databackup. 将该脚本命名为 JFSuQian.sql , 
 ----然后放到D:\databackup下, 下面是脚本内容:
 
---print ‘开始备份苏家数据库‘
-GO  
+print '开始备份药店管理系统数据库，请稍后......'
+GO
+  
 DECLARE  
-@backupTime VARCHAR(20)  --备份时间
+@backupTime VARCHAR(20)		--备份时间
 DECLARE  
-@fileName VARCHAR(1000)    --备份路径
+@fileName VARCHAR(1000)		--备份路径
 SELECT 
- @backupTime=(CONVERT(VARCHAR(8), GETDATE(), 112) +REPLACE(CONVERT(VARCHAR(5), GETDATE(), 114), ‘:‘, ‘‘))   
-SELECT @fileName=‘D:\databackup\JFSuQian_‘+@backupTime+‘.bak‘ 
-backup database 数据库名字 to disk=@fileName 
+ @backupTime=(CONVERT(VARCHAR(8), GETDATE(), 112) +REPLACE(CONVERT(VARCHAR(5), GETDATE(), 114), ':', ''))   
+SELECT @fileName='D:\databackup\'+@backupTime+'.bak' 
+backup database hjdb2 to disk=@fileName 
+
 --print ‘开始备份苏家数据库‘
 --
 
 ----4. 创建bat文件,在桌面任意建立一个txt的文本文件, 输入下面的内容, 然后将该txt的文本文件, 更改为JFSuQian.bat, 也放到D:\databackup目录下
 
 ----cd C:\Program Files\Microsoft SQL Server\100\Tools\Binn  
-----sqlcmd -S . -i D:\databackup\JPKFSuQian.sql
+----sqlcmd -S . -i D:\databackup\backup2008.sql
+
 ----解释:
 ----第一行: 是你的SqlServer的安装路径
 ----　第二行: 需要执行的sql脚本路径, 就是我们前面写的那个备份脚本

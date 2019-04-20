@@ -1,0 +1,1 @@
+forfiles /p C:\SqlDataBack\JPKF_DATA_BACKUP /m *.bak /d -7 /c "cmd /c del /f @path"

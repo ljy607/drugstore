@@ -1,3 +1,97 @@
+-----------2019年4月19日 20:55:36-------------
+-----------增加出库红冲功能-----
+INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+VALUES('33','出库红冲',1,0,'出库红冲','image\tom_wap.gif','w_ckdlr_hc',1,1,0)
+
+
+---------------2019年4月18日 13:40:47---------------
+--------出库单增加sccj，饮片与生产厂家对应关系是动态的----------------
+--ALTER TABLE t_chxx 
+--ADD sccj NVARCHAR(32) NULL
+
+--ALTER TABLE t_ckdmxb 
+--ADD sccj NVARCHAR(32) NULL
+
+
+
+----------2019年4月14日 15:38:15
+----------运输记录--------------
+--CREATE TABLE t_ysjl
+--(
+--	id INT IDENTITY(1,1) NOT NULL,
+--	jsdw NVARCHAR(8) NULL,
+--	rq DATETIME NULL,
+--	cph NVARCHAR(16) NULL,
+--	chek NVARCHAR(16) NULL,
+--	pjfs TINYINT NULL,
+--	spjs INT NULL,
+--	qssj DATETIME NULL,
+--	ddsj DATETIME NULL,
+--	bzzk NVARCHAR(16) NULL,
+--	jsr NVARCHAR(8) NULL,
+--	PRIMARY KEY(id)
+--)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('32','运输记录',1,0,'运输记录','image\tom_wap.gif','w_ysjllr',1,1,0)
+
+--INSERT INTO t_options(pid, code, name, note, sort,flag)
+--VALUES(3,19,'运输记录','运输记录',200,1)
+
+
+------------2019年4月8日 11:33:46 -----------
+-----------增加检验报告记录表-------------
+--ALTER TABLE T_spxx_jybg
+--ADD filePath NVARCHAR(128) NULL
+--GO
+--ALTER TABLE t_spxx_jybg
+--alter column fileNM NVARCHAR(32) NULL
+--GO
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('29','养护计划',4,3,'养护计划','image\tom_wap.gif','w_yhjl_jh',1,1,0)
+
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(6,0,'wmslb',N'仓储类别',N'仓储类别',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'NFY',N'内服药',N'内服药',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'HMHJ',N'麻黄碱复方制剂',N'麻黄碱复方制剂',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'WYY',N'外用药',N'外用药',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'QX',N'医疗器械',N'医疗器械',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'SLQX',N'三类医疗器械',N'三类医疗器械',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'RYXD',N'日用品、消毒用品',N'日用品、消毒用品',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'BJSP',N'保健食品',N'保健食品',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'SP',N'食品',N'食品',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'ZYYP',N'中药饮片',N'中药饮片',200,1)
+--INSERT INTO t_options(pid, code, name, note, sort, flag)
+--VALUES(6,'DXZYYP',N'毒性中药饮片',N'毒性中药饮片',200,1)
+
+
+-------------2019年4月6日 19:16:57 ------------------
+-------gsp报表增加 不合格药品记录 -----------
+--INSERT INTO t_options(pid, code, name, note, sort,flag)
+--VALUES(3,18,'不合格药品记录','不合格药品记录',190,1)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('31','待办统计',1,0,'待办统计','image\tom_wap.gif','w_timer',1,1,0)
+
+
+------------2019年4月2日 13:56:55-----------------
+----------进货单增加要货单长度，允许选择多个要货单
+--ALTER TABLE T_JHDZB
+--ALTER COLUMN yhdbh NVARCHAR(128) NULL
+
+
 ------------2019年2月28日 09:44:15-----------------
 ------要货标识、要货单供应商同步功能------
 --INSERT INTO t_funcs(FUNCID, FUNNM, FUNTP, GRPID, FUNMS, TPLJ, FUNFM, FLAG, UFLAG,
