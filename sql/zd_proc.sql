@@ -5,7 +5,8 @@
 --        @yhr	养护人
 --  结果	记录库存
 --  修改	2016.10.15				增加记录生产日期、到货日期
---		2019年4月18日 13:43:31	增加生产厂家				
+--		2019年4月18日 13:43:31	增加生产厂家
+--		2019年4月20日 11:15:37	增加出库红冲功能				
 --**********************************************************************************************/
 --ALTER   PROCEDURE [dbo].[SP_ZGSCKMX] @sspbh varchar(10), @spcbh varchar(20), @sdjhm varchar(15), @ywrq datetime, @yxrq datetime , 
 --  @iywtp int, @decjg decimal(10,4), @decsl decimal(10,2), @decjine decimal(10,2), @skw varchar(6),
@@ -74,14 +75,22 @@
 --				WHERE spbh = @sspbh AND pcbh = @spcbh
 --				ORDER BY jhdbh DESC
 --			END
---		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj) VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj)
+--		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj) 
+--		  VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj)
 --		END
 --	  ELSE   ---出库操作
+--	    ----判断数量是否是负数，代表红冲入库  2019年4月20日 11:15:23
+--	    IF @decsl < 0 
+--	    BEGIN
+--	    	INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj) 
+--	    	VALUES(@sspbh, @spcbh,@skw,0 - @decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj)
+--	    END
+	    
+--	    ELSE
 --		BEGIN
 --		  RAISERROR ( '编号为:%s的商品的存货不够!', 16, 1, @sspbh )
 --		  --ROLLBACK TRANSACTION
---		  RETURN
-		  
+--		  RETURN		  
 --		END
 --	END
 --end

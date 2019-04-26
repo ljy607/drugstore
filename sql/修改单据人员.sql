@@ -1,74 +1,40 @@
---------小屯-------------
--------来货验收
---SELECT *
-----UPDATE z SET fhr = '005' ---'042'
+------------修改分店系统单据-------------
+---------来货验收
+--SELECT z.*,m.xm
+----UPDATE z SET ysr = '029'
 --FROM t_ckdzb z
---WHERE ckrq  BETWEEN '2017-01-01' AND '2017-7-31 23:59:59'
+--JOIN t_zgxx m ON z.jsr = m.bh
+--WHERE ckrq  BETWEEN '2012.3.5' AND '2019.5.5 23:59:59'
+--ORDER BY z.CKRQ
 
---SELECT *
-----UPDATE z SET fhr = '005' ---'042'
---FROM t_ckdzb z
---WHERE ckrq  BETWEEN '2017-08-01' AND GETDATE()
-
-
-------二店-------------
-----退库表
---SELECT *
-----UPDATE z SET sqr = '097' ---'019'
+----------退库表
+--SELECT z.*,m.XM
+------UPDATE z SET sqr = '019'
 --FROM t_tkdzb z
---WHERE tkrq >= '2016-06-09' 
+--JOIN t_zgxx m ON z.sqr = m.bh
+--WHERE tkrq  BETWEEN '2019.3.6' AND '2019.5.5 23:59:59'
 
--------来货验收
---SELECT *
-----UPDATE z SET ysr = '097' ---'042'
---FROM t_ckdzb z
---WHERE ckrq  >= '2016-06-09' 
-
-------效期催销表
---SELECT *
-----UPDATE z SET z.yhr = '097'  ---'019'
+--------------效期催销表
+--SELECT z.*,e.XM
+------UPDATE z SET z.yhr = '124' 
 --FROM T_CXZB z
---WHERE cxrq >= '2016-06-09' 
+--JOIN t_zgxx e ON z.yhr = e.BH
+--WHERE cxrq BETWEEN '2019.3.6' AND '2019.5.5 23:59:59'
 
---------养护记录
---SELECT *
-----UPDATE ty SET ty.yhr = '097'
---FROM t_yhjlzb ty
---WHERE ty.YHRQ >= '2016-06-09'
+----------养护记录
+--SELECT z.*,e.XM
+------UPDATE z SET z.yhr = '124'
+--FROM t_yhjlzb z
+--JOIN t_zgxx e ON z.YHR = e.BH
+--WHERE z.YHRQ BETWEEN '2019.3.6' AND '2019.5.5 23:59:59'
 
-----------要货计划
---SELECT *
-----UPDATE z SET z.zbr = '097'
+------------要货计划
+--SELECT z.*,e.xm
+----UPDATE z SET z.zbr = '002'
 --FROM t_yhjhzb z
+--JOIN t_zgxx e ON z.zbr = e.BH
 --WHERE z.yhrq >= '2016-06-09'
-
-
--------三店-------------------
-------来货表
---SELECT *
-----UPDATE z SET fhr = '042',ysr = '110'
---FROM t_ckdzb z
---WHERE ckrq BETWEEN '2013-01-01' AND '2015-11-05 23:59:59'
-
---SELECT *
-----UPDATE z SET fhr = '124',ysr = '110'
---FROM t_ckdzb z
---WHERE ckrq BETWEEN '2014-11-08' AND '2017-6-19 23:59:59'
-
---SELECT *
-----UPDATE z SET ysr = '124' ---'042'
---FROM t_ckdzb z
---WHERE ckrq >= '2017-08-01'
-
-----效期催销表
---SELECT *
-----UPDATE z SET z.zgr = '042'  ---'019'
---FROM T_CXZB z
---WHERE cxrq BETWEEN '2012-01-01' AND '2014-11-07 23:59:59'
---SELECT *
-----UPDATE z SET z.zgr = '124'  ---'042'
---FROM T_CXZB z
---WHERE cxrq BETWEEN '2014-11-08' AND GETDATE()
+--ORDER BY z.YHRQ
 
 ------损益表
 --SELECT *
@@ -81,44 +47,54 @@
 --WHERE bsrq BETWEEN '2014-11-08' AND GETDATE()
 
 
--------广安门-------------------------------
-----来货表
---SELECT *
-----UPDATE z SET fhr = '030' ---'019'
---FROM t_ckdzb z
---WHERE ckrq BETWEEN '2016-01-01' AND '2017-05-30 23:59:59'
---SELECT *
-----UPDATE z SET ysr = '124' ---'042'
---FROM t_ckdzb z
---WHERE ckrq between '2017-05-01' AND GETDATE()
+-----------------------修改总店系统单据人员----------------
+--------进货单
+--SELECT z.*,e.XM
+----UPDATE z SET z.ysr = '082'
+--FROM t_jhdzb z
+--JOIN t_zgxx e ON z.ysr = e.bh
+--WHERE z.JHRQ >= '2016.8.1'
 
-----效期催销表
---SELECT *
-----UPDATE z SET z.zgr = '042'  ---'019'
---FROM T_CXZB z
---WHERE cxrq BETWEEN '2012-01-01' AND '2014-11-07 23:59:59'
---SELECT *
-----UPDATE z SET z.zgr = '124'  ---'042'
---FROM T_CXZB z
---WHERE cxrq BETWEEN '2014-11-08' AND GETDATE()
-
-
-
--------------------弘济-----------------
-------来货表
---SELECT *
-----UPDATE z SET fhr = '042',ysr = '110'
---FROM t_ckdzb z
---WHERE ckrq BETWEEN '2013-01-01' AND '2015-11-05 23:59:59'
+--------退款单
+--SELECT z.*,e.xm
+------UPDATE z SET z.ysr = '082'
+--FROM t_tkdzb z
+--JOIN t_zgxx e ON z.ysr = e.bh
+--WHERE z.tkrq >= '2016.8.1'
 
 --SELECT *
-----UPDATE z SET ysr = '123'
---FROM t_ckdzb z
---WHERE ckrq BETWEEN '2017-4-19' AND '2017-9-3 23:59:59'
+------DELETE m 
+--FROM t_ckdmxb m
+--WHERE ckdbh = 'ck17001734' AND spbh = '102753'
 
 --SELECT *
-----UPDATE z SET ysr = '089' ---'042'
---FROM t_ckdzb z
---WHERE ckrq >= '2017-09-1'
---------WHERE ckdbh = 'CK17002863'
---ORDER BY z.CKRQ
+------DELETE m 
+--FROM t_tkdmxb m
+--WHERE tkdbh = 'tk10517000089' 
+--SELECT *
+------DELETE m 
+--FROM t_tkdzb m
+--WHERE tkdbh = 'tk10517000089' 
+
+
+--SELECT *
+------update m set m.tkyy = ''
+--FROM t_tkdmxb m
+--WHERE tkdbh = 'tk10417000060'
+
+--SELECT *
+------update m set m.bz = ''
+--FROM t_tkdmxb m
+--WHERE tkdbh = 'tk17000060'
+
+
+
+
+
+
+
+
+
+
+
+

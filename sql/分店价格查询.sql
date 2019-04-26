@@ -3,8 +3,18 @@
 --JOIN t_lsdzb z ON z.LSDBH = m.LSDBH
 --JOIN t_spxx s ON m.spbh = s.SPBH
 ----WHERE z.rq > '2018-11-21' --AND m.lsj < m.jhjhs 
---WHERE m.spbh ='78049' 
+--WHERE m.spbh ='30580' AND z.rq > '2019.1.20'
 --ORDER BY z.rq DESC
+
+------更新价格
+--UPDATE a
+--SET a.jhjhs = 51
+----SELECT a.*
+--FROM t_lsdmxb a
+--WHERE a.spbh = '30580' AND a.jhjhs = 58.7500
+
+
+
 
 ------查询进货价为0
 --SELECT *
@@ -27,12 +37,6 @@
 --WHERE z.rq > '2018-3-1' AND m.spbh = '405172'
 --ORDER BY m.SPBH
 
-------更新价格
---UPDATE a
---SET a.jhjhs = 870
-----SELECT a.*
---FROM t_lsdmxb a
---WHERE a.lsdbh = '1902010092' AND a.ORDR = 1
 
 ----查询对应商品历史价格
 --SELECT tl.*

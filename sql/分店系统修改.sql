@@ -3,8 +3,8 @@
 --ALTER TABLE t_ckdmxb 
 --ADD sccj NVARCHAR(32) NULL
 
-ALTER TABLE t_chxx 
-ADD sccj NVARCHAR(32) NULL
+--ALTER TABLE t_chxx 
+--ADD sccj NVARCHAR(32) NULL
 
 --------------2019年4月16日 13:28:34------------
 ---------修改系统选项，增加状态字段
