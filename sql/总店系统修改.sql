@@ -1,13 +1,19 @@
+-----------2019年5月1日 13:32:51---------------------
+----------运输记录增加出库单列-----
+--ALTER TABLE t_ysjl
+--ADD ckdbh NVARCHAR(128) NULL
+--ADD zxsl INT DEFAULT 0 NULL
+
 -----------2019年4月19日 20:55:36-------------
 -----------增加出库红冲功能-----
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
 --VALUES('33','出库红冲',1,0,'出库红冲','image\tom_wap.gif','w_ckdlr_hc',1,1,0)
 
-INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
-VALUES('24','供应商信息维护',6,0,'供应商信息维护','image\tom_wap.gif','w_gysxxlr',1,1,0)
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('24','供应商信息维护',6,0,'供应商信息维护','image\tom_wap.gif','w_gysxxlr',1,1,0)
 
-INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
-VALUES('25','供应商信息审核',6,0,'供应商信息审核','image\tom_wap.gif','w_gysxxsh',1,1,0)
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('25','供应商信息审核',6,0,'供应商信息审核','image\tom_wap.gif','w_gysxxsh',1,1,0)
 
 
 ---------------2019年4月18日 13:40:47---------------
