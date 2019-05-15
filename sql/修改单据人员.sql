@@ -1,18 +1,18 @@
 ------------修改分店系统单据-------------
 ---------来货验收
 --SELECT z.*,m.xm
-----UPDATE z SET ysr = '029'
+----UPDATE z SET ysr = '097'
 --FROM t_ckdzb z
---JOIN t_zgxx m ON z.jsr = m.bh
---WHERE ckrq  BETWEEN '2012.3.5' AND '2019.5.5 23:59:59'
+--JOIN t_zgxx m ON z.ysr = m.bh
+--WHERE ckrq  BETWEEN '2015.2.1' AND '2019.4.16 23:59:59'
 --ORDER BY z.CKRQ
 
-----------退库表
+------------退库表
 --SELECT z.*,m.XM
-------UPDATE z SET sqr = '019'
+------UPDATE z SET sqr = '097'
 --FROM t_tkdzb z
 --JOIN t_zgxx m ON z.sqr = m.bh
---WHERE tkrq  BETWEEN '2019.3.6' AND '2019.5.5 23:59:59'
+--WHERE tkrq  BETWEEN '2015.2.1' AND '2019.4.16 23:59:59'
 
 --------------效期催销表
 --SELECT z.*,e.XM
@@ -23,10 +23,10 @@
 
 ----------养护记录
 --SELECT z.*,e.XM
-------UPDATE z SET z.yhr = '124'
+------UPDATE z SET z.yhr = '097'
 --FROM t_yhjlzb z
 --JOIN t_zgxx e ON z.YHR = e.BH
---WHERE z.YHRQ BETWEEN '2019.3.6' AND '2019.5.5 23:59:59'
+--WHERE z.YHRQ BETWEEN '2015.2.1' AND '2019.4.16 23:59:59'
 
 ------------要货计划
 --SELECT z.*,e.xm
@@ -37,14 +37,11 @@
 --ORDER BY z.YHRQ
 
 ------损益表
---SELECT *
-----UPDATE z SET pzr = '042' --'019'
+--SELECT z.*,e.XM
+----UPDATE z SET bsr = '097'
 --FROM t_bsdzb z
---WHERE bsrq BETWEEN '2012-01-01' AND '2014-11-07 23:59:59'
---SELECT *
-----UPDATE z SET pzr = '124' --'042'
---FROM t_bsdzb z
---WHERE bsrq BETWEEN '2014-11-08' AND GETDATE()
+--JOIN t_zgxx e ON z.bsr = e.bh
+--WHERE bsrq BETWEEN '2015.2.1' AND '2019.4.16 23:59:59'
 
 
 -----------------------修改总店系统单据人员----------------

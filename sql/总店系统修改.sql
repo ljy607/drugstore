@@ -1,3 +1,23 @@
+--------------2019年5月6日 19:36:47 ------------------
+-------退库单增加复核后再入库
+--ALTER TABLE T_TKDZB
+--ADD fhr NVARCHAR(8) NULL
+--GO
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('34','复核分店退库申请',1,0,'复核分店退库申请','image\tom_wap.gif','w_tkdrk',1,1,0)
+
+
+---------------2019年5月3日 12:19:01---------------
+-------退库单增加生产厂家和产地,解决饮片产地和生产厂家问题
+--ALTER TABLE T_TKDMXB 
+--ADD cd NVARCHAR(16) NULL,sccj NVARCHAR(32) null
+--ALTER TABLE T_chxx
+--ADD cd NVARCHAR(16) NULL
+--ALTER TABLE T_THDMXB 
+--ADD cd NVARCHAR(16) NULL,sccj NVARCHAR(32) null
+--ALTER TABLE t_thdzb
+--ADD gysbh NVARCHAR(10) NULL
+
 -----------2019年5月1日 13:32:51---------------------
 ----------运输记录增加出库单列-----
 --ALTER TABLE t_ysjl

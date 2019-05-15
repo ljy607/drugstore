@@ -1,3 +1,11 @@
+---------------2019年5月3日 12:19:01---------------
+-------退库单增加生产厂家和产地,解决饮片产地和生产厂家问题
+--ALTER TABLE T_TKDMXB 
+--ADD cd NVARCHAR(16) NULL,sccj NVARCHAR(32) null
+--ALTER TABLE T_chxx
+--ADD cd NVARCHAR(16) null
+
+
 ---------------2019年4月18日 17:20:14-----------
 ---------出库单增加生产厂家，解决饮片的厂家不固定问题
 --ALTER TABLE t_ckdmxb 

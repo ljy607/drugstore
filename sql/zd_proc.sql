@@ -6,11 +6,12 @@
 --  结果	记录库存
 --  修改	2016.10.15				增加记录生产日期、到货日期
 --		2019年4月18日 13:43:31	增加生产厂家
---		2019年4月20日 11:15:37	增加出库红冲功能				
+--		2019年4月20日 11:15:37	增加出库红冲功能
+--		2019年5月3日 14:38:05	增加产地				
 --**********************************************************************************************/
 --ALTER   PROCEDURE [dbo].[SP_ZGSCKMX] @sspbh varchar(10), @spcbh varchar(20), @sdjhm varchar(15), @ywrq datetime, @yxrq datetime , 
 --  @iywtp int, @decjg decimal(10,4), @decsl decimal(10,2), @decjine decimal(10,2), @skw varchar(6),
---  @scrq DATETIME = NULL,@dhrq DATETIME = NULL,@sccj NVARCHAR(32) = NULL AS
+--  @scrq DATETIME = NULL,@dhrq DATETIME = NULL,@sccj NVARCHAR(32) = NULL,@cd NVARCHAR(16) = NULL AS
 --begin
 --	DECLARE @iordrmax int, @icount int
 --	declare @chsl decimal(10,2)
@@ -61,11 +62,18 @@
 --		BEGIN
 --			IF @scrq IS NULL 
 --			BEGIN
---				SELECT @dhrq = MAX(z.jhrq),@scrq = MIN(m.scrq)
+--				SELECT @scrq = MIN(m.scrq)
 --				FROM t_jhdzb z
 --				JOIN t_jhdmxb m ON m.JHDBH = z.JHDBH
 --				WHERE m.spbh = @sspbh AND pcbh = @spcbh
-
+--			END
+			
+--			IF @dhrq IS NULL 
+--			BEGIN
+--				SELECT @dhrq = MAX(z.jhrq)
+--				FROM t_jhdzb z
+--				JOIN t_jhdmxb m ON m.JHDBH = z.JHDBH
+--				WHERE m.spbh = @sspbh AND pcbh = @spcbh
 --			END
 			
 --			IF @sccj IS NULL
@@ -75,8 +83,8 @@
 --				WHERE spbh = @sspbh AND pcbh = @spcbh
 --				ORDER BY jhdbh DESC
 --			END
---		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj) 
---		  VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj)
+--		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj,cd) 
+--		  VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj,@cd)
 --		END
 --	  ELSE   ---出库操作
 --	    ----判断数量是否是负数，代表红冲入库  2019年4月20日 11:15:23
@@ -96,6 +104,58 @@
 --end
 --GO
 
+--/******************* 过程说明 *****************************************************************
+--  由进货单生成退货单，一个进货单对应一个退货单，如果进货单中存在未来货标识的商品则生产对应退货单
+--  参数	@thdbh   退货单编号
+--        @jhdbh   进货单编号
+--	@bsr	 操作人
+--  结果	生成一个退货单
+--  修改	2019年5月3日 14:45:26	增加生产厂家和产地，解决饮片产地和厂家不固定问题
+--**********************************************************************************************/
+--ALTER PROCEDURE [dbo].[SP_JHD2THD] @thdbh varchar(15),@jhdbh varchar(15),@bsr nvarchar(15) AS
+--begin
+
+--	create table #t
+--	(
+--	ordr int identity(1,1),
+--	thdbh Nvarchar(30),
+--	spbh Nvarchar(30),
+--	pcbh Nvarchar(30),
+--	gysbh nvarchar(30),
+--	jhj decimal(14,4),
+--	thsl decimal(14,2),
+--	yhkw varchar(8),
+--	bz NVARCHAR(32),
+--	cd NVARCHAR(16),
+--	sccj NVARCHAR(32)
+--	)
+	
+--	--未来货
+--	insert into #t( thdbh,spbh,pcbh,jhj,thsl,yhkw,gysbh,bz,sccj,cd)
+--	select @thdbh,m.spbh,m.pcbh,m.jhj,m.sl,'T01',z.gysbh,N'未来货',sccj,cd
+--	from t_jhdmxb m
+--	join t_jhdzb z on z.jhdbh = m.jhdbh
+--	where z.jhdbh = @jhdbh and m.wlhbs = 1
+	
+--	--验收不合格商品
+--	insert into #t( thdbh,spbh,pcbh,jhj,thsl,yhkw,gysbh,bz,sccj,cd)
+--	select @thdbh,m.spbh,m.pcbh,m.jhj,m.sl - m.hgsl,'T01',z.gysbh,N'验收不合格',sccj,cd
+--	from t_jhdmxb m
+--	join t_jhdzb z on z.jhdbh = m.jhdbh
+--	where z.jhdbh = @jhdbh and m.wlhbs = 0 AND m.sl > m.hgsl
+	
+	
+--	insert into t_thdzb(THDBH, THRQ, THR, KPR, YXBZ, BZ)
+--	values(@thdbh,getdate(),@bsr,@bsr,10,'进货单'+@jhdbh)
+
+--	insert into t_thdmxb(ordr,thdbh,spbh,pcbh,gysbh,thsl,jhj,yxkw,bz,sccj,cd)
+--	select ordr,thdbh,spbh,pcbh,gysbh,thsl,jhj,yhkw,bz,sccj,cd
+--	from #t
+	
+--	drop table #t
+--end 
+
+--GO
 
 -----------------2019年4月6日 21:15:32-----------------------
 --/******************* 过程说明 *****************************************************************

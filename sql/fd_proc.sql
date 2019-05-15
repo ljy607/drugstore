@@ -8,11 +8,12 @@
 --  参数	@dh	养护编号
 --        @yhr	养护人
 --  结果	记录库存
---  修改	2016.10.15	增加记录生产日期、到货日期				
+--  修改	2016.10.15	增加记录生产日期、到货日期
+--		2019年5月3日 14:17:56 增加产地、生产厂家				
 --**********************************************************************************************/
 --CREATE    PROCEDURE [dbo].[SP_ZGSCKMX] @sspbh varchar(10), @spcbh varchar(20), @sdjhm varchar(15), @ywrq datetime, @yxrq datetime , 
 --  @iywtp int, @decjg decimal(10,4), @decsl decimal(10,2), @decjine decimal(10,2), @skw varchar(6),
---  @scrq DATETIME = NULL,@dhrq DATETIME = NULL,@sccj NVARCHAR(32) = NULL AS
+--  @scrq DATETIME = NULL,@dhrq DATETIME = NULL,@sccj NVARCHAR(32) = NULL,@cd NVARCHAR(16) = NULL AS
 --begin
 --	DECLARE @iordrmax int, @icount int
 --	declare @chsl decimal(10,2)
@@ -69,8 +70,8 @@
 --				WHERE m.spbh = @sspbh AND pcbh = @spcbh
 
 --			END
---		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj) 
---		  VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj)
+--		  INSERT INTO T_CHXX(spbh,pcbh,hwbh,chsl,yxrq,JIAG,flag,scrq,dhrq,sccj,cd) 
+--		  VALUES(@sspbh, @spcbh,@skw,@decsl,@yxrq,@decjg,1,@scrq,@dhrq,@sccj,@cd)
 --		END
 --	  ELSE   ---出库操作
 --		BEGIN
