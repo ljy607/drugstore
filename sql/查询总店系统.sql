@@ -129,6 +129,63 @@
 ----WHERE e.pm LIKE '%肺宁%'
 --WHERE e.id IN (5964)
 
+--------------------修改批号
+--SELECT *
+----UPDATE e SET e.pcbh = 'JS07114'
+--FROM t_JHDMXB e
+--WHERE spbh = '10120' AND pcbh = 'js0711'
+--SELECT *
+----INTO t_ckmx_del
+----DELETE e
+--FROM t_ckmx e
+--WHERE e.spbh = '10120' AND 
+--djhm IN('JH19000267','TK10619000041','CK19000378')
+
+---------------------修改生产日期------------------
+--select *
+----UPDATE e SET e.scrq = '2019/02/28'
+--from t_jhdmxb e
+--where e.jhdbh = 'JH19000983' AND spbh = '10668'
+
+--SELECT *
+----UPDATE e SET e.scrq = '2019/02/28'
+--FROM t_chxx e
+--WHERE e.spbh = '10668' AND pcbh = '190228124'
+
+--SELECT e1.jsdw,e.*
+----UPDATE e SET e.scrq = '2019/02/28'
+--FROM t_ckdmxb e
+--JOIN t_ckdzb e1 ON e1.CKDBH = e.CKDBH
+--WHERE e.spbh = '10668' AND pcbh = '190228124' --AND e.scrq = '2018-02-28'
+
+--------------删除催销单------------------
+--SELECT *
+----DELETE e
+--FROM t_cxmxb e
+--WHERE e.cxdbh IN('201904','201905')
+
+--SELECT *
+----DELETE e
+--FROM t_cxzb e
+--WHERE e.cxdbh IN('201904','201905')
+
+---------------修改养护日期------------------
+--SELECT *,DATEADD(DAY,-4,e.yhrq)
+----UPDATE e SET e.yhrq = DATEADD(DAY,-4,e.yhrq)
+--FROM t_yhjlzb e
+--WHERE DAY(e.yhrq) BETWEEN 20 AND 22
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

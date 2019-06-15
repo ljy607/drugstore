@@ -1,23 +1,23 @@
---SELECT z.rq, m.spbh,s.pm,s.gg,m.lsj,m.jhjhs,z.ZDZK,m.ZK,m.SL,z.LSDBH,m.ORDR
+--SELECT z.rq, m.spbh,s.pm,s.gg,m.lsj,m.jhjhs,m.jhj,z.ZDZK,m.ZK,m.SL,z.LSDBH,m.ORDR
 --FROM t_lsdmxb m 
 --JOIN t_lsdzb z ON z.LSDBH = m.LSDBH
 --JOIN t_spxx s ON m.spbh = s.SPBH
 ----WHERE z.rq > '2018-11-21' --AND m.lsj < m.jhjhs 
---WHERE m.spbh ='30580' AND z.rq > '2019.1.20'
+--WHERE m.spbh ='780491' AND z.rq > '2019.5.1'
 --ORDER BY z.rq DESC
 
 ------更新价格
---UPDATE a
---SET a.jhjhs = 51
-----SELECT a.*
+----UPDATE a
+----SET a.jhjhs = 1958
+--SELECT a.*
 --FROM t_lsdmxb a
---WHERE a.spbh = '30580' AND a.jhjhs = 58.7500
+--WHERE a.spbh = '780491' AND a.jhjhs = 2369.1800
 
-------查询进货价为0
+--------查询进货价为0
 --SELECT *
-----UPDATE c SET c.jiag = 7.8
+----UPDATE c SET c.jiag = 1958
 --FROM t_chxx c
---WHERE c.spbh = '78049'
+--WHERE c.spbh = '780491'
 
 --SELECT *
 --FROM t_ckdmxb 
@@ -166,6 +166,40 @@
 ----UPDATE tf SET tf.UFLAG = 1
 --FROM T_FUNCS tf
 --WHERE tf.FUNNM LIKE '%网络%'
+
+--------------修改养护记录养护时间-----------------------
+--SELECT *,CONVERT(CHAR(6),e.yhrq,112)
+----UPDATE e SET e.YHRQ = '2018-07-13 09:20:53.220'
+--FROM t_yhjlzb e
+----WHERE e.YHJLBH <> CONVERT(CHAR(6),e.yhrq,112)
+--WHERE e.YHjlbh = '201807'
+
+---------------养护记录删除效期一个月内的商品----------------------------
+--SELECT e.*,DATEADD(MONTH,1,e.yxrq),e1.YHRQ
+----DELETE FROM e
+--FROM t_yhjlmx e
+--JOIN t_yhjlzb e1 ON e1.YHJLBH = e.YHJLBH
+--WHERE e.yhlx = 1 AND DATEADD(MONTH,1,e.yxrq) <= e1.YHRQ
+
+----------------修改单据生产日期----------------------------
+--SELECT e.*
+----UPDATE e SET e.scrq = '2015.9.16'--,e.cd = '山东'
+--FROM t_ckdmxb e
+--JOIN t_ckdzb e1 ON e1.CKDBH = e.CKDBH
+--WHERE e.spbh = '10668' AND pcbh = '190228124' --AND e.scrq = '2018-02-28'
+
+--SELECT *
+----UPDATE e SET e.scrq = '2015.9.16'--,e.cd = '山东',e.sccj = '212495'
+--FROM t_chxx e
+--WHERE e.spbh = '10668' AND pcbh = '190228124'
+
+--SELECT e.*,'20'+LEFT(e.pcbh,2)+'.'+SUBSTRING(e.pcbh,3,2)+'.'+SUBSTRING(e.pcbh,5,2)
+----UPDATE e SET e.scrq = '20'+LEFT(e.pcbh,2)+'.'+SUBSTRING(e.pcbh,3,2)+'.'+SUBSTRING(e.pcbh,5,2)
+--FROM t_ckdmxb e
+--JOIN t_chxx e1 ON e1.spbh = e.spbh
+--WHERE e.ckdbh = 'ck16005658' --AND  e.spbh = '71811' --AND pcbh = '398171201' --AND e.scrq = '2018-02-28'
+----AND e.scrq IS NULL
+
 
 
 

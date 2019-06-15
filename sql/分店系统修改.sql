@@ -1,3 +1,7 @@
+--------------2019年5月19日 19:46:50-----------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('12','单据修改',4,0,'单据修改','image\tom_wap.gif','w_djxg',1,1,0)
+
 ---------------2019年5月3日 12:19:01---------------
 -------退库单增加生产厂家和产地,解决饮片产地和生产厂家问题
 --ALTER TABLE T_TKDMXB 
