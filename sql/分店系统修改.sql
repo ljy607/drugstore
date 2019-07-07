@@ -1,3 +1,8 @@
+--------------2019年7月7日 12:34:44-----------
+------ 17.100未执行
+--ALTER TABLE t_member
+--ADD wxcode NVARCHAR(32) NULL
+
 --------------2019年5月19日 19:46:50-----------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
 --VALUES('12','单据修改',4,0,'单据修改','image\tom_wap.gif','w_djxg',1,1,0)

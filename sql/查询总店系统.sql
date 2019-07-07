@@ -1,3 +1,13 @@
+---------2019年7月7日 17:50:16-----------
+--------同步2店会员信息----
+--SELECT COUNT(m.code)
+----UPDATE m1 SET m1.name = m.name,m1.sex =m.sex,m1.phone=m.phone,m1.[address]=m.[address],m1.tbflag=1
+--FROM t_member m
+--LEFT JOIN t_member_fd f ON f.code = m.code AND f.dwbh = '103'
+--JOIN hj103.hjdb2.dbo.t_member m1 ON m.code = m1.code
+--WHERE f.code IS NULL
+
+
 ------查询商品价格、会员价、核算价
 --SELECT DISTINCT s.spbh,s.pm,s.gg,s.cjmc,l.splb,l.rate,j.ZDJJ,j.LSJ, j.hyj,(1+l.rate)*j.ZDJJ AS hsjhj
 --FROM v_spxx s

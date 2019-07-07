@@ -1,3 +1,35 @@
+---------2019年7月7日 17:51:11-----------
+--------同步分店会员信息--------
+--INSERT INTO hj00.zddb.dbo.t_member(code, name, sex, phone, [address], jine, flag,
+--       enddate, wxcode)
+--SELECT tm.code, tm.name, tm.sex, tm.phone, tm.[address], tm.jine, tm.flag,
+--       tm.enddate, tm.wxcode
+--FROM t_member tm
+--left JOIN hj00.zddb.dbo.t_member z ON z.code=tm.code
+--WHERE tm.tbflag IS NULL AND tm.NAME <> '' and z.code IS NULL
+
+
+--SELECT COUNT(tm.code)
+----UPDATE tm SET tm.tbflag = 1
+--FROM t_member tm
+--WHERE tm.tbflag IS NULL AND tm.NAME <> ''
+
+--insert into hj00.zddb.dbo.t_member_fd(code,dwbh,jine,flag)
+--SELECT tm.code, '108',tm.jine,1
+--FROM t_member tm
+----JOIN hj00.zddb.dbo.t_member z ON z.code=tm.code
+--WHERE tm.tbflag = 1
+
+--SELECT COUNT(m.code)
+----UPDATE m1 SET m1.name = m.name,m1.sex =m.sex,m1.phone=m.phone,m1.[address]=m.[address],m1.tbflag=1
+--FROM hj00.zddb.dbo.t_member m
+--LEFT JOIN hj00.zddb.dbo.t_member_fd f ON f.code = m.code AND f.dwbh = '108'
+--JOIN t_member m1 ON m.code = m1.code
+--WHERE f.code IS NULL
+
+--------同步分店会员信息 end-------
+
+
 --SELECT z.rq, m.spbh,s.pm,s.gg,m.lsj,m.jhjhs,m.jhj,z.ZDZK,m.ZK,m.SL,z.LSDBH,m.ORDR
 --FROM t_lsdmxb m 
 --JOIN t_lsdzb z ON z.LSDBH = m.LSDBH
