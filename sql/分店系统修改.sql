@@ -1,3 +1,22 @@
+-------------2019年8月10日 16:31:02-----------
+-------------修改会员表会员号字段长度---------
+---- 删除索引 
+--ALTER TABLE t_member DROP CONSTRAINT pk_t_member_key;
+---- 修改字段长度
+--Alter table t_member alter column code  varchar(32) not null;
+---- 添加主键
+--Alter table t_member add constraint pk_t_member_key primary key (code);
+
+---- 修改字段长度
+--Alter table t_member_jfdh alter column code  varchar(32) not null;
+--Alter table t_lsdzb alter column member_code  varchar(32) null;
+--Alter table t_lsdzb_ls alter column member_code  varchar(32) null;
+
+
+-------------2019年7月24日 11:31:30--------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('13','修改零售数据',4,0,'修改零售数据','image\tom_wap.gif','w_temp_lsd',1,1,0)
+
 --------------2019年7月7日 12:34:44-----------
 ------ 17.100未执行
 --ALTER TABLE t_member

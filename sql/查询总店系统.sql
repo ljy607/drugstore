@@ -1,3 +1,32 @@
+-----------------2019年8月12日 16:12:13-------------------------
+------------------总店增加变价单信息-----------
+--SELECT MAX(bjdbh)
+--FROM T_BJDZB tb
+--WHERE YEAR(tb.bjrq) = 2019
+
+--INSERT INTO T_BJDZB(	BJDBH,	BJRQ,	PZR,	KPR,	BZ,	JSBZ)
+--SELECT 'BJ19000152',GETDATE(),'',209,'广安门执行会员价',0
+--INSERT INTO t_bjddw(bjdbh,dwbh,flag)
+--VALUES('BJ19000152','104',0)
+
+--INSERT INTO t_bjdmxb(BJDBH, SPBH, DWBH, LSZK, JLSJ, LSJ, JPFJ, PFJ, JGBJ, GBJ, DBJ,
+--            BJYY, jhyj, hyj)
+--SELECT DISTINCT 'BJ19000152',c.spbh,'***',100,0,s.lsj,0,s.pfj,0,s.gbj,s.zdjj,'',0,s.hyj
+--FROM hj04.gamdb.dbo.t_chxx c
+----left JOIN hj00.zddb.dbo.t_jgxx s ON s.SPBH = c.SPBH
+--left JOIN t_jgxx s ON s.SPBH = c.SPBH
+--WHERE LEFT(c.spbh,1) < '9'
+
+--UPDATE e SET e.pfj=e1.pfj,e.gbj=e1.gbj,e.dbj=e1.lsj
+----SELECT e1.spbh,e1.PFJ,e1.GBJ,e1.lsj
+--FROM t_bjdmxb e
+--JOIN t_jgxx e1 ON e.spbh=e1.spbh
+--WHERE e.BJDBH = 'BJ19000140'
+
+--SELECT *
+--FROM T_BJDMXB 
+--WHERE bjdbh = 'bj19000140'
+
 ---------2019年7月7日 17:50:16-----------
 --------同步2店会员信息----
 --SELECT COUNT(m.code)

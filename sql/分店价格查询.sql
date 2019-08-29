@@ -1,3 +1,34 @@
+---------------------------2019年8月14日 13:05:45---------------
+---------全部退库-----------------
+--SELECT *
+--FROM t_tkdzb 
+
+--INSERT INTO t_tkdzb(TKDBH, TKRQ, SQR, PZR, FLAG, BZ)
+--VALUES('TK19000010',GETDATE(),'083','124',0,'全部退货')
+
+--DROP TABLE T_1
+--GO
+--CREATE TABLE t_1
+--(
+--	ordr INT IDENTITY(1,1),
+--	spbh NVARCHAR(16),
+--	pcbh NVARCHAR(32)
+--)
+--GO
+
+--INSERT INTO t_1(spbh,pcbh) 
+--SELECT spbh,pcbh 
+--FROM t_chxx 
+--GO
+
+--INSERT INTO t_tkdmxb(TKDBH, ORDR, SPBH, PCBH, JHJG, SHUL, GUIW, TKYY, yxrq, scrq,
+--            cd, sccj)
+--SELECT 'TK19000010',e.ordr,e.spbh,e.pcbh,e1.jiag,e1.CHSL,e1.HWBH,'',e1.yxrq,e1.scrq,e1.cd,e1.sccj
+--FROM t_1 e
+--JOIN t_chxx e1 ON e.spbh=e1.spbh AND e.pcbh = e1.PCBH
+--GO
+
+
 ---------2019年7月7日 17:51:11-----------
 --------同步分店会员信息--------
 --INSERT INTO hj00.zddb.dbo.t_member(code, name, sex, phone, [address], jine, flag,
