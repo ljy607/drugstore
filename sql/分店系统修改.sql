@@ -1,3 +1,16 @@
+-------------2019年10月30日 10:54:51---------------------
+-------价格信息增加电商价格信息------------
+--ALTER TABLE t_jgxx
+--ADD dslsj DECIMAL(10,4) NULL  ----电商零售价
+--ALTER TABLE t_bjdmxb 
+--ADD jdslsj DECIMAL(10,4) NULL, dslsj DECIMAL(10,4) null                           
+
+
+-----结账增加 微信手机、支付宝手机两项金额
+--ALTER TABLE t_jz
+--ADD jeweixinsj MONEY NULL, jezhifubaosj MONEY NULL
+
+
 -------------2019年8月10日 16:31:02-----------
 -------------修改会员表会员号字段长度---------
 ---- 删除索引 

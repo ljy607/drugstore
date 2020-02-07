@@ -1,3 +1,42 @@
+
+-------------2019年10月30日 10:54:51---------------------
+-------价格信息增加电商价格信息------------
+--ALTER TABLE t_jgxx
+--ADD dslsj DECIMAL(10,4) NULL  ----电商零售价
+--ALTER TABLE t_bjdmxb 
+--ADD jdslsj DECIMAL(10,4) NULL, dslsj DECIMAL(10,4) null                           
+ 
+
+-------------2019年10月28日 11:05:40-------------
+---------增加会员信息查询导出-------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('26','会员信息',6,0,'会员信息','image\tom_wap.gif','w_member',1,1,0)
+
+
+-------------2019年9月16日 15:20:10--------------
+--------------结账数据-------------
+--cREATE TABLE [dbo].[t_jz](
+--	dwbh NVARCHAR(8) NOT NULL,
+--	[code] [nvarchar](8) NOT NULL,
+--	[rq] [datetime] NOT NULL,
+--	[je] [decimal](10, 2) NOT NULL,
+--	[jewr] [decimal](10, 2) NULL,
+--	[jefxj] [decimal](10, 2) NULL,
+--	[jeyq] [decimal](10, 2) NULL,
+--	[jezp] [decimal](10, 2) NULL,
+--	[jeweixin] [money] NULL,
+--	[jezhifubao] [money] NULL,
+--	[jeqita] [money] NULL,
+--	[jeyibao] [decimal](18, 2) NULL,
+--	[jeweixinsj] [money] NULL,
+--	[jezhifubaosj] [money] NULL,
+--	PRIMARY KEY(dwbh,code)
+--)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('08','零售结账记录',3,2,'零售结账记录','image\tom_wap.gif','w_jz',1,1,0)
+
+
 --------------2019年5月6日 19:36:47 ------------------
 -------退库单增加复核后再入库
 --ALTER TABLE T_TKDZB

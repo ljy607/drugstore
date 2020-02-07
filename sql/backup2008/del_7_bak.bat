@@ -1,0 +1,1 @@
+forfiles /p E:\数据库备份 /m *.bak /d -7 /c "cmd /c del /f @path"

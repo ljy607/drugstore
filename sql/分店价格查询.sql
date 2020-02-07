@@ -1,4 +1,41 @@
----------------------------2019年8月14日 13:05:45---------------
+------------2019年10月14日 17:17:11----------------
+--INSERT INTO t_yhjhmx(YHDBH, YHRQ, ORDR, SPBH, KLOW, DCL, YHSL, LSJ, FLAG, BZ, dhsl,cd)
+
+--DROP TABLE t_1 
+--GO
+--CREATE TABLE t_1
+--(
+--	id int IDENTITY(1,1),
+--	spbh NVARCHAR(16),
+--	sl DECIMAL(10,2),
+--	lsj DECIMAL(10,2)
+--)
+
+--INSERT INTO t_1(spbh,sl,lsj)
+--SELECT e.spbh,sum(shul),e.LSJ
+--FROM t_ckdmxb e
+--JOIN t_ckdzb e1 ON e1.CKDBH = e.CKDBH
+--WHERE e1.yxbz = 0
+--GROUP BY e.spbh,e.lsj
+
+--SELECT MAX(e.YHDBH)
+--FROM t_yhjhzb e
+
+--SELECT MAX(e.YHDBH)
+--FROM t_yhjhzb e
+
+--INSERT INTO t_yhjhzb(YHDBH, YHRQ, BZ, ZBR, JSBZ)
+--SELECT 'YH19000012','2019.10.10','','002',0
+
+--INSERT INTO t_yhjhmx(YHDBH, YHRQ, ORDR, SPBH, KLOW, DCL, YHSL, LSJ, FLAG, BZ, dhsl,cd)
+--SELECT 'YH19000012','2019-10-10 09:44:50.460',e.id,e.spbh,0,0,e.sl,e.lsj,0,'',0,''
+--FROM t_1 e
+	
+--SELECT *
+--FROM t_yhjhmx 
+--WHERE YHDBH = 'YH19000012'
+
+--------------------------2019年8月14日 13:05:45---------------
 ---------全部退库-----------------
 --SELECT *
 --FROM t_tkdzb 
