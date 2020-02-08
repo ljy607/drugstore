@@ -1,3 +1,10 @@
+---------------2020年2月8日 11:49:27-------------
+-------增加临时功能 单品进货记录查询 --------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('30','商品进货记录',4,1,'商品进货记录','image\tom_wap.gif','w_jhjlcx',1,1,0)
+
+--create nonclustered index Index_jhdmxb_spbh on t_jhdmxb(spbh)
+--with(drop_existing=on)
 
 -------------2019年10月30日 10:54:51---------------------
 -------价格信息增加电商价格信息------------
