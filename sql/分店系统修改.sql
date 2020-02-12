@@ -1,3 +1,23 @@
+
+--------分店修改 2020年2月12日 15:36:17 隐藏数据-------
+--alter table t_ckdzb
+--add flag tinyint null default 1
+
+--alter table t_ckdmxb
+--add flag tinyint null default 1
+
+--alter table t_lsdmxb
+--add flag tinyint null default 1
+
+--alter table t_tkdzb
+--add delflag tinyint null default 1
+
+--alter table t_tkdmxb
+--add delflag tinyint null default 1
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('140','数据隐藏',4,0,'数据隐藏','image\tom_wap.gif','w_djcx_edit',1,1,0)
+
 -------------2019年10月30日 10:54:51---------------------
 -------价格信息增加电商价格信息------------
 --ALTER TABLE t_jgxx

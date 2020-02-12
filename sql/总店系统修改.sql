@@ -1,3 +1,16 @@
+---------2020年2月12日 15:56:29  增加数据隐藏功能  --------------
+--alter table t_ckdzb
+--add flag tinyint null default 1
+
+--alter table t_ckdmxb
+--add flag tinyint null default 1
+
+--alter table t_jhdzb
+--add flag tinyint null default 1
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('07','数据隐藏',5,0,'数据隐藏','image\tom_wap.gif','w_djcx_edit',1,1,0)
+
 ---------------2020年2月8日 11:49:27-------------
 -------增加临时功能 单品进货记录查询 --------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
