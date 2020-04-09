@@ -1,3 +1,9 @@
+---------2020年4月3日 16:20:48 增加大客户的系统选项维护 --------
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(99,0,'dkh',N'大客户',N'大客户',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
 ---------2020年2月12日 15:56:29  增加数据隐藏功能  --------------
 --alter table t_ckdzb
 --add flag tinyint null default 1

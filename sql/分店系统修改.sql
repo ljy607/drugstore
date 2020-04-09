@@ -1,3 +1,21 @@
+--------分店结账增加 待付金额记录 2020年4月3日 11:33:17  --------
+--ALTER TABLE t_jz 
+--ADD jedaifu MONEY NULL,bz NVARCHAR(128) null,jexj money null
+
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(99,0,'dkh',N'大客户',N'大客户',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
+--SELECT * FROM t_jz WHERE isnull(jexj,0) = 0
+
+--UPDATE t_jz
+--SET jexj =  isnull(je,0) + isnull(jewr,0) - isnull(jefxj,0)  -  isnull(jeyq,0)
+--  -  isnull(jezp,0)  -  isnull(jeweixin,0)  -  isnull(jezhifubao,0)
+--    -  isnull(jeyibao,0)  +  isnull(jeqita,0) - isnull(jeweixinsj,0) - isnull(jezhifubaosj,0)
+--    -isnull(jedaifu,0)
+--WHERE isnull(jexj,0) = 0    
+    
 
 --------分店修改 2020年2月12日 15:36:17 隐藏数据-------
 --alter table t_ckdzb
@@ -13,6 +31,12 @@
 --add delflag tinyint null default 1
 
 --alter table t_tkdmxb
+--add delflag tinyint null default 1
+
+--alter table t_bsdzb
+--add delflag tinyint null default 1
+
+--alter table t_bsdmxb
 --add delflag tinyint null default 1
 
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
