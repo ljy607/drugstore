@@ -1,3 +1,7 @@
+---------2020年4月10日 12:59:24 结账增加追票金额 -----
+--ALTER TABLE t_jz
+--ADD jezhui MONEY NULL DEFAULT 0
+
 ---------2020年4月3日 16:20:48 增加大客户的系统选项维护 --------
 --SET IDENTITY_INSERT t_options ON
 --INSERT INTO t_options(id,pid, code, name, note, sort, flag)
