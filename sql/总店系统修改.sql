@@ -1,3 +1,13 @@
+----------分店结账增加 预存款、预存款消费 2020年11月10日 17:53:33  -------
+--ALTER TABLE t_jz 
+--ADD yczhifubao MONEY NULL,ycweixin money,yczhifubaosj money null,ycweixinsj money null,ycxianjin money null,jeyucun money null
+--execute sp_addextendedproperty 'MS_Description','预存支付宝','user','dbo','table','t_jz','column','yczhifubao';
+--execute sp_addextendedproperty 'MS_Description','预存支付宝手机','user','dbo','table','t_jz','column','yczhifubaosj';
+--execute sp_addextendedproperty 'MS_Description','预存微信','user','dbo','table','t_jz','column','ycweixin';
+--execute sp_addextendedproperty 'MS_Description','预存微信手机','user','dbo','table','t_jz','column','ycweixinsj';
+--execute sp_addextendedproperty 'MS_Description','预存金额消费','user','dbo','table','t_jz','column','jeyucun';
+--execute sp_addextendedproperty 'MS_Description','预存现金','user','dbo','table','t_jz','column','ycxianjin';
+
 ---------2020年4月10日 12:59:24 结账增加追票金额 -----
 --ALTER TABLE t_jz
 --ADD jezhui MONEY NULL DEFAULT 0
