@@ -1,5 +1,4 @@
 
-
 --零售记录明细触发器
 --修改记录 
 --			增加库存变更时，修改库存同步标志为0  2020年12月1日 17:18:55 
@@ -10,16 +9,13 @@ begin
 	DECLARE @iordr INT, @itemp INT
 
 	DECLARE @ijs   INT  --剂数
-	DECLARE @jhj   DECIMAL(8,4),@yyybh VARCHAR(10)
+	DECLARE @jhj   DECIMAL(8,4)
 
 	
 	----SELECT @sdjbh = LSDBH,@iordr = ORDR, @sspbh = SPBH, @ssppc=PCBH, @decsl = SL, @declsj = LSJ, @deczk = ZK / 100.00,@jhj = isnull(jhj,0) FROM INSERTED
-	-----需要恢复的字段 2020年3月2日 14:24:06 ,增加了yyybh
-	----DECLARE cur CURSOR FOR  SELECT LSDBH,ORDR, SPBH, PCBH, SL, LSJ, ZK / 100.00,isnull(jhj,0), FROM INSERTED  
-	
-	DECLARE cur CURSOR FOR  SELECT LSDBH,ORDR, SPBH, PCBH, SL, LSJ, ZK / 100.00,isnull(jhj,0),yyybh FROM INSERTED
+	DECLARE cur CURSOR FOR  SELECT LSDBH,ORDR, SPBH, PCBH, SL, LSJ, ZK / 100.00,isnull(jhj,0) FROM INSERTED
 	OPEN cur  
-    FETCH NEXT FROM cur INTO @sdjbh,@iordr,@sspbh,@ssppc,@decsl,@declsj,@deczk,@jhj,@yyybh        
+    FETCH NEXT FROM cur INTO @sdjbh,@iordr,@sspbh,@ssppc,@decsl,@declsj,@deczk,@jhj        
     WHILE @@FETCH_STATUS=0  
     BEGIN  
     	SELECT @dywrq = RQ, @deczdzk = ZDZK / 100.00, @ijs = js FROM T_LSDZB WHERE LSDBH = @sdjbh
@@ -39,7 +35,7 @@ begin
 		--判断存货是否够销售
 		Declare @chsl decimal(10,4)
 		SELECT @chsl = isnull(chsl,0) FROM T_CHXX WHERE SPBH = @sspbh AND PCBH = @ssppc and hwbh = @syxkw
-		SELECT @chsl = ISNULL(@chsl,0)	
+		SELECT @chsl = ISNULL(@chsl,-1)	  -- 没有存货信息 2020年12月29日 14:26:15
 		IF @chsl < @decsl		
 		  BEGIN
 			declare @sl int 
@@ -50,21 +46,6 @@ begin
 			ROLLBACK TRANSACTION
 			RETURN
 		  END
-		  
-		/*	
-		--------临时增加复制数据到t_lsdmxb_yjcx，只记录零售价 2020年3月2日 13:25:47
-		----取商品零售价
-		DECLARE @kpr VARCHAR(10),@membercode VARCHAR(32)
-		SELECT @declsj=lsj FROM t_jgxx WHERE spbh=@sspbh
-		
-		INSERT INTO t_lsdmxb_yjcx(LSDBH,ORDR,SPBH,SL,LSJ,YYYBH,GUIT,ZK,pcbh,jhj,flag) 
-		VALUES(@sdjbh, @iordr, @sspbh,@decsl,@declsj,@yyybh,@syxkw,@deczk*100,@ssppc,@jhj,1)
-		
-		SELECT @kpr = kpr,@membercode=member_code  FROM t_lsdzb WHERE lsdbh = @sdjbh
-		UPDATE t_lsdzb_yjcx SET yxbz = 1,kpr = @kpr,member_code = @membercode WHERE lsdbh=@sdjbh
-		 
-		----------临时增加结束------------------------------------
-		*/  
 
 		--设置柜台 2002-02-22
 		UPDATE T_LSDMXB SET GUIT = @syxkw WHERE LSDBH = @sdjbh AND ORDR = @iordr
@@ -75,7 +56,7 @@ begin
 				VALUES ( @sspbh, @ssppc, @sdjbh, @iordr, @dywrq, -10, @declsj, @decsl, (@declsj * @decsl), @syxkw)
 
 		--判断是否是退货
-		IF @decsl < 0 AND @chsl = 0
+		IF @decsl < 0 AND @chsl = -1  -- 无存货的情况 2020年12月29日 14:27:19
 		BEGIN
 			--无存货 新增数据
 			SELECT @dywrq = null
@@ -90,7 +71,7 @@ begin
 			UPDATE T_CHXX SET chsl = chsl - @decsl,tbbz = 0 WHERE  SPBH = @sspbh AND PCBH = @ssppc and hwbh = @syxkw			
 		END
 		
-		FETCH NEXT FROM cur INTO @sdjbh,@iordr,@sspbh,@ssppc,@decsl,@declsj,@deczk,@jhj,@yyybh
+		FETCH NEXT FROM cur INTO @sdjbh,@iordr,@sspbh,@ssppc,@decsl,@declsj,@deczk,@jhj
 	END	
 	
 	CLOSE cur  
@@ -98,5 +79,11 @@ begin
 end 
 
 GO
+
+
+
+
+
+
 
 

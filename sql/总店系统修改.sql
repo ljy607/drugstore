@@ -1,3 +1,8 @@
+------- 总店系统分公司库存增加更新日期  2020年12月29日 16:24:01
+--alter table t_fgskc
+--add gxrq datetime default getdate()
+--execute sp_addextendedproperty 'MS_Description','更新时间','user','dbo','table','t_fgskc','column','gxrq';
+
 ----------分店结账增加 预存款、预存款消费 2020年11月10日 17:53:33  -------
 --ALTER TABLE t_jz 
 --ADD yczhifubao MONEY NULL,ycweixin money,yczhifubaosj money null,ycweixinsj money null,ycxianjin money null,jeyucun money null
