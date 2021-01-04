@@ -1,8 +1,8 @@
-------库存表增加更新时间字段，记录最后更新时间 2020年12月29日 14:22:44
+--------库存表增加更新时间字段，记录最后更新时间 2020年12月29日 14:22:44
 --ALTER TABLE t_chxx 
 --ADD gxrq DATETIME DEFAULT GETDATE()
 --execute sp_addextendedproperty 'MS_Description','更新时间','user','dbo','table','t_chxx','column','gxrq';
---create TRIGGER [dbo].[tri_del_chxx] ON [dbo].[T_CHXX] 
+--alter TRIGGER [dbo].[tri_del_chxx] ON [dbo].[T_CHXX] 
 --FOR UPDATE
 --AS
 --UPDATE a SET a.gxrq = GETDATE()
@@ -10,13 +10,13 @@
 --JOIN INSERTED b ON a.spbh=b.spbh AND a.pcbh=b.pcbh AND a.hwbh=b.hwbh
 ----delete from t_chxx where chsl = 0 AND tbbz = 1
 --GO
---insert into t_chxx_tbjl(tbsj) values('2020.12.28')
+------insert into t_chxx_tbjl(tbsj) values('2020.12.28')
 
--- 库存表增加 库存同步标志(默认0为未同步，1为已同步)  2020年12月1日 16:49:39
+-- ------库存表增加 库存同步标志(默认0为未同步，1为已同步)  2020年12月1日 16:49:39
 --ALTER TABLE t_chxx 
 --ADD tbbz TINYINT DEFAULT 0 
 
-----EXEC sp_dropextendedproperty 'MS_Description','user',dbo,'table','t_chxx','column',tbbz
+------EXEC sp_dropextendedproperty 'MS_Description','user',dbo,'table','t_chxx','column',tbbz
 --execute sp_addextendedproperty 'MS_Description','库存同步标志(默认0为未同步，1为已同步)','user','dbo','table','t_chxx','column','tbbz';
 
 --CREATE TABLE t_chxx_tbjl
