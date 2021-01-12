@@ -4,7 +4,7 @@ DECLARE @tkdbh NVARCHAR(16)
 --SELECT MAX(tkdbh)
 --FROM t_tkdzb 
 
-SELECT @tkdbh = 'TK17000002'
+SELECT @tkdbh = 'TK21000012'
 
 CREATE TABLE #t
 ( 
@@ -23,10 +23,11 @@ CREATE TABLE #t
 INSERT INTO #t(spbh, pcbh, shul, guiw, yxrq, scrq,jg)
 SELECT c.SPBH, c.PCBH, c.CHSL, c.HWBH, c.yxrq, c.scrq,c.jiag
 FROM t_chxx c
+WHERE chsl > 0
 
 ----插入退库单主表
 INSERT INTO t_tkdzb(tkdbh,tkrq,sqr,flag,bz)
-SELECT @tkdbh,CONVERT(varchar(100), GETDATE(), 23),'001',1,N'广安门装修，系统生成退库'
+SELECT @tkdbh,CONVERT(varchar(100), GETDATE(), 23),'001',1,N'广安门，系统生成退库'
 
 ----插入退库单明细表
 INSERT INTO t_tkdmxb(TKDBH, ORDR, SPBH, PCBH, JHJG, SHUL, GUIW, TKYY, yxrq, scrq)
