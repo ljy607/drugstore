@@ -1,0 +1,3837 @@
+{
+  "name": "hjwxtj",
+  "describe": "弘济药店电商统计",
+  "avatar": "",
+  "version": "3.2.0",
+  "createdTime": "2021-9-4 07:23:51",
+  "updatedTime": "2021-9-4 22:59:57",
+  "dbConns": [],
+  "profile": {
+    "default": {
+      "db": "MYSQL",
+      "dbConn": "9BF8FD9B-6EF6-4440-8720-A2151990A72C",
+      "entityInitFields": [
+        {
+          "defKey": "TENANT_ID",
+          "defName": "租户号",
+          "comment": "",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "IdOrKey"
+        },
+        {
+          "defKey": "REVISION",
+          "defName": "乐观锁",
+          "comment": "",
+          "domain": "IdOrKey",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true
+        },
+        {
+          "defKey": "CREATED_BY",
+          "defName": "创建人",
+          "comment": "",
+          "domain": "IdOrKey",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true
+        },
+        {
+          "defKey": "CREATED_TIME",
+          "defName": "创建时间",
+          "comment": "",
+          "domain": "DateTime",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true
+        },
+        {
+          "defKey": "UPDATED_BY",
+          "defName": "更新人",
+          "comment": "",
+          "domain": "IdOrKey",
+          "type": "",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true
+        },
+        {
+          "defKey": "UPDATED_TIME",
+          "defName": "更新时间",
+          "comment": "",
+          "domain": "DateTime",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true
+        }
+      ],
+      "entityInitProperties": {}
+    },
+    "javaHome": "",
+    "sql": {
+      "delimiter": ""
+    },
+    "dataTypeSupports": [
+      "MYSQL",
+      "ORACLE",
+      "SQLServer",
+      "PostgreSQL",
+      "DB2",
+      "DM",
+      "GaussDB",
+      "Kingbase",
+      "JAVA",
+      "C#"
+    ],
+    "codeTemplates": [
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "MYSQL",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.defName,field.comment,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n)  COMMENT = '{{=it.func.join(it.entity.defName,it.entity.comment,';') }}';\n$blankline\n",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "ORACLE",
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "SQLServer",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' IDENTITY(1,1)' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n){{=it.separator}}\n$blankline\n{{? it.entity.defKey || it.entity.defName}}EXEC sp_addextendedproperty 'MS_Description', '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}', 'SCHEMA', dbo, 'table', {{=it.entity.defKey}}, null, null;{{?}}\n{{~it.entity.fields:field:index}}\nEXEC sp_addextendedproperty 'MS_Description', '{{=it.func.join(field.defName,field.comment,';')}}', 'SCHEMA', dbo, 'table', {{=it.entity.defKey}}, 'column', {{=field.defKey}};\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "PostgreSQL",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' AUTO_INCREMENT' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "appCode",
+        "isDefault": true,
+        "applyFor": "JAVA",
+        "content": "package cn.com.chiner.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n{{\n    var today=new Date();\n    var fullYear=today.getFullYear();\n    var month=today.getMonth() + 1;\n    var days=today.getDate();\n}}\n /**\n * @author : http://www.chiner.pro\n * @date : {{=fullYear}}-{{=month}}-{{=days}}\n * @desc : {{=it.func.join(it.entity.defName,it.entity.comment,'-')}}\n */\n@Table(name=\"{{=it.entity.defKey}}\")\npublic class {{=it.func.camel(it.entity.defKey,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    {{? field.primaryKey }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.defKey,false)}} ;\n{{~}}\n$blankline\n\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.defKey,true)}}(){\n        return this.{{=it.func.camel(field.defKey,false)}};\n    }\n    /** {{=it.func.join(field.defName,field.comment,';')}} */\n    public void set{{=it.func.camel(field.defKey,true)}}({{=field.type}} {{= it.func.camel(field.defKey,false) }}){\n        return this.{{=it.func.camel(field.defKey,false)}}={{=it.func.camel(field.defKey,false)}};\n    }\n{{~}}\n}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "DB2",
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "DM",
+        "createTable": "CREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? '' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ','('+field.defaultValue+')',' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "appCode",
+        "isDefault": true,
+        "applyFor": "C#",
+        "content": "using System;\nusing System.Collections.Generic;\n\n$blankline\n{{\n    var today=new Date();\n    var fullYear=today.getFullYear();\n    var month=today.getMonth() + 1;\n    var days=today.getDate();\n}}\n/*\n * @author : http://www.chiner.com.cn\n * @date : {{=fullYear}}-{{=month}}-{{=days}}\n * @desc : {{=it.func.join(it.entity.defName,it.entity.comment,'-')}}\n */\nnamespace Chiner.Application\n{\n    public partial class {{=it.func.camel(it.entity.defKey,true) }}\n    {\n    \n        {{~it.entity.fields:field:index}}\n        /// <summary>\n        /// {{=it.func.join(field.defName,field.comment,';')}}\n        /// </summary>\n        public {{=field.type}} {{=it.func.camel(field.defKey,true)}} { get; set; }\n        $blankline\n        {{~}}\n        \n    }\n}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "GaussDB",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' AUTO_INCREMENT' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "isDefault": true,
+        "applyFor": "Kingbase",
+        "createTable": "DROP TABLE IF EXISTS {{=it.entity.defKey}};\nCREATE TABLE {{=it.entity.defKey}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.primaryKey }}{{ pkList.push(field.defKey) }}{{?}}\n    {{=field.defKey}} {{=field.type}}{{?field.len>0}}{{='('}}{{=field.len}}{{?field.scale>0}}{{=','}}{{=field.scale}}{{?}}{{=')'}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= field.autoIncrement ? ' AUTO_INCREMENT' : '' }}{{= field.defaultValue ? it.func.join(' DEFAULT ',field.defaultValue,' ') : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\n{{? it.entity.defKey || it.entity.defName}}COMMENT ON TABLE {{=it.entity.defKey}} IS '{{=it.func.join(it.entity.defName,it.entity.comment,';')}}';{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.defName || field.comment}}COMMENT ON COLUMN {{=it.entity.defKey}}.{{=field.defKey}} IS '{{=it.func.join(field.defName,field.comment,';')}}';{{?}}\n{{~}}",
+        "createIndex": "{{~ it.entity.indexes:index}}\nCREATE {{? index.unique}}UNIQUE {{?}}INDEX {{=index.defKey}} ON {{=it.entity.defKey}}({{ fieldsKeys = index.fields.map(function(field){return field.fieldDefKey}) ; }}{{=it.func.join(...fieldsKeys,',')}});\n{{~}}"
+      },
+      {
+        "type": "dbDDL",
+        "applyFor": "dictSQLTemplate",
+        "content": "/* 插入字典总表[{{=it.dict.defKey}}-{{=it.dict.defName}}] */\nINSERT INTO SYS_DICT(KEY_,LABEL,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=it.dict.defName}}','{{=it.dict.intro}}',1);\n/* 插入字典明细表 */\n{{~it.dict.items:item:index}}\nINSERT INTO SYS_DICT_ITEM(DICT_KEY,KEY_,LABEL,SORT_,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=item.defKey}}','{{=item.defName}}','{{=item.sort}}','{{=item.intro}}',1);\n{{~}}"
+      }
+    ],
+    "generatorDoc": {
+      "docTemplate": ""
+    },
+    "relationFieldSize": 150,
+    "uiHint": [
+      {
+        "defKey": "Input",
+        "defName": "普通输入框"
+      },
+      {
+        "defKey": "Select",
+        "defName": "下拉输入框"
+      },
+      {
+        "defKey": "CheckBox",
+        "defName": "复选框"
+      },
+      {
+        "defKey": "RadioBox",
+        "defName": "单选框"
+      },
+      {
+        "defKey": "Double",
+        "defName": "小数输入"
+      },
+      {
+        "defKey": "Integer",
+        "defName": "整数输入"
+      },
+      {
+        "defKey": "Money",
+        "defName": "金额输入"
+      },
+      {
+        "defKey": "Date",
+        "defName": "日期输入"
+      },
+      {
+        "defKey": "DataYearMonth",
+        "defName": "年月输入"
+      },
+      {
+        "defKey": "Text",
+        "defName": "长文本输入"
+      },
+      {
+        "defKey": "RichText",
+        "defName": "富文本输入"
+      }
+    ],
+    "menuWidth": ""
+  },
+  "entities": [
+    {
+      "rowNo": 0,
+      "defKey": "T_FUNCMAIN",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "FUNCID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "FUNCNM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 30,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(30)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "PICLJ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 30,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(30)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "FUNMS",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 60,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(60)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "FLAG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "pk_funcmain",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "FUNCID"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "T_FUNCS",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "FUNCID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 4,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(4)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "FUNNM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 26,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(26)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "FUNTP",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "GRPID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "FUNMS",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 50,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(50)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "TPLJ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 26,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(26)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 7,
+          "defKey": "FUNFM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 20,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(20)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 8,
+          "defKey": "FLAG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 9,
+          "defKey": "UFLAG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 10,
+          "defKey": "fdbz",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 11,
+          "defKey": "parameter",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 12,
+          "defKey": "ID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int identity",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int identity(10)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "pk_funcs",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "FUNCID"
+            },
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "FUNTP"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "T_GYSXX",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "GYSBH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 10,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(10)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "GYSMC",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 30,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(30)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "GYSJC",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(10)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "LXR",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 20,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(20)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "SH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 20,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(20)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "YHZH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 20,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(20)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 7,
+          "defKey": "LXDZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 30,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(30)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 8,
+          "defKey": "YZBM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "char",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "char(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 9,
+          "defKey": "DH1",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 15,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(15)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 10,
+          "defKey": "DH2",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 15,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(15)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 11,
+          "defKey": "CZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 15,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(15)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 12,
+          "defKey": "GXRQ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 13,
+          "defKey": "GXZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "char",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "char(3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 14,
+          "defKey": "FLAG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 15,
+          "defKey": "email",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "pk_gysxx",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "GYSBH"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "T_SYS_LOG",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "ID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int identity",
+          "len": 10,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int identity(10)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "UserID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(12)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "OperationDatetime",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "(getdate())",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "DataNo",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "OperationDesc",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 128,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(128)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "FuncID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "PK__T_SYS_LO__3214EC270519C6AF",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "ID"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "T_USRFUNC",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "ZGBH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(12)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "FUNCID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 4,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(4)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "FUNCTP",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "pk_usrfunc",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "ZGBH"
+            },
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "FUNCID"
+            },
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "FUNCTP"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "T_ZGXX",
+      "defName": null,
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "BH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(12)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "XM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(12)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "XB",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "SYSID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "XL",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "ZC",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 7,
+          "defKey": "ZW",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 8,
+          "defKey": "SFZH",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 20,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(20)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 9,
+          "defKey": "BM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 10,
+          "defKey": "QX",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 50,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(50)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 11,
+          "defKey": "MM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(12)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 12,
+          "defKey": "JG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 36,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(36)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 13,
+          "defKey": "LXDZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 40,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(40)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 14,
+          "defKey": "YZBM",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 6,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(6)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 15,
+          "defKey": "CSRQ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 16,
+          "defKey": "DH1",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 15,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(15)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 17,
+          "defKey": "DH2",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 15,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(15)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 18,
+          "defKey": "JBGZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 6,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(6,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 19,
+          "defKey": "RZSJ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 20,
+          "defKey": "LZSJ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 21,
+          "defKey": "MEMO",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 300,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(300)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 22,
+          "defKey": "GXRQ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 23,
+          "defKey": "GXZ",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 12,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(12)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 24,
+          "defKey": "FLAG",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 25,
+          "defKey": "tjyxrq",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 26,
+          "defKey": "ID",
+          "defName": "",
+          "comment": "",
+          "domain": "",
+          "type": "int identity",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int identity(10)",
+          "primaryKeyName": "",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "pk_zgxx",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "BH"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "w_thd",
+      "defName": "退货单",
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "id",
+          "defName": "主键",
+          "comment": "",
+          "domain": "",
+          "type": "bigint identity",
+          "len": 19,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "bigint identity(19)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "ptlx",
+          "defName": "平台类型",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "dpmc",
+          "defName": "店铺名称",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "dkdh",
+          "defName": "退款单号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "ddbh",
+          "defName": "原始单号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "lx",
+          "defName": "类型",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 7,
+          "defKey": "ptzt",
+          "defName": "平台状态",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 8,
+          "defKey": "xtzt",
+          "defName": "系统状态",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 9,
+          "defKey": "djsbyy",
+          "defName": "递交失败原因",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 10,
+          "defKey": "tkhczt",
+          "defName": "退款回传状态",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 11,
+          "defKey": "tkjd",
+          "defName": "退款阶段",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 12,
+          "defKey": "sqtkje",
+          "defName": "申请退款金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 13,
+          "defKey": "sjtkje",
+          "defName": "实际退款金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 14,
+          "defKey": "tkyy",
+          "defName": "退款原因",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 15,
+          "defKey": "bz",
+          "defName": "备注",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 128,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(128)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 16,
+          "defKey": "wlgs",
+          "defName": "物流公司",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 17,
+          "defKey": "wldh",
+          "defName": "物流单号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 18,
+          "defKey": "tksj",
+          "defName": "退款时间",
+          "comment": "",
+          "domain": "",
+          "type": "date",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "date(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 19,
+          "defKey": "xgsj",
+          "defName": "修改时间",
+          "comment": "",
+          "domain": "",
+          "type": "date",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "date(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 20,
+          "defKey": "cjsj",
+          "defName": "创建时间",
+          "comment": "",
+          "domain": "",
+          "type": "date",
+          "len": 10,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "date(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "PK_w_thd",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "id"
+            }
+          ]
+        },
+        {
+          "defKey": "idx_ddbh",
+          "unique": false,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "ddbh"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "w_wdtdd",
+      "defName": "旺店通订单",
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "键值",
+          "comment": "",
+          "type": "INT",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "Int"
+        },
+        {
+          "rowNo": 1,
+          "defKey": "wdtddbh",
+          "defName": "订单编号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "ptlx",
+          "defName": "平台类型",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "dpmc",
+          "defName": "店铺名称",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "ddbh",
+          "defName": "原始单号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 256,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(256)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "ddzt",
+          "defName": "订单状态",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "ddlx",
+          "defName": "订单类型",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 7,
+          "defKey": "tkzt",
+          "defName": "退库状态",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 8,
+          "defKey": "xdsj",
+          "defName": "下单时间",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 0,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "date(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 9,
+          "defKey": "wlgs",
+          "defName": "物流公司",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 10,
+          "defKey": "wldh",
+          "defName": "物流单号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 11,
+          "defKey": "kfbz",
+          "defName": "客服备注",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 12,
+          "defKey": "hpsl",
+          "defName": "货品总数",
+          "comment": "",
+          "domain": "",
+          "type": "deimcal",
+          "len": 12,
+          "scale": 4,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "int(10)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 13,
+          "defKey": "hpje",
+          "defName": "货品总额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 14,
+          "defKey": "yhje",
+          "defName": "优惠",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 15,
+          "defKey": "ysje",
+          "defName": "应收金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 16,
+          "defKey": "hpygcb",
+          "defName": "货品预估成本",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 12,
+          "scale": 4,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 17,
+          "defKey": "ygyzcb",
+          "defName": "预估邮资成本",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 18,
+          "defKey": "yfje",
+          "defName": "已付金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 19,
+          "defKey": "ygml",
+          "defName": "预估毛利",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 12,
+          "scale": 4,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 20,
+          "defKey": "ywy",
+          "defName": "业务员",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 21,
+          "defKey": "sfzd",
+          "defName": "是否真单",
+          "comment": "",
+          "domain": "",
+          "type": "tinyint",
+          "len": 3,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "1",
+          "hideInGraph": false,
+          "typeFullName": "tinyint(3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "PK_w_wdtdd",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "wdtddbh"
+            }
+          ]
+        },
+        {
+          "defKey": "idx_ddbh",
+          "unique": false,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "ddbh"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "rowNo": 0,
+      "defKey": "w_xedkjl",
+      "defName": "w_xedkjl",
+      "comment": "",
+      "properties": {},
+      "fields": [
+        {
+          "rowNo": 1,
+          "defKey": "id",
+          "defName": "主键",
+          "comment": "",
+          "domain": "",
+          "type": "bigint identity",
+          "len": 19,
+          "scale": null,
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "bigint identity(19)",
+          "primaryKeyName": "√",
+          "notNullName": "√",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 2,
+          "defKey": "ptlx",
+          "defName": "平台类型",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 3,
+          "defKey": "ddbh",
+          "defName": "订单编号",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "varchar(64)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 4,
+          "defKey": "ddsj",
+          "defName": "时间",
+          "comment": "",
+          "domain": "",
+          "type": "datetime",
+          "len": 23,
+          "scale": 3,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "datetime(23,3)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 5,
+          "defKey": "lx",
+          "defName": "类型",
+          "comment": "",
+          "domain": "",
+          "type": "nvarchar",
+          "len": 32,
+          "scale": null,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "nvarchar(32)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        },
+        {
+          "rowNo": 6,
+          "defKey": "je",
+          "defName": "金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "typeFullName": "decimal(10,2)",
+          "primaryKeyName": "",
+          "notNullName": "",
+          "autoIncrementName": "",
+          "refDict": ""
+        }
+      ],
+      "indexes": [
+        {
+          "defKey": "PK_w_xedkjl",
+          "unique": true,
+          "defName": null,
+          "comment": "",
+          "fields": [
+            {
+              "ascOrDesc": "A",
+              "fieldDefKey": "id"
+            }
+          ]
+        }
+      ],
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "correlations": []
+    },
+    {
+      "defKey": "w_pdd",
+      "defName": "拼多多订单",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defKey}[{defName}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "键值",
+          "comment": "",
+          "type": "INT",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "Int"
+        },
+        {
+          "defKey": "ddbh",
+          "defName": "订单编号",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        },
+        {
+          "defKey": "yyr",
+          "defName": "运营人员",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 8,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        },
+        {
+          "defKey": "yongjin",
+          "defName": "佣金",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        },
+        {
+          "defKey": "sfyp",
+          "defName": "是否药品",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 8,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    },
+    {
+      "defKey": "w_yongjin",
+      "defName": "佣金",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defKey}[{defName}]",
+      "headers": [
+        {
+          "freeze": false,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": true,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": true,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "键值",
+          "comment": "",
+          "type": "INT",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "Int"
+        },
+        {
+          "defKey": "yyr",
+          "defName": "运营人员",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 8,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        },
+        {
+          "defKey": "ddbh",
+          "defName": "订单编号",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        },
+        {
+          "defKey": "yongjin",
+          "defName": "佣金",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 8,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": ""
+        }
+      ],
+      "correlations": [],
+      "indexes": []
+    }
+  ],
+  "views": [],
+  "dicts": [],
+  "viewGroups": [],
+  "dataTypeMapping": {
+    "referURL": "",
+    "mappings": [
+      {
+        "defKey": "string",
+        "defName": "字串",
+        "JAVA": "String",
+        "ORACLE": "VARCHAR2",
+        "MYSQL": "VARCHAR",
+        "SQLServer": "VARCHAR",
+        "PostgreSQL": "VARCHAR",
+        "DB2": "VARCHAR",
+        "DM": "VARCHAR2",
+        "C#": "string"
+      },
+      {
+        "defKey": "double",
+        "defName": "小数",
+        "JAVA": "Double",
+        "ORACLE": "DECIMAL",
+        "MYSQL": "DECIMAL",
+        "SQLServer": "DECIMAL",
+        "PostgreSQL": "NUMERIC",
+        "DB2": "DECIMAL",
+        "DM": "DECIMAL",
+        "C#": "float"
+      },
+      {
+        "defKey": "int",
+        "defName": "整数",
+        "JAVA": "Integer",
+        "ORACLE": "INT",
+        "MYSQL": "INT",
+        "SQLServer": "INT",
+        "PostgreSQL": "INTEGER",
+        "DB2": "INT",
+        "DM": "INTEGER",
+        "C#": "float"
+      },
+      {
+        "defKey": "date",
+        "defName": "日期",
+        "JAVA": "Date",
+        "ORACLE": "DATE",
+        "MYSQL": "DATETIME",
+        "SQLServer": "DATETIME",
+        "PostgreSQL": "DATE",
+        "DB2": "DATE",
+        "DM": "DATE",
+        "C#": "date"
+      },
+      {
+        "defKey": "bytes",
+        "defName": "二进制",
+        "JAVA": "byte[]",
+        "ORACLE": "BLOB",
+        "MYSQL": "BLOB",
+        "PostgreSQL": "BYTEA",
+        "SQLServer": "VARBINARY",
+        "DB2": "BLOB",
+        "DM": "BLOB",
+        "C#": "binary"
+      },
+      {
+        "defKey": "largeText",
+        "defName": "大文本",
+        "JAVA": "String",
+        "ORACLE": "CLOB",
+        "MYSQL": "TEXT",
+        "SQLServer": "TEXT",
+        "PostgreSQL": "TEXT",
+        "DB2": "CLOB",
+        "DM": "CLOB",
+        "C#": "string"
+      }
+    ]
+  },
+  "domains": [
+    {
+      "defKey": "DefaultString",
+      "defName": "默认字串",
+      "applyFor": "string",
+      "len": "60",
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "IdOrKey",
+      "defName": "主键标识",
+      "applyFor": "string",
+      "len": 32,
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "Name",
+      "defName": "名称",
+      "applyFor": "string",
+      "len": 90,
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "Int",
+      "defName": "整数",
+      "applyFor": "int",
+      "len": "",
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "Double",
+      "defName": "小数",
+      "applyFor": "double",
+      "len": 24,
+      "scale": 6,
+      "uiHint": ""
+    },
+    {
+      "defKey": "Money",
+      "defName": "金额",
+      "applyFor": "double",
+      "len": 24,
+      "scale": 6,
+      "uiHint": ""
+    },
+    {
+      "defKey": "DateTime",
+      "defName": "日期时间",
+      "applyFor": "date",
+      "len": "",
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "YesNo",
+      "defName": "是否",
+      "applyFor": "string",
+      "len": "1",
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "Dict",
+      "defName": "数据字典",
+      "applyFor": "string",
+      "len": "32",
+      "scale": "",
+      "uiHint": ""
+    },
+    {
+      "defKey": "DescText",
+      "defName": "描述文本",
+      "applyFor": "string",
+      "len": "900",
+      "scale": "",
+      "uiHint": ""
+    }
+  ],
+  "dbConn": [
+    {
+      "defKey": "9BF8FD9B-6EF6-4440-8720-A2151990A72C",
+      "defName": "hjwxtj",
+      "type": "SQLServer",
+      "properties": {
+        "driver_class_name": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+        "url": "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=wxtj",
+        "password": "sfyd7830",
+        "username": "sa"
+      }
+    }
+  ],
+  "diagrams": []
+}

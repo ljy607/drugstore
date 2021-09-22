@@ -1,3 +1,56 @@
+-----------------2021年9月10日 13:26:24 增加首营企业数据调整 -----------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('11','首营企业调整',7,0,'首营企业调整','image\tom_wap.gif','w_syqyspb_tz',1,1,0)
+
+
+----------------2021年6月30日 18:16:46 增加调整货位到退货区的功能  --------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('27','退货货位（退货）',6,1,'退货货位（退货）','image\tom_wap.gif','w_tzhw_th',0,1,0)
+
+
+------------2021年4月13日 14:55:09 商品信息增加OTC标志 ----------------
+--ALTER TABLE t_spxx 
+--ADD otc TINYINT DEFAULT 0
+
+---------2021年4月6日 13:21:30 增加网店出库单导出功能 ------------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('10','网售出库单导出',7,0,'网售出库单导出','image\tom_wap.gif','w_wdck',1,1,0)
+------ 初始化分店信息
+--INSERT INTO t_dwxx(dwbh,dwmc,jc,dwdz,fzr,dyhw,gxrq,sffd)
+--VALUES('201','网店','网店','网店','001','201',getdate(),0)
+
+
+---------2021年2月3日 09:48:10 增加采购状态的系统选项维护 --------
+--UPDATE t_options SET flag = 0 WHERE id not IN(3,4,99) AND id < 101
+
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(7,0,'gnzz',N'功能主治',N'功能主治',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
+--SET IDENTITY_INSERT t_options ON
+--INSERT INTO t_options(id,pid, code, name, note, sort, flag)
+--VALUES(8,0,'gnzz',N'采购状态',N'采购状态',200,1)
+--SET IDENTITY_INSERT t_options OFF
+
+
+
+------增加网售商品信息表 2021年2月2日 09:48:54
+--CREATE TABLE t_spxx_wangshou
+--(
+--	spbh NVARCHAR(32) NOT NULL,
+--	jhj DECIMAL(11,2) DEFAULT 0 NOT NULL,
+--	lsj DECIMAL(11,2) DEFAULT 0 NOT NULL,
+--	hyj DECIMAL(11,2) DEFAULT 0 NOT NULL,
+--	flag TINYINT DEFAULT 1 NOT NULL,
+--	PRIMARY KEY(spbh)
+--)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('09','网售商品维护',7,0,'网售商品维护','image\tom_wap.gif','w_spxx_wangshou',1,1,0)
+
+
+
 ------- 总店系统分公司库存增加更新日期  2020年12月29日 16:24:01
 --alter table t_fgskc
 --add gxrq datetime default getdate()

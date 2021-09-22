@@ -523,14 +523,16 @@
 --GO
 
 
----- 剩广安门、康宁、25店  
+
+
 /******************* 过程说明 *****************************************************************
   生成养护记录
   参数	@dh	养护编号
         @yhr	养护人
   结果	生成养护记录信息
   修改	2016.10.15	养护记录增加有效期半年内商品、全部中药饮片、滞销1年的商品		
-		2019.06.22  1个月有效期的不进养护记录		
+		2019.06.22  1个月有效期的不进养护记录	
+		2021年9月22日 10:05:58 增加存货数量大于0的限制	
 **********************************************************************************************/
 ALTER PROCEDURE [dbo].[SP_YHJL] @dh char(6),@yhr char(3) AS
 begin
@@ -547,7 +549,8 @@ begin
 	
 	insert into t_yhjlmx(yhjlbh,hwbh,sl,yhsl,jl,bz,CCTJ,bhgsl,yhlx)
 	select @dh,hwbh,count(distinct spbh),0,N'合格','',N'符合要求',0,0
-	from t_chxx
+	from t_chxx 
+	WHERE chsl > 0
 	group by hwbh
 	order by hwbh
 	
@@ -559,7 +562,7 @@ begin
 	SELECT @dh,c.hwbh,c.spbh,c.PCBH,c.CHSL, c.yxrq,c.CHSL,N'合格','',N'符合要求',0,1
 	FROM t_chxx c
 	JOIN T_SPXX ts ON c.spbh=ts.spbh
-	WHERE ts.yhlx <> 0
+	WHERE ts.yhlx <> 0 AND c.chsl > 0
 	
 	--近效期 31 - 180天的品种进入养护记录
 	INSERT INTO t_yhjlmx(yhjlbh,hwbh,spbh,PCBH,sl,yxrq,yhsl,jl,bz,CCTJ,bhgsl,yhlx)
@@ -567,6 +570,7 @@ begin
 	FROM t_chxx c
 	left JOIN t_yhjlmx ts ON c.spbh = ts.spbh AND c.pcbh = ts.pcbh AND ts.YHJLBH = @dh
 	WHERE ts.spbh IS NULL AND DATEDIFF(day,GETDATE(),c.yxrq) BETWEEN 31 AND 181
+	AND c.chsl > 0
 	
 	----中药饮片
 	--INSERT INTO t_yhjlmx(yhjlbh,hwbh,spbh,PCBH,sl,yxrq,yhsl,jl,bz,CCTJ,bhgsl,yhlx)
@@ -608,7 +612,65 @@ end
 
 end 
 
+
 GO
+
+
+
+
+--分店执行
+
+/******************* 过程说明 *****************************************************************
+  生成效期催销记录
+  参数	@cxr	操作人
+		@zgr   	质管员
+        @yhr	养护人
+        @day	近效期天数
+  结果	生成效期催销记录信息
+		2021年9月22日 10:05:18 增加存货数量大于0的限制
+**********************************************************************************************/
+ALTER PROCEDURE [dbo].[SP_JXQCX] @cxr char(3), @zgr char(3),@yhr char(3),@day int AS
+begin
+
+declare @dh char(6)
+
+select @dh = convert(char(6),getdate(),112)
+
+--一个月只能生成一个催销表
+if not exists(
+select *
+from t_cxzb
+where cxdbh = @dh
+)
+begin
+	insert into t_cxzb(cxdbh,cxrq,cxr,zgr,yhr,bz)
+	values(@dh,getdate(),@cxr,@zgr,@yhr,'')
+	
+	insert into t_cxmxb(cxdbh,spbh,pcbh,sl,yxrq,bz)
+	select @dh, a.spbh,a.pcbh,a.chsl,a.yxrq,''
+	from t_chxx a
+	join v_spxx b on b.spbh = a.spbh
+	where dateadd(day,@day,getdate()) >= yxrq and b.lbbh <> '07' and b.flag = 1 AND a.chsl > 0
+	
+	IF NOT EXISTS (SELECT 1 FROM t_cxmxb WHERE cxdbh=@dh)
+		DELETE FROM t_cxzb WHERE cxdbh = @dh
+end
+
+end 
+
+GO
+
+------ 删除历史的催销记录、养护记录 数量为0的记录 
+SELECT *  -- delete tc
+FROM T_CXMXB tc
+WHERE sl =0
+
+
+SELECT *  --  delete a
+FROM t_yhjlmx a
+WHERE sl = 0 AND yhlx = 1
+
+
 
 
 

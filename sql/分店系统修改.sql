@@ -1,23 +1,27 @@
+---------------增加内部销售 2021年7月5日 18:07:22 三店 25店 未更新-----------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('17','内部销售',3,2,'内部销售','image\tom_wap.gif','w_kfls',0,1,0)
+
+------修改价格状态区间 2021年2月19日 16:24:56
+--UPDATE t_lslrl SET sx = -100,xx = 0.2 WHERE id = 1
+--UPDATE t_lslrl SET sx =0.21 ,xx = 0.4 WHERE id = 2
+--UPDATE t_lslrl SET sx =0.41 ,xx = 0.6 WHERE id = 3
+--UPDATE t_lslrl SET sx =0.61 ,xx = 10 WHERE id = 4
+
 --------库存表增加更新时间字段，记录最后更新时间 2020年12月29日 14:22:44
 --ALTER TABLE t_chxx 
 --ADD gxrq DATETIME DEFAULT GETDATE()
 --execute sp_addextendedproperty 'MS_Description','更新时间','user','dbo','table','t_chxx','column','gxrq';
+
+--UPDATE t_chxx SET gxrq = GETDATE()
+
 --alter TRIGGER [dbo].[tri_del_chxx] ON [dbo].[T_CHXX] 
 --FOR UPDATE
 --AS
 --UPDATE a SET a.gxrq = GETDATE()
 --FROM t_chxx a
 --JOIN INSERTED b ON a.spbh=b.spbh AND a.pcbh=b.pcbh AND a.hwbh=b.hwbh
-----delete from t_chxx where chsl = 0 AND tbbz = 1
 --GO
-------insert into t_chxx_tbjl(tbsj) values('2020.12.28')
-
--- ------库存表增加 库存同步标志(默认0为未同步，1为已同步)  2020年12月1日 16:49:39
---ALTER TABLE t_chxx 
---ADD tbbz TINYINT DEFAULT 0 
-
-------EXEC sp_dropextendedproperty 'MS_Description','user',dbo,'table','t_chxx','column',tbbz
---execute sp_addextendedproperty 'MS_Description','库存同步标志(默认0为未同步，1为已同步)','user','dbo','table','t_chxx','column','tbbz';
 
 --CREATE TABLE t_chxx_tbjl
 --(
@@ -29,6 +33,8 @@
 --EXECUTE sp_addextendedproperty 'MS_Description', '同步库存日志记录表', 'user', 'dbo', 'table', 't_chxx_tbjl', NULL;
 --execute sp_addextendedproperty 'MS_Description','库存同步时间','user','dbo','table','t_chxx_tbjl','column','tbsj';
 --execute sp_addextendedproperty 'MS_Description','库存记录数量','user','dbo','table','t_chxx_tbjl','column','tbjls';
+------初始化一条同步记录
+--insert into t_chxx_tbjl(tbsj) values('2020.12.28')
 
 
 ----------分店结账增加 预存款、预存款消费 2020年11月10日 17:53:33  -------

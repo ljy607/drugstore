@@ -1,3 +1,6 @@
+---- 删除链接服务器语法 
+---- exec sp_dropserver 'HJWL', 'droplogins '
+
 EXEC  sp_addlinkedserver
       @server='HJ00',--被访问的服务器别名 
       @srvproduct='',
@@ -14,7 +17,7 @@ EXEC sp_addlinkedsrvlogin
 
 go
 
-select * from HJ00.zddb.dbo.T_hosts
+select * from HJ00.zddb.dbo.t_fgskc
 
 go
 

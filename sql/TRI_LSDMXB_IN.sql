@@ -1,7 +1,6 @@
 
 --零售记录明细触发器
 --修改记录 
---			增加库存变更时，修改库存同步标志为0  2020年12月1日 17:18:55 
 alter   TRIGGER [dbo].[TRI_LSDMXB_IN] ON [dbo].[T_LSDMXB] FOR INSERT AS
 begin
 	DECLARE @decsl DECIMAL(8,2), @declsj DECIMAL(10,4), @deczk decimal(8,2), @decpcye DECIMAL(8,2), @decsysl DECIMAL(8,2), @deczdzk decimal(8,2)
@@ -68,7 +67,7 @@ begin
 		END		
 		ELSE
 		BEGIN			
-			UPDATE T_CHXX SET chsl = chsl - @decsl,tbbz = 0 WHERE  SPBH = @sspbh AND PCBH = @ssppc and hwbh = @syxkw			
+			UPDATE T_CHXX SET chsl = chsl - @decsl WHERE  SPBH = @sspbh AND PCBH = @ssppc and hwbh = @syxkw			
 		END
 		
 		FETCH NEXT FROM cur INTO @sdjbh,@iordr,@sspbh,@ssppc,@decsl,@declsj,@deczk,@jhj

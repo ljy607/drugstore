@@ -5,8 +5,7 @@
         @yhr	养护人
   结果	记录库存
   修改	2016.10.15	增加记录生产日期、到货日期
-		2019年5月3日 14:17:56	增加产地、生产厂家
-		2020年12月1日 17:33:41	库存变动，修改库存同步标志为0				
+		2019年5月3日 14:17:56	增加产地、生产厂家					
 **********************************************************************************************/
 alter    PROCEDURE [dbo].[SP_ZGSCKMX] @sspbh varchar(10), @spcbh varchar(20), @sdjhm varchar(15), @ywrq datetime, @yxrq datetime , 
   @iywtp int, @decjg decimal(10,4), @decsl decimal(10,2), @decjine decimal(10,2), @skw varchar(6),
@@ -45,14 +44,14 @@ begin
 		  IF @iywtp = 1
 			UPDATE T_CHXX 
 			SET YXRQ = @yxrq, CHSL = ISNUll(CHSL,0) + @decsl, JIAG = ((chsl * jiag) + (@decsl * @decjg))/(chsl + @decsl),
-			sccj = @sccj,tbbz = 0
+			sccj = @sccj
 			WHERE  SPBH = @sspbh AND PCBH = @spcbh and hwbh = @skw
 		  ELSE
-			UPDATE T_CHXX SET CHSL = ISNUll(CHSL,0) + @decsl, YXRQ = @yxrq,tbbz = 0 WHERE  SPBH = @sspbh AND PCBH = @spcbh and hwbh = @skw
+			UPDATE T_CHXX SET CHSL = ISNUll(CHSL,0) + @decsl, YXRQ = @yxrq WHERE  SPBH = @sspbh AND PCBH = @spcbh and hwbh = @skw
 		END 
 	  ELSE   --出库操作
 		BEGIN
-		  UPDATE T_CHXX SET chsl = chsl - @decsl,tbbz = 0 WHERE  SPBH = @sspbh AND PCBH = @spcbh and hwbh = @skw
+		  UPDATE T_CHXX SET chsl = chsl - @decsl WHERE  SPBH = @sspbh AND PCBH = @spcbh and hwbh = @skw
 		END
 	END
 	ELSE   --没有相应数据 
