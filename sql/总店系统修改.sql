@@ -1,3 +1,8 @@
+-- 商品信息增加四类药品标识 2022年1月28日 17:26:32 ---------------------
+--ALTER TABLE t_spxx 
+--ADD slyp TINYINT DEFAULT 0 ;
+--execute sp_addextendedproperty 'MS_Description','四类药品','user','dbo','table','t_spxx','column','slyp';
+
 -----------------2021年9月10日 13:26:24 增加首营企业数据调整 -----------------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
 --VALUES('11','首营企业调整',7,0,'首营企业调整','image\tom_wap.gif','w_syqyspb_tz',1,1,0)

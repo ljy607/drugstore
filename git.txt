@@ -1,0 +1,11 @@
+##### 查看本地代码状态
+git status
+
+##### 增加本地变更到提交状态 
+git add .
+
+##### 提交变更，增加注释
+git commmit -m '修改了库存管理 2021年9月22日 16:40:19'
+
+##### 提交分支到服务器master
+git push origin master
