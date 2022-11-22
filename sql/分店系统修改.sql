@@ -1,3 +1,96 @@
+----------外部销售单增加打包袋、包装费、配送费三个字段属性 2022年9月26日 09:35:11 --------------------
+--alter TABLE [dbo].[T_LSDZB_W]
+--add dbd decimal(10,2) DEFAULT 0,
+--    bzf decimal(10,2) DEFAULT 0,
+--    psf decimal(10,2) DEFAULT 0;
+--GO
+
+--EXEC sp_addextendedproperty 'MS_Description', '打包袋', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', dbd;
+--EXEC sp_addextendedproperty 'MS_Description', '包装费', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', bzf;
+--EXEC sp_addextendedproperty 'MS_Description', '配送费', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', psf;
+
+---------------- 结账增加美团销售额 2022年9月21日 14:16:57  ------------
+--ALTER TABLE t_jz
+--ADD jemeituan DECIMAL(18,2) DEFAULT 0;
+--GO
+
+--EXEC sp_updateextendedproperty 'MS_Description', '结账记录', 'user', dbo, 'table', t_jz, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '美团销售额', 'user', dbo, 'table', t_jz, 'column', jemeituan;
+
+--------商品信息增加27位国家编码，用于医疗器械/耗材的医保结算 2022年9月13日 17:12:16 ------------------
+--alter TABLE T_SPXX
+--add gjgbbm VARCHAR(60);
+--GO
+--EXEC sp_addextendedproperty 'MS_Description', '国家贯标耗材编码;27位国家贯标耗材编码，用于医保结算', 'user', dbo, 'table', T_SPXX, 'column', gjgbbm;
+
+
+----------增加外部订单录入功能 2022年6月2日 11:07:13 ------------------------
+
+--IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_LSDZB_W]') AND type in (N'U'))
+--DROP TABLE [dbo].[T_LSDZB_W];
+--CREATE TABLE [dbo].[T_LSDZB_W](
+--    LSDBH varchar(15) NOT NULL,
+--    RQ DATETIME,
+--    YSJE decimal(10,2) NOT NULL DEFAULT  (0),
+--    SSJE decimal(10,2) NOT NULL DEFAULT  0,
+--    DDLY varchar(10) NOT NULL,
+--    WBDDBH varchar(60),
+--    BZ varchar(50),
+--    KPR varchar(10),
+--    YXBZ tinyint,
+--    PRIMARY KEY (LSDBH)
+--)
+
+--EXEC sp_addextendedproperty 'MS_Description', '外部销售订单主表', 'SCHEMA', dbo, 'table', T_LSDZB_W, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '零售单号', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', LSDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '销售日期', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', RQ;
+--EXEC sp_addextendedproperty 'MS_Description', '应收金额', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', YSJE;
+--EXEC sp_addextendedproperty 'MS_Description', '实收金额', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', SSJE;
+--EXEC sp_addextendedproperty 'MS_Description', '订单来源;美团、拼多多、京东等', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', DDLY;
+--EXEC sp_addextendedproperty 'MS_Description', '外部订单编号', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', WBDDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '备注', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', BZ;
+--EXEC sp_addextendedproperty 'MS_Description', '录入人', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', KPR;
+--EXEC sp_addextendedproperty 'MS_Description', '状态', 'SCHEMA', dbo, 'table', T_LSDZB_W, 'column', YXBZ;
+
+--IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_LSDMXB_W]') AND type in (N'U'))
+--DROP TABLE [dbo].[T_LSDMXB_W];
+--CREATE TABLE [dbo].[T_LSDMXB_W](
+--    ID INT NOT NULL IDENTITY(1,1),
+--    LSDBH varchar(15) NOT NULL,
+--    SPBH varchar(15) NOT NULL,
+--    PCBH varchar(20),
+--    SL decimal(10,2) NOT NULL DEFAULT  (0),
+--    LSJ decimal(10,2) NOT NULL DEFAULT  (0),
+--    YYYBH varchar(10),
+--    GUIT varchar(10),
+--    YSBH varchar(10),
+--    JHJ decimal(10,2) DEFAULT  (0),
+--    JHJHS decimal(10,2) DEFAULT  (0),
+--    JYLB varchar(5),
+--    PRIMARY KEY (ID)
+--);
+
+--EXEC sp_addextendedproperty 'MS_Description', '外部销售订单明细表', 'SCHEMA', dbo, 'table', T_LSDMXB_W, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '键值', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', ID;
+--EXEC sp_addextendedproperty 'MS_Description', '零售单号', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', LSDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '货号', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', SPBH;
+--EXEC sp_addextendedproperty 'MS_Description', '批号', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', PCBH;
+--EXEC sp_addextendedproperty 'MS_Description', '数量', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', SL;
+--EXEC sp_addextendedproperty 'MS_Description', '单价', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', LSJ;
+--EXEC sp_addextendedproperty 'MS_Description', '营业员编号', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', YYYBH;
+--EXEC sp_addextendedproperty 'MS_Description', '货位', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', GUIT;
+--EXEC sp_addextendedproperty 'MS_Description', '药师编号', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', YSBH;
+--EXEC sp_addextendedproperty 'MS_Description', '进货价', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', JHJ;
+--EXEC sp_addextendedproperty 'MS_Description', '核算价', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', JHJHS;
+--EXEC sp_addextendedproperty 'MS_Description', '经营类别', 'SCHEMA', dbo, 'table', T_LSDMXB_W, 'column', JYLB;
+
+
+------   商品信息增加是否退换货标识 2022年2月25日 14:57:19 ------------------
+--ALTER TABLE t_spxx 
+--ADD sfth TINYINT DEFAULT 0 ;
+--execute sp_addextendedproperty 'MS_Description','是否支持退换货','user','dbo','table','t_spxx','column','sfth';
+
+
 ---------------增加内部销售 2021年7月5日 18:07:22 三店 25店 未更新-----------------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
 --VALUES('17','内部销售',3,2,'内部销售','image\tom_wap.gif','w_kfls',0,1,0)

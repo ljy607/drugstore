@@ -1,3 +1,270 @@
+------增加外部销售订单 2022年10月9日 14:13:18  -------------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('13','网销订单查询',3,1,'网销订单查询','image\tom_wap.gif','w_lsdcx_w',1,1,0);
+
+--CREATE TABLE T_LSDZB_W(
+--    fgsbh VARCHAR(15) NOT NULL,
+--    LSDBH varchar(15) NOT NULL,
+--    RQ datetime,
+--    YSJE decimal(10,2) NOT NULL DEFAULT  (0),
+--    SSJE decimal(10,2) NOT NULL DEFAULT  0,
+--    dbd decimal(10,2),
+--    bzf decimal(10,2),
+--    psf decimal(10,2),
+--    DDLY varchar(10) NOT NULL,
+--    WBDDBH varchar(60),
+--    BZ varchar(50),
+--    KPR varchar(10),
+--    YXBZ tinyint,
+--    PRIMARY KEY (fgsbh,LSDBH)
+--);
+--go
+
+--EXEC sp_addextendedproperty 'MS_Description', '外部销售订单主表', 'user', dbo, 'table', T_LSDZB_W, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '分店编号', 'user', dbo, 'table', T_LSDZB_W, 'column', fgsbh;
+--EXEC sp_addextendedproperty 'MS_Description', '零售单号', 'user', dbo, 'table', T_LSDZB_W, 'column', LSDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '销售日期', 'user', dbo, 'table', T_LSDZB_W, 'column', RQ;
+--EXEC sp_addextendedproperty 'MS_Description', '应收金额', 'user', dbo, 'table', T_LSDZB_W, 'column', YSJE;
+--EXEC sp_addextendedproperty 'MS_Description', '实收金额', 'user', dbo, 'table', T_LSDZB_W, 'column', SSJE;
+--EXEC sp_addextendedproperty 'MS_Description', '打包袋', 'user', dbo, 'table', T_LSDZB_W, 'column', dbd;
+--EXEC sp_addextendedproperty 'MS_Description', '包装费', 'user', dbo, 'table', T_LSDZB_W, 'column', bzf;
+--EXEC sp_addextendedproperty 'MS_Description', '配送费', 'user', dbo, 'table', T_LSDZB_W, 'column', psf;
+--EXEC sp_addextendedproperty 'MS_Description', '订单来源;美团、拼多多、京东等', 'user', dbo, 'table', T_LSDZB_W, 'column', DDLY;
+--EXEC sp_addextendedproperty 'MS_Description', '外部订单编号', 'user', dbo, 'table', T_LSDZB_W, 'column', WBDDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '备注', 'user', dbo, 'table', T_LSDZB_W, 'column', BZ;
+--EXEC sp_addextendedproperty 'MS_Description', '录入人', 'user', dbo, 'table', T_LSDZB_W, 'column', KPR;
+--EXEC sp_addextendedproperty 'MS_Description', '状态', 'user', dbo, 'table', T_LSDZB_W, 'column', YXBZ;
+
+--CREATE TABLE T_LSDMXB_W(
+--    ID int NOT NULL IDENTITY(1,1),
+--    LSDBH varchar(15) NOT NULL,
+--    SPBH varchar(15) NOT NULL,
+--    PCBH varchar(20),
+--    SL decimal(10,2) NOT NULL DEFAULT  (0),
+--    LSJ decimal(10,2) NOT NULL DEFAULT  (0),
+--    YYYBH varchar(10),
+--    GUIT varchar(10),
+--    YSBH varchar(10),
+--    JHJ decimal(10,2) DEFAULT  (0),
+--    JHJHS decimal(10,2) DEFAULT  (0),
+--    JYLB varchar(5),
+--    PRIMARY KEY (ID)
+--);
+--go
+
+--EXEC sp_addextendedproperty 'MS_Description', '外部销售订单明细表', 'user', dbo, 'table', T_LSDMXB_W, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '键值', 'user', dbo, 'table', T_LSDMXB_W, 'column', ID;
+--EXEC sp_addextendedproperty 'MS_Description', '零售单号', 'user', dbo, 'table', T_LSDMXB_W, 'column', LSDBH;
+--EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', T_LSDMXB_W, 'column', SPBH;
+--EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', T_LSDMXB_W, 'column', PCBH;
+--EXEC sp_addextendedproperty 'MS_Description', '数量', 'user', dbo, 'table', T_LSDMXB_W, 'column', SL;
+--EXEC sp_addextendedproperty 'MS_Description', '单价', 'user', dbo, 'table', T_LSDMXB_W, 'column', LSJ;
+--EXEC sp_addextendedproperty 'MS_Description', '营业员编号', 'user', dbo, 'table', T_LSDMXB_W, 'column', YYYBH;
+--EXEC sp_addextendedproperty 'MS_Description', '货位', 'user', dbo, 'table', T_LSDMXB_W, 'column', GUIT;
+--EXEC sp_addextendedproperty 'MS_Description', '药师编号', 'user', dbo, 'table', T_LSDMXB_W, 'column', YSBH;
+--EXEC sp_addextendedproperty 'MS_Description', '进货价', 'user', dbo, 'table', T_LSDMXB_W, 'column', JHJ;
+--EXEC sp_addextendedproperty 'MS_Description', '核算价', 'user', dbo, 'table', T_LSDMXB_W, 'column', JHJHS;
+--EXEC sp_addextendedproperty 'MS_Description', '经营类别', 'user', dbo, 'table', T_LSDMXB_W, 'column', JYLB;
+
+
+--------------------付款记录增加返款金额字段 2022年9月19日 09:51:37 ---------------
+--alter TABLE T_FKJLZB
+--ADD ZKJE decimal(19,4) DEFAULT  0;
+--GO
+
+--EXEC sp_addextendedproperty 'MS_Description', '', 'user', dbo, 'table', T_FKJLZB, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '付款记录编号', 'user', dbo, 'table', T_FKJLZB, 'column', FKJLBH;
+--EXEC sp_addextendedproperty 'MS_Description', '供应商编号', 'user', dbo, 'table', T_FKJLZB, 'column', GYSBH;
+--EXEC sp_addextendedproperty 'MS_Description', '付款日期', 'user', dbo, 'table', T_FKJLZB, 'column', FKRQ;
+--EXEC sp_addextendedproperty 'MS_Description', '付款金额', 'user', dbo, 'table', T_FKJLZB, 'column', FKJE;
+--EXEC sp_addextendedproperty 'MS_Description', '退货金额', 'user', dbo, 'table', T_FKJLZB, 'column', THJE;
+--EXEC sp_addextendedproperty 'MS_Description', '付款人', 'user', dbo, 'table', T_FKJLZB, 'column', FKR;
+--EXEC sp_addextendedproperty 'MS_Description', '备注', 'user', dbo, 'table', T_FKJLZB, 'column', BZ;
+--EXEC sp_addextendedproperty 'MS_Description', '返款金额;返款金额作为扣除付款的一部分，同退回金额', 'user', dbo, 'table', T_FKJLZB, 'column', ZKJE;
+
+--alter TABLE t_jhpfd
+--add wrje decimal(18,2) DEFAULT 0;
+--GO
+
+--EXEC sp_addextendedproperty 'MS_Description', '进货票附单', 'user', dbo, 'table', t_jhpfd, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '', 'user', dbo, 'table', t_jhpfd, 'column', id;
+--EXEC sp_addextendedproperty 'MS_Description', '供应商编号', 'user', dbo, 'table', t_jhpfd, 'column', gysbh;
+--EXEC sp_addextendedproperty 'MS_Description', '供应商名称', 'user', dbo, 'table', t_jhpfd, 'column', gysmc;
+--EXEC sp_addextendedproperty 'MS_Description', '进货日期', 'user', dbo, 'table', t_jhpfd, 'column', jhrq;
+--EXEC sp_addextendedproperty 'MS_Description', '来票张数', 'user', dbo, 'table', t_jhpfd, 'column', lpzs;
+--EXEC sp_addextendedproperty 'MS_Description', '票面金额', 'user', dbo, 'table', t_jhpfd, 'column', pmje;
+--EXEC sp_addextendedproperty 'MS_Description', '供货品种', 'user', dbo, 'table', t_jhpfd, 'column', ghpz;
+--EXEC sp_addextendedproperty 'MS_Description', '冲账金额', 'user', dbo, 'table', t_jhpfd, 'column', cjje;
+--EXEC sp_addextendedproperty 'MS_Description', '未收金额', 'user', dbo, 'table', t_jhpfd, 'column', wsje;
+--EXEC sp_addextendedproperty 'MS_Description', '未收品种数;0 已保存， 1 待审核，2 已审核', 'user', dbo, 'table', t_jhpfd, 'column', wspzs;
+--EXEC sp_addextendedproperty 'MS_Description', '标志', 'user', dbo, 'table', t_jhpfd, 'column', flag;
+--EXEC sp_addextendedproperty 'MS_Description', '未入机金额', 'user', dbo, 'table', t_jhpfd, 'column', wrje;
+
+--CREATE TABLE t_jhdmxb_jg(
+--    id INT NOT NULL,
+--    jhdbh VARCHAR(32),
+--    spbh VARCHAR(32),
+--    jhj decimal(18,2),
+--    qjhj decimal(18,2),
+--    bz VARCHAR(64),
+--    PRIMARY KEY (id)
+--);
+--GO
+--EXEC sp_addextendedproperty 'MS_Description', '涨价记录明细表', 'user', dbo, 'table', t_jhdmxb_jg, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', 'ID;t_jhdmxb.id', 'user', dbo, 'table', t_jhdmxb_jg, 'column', id;
+--EXEC sp_addextendedproperty 'MS_Description', '进货单编号', 'user', dbo, 'table', t_jhdmxb_jg, 'column', jhdbh;
+--EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_jhdmxb_jg, 'column', spbh;
+--EXEC sp_addextendedproperty 'MS_Description', '进货价', 'user', dbo, 'table', t_jhdmxb_jg, 'column', jhj;
+--EXEC sp_addextendedproperty 'MS_Description', '上次进货价', 'user', dbo, 'table', t_jhdmxb_jg, 'column', qjhj;
+--EXEC sp_addextendedproperty 'MS_Description', '涨价原因', 'user', dbo, 'table', t_jhdmxb_jg, 'column', bz;
+
+--CREATE TABLE t_jhdzb_jg(
+--    jhdbh VARCHAR(32) NOT NULL,
+--    jhrq datetime,
+--    gysbh VARCHAR(16),
+--    flag tinyint DEFAULT  0,
+--    PRIMARY KEY (jhdbh)
+--);
+--go
+
+--EXEC sp_addextendedproperty 'MS_Description', '涨价记录主表', 'SCHEMA', dbo, 'table', t_jhdzb_jg, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '进货单编号', 'SCHEMA', dbo, 'table', t_jhdzb_jg, 'column', jhdbh;
+--EXEC sp_addextendedproperty 'MS_Description', '进货日期', 'SCHEMA', dbo, 'table', t_jhdzb_jg, 'column', jhrq;
+--EXEC sp_addextendedproperty 'MS_Description', '供应商编号', 'SCHEMA', dbo, 'table', t_jhdzb_jg, 'column', gysbh;
+--EXEC sp_addextendedproperty 'MS_Description', '状态', 'SCHEMA', dbo, 'table', t_jhdzb_jg, 'column', flag;
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('15','进货涨价原因',2,1,'进货涨价原因','image\tom_wap.gif','w_jhd_jgsm',1,1,0);
+
+
+------------------商品信息增加医疗器械/耗材的27位国家贯标耗材编码字段 2022年9月13日 16:44:51 ----------------
+--alter TABLE T_SPXX
+--add gjgbbm VARCHAR(60);
+--GO
+--EXEC sp_addextendedproperty 'MS_Description', '国家贯标耗材编码;27位国家贯标耗材编码，用于医保结算', 'user', dbo, 'table', T_SPXX, 'column', gjgbbm;
+
+-----------零售汇总表增加核算进货价金额 2022年9月7日 14:17:52 -----------------
+--alter TABLE T_LSHZB
+--ADD HSJE decimal(10,2) ;
+--GO
+
+--EXEC sp_addextendedproperty 'MS_Description', '', 'user', dbo, 'table', T_LSHZB, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '分公司编码', 'user', dbo, 'table', T_LSHZB, 'column', FGSBH;
+--EXEC sp_addextendedproperty 'MS_Description', '销售日期', 'user', dbo, 'table', T_LSHZB, 'column', LSRQ;
+--EXEC sp_addextendedproperty 'MS_Description', '序号', 'user', dbo, 'table', T_LSHZB, 'column', ORDR;
+--EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', T_LSHZB, 'column', SPBH;
+--EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', T_LSHZB, 'column', PCBH;
+--EXEC sp_addextendedproperty 'MS_Description', '数量', 'user', dbo, 'table', T_LSHZB, 'column', SHUL;
+--EXEC sp_addextendedproperty 'MS_Description', '销售金额', 'user', dbo, 'table', T_LSHZB, 'column', JINE;
+--EXEC sp_addextendedproperty 'MS_Description', '进货价', 'user', dbo, 'table', T_LSHZB, 'column', JHJ;
+--EXEC sp_addextendedproperty 'MS_Description', '开发票标志', 'user', dbo, 'table', T_LSHZB, 'column', KFP;
+--EXEC sp_addextendedproperty 'MS_Description', '核算进货金额', 'user', dbo, 'table', T_LSHZB, 'column', HSJE;
+--GO
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('12','分店毛利核算',3,1,'分店毛利核算','image\tom_wap.gif','w_cw_fdmlhs',1,1,0);
+--go
+
+--/***********************************************
+--* 零售记录上传
+--***********************************************/
+--ALTER PROCEDURE [dbo].[SP_LSUPLOAD] @sdwbh varchar(12), @dtywrq datetime, @spbh varchar(16), @spcbh varchar(20)
+--, @decsl decimal(8,2), @decjine decimal(8,2),@decjhj decimal(10,4),@dechsje decimal(10,2)=null
+--AS
+--DECLARE @iordr int
+--SELECT @iordr = ISNULL(MAX(ORDR),0) + 1 FROM T_LSHZB WHERE FGSBH = @sdwbh AND LSRQ = @dtywrq
+--INSERT INTO T_LSHZB(fgsbh,lsrq,ordr,spbh,pcbh,shul,jine,jhj,HSJE)
+-- VALUES ( @sdwbh, @dtywrq, @iordr, @spbh, @spcbh, @decsl, @decjine,@decjhj,@dechsje )
+
+--GO
+
+----------------- 运输记录增加车型 2022年8月14日 16:39:01 ----------------
+--ALTER TABLE t_ysjl
+--ADD chex VARCHAR(16) NULL;
+--GO
+--EXEC sp_addextendedproperty 'MS_Description', '车型', 'user', dbo, 'table', t_ysjl, 'column', chex;
+
+
+
+----------------- 供应商增加预警提醒属性 2022年7月27日 10:29:35------------------
+--ALTER TABLE T_GYSXX
+--ADD yjtx TINYINT DEFAULT 1;
+--GO
+--EXEC sp_addextendedproperty 'MS_Description', '预警提醒', 'user', dbo, 'table', T_GYSXX, 'column', yjtx;
+--UPDATE T_GYSXX SET yjtx = 1 ;
+
+----------------- 增加返款财务记录 2022年7月11日 09:48:01  -------------------
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('10','返款记账',3,0,'返款记账','image\tom_wap.gif','w_spxx_fk',1,1,0);
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('11','返款记账查询',3,0,'返款记账','image\tom_wap.gif','w_spxx_fkcx',1,1,0);
+
+
+--CREATE TABLE t_spxx_fkjl(
+--    fkbh VARCHAR(32) NOT NULL,
+--    fkrq DATETIME,
+--    fkje DECIMAL(10,2),
+--    zbr VARCHAR(10),
+--    bz varchar(128),
+--    PRIMARY KEY (fkbh)
+--);
+--EXEC sp_addextendedproperty 'MS_Description', '返款记录', 'user', dbo, 'table', t_spxx_fkjl, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '键值', 'user', dbo, 'table', t_spxx_fkjl, 'column', fkbh;
+--EXEC sp_addextendedproperty 'MS_Description', '返款日期', 'user', dbo, 'table', t_spxx_fkjl, 'column', fkrq;
+--EXEC sp_addextendedproperty 'MS_Description', '返款金额', 'user', dbo, 'table', t_spxx_fkjl, 'column', fkje;
+--EXEC sp_addextendedproperty 'MS_Description', '操作人', 'user', dbo, 'table', t_spxx_fkjl, 'column', zbr;
+--EXEC sp_addextendedproperty 'MS_Description', '备注', 'user', dbo, 'table', t_spxx_fkjl, 'column', bz;
+
+----DROP TABLE IF EXISTS t_spxx_fkjlmx;
+--CREATE TABLE t_spxx_fkjlmx(
+--    id INT NOT NULL IDENTITY(1,1),
+--    fkbh VARCHAR(32),
+--    spxx_fk_id INT,
+--    fkje DECIMAL(10,2),
+--    jhdmxid INT,
+--    jhsl decimal(10,2),
+--    PRIMARY KEY (id)
+--);
+--EXEC sp_addextendedproperty 'MS_Description', '返款记录明细', 'user', dbo, 'table', t_spxx_fkjlmx, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '键值', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', id;
+--EXEC sp_addextendedproperty 'MS_Description', '返款编号', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', fkbh;
+--EXEC sp_addextendedproperty 'MS_Description', '返款商品', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', spxx_fk_id;
+--EXEC sp_addextendedproperty 'MS_Description', '返款金额', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', fkje;
+--EXEC sp_addextendedproperty 'MS_Description', '进货单明细ID', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', jhdmxid;
+--EXEC sp_addextendedproperty 'MS_Description', '进货数量', 'user', dbo, 'table', t_spxx_fkjlmx, 'column', jhsl;
+
+
+-----增加返款商品记录表，记录商品的返款金额、联系人信息，用于查询统计返款金额 2022年3月4日 08:59:10------------
+--CREATE TABLE t_spxx_fk(
+--    id INT NOT NULL IDENTITY(1,1),
+--    spbh VARCHAR(32),
+--    gysbh VARCHAR(10),
+--    fkje DECIMAL(10,2),
+--    lxr VARCHAR(16),
+--    lxdh VARCHAR(16),
+--    PRIMARY KEY (id)
+--)
+--EXEC sp_addextendedproperty 'MS_Description', '返款商品记录信息', 'user', dbo, 'table', t_spxx_fk, null, null;
+--EXEC sp_addextendedproperty 'MS_Description', '键值', 'user', dbo, 'table', t_spxx_fk, 'column', id;
+--EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_spxx_fk, 'column', spbh;
+--EXEC sp_addextendedproperty 'MS_Description', '供应商编号', 'user', dbo, 'table', t_spxx_fk, 'column', gysbh;
+--EXEC sp_addextendedproperty 'MS_Description', '返款金额;每个数量的返款金额', 'user', dbo, 'table', t_spxx_fk, 'column', fkje;
+--EXEC sp_addextendedproperty 'MS_Description', '联系人', 'user', dbo, 'table', t_spxx_fk, 'column', lxr;
+--EXEC sp_addextendedproperty 'MS_Description', '联系电话', 'user', dbo, 'table', t_spxx_fk, 'column', lxdh;
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('28','返款药品',6,0,'返款药品','image\tom_wap.gif','w_fkyp',1,1,0)
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('09','返款金额查询',3,0,'返款金额查询','image\tom_wap.gif','w_fkcx',1,1,0)
+
+
+--------   商品信息增加是否退换货标识 2022年2月25日 14:57:19 ------------------
+--ALTER TABLE t_spxx 
+--ADD sfth TINYINT DEFAULT 0 ;
+--execute sp_addextendedproperty 'MS_Description','是否支持退换货','user','dbo','table','t_spxx','column','sfth';
+
+
 -- 商品信息增加四类药品标识 2022年1月28日 17:26:32 ---------------------
 --ALTER TABLE t_spxx 
 --ADD slyp TINYINT DEFAULT 0 ;

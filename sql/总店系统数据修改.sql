@@ -1,3 +1,166 @@
+
+------------- 修改经营范围 2022年7月29日 10:50:25 -----------------
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,8,'中成药','中成药',1,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,9,'化学药制剂','化学药制剂',2,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,10,'抗生素','抗生素',3,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,11,'食品','食品',4,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,12,'保健品','保健品',5,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,13,'消毒剂','消毒剂',6,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,14,'化妆品','化妆品',7,1 );
+INSERT INTO t_options(	pid,code,name,note,sort,flag)
+VALUES( 5,15,'日化','日化',8,1 );
+
+
+UPDATE t_options
+SET name = '生化药品',note='生化药品',sort=5 WHERE id = 141;
+
+
+SELECT *
+FROM t_options e
+--LEFT JOIN t_dwxx_jyfw e1 ON e.code = e1.jyfwid  and e1.dwbh = :a
+WHERE e.pid = 5
+ORDER BY e.sort
+
+------------- 删除操作日志 2022年7月27日 20:56:49 -------------
+SELECT *  -- delete
+FROM T_SYS_LOG 
+WHERE UserID='001'
+
+-------------- 电商损益单转退库单  2022年7月26日 15:50:08
+--INSERT INTO T_TKDZB(TKDBH, TKRQ, TKDW, SQR, PZR, FLAG, BZ, wmsflag, ysr, fhr, delflag)
+SELECT distinct 'TK201'+ substring(a.bsdbh,3,8),bsrq,'201',kpr,bsr,10,'电商退库',1,'023','090',1
+FROM t_bsdzb a
+JOIN t_bsdmxb b ON a.BSDBH=b.BSDBH
+WHERE a.bz LIKE '%电商%' 
+AND b.bstp = 1
+ORDER BY a.bsrq
+
+--INSERT INTO t_tkdmxb(TKDBH, ORDR, SPBH, PCBH, JHJG, SHUL, GUIW, TKYY, yxrq, scrq, zlzk, ysjl, cd,sccj, delflag)
+SELECT 'TK201'+ substring(b.bsdbh,3,8),b.ordr,b.spbh,b.pcbh,b.bsjg,b.bssl,'H01','',b.yxrq,NULL,'外包装符合规定','合格入库','','',1
+FROM t_bsdzb a
+JOIN t_bsdmxb b ON a.BSDBH=b.BSDBH
+WHERE a.bz LIKE '%电商%' 
+AND b.bstp = 1
+ORDER BY a.bsrq
+---------------------- 电商损益单转退款单结束 -----------------------------------------
+
+SELECT a.id, s.spbh,s.pm,s.gg,s.CJMC,s.pzwh,b.gmp,b.otc
+FROM t_1 a
+ JOIN v_spxx s ON s.pzwh = a.bz
+ JOIN t_jgxx j ON j.spbh=s.spbh
+ JOIN t_spxx b ON b.spbh=s.spbh
+AND isnull(b.otc,0) = 1
+--and s.GMP='Y' 
+ORDER BY a.id
+
+SELECT a.id, a.spbh,ISNULL(s.PZWH,'') pzwh,ISNULL(b.gnzz,'') gnzz,ISNULL(j.zdjj,0) zdjj,h.jhrq
+FROM t_1 a
+left JOIN v_spxx s ON s.spbh = a.spbh
+left JOIN t_jgxx j ON j.spbh=a.spbh
+LEFT JOIN t_spxx b ON b.spbh=a.spbh
+left JOIN (
+	SELECT e.spbh,max(e1.jhrq) jhrq
+	FROM t_jhdmxb e
+	JOIN t_jhdzb e1 ON e1.JHDBH = e.JHDBH
+	WHERE e1.JHRQ > '2021.7.1'
+	GROUP BY e.spbh
+) h ON a.spbh=h.spbh
+ORDER BY a.id
+
+----------查询总店一周以前进货的库存商品 2022年6月14日 18:17:58
+SELECT s.spbh,s.pm,s.gg,s.cjmc,s.gmp,s.cctj,s.FLAG,j.zdjj,j.zhgys,g.gysmc,c.yxrq,c.pcbh,c.chsl
+FROM (
+SELECT a.spbh,a.pcbh,a.yxrq,a.chsl
+FROM t_chxx a
+left JOIN (
+	SELECT DISTINCT e.spbh,pcbh
+	FROM t_jhdmxb e
+	JOIN t_jhdzb e1 ON e1.JHDBH = e.JHDBH
+	WHERE e1.JHRQ>'2022.6.6'
+) b ON a.spbh=b.spbh AND a.PCBH=b.pcbh AND a.CHSL>0
+WHERE b.spbh IS NULL 
+) c 
+join v_spxx s ON s.spbh=c.spbh
+JOIN t_jgxx j ON s.spbh=j.spbh
+JOIN t_gysxx g ON j.zhgys=g.gysbh
+ORDER BY  c.yxrq 
+
+-----------查询进3月otc药品销量和价格 2022年5月18日 11:45:01
+SELECT a.spbh,sj.pm,sj.gg,sj.cjmc,s.spbm,sj.zdjj,a.sl,g.GYSBH,g.GYSMC
+FROM (
+SELECT tl.spbh,COUNT(tl.shul) sl
+FROM T_LSHZB tl 
+where tl.lsrq > DATEADD(MONTH,-1,GETDATE())
+group BY tl.spbh
+) a
+JOIN v_spxx_qtcx sj ON a.spbh=sj.spbh
+JOIN t_spxx s ON a.SPBH=s.spbh
+JOIN t_jgxx j ON a.spbh=j.SPBH
+JOIN t_Gysxx g ON j.zhgys=g.GYSBH
+WHERE 1=1  
+--AND (a.spbh LIKE '1%' OR a.spbh LIKE '4%')
+AND isnull(s.otc,0) = 1
+--and s.GMP='Y' 
+ORDER BY  a.sl DESC
+
+SELECT a.spbh,isnull(a.sl,0)
+FROM (
+SELECT tl.spbh,COUNT(tl.shul) sl
+FROM T_LSHZB tl 
+where tl.lsrq > DATEADD(MONTH,-1,GETDATE())
+group BY tl.spbh
+) a
+right JOIN t_aa b ON a.spbh=b.spbh
+WHERE b.ordr >= 930
+ORDER BY b.ordr
+
+SELECT a.spbh,b.zdjj,c.GYSBH,c.gysmc
+FROM t_aa a
+JOIN t_jgxx b ON a.spbh=b.SPBH
+JOIN t_gysxx c ON b.zhgys=c.GYSBH
+WHERE a.ordr >= 930
+ORDER BY ordr
+
+------------查询库存商品的进价和进货单位 2022年5月4日 21:01:57
+SELECT s.spbh,s.pm,s.gg,s.cjmc,s.gmp,s.cctj,s.FLAG,j.zdjj,j.zhgys,g.gysmc,c.yxrq,c.pcbh
+FROM v_spxx s
+JOIN t_jgxx j ON s.spbh=j.spbh
+JOIN t_gysxx g ON j.zhgys=g.gysbh
+JOIN(
+	SELECT spbh,pcbh,yxrq 
+FROM t_chxx 
+WHERE CHSL > 0
+UNION
+SELECT DISTINCT spbh,pcbh,YXRQ
+FROM t_fgskc 
+WHERE shul - yxsl > 0
+) c ON s.spbh=c.spbh
+ORDER BY c.yxrq 
+
+------ 设置商品的积分标志，毛利低于0.3的不积分 2022年4月26日 14:24:49
+--SELECT a.spbh,(b.hyj-b.zdjj)/b.hyj,b.zdjj,b.hyj,s.jfbz,s.gxrq   -- UPDATE s set s.jfbz=0,s.gxrq=getdate()
+--FROM t_spxx s
+--join
+--(
+--SELECT spbh 
+--FROM t_chxx 
+--WHERE CHSL > 0
+--UNION
+--SELECT DISTINCT spbh
+--FROM t_fgskc 
+--WHERE shul - yxsl > 0
+--) a ON a.SPBH = s.SPBH
+--JOIN t_jgxx b ON a.spbh=b.spbh 
+--WHERE b.hyj >0 AND (b.hyj-b.zdjj)/b.hyj <= 0.3
+--AND s.jfbz = 1
+
 --------查询分店商品价格信息  2022年2月17日 13:12:03
 --SELECT DISTINCT b.spbh,b.pm,b.gg,b.cjmc,c.lsj,c.zdjj,c.hyj,b.SPLB
 --FROM t_fgskc a

@@ -17,7 +17,7 @@ EXEC sp_addlinkedsrvlogin
 
 go
 
-select * from HJ00.zddb.dbo.t_fgskc
+select * from HJ00.zddb.dbo.t_hosts
 
 go
 

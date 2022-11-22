@@ -1,3 +1,24 @@
+-- 删除美团订单 2022年10月9日 11:38:04
+SELECT *  
+--DELETE a
+FROM T_LSDZB_W a
+WHERE lsdbh = '22100710522102';
+
+SELECT *  
+--delete a
+FROM T_LSDmxB_W a
+WHERE lsdbh = '22100710522102';
+
+SELECT * 
+--update a SET chsl = 1,gxrq = GETDATE() 
+FROM t_chxx a 
+WHERE spbh = '42204';
+
+SELECT * 
+--DELETE a
+FROM t_ckmx a WHERE djhm = '22100710522102';
+
+
 SELECT DISTINCT sbbz
 FROM t_spxx WHERE pzwh LIKE '国药准字%'
 AND flag = 1
