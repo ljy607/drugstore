@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.2.0",
   "createdTime": "2022-6-2 10:13:05",
-  "updatedTime": "2022-11-14 13:32:43",
+  "updatedTime": "2022-12-28 14:39:04",
   "profile": {
     "default": {
       "db": "9FCB2F9E-B5E1-4FEE-B23E-F22E45BDB5D8",
@@ -26531,6 +26531,40 @@
           "extProps": {},
           "domain": "",
           "id": "2A728240-330F-4118-99D8-11A30A70F51B"
+        },
+        {
+          "defKey": "dzbz",
+          "defName": "对账标志",
+          "comment": "0 未对账，1 对账成功，2 对账失败",
+          "type": "tinyint",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "0",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "1C2BA0A6-7CF0-4EFA-AB44-D12AFBB9F855"
+        },
+        {
+          "defKey": "dzxx",
+          "defName": "对账返回的消息",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 200,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "B85B79C3-D049-4268-B384-9E0C6ED66480"
         }
       ],
       "indexes": [

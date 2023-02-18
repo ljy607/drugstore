@@ -80,7 +80,9 @@ mzpayfirst decimal(10,2),
     medicalservice decimal(10,2),
     commonservice decimal(10,2),
     registfee decimal(10,2),
-    otheropfee decimal(10,2)
+    otheropfee decimal(10,2),
+    dzbz tinyint(3) DEFAULT  0,
+    dzxx VARCHAR(200)
 ;
 GO
 
@@ -111,3 +113,5 @@ EXEC sp_addextendedproperty 'MS_Description', '其他门诊收费', 'SCHEMA', dbo, 'ta
 EXEC sp_addextendedproperty 'MS_Description', '本次付起付线金额', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', mzpayfirst;
 EXEC sp_addextendedproperty 'MS_Description', '费用总金额', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', mzfee;
 EXEC sp_addextendedproperty 'MS_Description', '参保地结算流水号', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', depatradeno;
+EXEC sp_addextendedproperty 'MS_Description', '对账标志;0 未对账，1 对账成功，2 对账失败', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', dzbz;
+EXEC sp_addextendedproperty 'MS_Description', '对账返回的消息', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', dzxx;
