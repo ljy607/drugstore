@@ -1,0 +1,119 @@
+------------------------- 2023-03-02 13:26:58 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+调用返回状态：成功
+调用返回警告：编号 [5004] -- 描述 [无法验证PSAM卡有效性，请操作员注意禁止使用挂失PSAM卡结算，否则会产生医保拒付。提示信息为：]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用收费预结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="就诊类型，11药店">11</curetype>     <illtype name="就诊方式，0：普通">0</illtype>     <feeno name="收费单据号">2303020001</feeno>     <operator name="收费员">7PrXzrqt</operator>     <Histradeno name="HIS交易流水号">2303020001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230302300014</tradeno><feeno>2303020001</feeno><tradedate>20230302134155</tradedate><depatradeno>120000202303021341550000032174</depatradeno><nationtradedate>20230302134156</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>9.00</fund><cash>0.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>9.00</OtherPay><Cash>0.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>1000.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="9.00"></fundpayitem><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+调用返回状态：成功
+调用收费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="就诊类型，11药店">11</curetype>     <illtype name="就诊方式，0：普通">0</illtype>     <feeno name="收费单据号">2303020001</feeno>     <operator name="收费员">7PrXzrqt</operator>     <Histradeno name="HIS交易流水号">2303020001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230302300015</tradeno><feeno>2303020001</feeno><tradedate>20230302134201</tradedate><depatradeno>120000202303021342020000032175</depatradeno><nationtradedate>20230302134202</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>9.00</fund><cash>0.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>9.00</OtherPay><Cash>0.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>991.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="10" FundName="uPbIy9XLu6c=" FundPay="9.00"></fundpayitem><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+
+调用返回状态：成功
+
+调用异地收据重打接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "交易流水号">2303020001</HisTradeNo>   <invoiceno name = "收费单据号">2303020001</invoiceno>   <businessinfo name = "业务流水号">2303020001</businessinfo>   <hosptype name = "医疗机构类型">v7XE/g==</hosptype>   <Feecode name = "票据代码">2303020001</Feecode>   <Outpatientno name = "门诊号"></Outpatientno> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><DetailReprintFlag>0</DetailReprintFlag></root>
+
+调用返回状态：成功
+调用返回状态：成功
+
+调用异地医保实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><histradeno>2303020001</histradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>20230301000000</checkdate></output></root>
+调用返回状态：成功
+------------------------- 2023-03-02 13:42:51 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+调用返回状态：成功
+调用返回警告：编号 [5004] -- 描述 [无法验证PSAM卡有效性，请操作员注意禁止使用挂失PSAM卡结算，否则会产生医保拒付。提示信息为：]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用异地退费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><HisTradeNo>2303020002</HisTradeNo><OriginalHisTradeNo>2303020001</OriginalHisTradeNo><Operator>7PrXzrqt</Operator><feeno></feeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230302300016</tradeno><feeno>2303020001</feeno><tradedate>20230302134818</tradedate><depatradeno>120000202303021348180000032176</depatradeno><nationtradedate>20230302134818</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="-1.00" fee="-9.0000" feein="0.0000" feeout="-9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>-9.00</feeall><fund>-9.00</fund><cash>0.00</cash><personcountpay>0.00</personcountpay><selFeeAll>-9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>-9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>-9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>-9.00</OtherPay><Cash>0.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>-991.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="10" FundName="uPbIy9XLu6c=" FundPay="-9.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+
+调用返回状态：成功
+
+调用异地收据重打接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "交易流水号">2303020002</HisTradeNo>   <invoiceno name = "收费单据号">2303020002</invoiceno>   <businessinfo name = "业务流水号">2303020002</businessinfo>   <hosptype name = "医疗机构类型">v7XE/g==</hosptype>   <Feecode name = "票据代码">2303020002</Feecode>   <Outpatientno name = "门诊号"></Outpatientno> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><DetailReprintFlag>0</DetailReprintFlag></root>
+
+调用返回状态：成功
+
+调用异地医保实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><histradeno>2303020002</histradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>20230301000000</checkdate></output></root>
+调用返回状态：成功
+调用返回状态：成功

@@ -1,17 +1,27 @@
 ----- 手工导入变价单 2022年12月10日 15:45:03
---SELECT MAX(bjdbh)
---FROM t_bjdzb 
---WHERE bjrq > '2022.1.1'
+SELECT MAX(bjdbh)
+FROM t_bjdzb 
+WHERE bjrq > '2023.1.1'
 
---INSERT INTO t_bjdzb
---SELECT 'BJ22000292', BJRQ, PZR, KPR, BZ, JSBZ, DWBH, DWMC
---FROM t_bjdzb WHERE bjdbh = 'BJ22000291'
+--DELETE FROM t_bjdzb WHERE bjdbh = 'BJ23000246'
 
---SELECT m.*,j.lsj,j.zdjj,j.pfj,j.gbj,j.dslsj,j.hyj 
----- update m set m.lszk=100,m.jlsj=j.lsj,m.jpfj=j.pfj,m.jgbj=j.gbj,m.dbj=j.zdjj,m.jdslsj=j.dslsj,m.jhyj=j.hyj
---FROM t_bjdmxb m
---JOIN t_jgxx j ON j.SPBH = m.SPBH
---WHERE bjdbh = 'BJ22000292'
+INSERT INTO t_bjdzb
+SELECT 'BJ23000246', BJRQ, PZR, KPR, BZ, JSBZ, DWBH, DWMC
+FROM t_bjdzb WHERE bjdbh = 'BJ23000245'
+
+SELECT m.*,j.lsj,j.zdjj,j.pfj,j.gbj,j.dslsj,j.hyj 
+-- update m set m.lszk=100,m.jlsj=j.lsj,m.jpfj=j.pfj,m.jgbj=j.gbj,m.dbj=j.zdjj,m.jdslsj=j.dslsj,m.jhyj=j.hyj
+FROM t_bjdmxb m
+JOIN t_jgxx j ON j.SPBH = m.SPBH
+WHERE bjdbh = 'BJ23000246' -- AND j.dslsj <> m.dslsj
+
+-- 只更新电商价格，其他保持一样
+update m set m.lszk=100,m.jlsj=j.lsj,m.lsj=j.lsj,m.jpfj=j.pfj,m.pfj=j.pfj,m.jgbj=j.gbj,m.gbj=j.gbj,m.dbj=j.zdjj
+,m.jdslsj=j.dslsj,m.jhyj=j.hyj,m.hyj=j.hyj
+FROM t_bjdmxb m
+JOIN t_jgxx j ON j.SPBH = m.SPBH
+WHERE bjdbh = 'BJ23000123' -- AND j.dslsj <> m.dslsj
+AND m.lsj IS NULL
 
 --------------- 修改经营范围 2022年7月29日 10:50:25 -----------------
 --INSERT INTO t_options(	pid,code,name,note,sort,flag)

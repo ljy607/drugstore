@@ -1,0 +1,280 @@
+------------------------- 2023-03-08 08:28:36 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 08:31:53 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用异地收费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="就诊类型，11药店">11</curetype>     <illtype name="就诊方式，0：普通">0</illtype>     <feeno name="收费单据号">2303080001</feeno>     <operator name="收费员">7PrXzrqt</operator>     <Histradeno name="HIS交易流水号">2303080001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="C14090200000000098010000035"     itemname="tLS/ycz5"     itemtype="3"     unitprice="14.8000"     count="1.00"     fee="14.80"     dose=""     specification="MTLGrA=="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+输出数据：
+------------------------- 2023-03-08 08:35:45 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用异地收费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="就诊类型，11药店">11</curetype>     <illtype name="就诊方式，0：普通">0</illtype>     <feeno name="收费单据号">2303080002</feeno>     <operator name="收费员">7PrXzrqt</operator>     <Histradeno name="HIS交易流水号">2303080002</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="C14090200000000098010000035"     itemname="tLS/ycz5"     itemtype="3"     unitprice="14.8000"     count="1.00"     fee="14.80"     dose=""     specification="MTLGrA=="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><tradeinfo><tradeno>132000020A230308300001</tradeno><feeno>2303080002</feeno><tradedate>20230308083552</tradedate><depatradeno>120000202303080835530000032532</depatradeno><nationtradedate>20230308083554</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="C14090200000000098010000035" itemcode="hisC14090200000000098010000035" itemname="tLS/ycz5" itemtype="3" unitprice="14.8000" count="1" fee="14.8000" feein="0.0000" feeout="14.8000" selfpay2="0.0000" state="0" fee_type="9900" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>14.80</feeall><fund>0.00</fund><cash>14.80</cash><personcountpay>0.00</personcountpay><selFeeAll>14.80</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>14.80</mzfee><mzfeein>0.00</mzfeein><mzfeeout>14.80</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>14.80</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>0.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>14.80</otheropfee></medicatalog></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 08:40:14 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+
+调用异地收费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="就诊类型，11药店">11</curetype>     <illtype name="就诊方式，0：普通">0</illtype>     <feeno name="收费单据号">2303080003</feeno>     <operator name="收费员">7PrXzrqt</operator>     <Histradeno name="HIS交易流水号">2303080003</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="C14090200000000098010000035"     itemname="tLS/ycz5"     itemtype="3"     unitprice="14.8000"     count="1.00"     fee="14.80"     dose=""     specification="MTLGrA=="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><tradeinfo><tradeno>132000020A230308300002</tradeno><feeno>2303080003</feeno><tradedate>20230308084020</tradedate><depatradeno>120000202303080840210000032533</depatradeno><nationtradedate>20230308084023</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="C14090200000000098010000035" itemcode="hisC14090200000000098010000035" itemname="tLS/ycz5" itemtype="3" unitprice="14.8000" count="1" fee="14.8000" feein="0.0000" feeout="14.8000" selfpay2="0.0000" state="0" fee_type="9900" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>14.80</feeall><fund>0.00</fund><cash>14.80</cash><personcountpay>0.00</personcountpay><selFeeAll>14.80</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>14.80</mzfee><mzfeein>0.00</mzfeein><mzfeeout>14.80</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>14.80</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>0.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>14.80</otheropfee></medicatalog></output></root>
+调用返回状态：成功
+
+调用异地收据重打接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "交易流水号">2303080003</HisTradeNo>   <invoiceno name = "收费单据号">2303080003</invoiceno>   <businessinfo name = "业务流水号">2303080003</businessinfo>   <hosptype name = "医疗机构类型">v7XE/g==</hosptype>   <Feecode name = "票据代码">2303080003</Feecode>   <Outpatientno name = "门诊号"></Outpatientno> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><DetailReprintFlag>0</DetailReprintFlag></root>
+
+调用返回状态：成功
+
+调用异地医保实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><histradeno>2303080003</histradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>18991230000000</checkdate></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 08:40:43 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 08:40:47 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+------------------------- 2023-03-08 08:40:56 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用异地退费结算接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><HisTradeNo>2303080004</HisTradeNo><OriginalHisTradeNo>2303080003</OriginalHisTradeNo><Operator>7PrXzrqt</Operator><feeno></feeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><tradeinfo><tradeno>132000020A230308300003</tradeno><feeno>2303080003</feeno><tradedate>20230308084059</tradedate><depatradeno>120000202303080841000000032534</depatradeno><nationtradedate>20230308084100</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="C14090200000000098010000035" itemcode="hisC14090200000000098010000035" itemname="tLS/ycz5" itemtype="3" unitprice="14.8000" count="-1.00" fee="-14.8000" feein="0.0000" feeout="-14.8000" selfpay2="0.0000" state="0" fee_type="9900" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>-14.80</feeall><fund>0.00</fund><cash>-14.80</cash><personcountpay>0.00</personcountpay><selFeeAll>-14.80</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>-14.80</mzfee><mzfeein>0.00</mzfeein><mzfeeout>-14.80</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>-14.80</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>0.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>14.80</otheropfee></medicatalog></output></root>
+
+调用返回状态：成功
+
+调用异地收据重打接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "交易流水号">2303080004</HisTradeNo>   <invoiceno name = "收费单据号">2303080004</invoiceno>   <businessinfo name = "业务流水号">2303080004</businessinfo>   <hosptype name = "医疗机构类型">v7XE/g==</hosptype>   <Feecode name = "票据代码">2303080004</Feecode>   <Outpatientno name = "门诊号"></Outpatientno> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><DetailReprintFlag>0</DetailReprintFlag></root>
+
+调用返回状态：成功
+
+调用异地医保实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><histradeno>2303080004</histradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>18991230000000</checkdate></output></root>
+调用返回状态：成功
+
+交易实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><tradeno>132000020A230308000001</tradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><receivestate>1</receivestate></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 16:19:36 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+调用获取个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954872652544000000000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>北京市弘济药店有限公司</operatorName>   <officeId>107</officeId>   <officeName>康宁</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no>00000585003S</card_no><ic_no>00000585003S</ic_no><id_no>999999198102158402</id_no><personname>suLK1DU4NTBD</personname><sex>2</sex><birthday>19810215</birthday><fromhosp></fromhosp><fromhospdate>18991230000000</fromhospdate><fundtype>3</fundtype><isyt>0</isyt><jclevel>0</jclevel><hospflag>0</hospflag><civil_flag>0</civil_flag><ExServiceFlag>0</ExServiceFlag></ic><net><persontype>11</persontype><isinredlist>true</isinredlist><isspecifiedhosp>1</isspecifiedhosp><ischronichosp>false</ischronichosp><personcount>200.00</personcount><chroniccode></chroniccode></net></output></root>
+
+调用返回状态：成功
+------------------------- 2023-03-08 16:19:40 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用费用退费分解接口
+输入参数：
+原购药交易流水号: 132000020A230308000001,收费员：
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><tradeinfo><tradeno>132000020A230308000002</tradeno><ic_no>00000585003S</ic_no><curetype>11</curetype><tradedate>20230308161949</tradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="C14090200000000098010000035" itemcode="hisC14090200000000098010000035" itemname="tLS/ycz5" itemtype="3" unitprice="14.8000" count="-1" fee="-14.8000" feein="0.0000" feeout="-14.8000" selfpay2="0.0000" state="0" fee_type="9900" preferentialfee="0.0000" preferentialscale="0" approval_number=""></feeitem></feeitemarray><sumpay><feeall>-14.80</feeall><fund>0.00</fund><cash>0.00</cash><personcountpay>-14.80</personcountpay></sumpay><payinfo><fee>-14.80</fee><feein>0.00</feein><feeout>-14.80</feeout><payfirst>0.00</payfirst><selfpay2>0.00</selfpay2><bigpay>0.00</bigpay><bigselfpay>0.00</bigselfpay><outofbig>0.00</outofbig><bcpay>0.00</bcpay><jcbz>0.00</jcbz><big_ill_pay>0.00</big_ill_pay><civil_pay>0.00</civil_pay><ExServicePay>0.00</ExServicePay></payinfo></output></root>
+
+调用返回状态：成功
+
+调用交易确认接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><personcountaftersub>214.80</personcountaftersub><certid>BLnNVPW+3MDWUhOJkiYdQm2ftFhuQ8MnMN9iM9sQovJZLa5P5Ij0SQ0yK1PMy9dfApLU5/yKFMlkjY1dpZPzEB0=</certid><sign>OUIRQfNrfh+7xzVpsaJfB8Waoz0PybfAo3C0ob46EmhJw8Fagv0U4CoI/yeWQYl3DJg0lGjEYswGjTEDj3yFbg==</sign></output></root>
+
+调用返回状态：成功
+
+调用收据重打接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <tradeno name = "交易流水号">132000020A230308000002</tradeno>   <invoiceno name = "收费单据号">2303080006</invoiceno>   <businessinfo name = "业务流水号">2303080006</businessinfo>   <hosptype name = "医疗机构类型">uuu8w9Kpteo=</hosptype> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5007" info="x+vPyLPJuabWtNDQT1BFTrLZ1/ejoQ=="></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5007] -- 描述 [请先成功执行OPEN操作！]
+
+交易实时对账接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><tradeno>132000020A230308000002</tradeno></input></root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><receivestate>1</receivestate></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 16:21:58 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+
+调用获取异地医保个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+调用返回状态：成功
+------------------------- 2023-03-08 16:22:08 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+------------------------- 2023-03-08 16:22:19 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]
+------------------------- 2023-03-08 16:22:30 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：请检查是否安装北京社保卡专用读写器！---(错误函数号：1 错误号：0xffffffff)]

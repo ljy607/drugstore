@@ -1,0 +1,495 @@
+------------------------- 2023-02-23 10:24:24 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+µ÷ÓÃ»ñÈ¡¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954870100070400000000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>±±¾©ÊÐºë¼ÃÒ©µêÓÐÏÞ¹«Ë¾</operatorName>   <officeId>107</officeId>   <officeName>¿µÄþ</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>00000687202S</card_no><ic_no>00000687202S</ic_no><id_no>999999198102168627</id_no><personname>suLK1DY4NzJC</personname><sex>2</sex><birthday>19810216</birthday><fromhosp></fromhosp><fromhospdate>18991230000000</fromhospdate><fundtype>3</fundtype><isyt>0</isyt><jclevel>0</jclevel><hospflag>0</hospflag><civil_flag>0</civil_flag><ExServiceFlag></ExServiceFlag></ic><net><persontype>11</persontype><isinredlist>true</isinredlist><isspecifiedhosp>1</isspecifiedhosp><ischronichosp>false</ischronichosp><personcount>200.00</personcount><chroniccode>1,2,3,4,5,6</chroniccode></net></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rrqt<ÈÊµ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>ìú×Îº­</operatorName><officeId>107</officeId><officeName>¿µÄþ</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></r01</Ø›<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>ìú×Îº­</operatorName><officeId>107</officeId><officeName>¿µÄþ</officeName></input></root>------------------------- 2023-02-23 11:03:52 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 11:09:54 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+------------------------- 2023-02-23 11:21:25 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+------------------------- 2023-02-23 11:21:50 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>1</multiclass><QRcode></QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><card_no>T5TJBJ247</card_no><card_id>120000D156000005ABC10247D5210259</card_id><card_class>2</card_class></ic></output></root>
+------------------------- 2023-02-23 11:26:50 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+------------------------- 2023-02-23 11:27:30 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>1</multiclass><QRcode></QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><card_no>T5TJBJ247</card_no><card_id>120000D156000005ABC10247D5210259</card_id><card_class>2</card_class></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 11:31:48 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>1</multiclass><QRcode></QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><card_no>T5TJBJ247</card_no><card_id>120000D156000005ABC10247D5210259</card_id><card_class>2</card_class></ic></output></root>
+------------------------- 2023-02-23 11:45:23 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+------------------------- 2023-02-23 11:45:34 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>1</multiclass><QRcode></QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><card_no>T5TJBJ247</card_no><card_id>120000D156000005ABC10247D5210259</card_id><card_class>2</card_class></ic></output></root>
+------------------------- 2023-02-23 13:00:25 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+------------------------- 2023-02-23 13:00:37 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>1</multiclass><QRcode></QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><card_no>T5TJBJ247</card_no><card_id>120000D156000005ABC10247D5210259</card_id><card_class>2</card_class></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>------------------------- 2023-02-23 13:27:29 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType></businessType>   <termId></termId>   <termIp></termIp>   <operatorId></operatorId>   <operatorName></operatorName>   <officeId></officeId>   <officeName></officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType></businessType>   <termId></termId>   <termIp></termIp>   <operatorId></operatorId>   <operatorName></operatorName>   <officeId></officeId>   <officeName></officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no>T5TJBJ247</card_no><Person_manage>6100020247</Person_manage><id_no>120117201801030247</id_no><personname>vfLBqr6pt6HLwcbi</personname><sex>2</sex><birthday>20180103</birthday><persontype>42</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>0</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230001</feeno>     <operator name="ÊÕ·ÑÔ±">001</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="1100" info="tffTw9bQ0MS2y1JlbW90aW5nvdO/2sqxt6LJ+tLizeK07c7zOrX308PNqNG2t/7O8cqxt6LJ+tLizeK07c7zo7oNCr3Tv9rD+7PGo7pbTkNDU19ZRE5BVElPTlJFQURZQ09NTUlUVFJBREVdDQpVUkyjunRjcDovLzEyNy4wLjAuMToxNzAzMy9EU05hdGlvblRyYWRlL1JlYWx0aW1lQWdlbnRTZXJ2aWNlLnJlbQ0KtffTw9bQ0MS2y9LstdjStc7xt/7O8cqxt6LJ+tLizeK07c7zo6y6xMqxo7o4MTi6wcPro6y07c7z0MXPoqO6DQpVUkyjunRjcDovLzE3Mi4yMC42NS45NDo5MTAwL1JlbW90aW5nU2VydmljZS5yZW0NCrX308PUtrPMt/7O8cqxt6LJ+tLizeK07c7zIDogDQq199PDUmVtb3Rpbme3/s7xyrG3osn60uLN4rTtzvM6IKG+z7XNs8qxvOQ6MjAyMy8yLzIzIDEzOjMwOjM5ob+199PDvdO/2sa9zKi3tbvY0uyzo6O6ob7Ptc2zyrG85DoyMDIzLzIvMjMgMTM6MzA6Mzmhv6G+t6LLzbGozsRJRKO6MTEwMDAwMjAyMzAyMjMxMzMwMzI5OTUyMzA2MzMwO73TytWxqM7ESUQ6MTAwMDAwMjAyMzAyMjMxMzMwMzcwMDY1MjIxMjUyob8NCkJCMDExMKG+ufq80sa9zKihv8rkyOuxqM7EvOyy6bTtzvM6ss7K/VtPUFRFUl9OQU1FXbXE1rVbXbn9tsyjrLjDss7K/dfu0KGzpLbIzqo6MaOsx+vBqs+1vs3SvbXYv+fKodLstdjWsb3TveHL48+1zbPUy86syMvUsbzssunI67LOo6E="></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [1100] -- ÃèÊö [µ÷ÓÃÖÐÐÄ¶ËRemoting½Ó¿ÚÊ±·¢ÉúÒâÍâ´íÎó:µ÷ÓÃÍ¨Ñ¶·þÎñÊ±·¢ÉúÒâÍâ´íÎó£º
+½Ó¿ÚÃû³Æ£º[NCCS_YDNATIONREADYCOMMITTRADE]
+URL£ºtcp://127.0.0.1:17033/DSNationTrade/RealtimeAgentService.rem
+µ÷ÓÃÖÐÐÄ¶ËÒìµØÒµÎñ·þÎñÊ±·¢ÉúÒâÍâ´íÎó£¬ºÄÊ±£º818ºÁÃë£¬´íÎóÐÅÏ¢£º
+URL£ºtcp://172.20.65.94:9100/RemotingService.rem
+µ÷ÓÃÔ¶³Ì·þÎñÊ±·¢ÉúÒâÍâ´íÎó : 
+µ÷ÓÃRemoting·þÎñÊ±·¢ÉúÒâÍâ´íÎó: ¡¾ÏµÍ³Ê±¼ä:2023/2/23 13:30:39¡¿µ÷ÓÃ½Ó¿ÚÆ½Ì¨·µ»ØÒì³££º¡¾ÏµÍ³Ê±¼ä:2023/2/23 13:30:39¡¿¡¾·¢ËÍ±¨ÎÄID£º110000202302231330329952306330;½ÓÊÕ±¨ÎÄID:100000202302231330370065221252¡¿
+BB0110¡¾¹ú¼ÒÆ½Ì¨¡¿ÊäÈë±¨ÎÄ¼ì²é´íÎó:²ÎÊý[OPTER_NAME]µÄÖµ[]¹ý¶Ì£¬¸Ã²ÎÊý×îÐ¡³¤¶ÈÎª:1£¬ÇëÁªÏµ¾ÍÒ½µØ¿çÊ¡ÒìµØÖ±½Ó½áËãÏµÍ³ÔËÎ¬ÈËÔ±¼ì²éÈë²Î£¡]
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 14:04:57 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>1</multiclass>   <QRcode></QRcode>   <businessType></businessType>   <termId></termId>   <termIp></termIp>   <operatorId></operatorId>   <operatorName></operatorName>   <officeId></officeId>   <officeName></officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="1000" info="tffTw82o0ba3/s7xyrG3osn60uLN4rTtzvOjug0KvdO/2sP7s8ajultOQ0NTX0dFVE5BVElPTlBFUlNPTklORk9dDQpVUkyjunRjcDovLzEyNy4wLjAuMToxNzAzMy9EU05hdGlvblRyYWRlL1JlYWx0aW1lQWdlbnRTZXJ2aWNlLnJlbQ0KtffTw9bQ0MS2y9LstdjStc7xt/7O8cqxt6LJ+tLizeK07c7zo6y6xMqxo7ozNzW6wcPro6y07c7z0MXPoqO6DQpVUkyjunRjcDovLzE3Mi4yMC42NS45NDo5MTAwL1JlbW90aW5nU2VydmljZS5yZW0NCrX308PUtrPMt/7O8cqxt6LJ+tLizeK07c7zIDogDQq199PDUmVtb3Rpbme3/s7xyrG3osn60uLN4rTtzvM6IKG+z7XNs8qxvOQ6MjAyMy8yLzIzIDE0OjEwOjI1ob+78cih0uy12MjL1LHQxc+i1tDQxLbLt6LJ+tLizeK07c7zOg0Ku/HIodLstdjIy9Sx0MXPoqG+1tDQxLbLtffTw7K/xr3MqKG/z7XNs7y2tO3O8zqhvs+1zbPKsbzkOjIwMjMvMi8yMyAxNDoxMDoyNaG/MTQwMaG+t6LLzbGozsRJRKO6MTEwMDAwMjAyMzAyMjMxNDEwMTg5OTUyMzA2MzU3O73TytWxqM7ESUQ6MTAwMDAwMjAyMzAyMjMxNDEwMjMwMDY1MjI2ODc3ob8NCkJCMDAwMbn6vNLGvcyotffTwyBbzOy98srQXSC3/s7xsbu+3L74o6zH68Gqz7WyzrGjyqHFxbLpt/7O8aOh"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [1000] -- ÃèÊö [µ÷ÓÃÍ¨Ñ¶·þÎñÊ±·¢ÉúÒâÍâ´íÎó£º
+½Ó¿ÚÃû³Æ£º[NCCS_GETNATIONPERSONINFO]
+URL£ºtcp://127.0.0.1:17033/DSNationTrade/RealtimeAgentService.rem
+µ÷ÓÃÖÐÐÄ¶ËÒìµØÒµÎñ·þÎñÊ±·¢ÉúÒâÍâ´íÎó£¬ºÄÊ±£º375ºÁÃë£¬´íÎóÐÅÏ¢£º
+URL£ºtcp://172.20.65.94:9100/RemotingService.rem
+µ÷ÓÃÔ¶³Ì·þÎñÊ±·¢ÉúÒâÍâ´íÎó : 
+µ÷ÓÃRemoting·þÎñÊ±·¢ÉúÒâÍâ´íÎó: ¡¾ÏµÍ³Ê±¼ä:2023/2/23 14:10:25¡¿»ñÈ¡ÒìµØÈËÔ±ÐÅÏ¢ÖÐÐÄ¶Ë·¢ÉúÒâÍâ´íÎó:
+»ñÈ¡ÒìµØÈËÔ±ÐÅÏ¢¡¾ÖÐÐÄ¶Ëµ÷ÓÃ²¿Æ½Ì¨¡¿ÏµÍ³¼¶´íÎó:¡¾ÏµÍ³Ê±¼ä:2023/2/23 14:10:25¡¿1401¡¾·¢ËÍ±¨ÎÄID£º110000202302231410189952306357;½ÓÊÕ±¨ÎÄID:100000202302231410230065226877¡¿
+BB0001¹ú¼ÒÆ½Ì¨µ÷ÓÃ [Ìì½òÊÐ] ·þÎñ±»¾Ü¾ø£¬ÇëÁªÏµ²Î±£Ê¡ÅÅ²é·þÎñ£¡]
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rut>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>zOy98sGqsbG+qcHjzuU=</personname><card_class>2</card_class></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>zOy98sGqsbG+qcHjzuU=</personname><card_class>2</card_class></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>zOy98sGqsbG+qcHjzuU=</personname><card_class>2</card_class></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 15:00:10 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="2011" info="yrnTw7b+zqzC67LZ1/fStc7xyrGjrLjDtv7OrMLr0tHKp9Cno6zH69bY0MLVucLroaM="></error></state></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [2011] -- ÃèÊö [Ê¹ÓÃ¶þÎ¬Âë²Ù×÷ÒµÎñÊ±£¬¸Ã¶þÎ¬ÂëÒÑÊ§Ð§£¬ÇëÖØÐÂÕ¹Âë¡£]
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230001</feeno>     <operator name="ÊÕ·ÑÔ±">001</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="1100" info="tffTw9bQ0MS2y1JlbW90aW5nvdO/2sqxt6LJ+tLizeK07c7zOrX308PNqNG2t/7O8cqxt6LJ+tLizeK07c7zo7oNCr3Tv9rD+7PGo7pbTkNDU19ZRE5BVElPTlJFQURZQ09NTUlUVFJBREVdDQpVUkyjunRjcDovLzEyNy4wLjAuMToxNzAzMy9EU05hdGlvblRyYWRlL1JlYWx0aW1lQWdlbnRTZXJ2aWNlLnJlbQ0KtffTw9bQ0MS2y9LstdjStc7xt/7O8cqxt6LJ+tLizeK07c7zo6y6xMqxo7ozNDO6wcPro6y07c7z0MXPoqO6DQpVUkyjunRjcDovLzE3Mi4yMC42NS45NDo5MTAwL1JlbW90aW5nU2VydmljZS5yZW0NCrX308PUtrPMt/7O8cqxt6LJ+tLizeK07c7zIDogDQq199PDUmVtb3Rpbme3/s7xyrG3osn60uLN4rTtzvM6IKG+z7XNs8qxvOQ6MjAyMy8yLzIzIDE1OjAzOjM2ob+199PDvdO/2sa9zKi3tbvY0uyzo6O6ob7Ptc2zyrG85DoyMDIzLzIvMjMgMTU6MDM6Mzahv6G+t6LLzbGozsRJRKO6MTEwMDAwMjAyMzAyMjMxNTAzMjk5OTUyMzA2NDM2O73TytWxqM7ESUQ6MTAwMDAwMjAyMzAyMjMxNTAzMzQwMDY1MjM0Njg1ob8NCkJCMDExMKG+ufq80sa9zKihv8rkyOuxqM7EvOyy6bTtzvM6ss7K/VtPUFRFUl9OQU1FXbXE1rVbXbn9tsyjrLjDss7K/dfu0KGzpLbIzqo6MaOsx+vBqs+1vs3SvbXYv+fKodLstdjWsb3TveHL48+1zbPUy86syMvUsbzssunI67LOo6E="></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [1100] -- ÃèÊö [µ÷ÓÃÖÐÐÄ¶ËRemoting½Ó¿ÚÊ±·¢ÉúÒâÍâ´íÎó:µ÷ÓÃÍ¨Ñ¶·þÎñÊ±·¢ÉúÒâÍâ´íÎó£º
+½Ó¿ÚÃû³Æ£º[NCCS_YDNATIONREADYCOMMITTRADE]
+URL£ºtcp://127.0.0.1:17033/DSNationTrade/RealtimeAgentService.rem
+µ÷ÓÃÖÐÐÄ¶ËÒìµØÒµÎñ·þÎñÊ±·¢ÉúÒâÍâ´íÎó£¬ºÄÊ±£º343ºÁÃë£¬´íÎóÐÅÏ¢£º
+URL£ºtcp://172.20.65.94:9100/RemotingService.rem
+µ÷ÓÃÔ¶³Ì·þÎñÊ±·¢ÉúÒâÍâ´íÎó : 
+µ÷ÓÃRemoting·þÎñÊ±·¢ÉúÒâÍâ´íÎó: ¡¾ÏµÍ³Ê±¼ä:2023/2/23 15:03:36¡¿µ÷ÓÃ½Ó¿ÚÆ½Ì¨·µ»ØÒì³££º¡¾ÏµÍ³Ê±¼ä:2023/2/23 15:03:36¡¿¡¾·¢ËÍ±¨ÎÄID£º110000202302231503299952306436;½ÓÊÕ±¨ÎÄID:100000202302231503340065234685¡¿
+BB0110¡¾¹ú¼ÒÆ½Ì¨¡¿ÊäÈë±¨ÎÄ¼ì²é´íÎó:²ÎÊý[OPTER_NAME]µÄÖµ[]¹ý¶Ì£¬¸Ã²ÎÊý×îÐ¡³¤¶ÈÎª:1£¬ÇëÁªÏµ¾ÍÒ½µØ¿çÊ¡ÒìµØÖ±½Ó½áËãÏµÍ³ÔËÎ¬ÈËÔ±¼ì²éÈë²Î£¡]
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 15:09:24 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 15:09:31 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230001</feeno>     <operator name="ÊÕ·ÑÔ±">7PrXzrqt</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230001</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230223300023</tradeno><feeno>2302230001</feeno><tradedate>20230223150939</tradedate><depatradeno>120000202302231509400000031852</depatradeno><nationtradedate>20230223150940</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>0.00</fund><cash>9.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>9.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 16:12:45 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 16:12:54 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230002</feeno>     <operator name="ÊÕ·ÑÔ±">7PrXzrqt</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230002</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230223300032</tradeno><feeno>2302230002</feeno><tradedate>20230223161258</tradedate><depatradeno>120000202302231612590000031862</depatradeno><nationtradedate>20230223161259</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>0.00</fund><cash>9.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>9.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230002</feeno>     <operator name="ÊÕ·ÑÔ±">7PrXzrqt</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230002</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230223300033</tradeno><feeno>2302230002</feeno><tradedate>20230223161312</tradedate><depatradeno>120000202302231613130000031863</depatradeno><nationtradedate>20230223161314</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>0.00</fund><cash>9.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>9.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃÒìµØÒ½±£ÊµÊ±¶ÔÕË½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <histradeno>2302230002</histradeno> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>20230203060102</checkdate></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃÊÕ¾ÝÖØ´ò½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "½»Ò×Á÷Ë®ºÅ">132000020A230223300032</HisTradeNo>   <invoiceno name = "ÊÕ·Ñµ¥¾ÝºÅ">2302230002</invoiceno>   <businessinfo name = "ÒµÎñÁ÷Ë®ºÅ">2302230002</businessinfo>   <hosptype name = "Ò½ÁÆ»ú¹¹ÀàÐÍ">uuu8w9Kpteo=</hosptype>   <Feecode name = "Æ±¾Ý´úÂë">2302230002</Feecode>   <Outpatientno name = "ÃÅÕïºÅ"></Outpatientno> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="1801" info="vbvS18601dK1vaOh"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [1801] -- ÃèÊö [½»Ò×Î´ÕÒµ½£¡]
+------------------------- 2023-02-23 16:22:26 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ»ñÈ¡ÒìµØÒ½±£¸öÈËÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>001</operatorId>   <operatorName>7PrXzrqt</operatorName>   <officeId>107</officeId>   <officeName>v7XE/g==</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><ic><card_no></card_no><Person_manage>80000002085</Person_manage><id_no>120222201801010005</id_no><personname>zOy98sGqsbG+qcHjzuU=</personname><sex>1</sex><birthday>20061024</birthday><persontype>50</persontype><personcount>0.00</personcount><fundtype>390</fundtype><hospflag>0</hospflag><ServantFlag>0</ServantFlag><PoorFlag></PoorFlag><InHospitalNumber>1</InHospitalNumber><AreaCode>120000</AreaCode></ic></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+------------------------- 2023-02-23 16:22:32 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7rH67zssunKx7fxsLLXsLGxvqnJ57Gjv6jXqNPDtsHQtMb3o6EtLS0otO3O87qvyv26xaO6MSC07c7zusWjujB4ZmZmZmZmZmYp"></error></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£ºÊ§°Ü
+µ÷ÓÃ·µ»Ø´íÎó£º±àºÅ [5004] -- ÃèÊö [´ò¿ªÉè±¸Ê§°Ü£ºÇë¼ì²éÊÇ·ñ°²×°±±¾©Éç±£¿¨×¨ÓÃ¶ÁÐ´Æ÷£¡---(´íÎóº¯ÊýºÅ£º1 ´íÎóºÅ£º0xffffffff)]
+
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230003</feeno>     <operator name="ÊÕ·ÑÔ±">7PrXzrqt</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230003</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230223300034</tradeno><feeno>2302230003</feeno><tradedate>20230223162236</tradedate><depatradeno>120000202302231622370000031864</depatradeno><nationtradedate>20230223162237</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>0.00</fund><cash>9.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>9.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="08" FundName="xuTL+7v5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·ÑÓÃ·Ö½â½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="BJSHJYDYYD001.000009"> <input>   <tradeinfo>     <curetype name="¾ÍÕïÀàÐÍ£¬11Ò©µê">11</curetype>     <illtype name="¾ÍÕï·½Ê½£¬0£ºÆÕÍ¨">0</illtype>     <feeno name="ÊÕ·Ñµ¥¾ÝºÅ">2302230003</feeno>     <operator name="ÊÕ·ÑÔ±">7PrXzrqt</operator>     <Histradeno name="HIS½»Ò×Á÷Ë®ºÅ">2302230003</Histradeno>   </tradeinfo>   <recipearray>   </recipearray>   <feeitemarray>     <feeitem       itemno="1"     recipeno="1"     hiscode="0001"     itemname="sKLEqs73wdbGrA=="     itemtype="0"     unitprice="9.0000"     count="1.00"     fee="9.00"     dose=""     specification="MC4yNb/LKjI0xqw="     unit=""     howtouse=""     dosage=""     packaging=""     minpackage=""     conversion=""     days=""     babyflag="0"     drugapprovalnumber=""     PACK_FLAG=""     NATION_SUBJECT_CODE=""     SPE_USE_FLAG="" />   </feeitemarray> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><output><tradeinfo><tradeno>132000020A230223300035</tradeno><feeno>2302230003</feeno><tradedate>20230223162239</tradedate><depatradeno>120000202302231622400000031865</depatradeno><nationtradedate>20230223162240</nationtradedate></tradeinfo><feeitemarray><feeitem itemno="1" recipeno="1" hiscode="0001" itemcode="XJ01CAA040A001010405611" itemname="sKLEqs73wdbGrA==" itemtype="0" unitprice="9.0000" count="1" fee="9.0000" feein="0.0000" feeout="9.0000" selfpay2="0.0000" state="0" fee_type="0101" preferentialfee="0.0000" preferentialscale="0"></feeitem></feeitemarray><sumpay><feeall>9.00</feeall><fund>0.00</fund><cash>9.00</cash><personcountpay>0.00</personcountpay><selFeeAll>9.00</selFeeAll><selfPayFirst>0.00</selfPayFirst></sumpay><payinfo><mzpayfirst>0.00</mzpayfirst><mzfee>9.00</mzfee><mzfeein>0.00</mzfeein><mzfeeout>9.00</mzfeeout><BasePay>0.00</BasePay><GwybzPay>0.00</GwybzPay><bcpay>0.00</bcpay><mzbigpay>0.00</mzbigpay><jcbz>0.00</jcbz><MzbzPay>0.00</MzbzPay><OtherPay>0.00</OtherPay><Cash>9.00</Cash><PersonCountPay>0.00</PersonCountPay><PersonCountBalance>0.00</PersonCountBalance><PromptMessage></PromptMessage><SelfPayFlag>0</SelfPayFlag></payinfo><fundpaylist><fundpayitem FundCode="05" FundName="s8fV8r7Tw/G7+bG+0r3BxrGjz9W7+b3w" FundPay="0.00"></fundpayitem><fundpayitem FundCode="09" FundName="tPO27rK5s+TSvcHGsaPP1bv5vfA=" FundPay="0.00"></fundpayitem><fundpayitem FundCode="07" FundName="w/HV/rK51vq7+b3w" FundPay="0.00"></fundpayitem></fundpaylist><medicatalog><diagnosis>0.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>9.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃÒìµØÒ½±£ÊµÊ±¶ÔÕË½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <histradeno>2302230003</histradeno> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><checkflag>1</checkflag><checkdate>20230203060009</checkdate></output></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+
+µ÷ÓÃÊÕ¾ÝÖØ´ò½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <HisTradeNo name = "½»Ò×Á÷Ë®ºÅ">2302230003</HisTradeNo>   <invoiceno name = "ÊÕ·Ñµ¥¾ÝºÅ">2302230003</invoiceno>   <businessinfo name = "ÒµÎñÁ÷Ë®ºÅ">2302230003</businessinfo>   <hosptype name = "Ò½ÁÆ»ú¹¹ÀàÐÍ">v7XE/g==</hosptype>   <Feecode name = "Æ±¾Ý´úÂë">2302230003</Feecode>   <Outpatientno name = "ÃÅÕïºÅ"></Outpatientno> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"></state><DetailReprintFlag>0</DetailReprintFlag></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦

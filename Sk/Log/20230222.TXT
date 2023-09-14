@@ -1,0 +1,50 @@
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></r  <oÈâÎAöAÒ½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>à¹<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></r  <o@âF	öÒ½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>à¹<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243697954468339353600120000</QRcode>   <businessType>01301</businessType>   <termId>123</termId>   <termIp>12.12.12.12</termIp>   <operatorId>001</operatorId>   <operatorName>001</operatorName>   <officeId>107</officeId>   <officeName>107</officeName> </input> </root>
+------------------------- 2023-02-22 11:22:32 -------------------------
+µ÷ÓÃ´ò¿ª¶Á¿¨Éè±¸½Ó¿Ú
+ÊäÈë²ÎÊý£ºÎÞ
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><warning no="5004" info="zt63qNHp1qRQU0FNv6jT0NCn0NSjrMfrstnX99Sx16LS4r371rnKudPDudLKp1BTQU2/qL3hy+OjrLfx1PK74bL6yfrSvbGjvty4tqGjzOHKvtDFz6LOqqO6"></warning></state></root>
+
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ·µ»Ø¾¯¸æ£º±àºÅ [5004] -- ÃèÊö [ÎÞ·¨ÑéÖ¤PSAM¿¨ÓÐÐ§ÐÔ£¬Çë²Ù×÷Ô±×¢Òâ½ûÖ¹Ê¹ÓÃ¹ÒÊ§PSAM¿¨½áËã£¬·ñÔò»á²úÉúÒ½±£¾Ü¸¶¡£ÌáÊ¾ÐÅÏ¢Îª£º]
+µ÷ÓÃ·µ»Ø×´Ì¬£º³É¹¦
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>001</operatorName><officeId>107</officeId><officeName>107</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rbusiØ›<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>001</operatorName><officeId>107</officeId><officeName>107</officeName></input></root>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>001</operatorName><officeId>107</officeId><officeName>107</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rbusi°›<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>001</operatorName><officeId>107</officeId><officeName>107</officeName></input></root>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName></operatorName><officeId>107</officeId><officeName>úñQ</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rd>
+µ÷ÓÃ»ñÈ¡Ò½±£Ò½±£Àà±ðÐÅÏ¢½Ó¿Ú
+ÊäÈë²ÎÊý£º
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>
+Êä³öÊý¾Ý£º
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0129"><state success="true"><error></error><warning></warning></state><output><ic><Id_No>120222201801010005</Id_No><Id_Type>01</Id_Type><personname>Ìì½òÁª±±¾©ÁãÎå</personname><card_class>2</card_class></ic></output></rQRcode><businessType>01301</businessType><termId>123</termIdh£<?xml version="1.0" encoding="utf-16" standalone="yes" ?><root version="2.003" sender="HJYD"><input><buymode>1</buymode><multiclass>2</multiclass><QRcode>4243697954468339353600120000</QRcode><businessType>01301</businessType><termId>123</termId><termIp>12.12.12.12</termIp><operatorId>001</operatorId><operatorName>7PrXzrqt</operatorName><officeId>107</officeId><officeName>v7XE/g==</officeName></input></root>

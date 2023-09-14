@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.2.0",
   "createdTime": "2022-6-2 10:13:05",
-  "updatedTime": "2022-12-28 14:39:04",
+  "updatedTime": "2023-2-24 11:38:33",
   "profile": {
     "default": {
       "db": "9FCB2F9E-B5E1-4FEE-B23E-F22E45BDB5D8",
@@ -25623,7 +25623,7 @@
         {
           "rowNo": 1,
           "defKey": "tradeno",
-          "defName": "药店交易流水号",
+          "defName": "医保交易流水号",
           "comment": "",
           "domain": "",
           "type": "varchar",
@@ -26312,57 +26312,6 @@
           "id": "0800DBF7-2AED-4FCF-99B2-BED4E9F18C9B"
         },
         {
-          "defKey": "FundCode",
-          "defName": "基金分项编码",
-          "comment": "",
-          "type": "VARCHAR",
-          "len": 16,
-          "scale": "",
-          "primaryKey": false,
-          "notNull": false,
-          "autoIncrement": false,
-          "defaultValue": "",
-          "hideInGraph": false,
-          "refDict": "",
-          "extProps": {},
-          "domain": "",
-          "id": "D9CDB329-7A22-4FE8-8CAE-9C482AF9D052"
-        },
-        {
-          "defKey": "FundName",
-          "defName": "基金分项名称",
-          "comment": "",
-          "type": "VARCHAR",
-          "len": 64,
-          "scale": "",
-          "primaryKey": false,
-          "notNull": false,
-          "autoIncrement": false,
-          "defaultValue": "",
-          "hideInGraph": false,
-          "refDict": "",
-          "extProps": {},
-          "domain": "",
-          "id": "9389B4C6-451B-42B3-B347-E3F02AE55715"
-        },
-        {
-          "defKey": "FundPay",
-          "defName": "基金分项支付金额",
-          "comment": "",
-          "type": "decimal",
-          "len": 10,
-          "scale": 2,
-          "primaryKey": false,
-          "notNull": false,
-          "autoIncrement": false,
-          "defaultValue": "",
-          "hideInGraph": false,
-          "refDict": "",
-          "extProps": {},
-          "domain": "",
-          "id": "B97E57CC-874E-48F0-A0D9-6C6D086D4761"
-        },
-        {
           "defKey": "diagnosis",
           "defName": "诊察费",
           "comment": "",
@@ -26565,6 +26514,108 @@
           "extProps": {},
           "domain": "",
           "id": "B85B79C3-D049-4268-B384-9E0C6ED66480"
+        },
+        {
+          "defKey": "selfPayFirst",
+          "defName": "先行自付金额汇总",
+          "comment": "异地结算专用",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "1BC50B2F-BEF8-4437-861F-83CA88D34DFA"
+        },
+        {
+          "defKey": "selFeeAll",
+          "defName": "全自费金额",
+          "comment": "异地结算专用",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "80F0C54B-C723-46E7-8241-D0FE60C32AF3"
+        },
+        {
+          "defKey": "nationtradedate",
+          "defName": "异地平台交易时间",
+          "comment": "异地结算专用",
+          "type": "VARCHAR",
+          "len": 14,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "BB933156-7D67-43CE-95F4-EB63DE6D1051"
+        },
+        {
+          "defKey": "mzfeein",
+          "defName": "医保内金额",
+          "comment": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "5425477A-663C-42D3-AF9E-66D3C55EB4D0"
+        },
+        {
+          "defKey": "mzfeeout",
+          "defName": "医保外金额",
+          "comment": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "1103DE9F-3599-4B1E-83B2-DEC4267B8BB9"
+        },
+        {
+          "defKey": "cbdbz",
+          "defName": "参保地标志",
+          "comment": "1 本地，2 异地",
+          "type": "tinyint",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "1",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "F116647C-4301-4DEF-BB1E-92C2FA5DCDC7"
         }
       ],
       "indexes": [
@@ -28598,6 +28649,40 @@
           "autoIncrementName": "",
           "refDict": "",
           "id": "97152569-223E-4C7F-A686-8B1A2B16CF90"
+        },
+        {
+          "defKey": "Person_manage",
+          "defName": "个人管理码",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "F7650A25-9B28-45F6-A010-28B4DA12C9CE"
+        },
+        {
+          "defKey": "cbdbz",
+          "defName": "参保地标志",
+          "comment": "1 本地，2 异地",
+          "type": "tinyint",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "1",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "027F670B-4DC6-4E0C-B7AA-DB8F521E3037"
         }
       ],
       "indexes": [
@@ -34974,6 +35059,176 @@
         }
       ],
       "correlations": []
+    },
+    {
+      "id": "4D866165-C6D4-4E6B-BFB8-1C8B779844D2",
+      "env": {
+        "base": {
+          "nameSpace": "",
+          "codeRoot": ""
+        }
+      },
+      "defKey": "t_yb_divide_fundpay",
+      "defName": "费用分解基金支付列表",
+      "comment": "",
+      "properties": {},
+      "nameTemplate": "{defKey}[{defName}]",
+      "notes": {},
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "ID",
+          "comment": "",
+          "type": "int",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "1263583F-32EA-44EB-825C-17CD97EB393B"
+        },
+        {
+          "defKey": "tradeno",
+          "defName": "医保交易流水号",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 24,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "D3045F74-166A-4608-B845-914566B586C0"
+        },
+        {
+          "defKey": "fundcode",
+          "defName": "基金代码",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 8,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "C7FA5B2F-0FED-406F-9493-3C30222DBAF2"
+        },
+        {
+          "defKey": "fundname",
+          "defName": "基金名称",
+          "comment": "",
+          "domain": "",
+          "type": "varchar",
+          "len": 64,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "E7BFDF83-EF6A-42F2-BD5C-8A353EFFD379"
+        },
+        {
+          "defKey": "fundpay",
+          "defName": "支付金额",
+          "comment": "",
+          "domain": "",
+          "type": "decimal",
+          "len": 10,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "F7BF4A90-C449-4D6D-92A9-CF29F9BA4E6C"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
     }
   ],
   "views": [],

@@ -1,35 +1,15 @@
----- 医保增加异地结算 2022年8月24日 14:55:20
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[t_yb_personinfo]') AND type in (N'U'))
-DROP TABLE [dbo].[t_yb_personinfo];
-CREATE TABLE [dbo].[t_yb_personinfo](
-    ic_no varchar(12),
-    card_no varchar(32),
-    id_no varchar(18) NOT NULL,
-    personname nvarchar(20),
-    sex tinyint,
-    birthday char(8),
-    fromhosp varchar(8),
-    fromhospdate char(8),
-    persontype varchar(3),
-    isinredlist varchar(5),
-    isspecifiedhosp char(1),
-    ischronichosp varchar(5),
-    personcount decimal(10,2) DEFAULT  (0),
-    chroniccode varchar(50),
-    fundtype varchar(4),
-    isyt tinyint,
-    jclevel tinyint,
-    hospflag tinyint,
+------ 医保增加异地结算 2022年8月24日 14:55:20
+-- 参保人信息增加字段 2023年2月24日 11:37:08
+alter TABLE [dbo].[t_yb_personinfo]
+add
     personmanage VARCHAR(64),
     servantflag VARCHAR(8),
     PoorFlag VARCHAR(64),
     InHospitalNumber INT,
     AreaCode VARCHAR(16),
-    updatedate DATETIME NOT NULL DEFAULT  (getdate()),
-    PRIMARY KEY (id_no)
-)
+    cbdbz tinyint DEFAULT  1;
 
-EXEC sp_addextendedproperty 'MS_Description', '', 'SCHEMA', dbo, 'table', t_yb_personinfo, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '医保个人信息', 'SCHEMA', dbo, 'table', t_yb_personinfo, null, null;
 EXEC sp_addextendedproperty 'MS_Description', '医保应用号', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', ic_no;
 EXEC sp_addextendedproperty 'MS_Description', '社保卡卡号', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', card_no;
 EXEC sp_addextendedproperty 'MS_Description', '公民身份证号', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', id_no;
@@ -54,23 +34,38 @@ EXEC sp_addextendedproperty 'MS_Description', '低保对象标识', 'SCHEMA', dbo, 'ta
 EXEC sp_addextendedproperty 'MS_Description', '本年度住院次数', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', InHospitalNumber;
 EXEC sp_addextendedproperty 'MS_Description', '参保地行政区划代码', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', AreaCode;
 EXEC sp_addextendedproperty 'MS_Description', '', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', updatedate;
+EXEC sp_addextendedproperty 'MS_Description', '参保地标志;1 本地，2 异地', 'SCHEMA', dbo, 'table', t_yb_personinfo, 'column', cbdbz;
+
+ALTER TABLE T_yb_divide
+ALTER COLUMN ic_no VARCHAR(32) null ;
+
+ALTER TABLE t_yb_rxdiagnosisinfo
+ALTER COLUMN icno VARCHAR(32) null;
+
+ALTER TABLE t_yb_personinfo
+ALTER COLUMN ic_no VARCHAR(12) null;
+
+
+alter  table   t_yb_personinfo   alter  column   id_No  varchar(18) NOT NULL;
+GO
+
+alter  table   t_yb_personinfo   add constraint  PK_t_yb_personinfo primary key(id_no);
+GO
 
 -------------费用分解增加字段 --------------------
 alter TABLE [dbo].[T_yb_divide]
 ADD  depatradeno VARCHAR(32),
-mzpayfirst decimal(10,2),
+	mzpayfirst decimal(10,2),
     mzfee decimal(10,2),
     BasePay decimal(10,2),
     GwybzPay decimal(10,2),
     mzbigpay decimal(10,2),
     MzbzPay decimal(10,2),
     OtherPay decimal(10,2),
-    PersonCountBalance decimal(10,2),
+    PersonCountPay decimal(10,2),
+    PersonCountBalance decimal(10,2),    
     PromptMessage VARCHAR(500),
     SelfPayFlag VARCHAR(8),
-    FundCode VARCHAR(16),
-    FundName VARCHAR(64),
-    FundPay decimal(10,2),
     diagnosis decimal(10,2),
     examine decimal(10,2),
     labexam decimal(10,2),
@@ -82,7 +77,13 @@ mzpayfirst decimal(10,2),
     registfee decimal(10,2),
     otheropfee decimal(10,2),
     dzbz tinyint(3) DEFAULT  0,
-    dzxx VARCHAR(200)
+    dzxx VARCHAR(200),
+    selfPayFirst decimal(10,2),
+    selFeeAll decimal(10,2),
+    nationtradedate VARCHAR(14),
+    mzfeein decimal(10,2),
+    mzfeeout decimal(10,2),
+    cbdbz tinyint DEFAULT  1
 ;
 GO
 
@@ -115,3 +116,25 @@ EXEC sp_addextendedproperty 'MS_Description', '费用总金额', 'SCHEMA', dbo, 'tabl
 EXEC sp_addextendedproperty 'MS_Description', '参保地结算流水号', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', depatradeno;
 EXEC sp_addextendedproperty 'MS_Description', '对账标志;0 未对账，1 对账成功，2 对账失败', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', dzbz;
 EXEC sp_addextendedproperty 'MS_Description', '对账返回的消息', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', dzxx;
+EXEC sp_addextendedproperty 'MS_Description', '先行自付金额汇总;异地结算专用', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', selfPayFirst;
+EXEC sp_addextendedproperty 'MS_Description', '全自费金额;异地结算专用', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', selFeeAll;
+EXEC sp_addextendedproperty 'MS_Description', '异地平台交易时间;异地结算专用', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', nationtradedate;
+EXEC sp_addextendedproperty 'MS_Description', '医保内金额', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', mzfeein;
+EXEC sp_addextendedproperty 'MS_Description', '医保外金额', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', mzfeeout;
+EXEC sp_addextendedproperty 'MS_Description', '参保地标志;1 本地，2 异地', 'SCHEMA', dbo, 'table', T_yb_divide, 'column', cbdbz;
+
+CREATE TABLE [dbo].[t_yb_divide_fundpay](
+    id int NOT NULL IDENTITY(1,1),
+    tradeno VARCHAR(24),
+    fundcode VARCHAR(8),
+    fundname varchar(64),
+    fundpay decimal(10,2),
+    PRIMARY KEY (id)
+)
+
+EXEC sp_addextendedproperty 'MS_Description', '费用分解基金支付列表', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, null, null;
+EXEC sp_addextendedproperty 'MS_Description', 'ID', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, 'column', id;
+EXEC sp_addextendedproperty 'MS_Description', '医保交易流水号', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, 'column', tradeno;
+EXEC sp_addextendedproperty 'MS_Description', '基金代码', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, 'column', fundcode;
+EXEC sp_addextendedproperty 'MS_Description', '基金名称', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, 'column', fundname;
+EXEC sp_addextendedproperty 'MS_Description', '支付金额', 'SCHEMA', dbo, 'table', t_yb_divide_fundpay, 'column', fundpay;
