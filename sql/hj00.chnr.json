@@ -2,9 +2,9 @@
   "name": "hj00",
   "describe": "弘济药店公司系统",
   "avatar": "",
-  "version": "4.1.5",
+  "version": "4.2.0",
   "createdTime": "2021-9-4 07:01:05",
-  "updatedTime": "2022-10-9 14:10:52",
+  "updatedTime": "2023-12-18 14:27:43",
   "dbConns": [],
   "profile": {
     "default": {
@@ -16969,6 +16969,23 @@
           "refDict": "",
           "uiHint": "",
           "id": "C273E24F-F89F-4CBC-867A-4E761BE35673"
+        },
+        {
+          "defKey": "srcbillcode",
+          "defName": "外部单号",
+          "comment": "凯宏鑫验收单号",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "3EADF48E-75B7-4A44-8039-52EE9B7F87D6",
+          "id": "828B2256-715D-43D6-BDF5-4A6FB5D8B895"
         }
       ],
       "indexes": [
@@ -24675,6 +24692,23 @@
           "extProps": {},
           "domain": "",
           "id": "CF75A5B1-72D5-421C-B910-FD5EB951E6E2"
+        },
+        {
+          "defKey": "MarketBy",
+          "defName": "上市许可持有人",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 100,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "D710A75E-BD5D-47A7-8DAE-1A499EAFE405"
         }
       ],
       "indexes": [

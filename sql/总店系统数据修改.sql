@@ -1,3 +1,6 @@
+INSERT INTO t_options( pid,code,to1.name, to1.note, to1.sort, to1.flag)
+VALUES (5,16,'乙类非处方药','乙类非处方药',9,1)
+
 ----- 手工导入变价单 2022年12月10日 15:45:03
 SELECT MAX(bjdbh)
 FROM t_bjdzb 

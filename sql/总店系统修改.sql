@@ -1,3 +1,80 @@
+---- 2024年3月15日 16:59:30
+ALTER TABLE t_gysxx 
+ALTER COLUMN gysmc VARCHAR(100)
+
+INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+VALUES('13','经营类别管理',7,1,'经营类别管理','image\tom_wap.gif','w_spjylb',1,1,0);
+
+--ALTER TABLE t_fdyhzb 
+--ALTER COLUMN bz VARCHAR(200)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('12','北京药监对接表',7,3,'北京药监对接表','image\tom_wap.gif','w_bjyjdj',1,1,0);
+
+
+--ALTER table t_dwxx 
+--ALTER COLUMN dwdz VARCHAR(200) NULL
+
+--ALTER TABLE t_gysxx 
+--ALTER COLUMN lxdz VARCHAR(100)
+
+--ALTER TABLE t_gysxx 
+--ALTER COLUMN sh VARCHAR(50)
+
+--ALTER TABLE t_gysxx 
+--ALTER COLUMN yhzh VARCHAR(50)
+
+--ALTER table t_gysxx 
+--ADD khh VARCHAR(100) NULL
+
+-------单位信息 增加仓库地址 2024年3月4日 17:25:09
+--ALTER table t_dwxx 
+--ADD ckdz VARCHAR(500) NULL
+
+--update a set a.yjtx=1,gsprq=null,lb=RIGHT(lb,4)
+--FROM T_gysxx a
+
+-------- 供应商增加仓库地址信息 2024年3月4日 15:17:00
+--ALTER TABLE t_gysxx 
+--ADD ckdz VARCHAR(1000) NULL
+
+--ALTER TABLE t_gysxx 
+--DROP CONSTRAINT PK__T_GYSXX__30F848ED
+
+--ALTER TABLE t_gysxx 
+--ADD CONSTRAINT pk_gysbh PRIMARY KEY(gysbh)
+
+--ALTER TABLE t_ckdzb 
+--ADD srcbillcode VARCHAR(60) NULL DEFAULT ''  -- 外部单号 凯宏鑫出库单号 
+
+--/* 凯宏鑫委外库，修改相关表，生产厂家名称增加长度 */
+--ALTER TABLE t_jhdzb 
+--add [srcbillcode] VARCHAR(60);	-- 外部单号 
+                              
+--ALTER TABLE t_jhdzb
+--ALTER COLUMN ysr VARCHAR(16);                          
+
+---- 总店要货计划 增加是否上传凯宏鑫标志                             	
+--ALTER TABLE t_yhjhzb 
+--ADD isdone CHAR(1) DEFAULT 'N' NULL;        
+
+---- 分店要货计划 增加是否上传凯宏鑫标志                             	
+--ALTER TABLE t_fdyhzb 
+--ADD isdone CHAR(1) DEFAULT 'N' NULL;  
+
+--ALTER TABLE t_sccj 
+--ALTER column cjmc VARCHAR(100) NULL;
+
+--ALTER TABLE t_tkdzb 
+--ADD isdone CHAR(1) DEFAULT 'N' ;
+
+--ALTER TABLE t_thdzb 
+--ADD isdone CHAR(1) DEFAULT 'N' ;
+
+-- --商品信息增加上市许可持有人字段 2023年12月14日 14:18:33
+--ALTER TABLE T_SPXX
+--ADD MarketBy VARCHAR(100) NULL
+
 ------增加外部销售订单 2022年10月9日 14:13:18  -------------------
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
 --VALUES('13','网销订单查询',3,1,'网销订单查询','image\tom_wap.gif','w_lsdcx_w',1,1,0);
