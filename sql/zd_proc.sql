@@ -1,3 +1,40 @@
+/******************* 过程说明 *****************************************************************
+  由进货单生成要货单，一个进货单对应一个要货单
+  参数	@jhdbh   进货单编号
+	
+  结果	反推进货单商品信息到进货单对应的要货计划中
+  创建  2024年11月13日 13:51:53
+  修改	
+**********************************************************************************************/
+DROP PROCEDURE SP_JHD2YHD
+GO
+CREATE PROCEDURE SP_JHD2YHD @jhdbh varchar(15) AS
+begin
+	-- 删除原要货单里明细
+	DELETE y
+	FROM t_yhjhmx y
+	JOIN t_jhdzb z ON z.YHDBH = y.YHDBH
+	WHERE z.JHDBH = @jhdbh
+	
+	create table #t
+	(	
+	ordr INT IDENTITY NOT NULL,
+	spbh Nvarchar(30),	
+	sl decimal(14,2)
+	)
+	INSERT INTO #t(spbh,sl)
+	SELECT spbh,SUM(sl) FROM t_jhdmxb WHERE jhdbh = @jhdbh GROUP BY spbh
+	
+	INSERT INTO t_yhjhmx(YHDBH, YHDW, YHRQ, ORDR, SPBH, GYSBH, KLOW, DCL, YHSL, FLAG)
+	SELECT z.yhdbh,0,GETDATE(),e.ordr,e.spbh,z.GYSBH,0,0,e.sl,1
+	FROM #t e
+	JOIN t_jhdzb z ON z.jhdbh = @jhdbh 
+		
+	drop table #t
+end 
+
+GO
+
 --------------------------总公司冲库--------------------------------------------------------------
 --/******************* 过程说明 *****************************************************************
 --  冲库过程，记录库存

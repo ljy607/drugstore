@@ -30,7 +30,9 @@ SELECT b.* FROM t_pddzb a JOIN t_pddmxb b ON b.PDDBH = a.PDDBH  WHERE a.flag IN(
 SELECT a.* FROM t_pddzb a WHERE a.flag in(1,10)
 SELECT DISTINCT flag FROM T_PDDZB tp
 
-
+---退货单----------
+SELECT * from t_thdzb WHERE thdbh = 'TH24000217'
+SELECT * from t_thdmxb WHERE thdbh = 'TH24000217'
 
 
 /* ---------------删除开始-----------------------------
@@ -56,6 +58,11 @@ delete e from t_tkdzb e where e.flag =5
 
 delete b FROM t_pddzb a JOIN t_pddmxb b ON b.PDDBH = a.PDDBH  WHERE a.flag IN(1,10);
 delete a FROM t_pddzb a WHERE a.flag in(1,10);
+
+---退货单----------
+delete from t_thdzb WHERE thdbh = 'TH24000217'
+delete from t_thdmxb WHERE thdbh = 'TH24000217'
+
 
 */
 

@@ -1,3 +1,21 @@
+-- 调拨单状态修改 
+SELECT *  -- update a set a.yxbz = 0
+FROM t_dbdzb a  
+WHERE 1=1 
+--and yxbz = 1
+AND dbdbh = 'DB107250008'
+
+SELECT *
+FROM t_dbdmxb 
+WHERE 1=1 
+--and spbh = '423311'
+and dbdbh = 'DB107250008'
+
+-- 退库单状态修改
+SELECT * -- update a set a.flag = 5
+FROM t_tkdzb a WHERE FLAG = 2
+
+
 -- 删除美团订单 2022年10月9日 11:38:04
 SELECT *  
 --DELETE a

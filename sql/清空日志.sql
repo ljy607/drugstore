@@ -1,11 +1,12 @@
+/* -------sql2000清空日志------------
 
--------sql2000清空日志------------
---use master 
---go
---backup  log  hjdb  with  no_log
---go
---DBCC  SHRINKdatabase  (hjdb)
+use master 
+go
+backup  log  zddb  with  no_log
+go
+DBCC  SHRINKdatabase  (zddb)
 
+*/
 
 -----sql2008 清空日志 hj00----------
 USE [master]

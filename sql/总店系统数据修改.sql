@@ -1,3 +1,16 @@
+SELECT *
+FROM t_bjdzb 
+WHERE bjdbh IN ('BJ24000233','','')
+
+SELECT * -- update a set a.jhhw = 'K0301',a.lshw='K0301'
+FROM t_sphw a
+WHERE LEFT(spbh,1) NOT IN('1','4','7')
+
+SELECT *    -- update a set a.hwbh = 'K0301'
+FROM t_chxx a
+WHERE LEFT(spbh,1) NOT IN('1','4','7') AND hwbh <> 'H01'
+
+
 INSERT INTO t_options( pid,code,to1.name, to1.note, to1.sort, to1.flag)
 VALUES (5,16,'乙类非处方药','乙类非处方药',9,1)
 
@@ -6,11 +19,12 @@ SELECT MAX(bjdbh)
 FROM t_bjdzb 
 WHERE bjrq > '2023.1.1'
 
---DELETE FROM t_bjdzb WHERE bjdbh = 'BJ23000246'
+-- DELETE FROM t_bjdzb WHERE bjdbh = 'BJ24000233'
+-- delete from t_bjdmxb where bjdbh = 'BJ24000233'
 
 INSERT INTO t_bjdzb
 SELECT 'BJ23000246', BJRQ, PZR, KPR, BZ, JSBZ, DWBH, DWMC
-FROM t_bjdzb WHERE bjdbh = 'BJ23000245'
+FROM t_bjdzb WHERE bjdbh = 'BJ24000233'
 
 SELECT m.*,j.lsj,j.zdjj,j.pfj,j.gbj,j.dslsj,j.hyj 
 -- update m set m.lszk=100,m.jlsj=j.lsj,m.jpfj=j.pfj,m.jgbj=j.gbj,m.dbj=j.zdjj,m.jdslsj=j.dslsj,m.jhyj=j.hyj

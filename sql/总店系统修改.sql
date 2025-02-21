@@ -1,9 +1,34 @@
----- 2024年3月15日 16:59:30
-ALTER TABLE t_gysxx 
-ALTER COLUMN gysmc VARCHAR(100)
+---- 要货单明细增加进货日期 2024年12月20日 13:28:27
+ALTER TABLE t_yhjhmx
+ADD jhrq DATETIME NULL
 
-INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
-VALUES('13','经营类别管理',7,1,'经营类别管理','image\tom_wap.gif','w_spjylb',1,1,0);
+--ALTER TABLE T_SPXX
+--ALTER COLUMN cd NVARCHAR(50)
+
+----调拨单增加生产日期字段 2024年11月7日 16:28:07
+--ALTER TABLE t_dbdmxb 
+--ADD scrq DATETIME
+
+----退货单增加 有效期和生产日期字段 2024年10月30日 16:30:09
+--ALTER TABLE t_thdmxb 
+--ADD yxrq DATETIME ,scrq DATETIME
+
+------- 修改商品经营类别 2024年4月7日 10:53:45
+--SELECT *  -- update a set a.lbbh = '01',gxrq = getdate()
+--FROM t_spxx a
+--WHERE lbbh IN ('02','03','04')
+
+--alter table t_splb
+--ADD flag TINYINT NULL DEFAULT 1 
+
+--UPDATE t_splb SET flag = 1
+
+------ 2024年3月15日 16:59:30
+--ALTER TABLE t_gysxx 
+--ALTER COLUMN gysmc VARCHAR(100)
+
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('13','经营类别管理',7,1,'经营类别管理','image\tom_wap.gif','w_spjylb',1,1,0);
 
 --ALTER TABLE t_fdyhzb 
 --ALTER COLUMN bz VARCHAR(200)

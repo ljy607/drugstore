@@ -116,16 +116,23 @@ DELETE FROM t_zgxx WHERE bh <> '001';
 delete from t_usrfunc where zgbh <> '001';
 
 --SELECT * FROM t_dwxx_jyfw
+SELECT * FROM t_sphw 
 
  --增加临时货位,用于铺货
 INSERT INTO t_hwxx(hwbh,LSHW, HWMC, HWTP, SXKW, CKSX,FLAG)
-VALUES('L0000','***','临时货位',1,0,0,1)
+VALUES('J0101','***','货位',1,0,0,1)
 
+INSERT INTO t_sphw(spbh,jhhw,lshw)
+SELECT spbh,'J0101','J0101'
+FROM t_spxx 
+WHERE FLAG =1 AND LEFT(spbh,1) < '7'
 
 ----同步价格信息
 INSERT INTO t_jgxx(SPBH, LSJ, PFJ, DBJ, GBJ, ZK, hyj, GXRQ, dslsj)
 SELECT SPBH, LSJ, PFJ, DBJ, GBJ, ZK, hyj, GXRQ, dslsj
 FROM hj01.hjdb.dbo.T_JGXX
+
+SELECT COUNT(*) FROM t_jgxx 
  
 ---- 同步商品信息
 INSERT INTO t_spxx(SPBH, LBBH, SBBZ, XQBJ, TZM, PM, JC, SB, PZWH, GG, JLDWBH, CJBH, YXQX, ZDJL,
@@ -137,10 +144,18 @@ SELECT SPBH, LBBH, SBBZ, XQBJ, TZM, PM, JC, SB, PZWH, GG, JLDWBH, CJBH, YXQX, ZD
        jgzt, jfbz, yhlx, IsMHJ, cctj, ypfl, spbm, ybbm, gnzz, sxyxq, pzwhyxq,
        scqyxkzh, jyfwid, slyp, sfth, gjgbbm, MarketBy
 FROM hj00.zddb.dbo.t_spxx 
+WHERE flag = 1 AND LEFT(spbh,1) < '7'
 
 SELECT a.spbh,a.MarketBy,b.marketby
 FROM t_spxx a
 JOIN hj00.zddb.dbo.t_spxx b ON a.spbh=b.spbh
 
 
+--UPDATE a SET a.MarketBy = b.cjmc
+--FROM t_spxx a
+--JOIN v_spxx b ON a.spbh=b.spbh
+
+INSERT INTO t_sccj(CJBH, JC, CJMC, DZ, GXRQ, GXZ, FLAG)
+SELECT CJBH, JC, CJMC, DZ, GXRQ, GXZ, FLAG
+FROM hj00.zddb.dbo.t_sccj
 

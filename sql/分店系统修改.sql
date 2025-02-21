@@ -1,13 +1,20 @@
-ALTER table t_dwxx 
-ALTER COLUMN dwdz VARCHAR(200) NULL
+----损益单增加生产日期 2024年11月8日 10:11:59
+--ALTER TABLE T_BSDMXB
+--ADD scrq DATETIME 
 
--- --商品信息增加上市许可持有人字段 2023年12月14日 14:18:33
-ALTER TABLE T_SPXX
-ADD MarketBy VARCHAR(100) NULL
+--ALTER TABLE t_spxx 
+--ADD ybbm NVARCHAR(50);
 
-/* 生产厂家表 厂家名称增加长度 */
-ALTER TABLE t_sccj 
-ALTER column cjmc VARCHAR(100) NULL;
+--ALTER table t_dwxx 
+--ALTER COLUMN dwdz VARCHAR(200) NULL
+
+---- --商品信息增加上市许可持有人字段 2023年12月14日 14:18:33
+--ALTER TABLE T_SPXX
+--ADD MarketBy VARCHAR(100) NULL
+
+--/* 生产厂家表 厂家名称增加长度 */
+--ALTER TABLE t_sccj 
+--ALTER column cjmc VARCHAR(100) NULL;
 
 ----------外部销售单增加打包袋、包装费、配送费三个字段属性 2022年9月26日 09:35:11 --------------------
 --alter TABLE [dbo].[T_LSDZB_W]

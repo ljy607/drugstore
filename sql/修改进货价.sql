@@ -13,7 +13,7 @@ WHERE spbh = '402067'
 
 SELECT * -- update c set c.jiag = 18
 FROM t_chxx c
-WHERE c.spbh = '402067' AND pcbh = '230724'
+WHERE c.spbh = '308233' AND pcbh = '20220301'
 
 SELECT z.jsdw,m.*  -- update m set m.jhj = 18
 FROM t_ckdmxb m 
