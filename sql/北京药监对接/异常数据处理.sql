@@ -1,8 +1,11 @@
 -- 入出库数据异常处理 2024年11月18日 10:49:25
 select * -- UPDATE a SET scbz = 0,scsbyy = ''   -- delete a
 FROM t_bjyj_rck a 
---WHERE scbz = -1
+WHERE scbz = -1
 ORDER BY a.created_time DESC
+
+select MAX(a.created_time)
+FROM t_bjyj_rck a
 
 SELECT b.spbh,b.pcbh,b.scrq,c.SCRQ,r.bill_code,r.scbz   -- -- update b set b.scrq = c.scrq
 FROM (SELECT distinct e.spbh,e.pcbh,a.SCRQ  
@@ -29,8 +32,11 @@ JOIN t_bjyj_rck r ON r.bill_code = b.bill_code
 ----------------- 当日库存信息 ------------------------
 select * -- UPDATE a SET scbz = 0,scsbyy = ''
 FROM t_bjyj_drkc a 
---WHERE scbz = -1
+WHERE scbz = -1
 ORDER BY a.created_time DESC
+
+select MAX(a.created_time)
+FROM t_bjyj_drkc a
 
 --SELECT spbh,pm,gg,spbm,spbmlx
 --FROM t_spxx 
@@ -53,8 +59,11 @@ ORDER BY a.created_time DESC
 ----------------- 零售单据信息 ------------------------
 select * -- UPDATE a SET scbz = 0,scsbyy = ''
 FROM t_bjyj_lsd a 
---WHERE scbz = -1
+WHERE scbz = -1
 ORDER BY a.created_time DESC
+
+select MAX(a.created_time)
+FROM t_bjyj_lsd a 
 
 --SELECT m.spbh,m.pzwh   -- update m set m.pzwh = 'HC20150044'
 --FROM t_bjyj_lsd z

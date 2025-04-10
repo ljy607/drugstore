@@ -1,3 +1,18 @@
+--损益单
+SELECT *  -- update s set s.scrq = '2023-02-02 00:00:00.000'
+FROM t_bsdmxb s
+WHERE bsdbh = 'BS24000032' AND spbh = '306635' AND pcbh = '230201'
+
+SELECT *  -- update s set s.scrq = '2024-06-27 00:00:00.000'
+FROM t_bsdzb s
+WHERE bsdbh = 'BS25000010' 
+
+SELECT s.spbh,s.pcbh,s.scrq,m.scrq   -- update s set s.scrq = m.scrq
+FROM t_bsdmxb s
+JOIN t_bsdzb z ON z.BSDBH = s.BSDBH -- AND z.yxbz = 5
+JOIN t_ckdmxb m ON m.SPBH = s.SPBH AND m.PCBH = s.PCBH 
+WHERE s.scrq IS NULL
+
 -- 调拨单状态修改 
 SELECT *  -- update a set a.yxbz = 0
 FROM t_dbdzb a  

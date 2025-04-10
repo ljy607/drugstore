@@ -1,3 +1,9 @@
+---- 出库单主表增加是否上传三方系统标识 2025年4月10日 15:08:28
+ALTER TABLE t_ckdzb 
+ADD isdone NVARCHAR(1) DEFAULT  'N'
+
+EXEC sp_addextendedproperty 'MS_Description', '是否上传三方系统', 'user', dbo, 'table', T_CKDZB, 'column', isdone;
+
 ---- 要货单明细增加进货日期 2024年12月20日 13:28:27
 ALTER TABLE t_yhjhmx
 ADD jhrq DATETIME NULL
