@@ -1,4 +1,13 @@
 --ËðÒæµ¥
+SELECT *  -- delete m
+FROM t_bsdzb z
+JOIN t_bsdmxb m ON m.BSDBH = z.BSDBH
+WHERE z.yxbz < 10
+
+SELECT *  -- delete z
+FROM t_bsdzb z
+WHERE z.yxbz < 10
+
 SELECT *  -- update s set s.scrq = '2023-02-02 00:00:00.000'
 FROM t_bsdmxb s
 WHERE bsdbh = 'BS24000032' AND spbh = '306635' AND pcbh = '230201'

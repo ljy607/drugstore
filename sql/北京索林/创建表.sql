@@ -1,3 +1,387 @@
+DROP TABLE t_bjsl_yhjlmx;
+CREATE TABLE t_bjsl_yhjlmx(
+    wlzx INT NOT NULL,
+    dh nvarchar(50) NOT NULL,
+    hpbh NVARCHAR(50) NOT NULL,
+    kqbh NVARCHAR(50) NOT NULL,
+    hwbh NVARCHAR(50) NOT NULL,
+    pcbh NVARCHAR(50) NOT NULL,
+    date DATETIME NOT NULL,
+    id INT NOT NULL,
+    wlzxmc NVARCHAR(200),
+    hzbh Nvarchar(50),
+    hzmc NVARCHAR(200),
+    yhrq DATETIME,
+    yhlx NVARCHAR(50),
+    yhy NVARCHAR(200),
+    spbh NVARCHAR(50),
+    pm NVARCHAR(200),
+    gg NVARCHAR(100),
+    cd NVARCHAR(256),
+    sccj NVARCHAR(256),
+    jldw VARCHAR(60),
+    bz DECIMAL(18,4),
+    cctj NVARCHAR(50),
+    zczh NVARCHAR(100),
+    xkzh NVARCHAR(100),
+    hpdl NVARCHAR(200),
+    hpsx NVARCHAR(200),
+    kqmc NVARCHAR(200),
+    hwmc NVARCHAR(200),
+    yxrq DATETIME,
+    scrq DATETIME,
+    yhsl DECIMAL(18,4),
+    zlzk NVARCHAR(200),
+    clyj NVARCHAR(200),
+    yhjl NVARCHAR(200),
+    sm VARCHAR(500),
+    dyph NVARCHAR(50),
+    dyxq NVARCHAR(20),
+    dyscrq NVARCHAR(20),
+    PRIMARY KEY (wlzx,dh,hpbh,kqbh,hwbh,pcbh,date,id)
+)
+
+EXEC sp_addextendedproperty 'MS_Description', '北京索林养护记录', 'user', dbo, 'table', t_bjsl_yhjlmx, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', wlzx;
+EXEC sp_addextendedproperty 'MS_Description', '养护单号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', dh;
+EXEC sp_addextendedproperty 'MS_Description', '货品编号(索林)', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hpbh;
+EXEC sp_addextendedproperty 'MS_Description', '库区编号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', kqbh;
+EXEC sp_addextendedproperty 'MS_Description', '货位编号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hwbh;
+EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', pcbh;
+EXEC sp_addextendedproperty 'MS_Description', 'date', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', date;
+EXEC sp_addextendedproperty 'MS_Description', 'id', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', id;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心名称', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', wlzxmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主编号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hzbh;
+EXEC sp_addextendedproperty 'MS_Description', '货主名称', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hzmc;
+EXEC sp_addextendedproperty 'MS_Description', '养护日期;分店编号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yhrq;
+EXEC sp_addextendedproperty 'MS_Description', '养护类型', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yhlx;
+EXEC sp_addextendedproperty 'MS_Description', '养护员', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yhy;
+EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', spbh;
+EXEC sp_addextendedproperty 'MS_Description', '货品名称', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', pm;
+EXEC sp_addextendedproperty 'MS_Description', '规格', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', gg;
+EXEC sp_addextendedproperty 'MS_Description', '产地', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', cd;
+EXEC sp_addextendedproperty 'MS_Description', '生产厂商', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', sccj;
+EXEC sp_addextendedproperty 'MS_Description', '单位', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', jldw;
+EXEC sp_addextendedproperty 'MS_Description', '包装', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', bz;
+EXEC sp_addextendedproperty 'MS_Description', '储存条件', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', cctj;
+EXEC sp_addextendedproperty 'MS_Description', '注册证号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', zczh;
+EXEC sp_addextendedproperty 'MS_Description', '生产企业许可证号或备案凭证号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', xkzh;
+EXEC sp_addextendedproperty 'MS_Description', '货品大类', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hpdl;
+EXEC sp_addextendedproperty 'MS_Description', '货品属性', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hpsx;
+EXEC sp_addextendedproperty 'MS_Description', '库区名称', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', kqmc;
+EXEC sp_addextendedproperty 'MS_Description', '货位名称', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', hwmc;
+EXEC sp_addextendedproperty 'MS_Description', '有效期至', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yxrq;
+EXEC sp_addextendedproperty 'MS_Description', '生产日期', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', scrq;
+EXEC sp_addextendedproperty 'MS_Description', '养护数量;收货时间', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yhsl;
+EXEC sp_addextendedproperty 'MS_Description', '质量状态', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', zlzk;
+EXEC sp_addextendedproperty 'MS_Description', '处理意见', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', clyj;
+EXEC sp_addextendedproperty 'MS_Description', '养护结论', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', yhjl;
+EXEC sp_addextendedproperty 'MS_Description', '说明', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', sm;
+EXEC sp_addextendedproperty 'MS_Description', '打印批号', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', dyph;
+EXEC sp_addextendedproperty 'MS_Description', '打印效期', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', dyxq;
+EXEC sp_addextendedproperty 'MS_Description', '打印生产日期', 'user', dbo, 'table', t_bjsl_yhjlmx, 'column', dyscrq;
+
+
+DROP TABLE t_bjsl_yunsjlmx;
+CREATE TABLE t_bjsl_yunsjlmx(
+    wlzx INT NOT NULL,
+    hz NVARCHAR(50) NOT NULL,
+    psdh nvarchar(50) NOT NULL,
+    hdh NVARCHAR(50) NOT NULL,
+    tzdh nvarchar(50) NOT NULL,
+    ordr INT NOT NULL,
+    slkhbh NVARCHAR(50) NOT NULL,
+    hpbh NVARCHAR(50) NOT NULL,
+    pcbh NVARCHAR(50) NOT NULL,
+    id INT NOT NULL,
+    date DATETIME NOT NULL,
+    wlzxmc NVARCHAR(200),
+    hzmc NVARCHAR(200),
+    spbh NVARCHAR(50),
+    pm NVARCHAR(200),
+    khbh NVARCHAR(50),
+    khmc NVARCHAR(200),
+    fysj DATETIME,
+    dhsj DATETIME,
+    cphm NVARCHAR(20),
+    wydh NVARCHAR(50),
+    siji NVARCHAR(100),
+    shdw NVARCHAR(200),
+    shdz NVARCHAR(200),
+    shr NVARCHAR(100),
+    gg NVARCHAR(100),
+    cd NVARCHAR(256),
+    jldw VARCHAR(60),
+    yxrq DATETIME,
+    scrq DATETIME,
+    hwsl DECIMAL(18,4),
+    ysgj NVARCHAR(50),
+    psy NVARCHAR(50),
+    fyr NVARCHAR(50),
+    fhsj NVARCHAR(50),
+    wtjbr NVARCHAR(50),
+    cydw NVARCHAR(50),
+    fhdz NVARCHAR(100),
+    jx NVARCHAR(50),
+    bz DECIMAL(18,4),
+    zjsl DECIMAL(18,4),
+    sjsl DECIMAL(18,4),    
+    ysfs NVARCHAR(50),
+    dyph NVARCHAR(50),
+    dyxq NVARCHAR(20),
+    dyscrq NVARCHAR(20),
+    PRIMARY KEY (wlzx,hz,psdh,hdh,tzdh,ordr,slkhbh,hpbh,pcbh,id,date)
+)
+
+EXEC sp_addextendedproperty 'MS_Description', '北京索林运输记录', 'user', dbo, 'table', t_bjsl_yunsjlmx, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', wlzx;
+EXEC sp_addextendedproperty 'MS_Description', '货主编号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', hz;
+EXEC sp_addextendedproperty 'MS_Description', '配送单号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', psdh;
+EXEC sp_addextendedproperty 'MS_Description', '货单号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', hdh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单号;对应要货单号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', tzdh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单行号;对应要货单行号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', ordr;
+EXEC sp_addextendedproperty 'MS_Description', '索林客户编号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', slkhbh;
+EXEC sp_addextendedproperty 'MS_Description', '货品编号（索林）', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', hpbh;
+EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', pcbh;
+EXEC sp_addextendedproperty 'MS_Description', 'id', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', id;
+EXEC sp_addextendedproperty 'MS_Description', 'date', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', date;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心名称', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', wlzxmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主名称', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', hzmc;
+EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', spbh;
+EXEC sp_addextendedproperty 'MS_Description', '货品名称', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', pm;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户编号;分店编号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', khbh;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户名称;分店名称', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', khmc;
+EXEC sp_addextendedproperty 'MS_Description', '发运时间', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', fysj;
+EXEC sp_addextendedproperty 'MS_Description', '到货时间', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', dhsj;
+EXEC sp_addextendedproperty 'MS_Description', '车牌号码', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', cphm;
+EXEC sp_addextendedproperty 'MS_Description', '外运单号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', wydh;
+EXEC sp_addextendedproperty 'MS_Description', '司机', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', siji;
+EXEC sp_addextendedproperty 'MS_Description', '收货单位', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', shdw;
+EXEC sp_addextendedproperty 'MS_Description', '收货地址', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', shdz;
+EXEC sp_addextendedproperty 'MS_Description', '收货人', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', shr;
+EXEC sp_addextendedproperty 'MS_Description', '规格', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', gg;
+EXEC sp_addextendedproperty 'MS_Description', '产地', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', cd;
+EXEC sp_addextendedproperty 'MS_Description', '单位', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', jldw;
+EXEC sp_addextendedproperty 'MS_Description', '有效期至', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', yxrq;
+EXEC sp_addextendedproperty 'MS_Description', '生产日期', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', scrq;
+EXEC sp_addextendedproperty 'MS_Description', '货物数量', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', hwsl;
+EXEC sp_addextendedproperty 'MS_Description', '运输工具', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', ysgj;
+EXEC sp_addextendedproperty 'MS_Description', '配送员', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', psy;
+EXEC sp_addextendedproperty 'MS_Description', '发运人', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', fyr;
+EXEC sp_addextendedproperty 'MS_Description', '返回时间', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', fhsj;
+EXEC sp_addextendedproperty 'MS_Description', '委托经办人', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', wtjbr;
+EXEC sp_addextendedproperty 'MS_Description', '承运单位', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', cydw;
+EXEC sp_addextendedproperty 'MS_Description', '发货地址', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', fhdz;
+EXEC sp_addextendedproperty 'MS_Description', '剂型', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', jx;
+EXEC sp_addextendedproperty 'MS_Description', '包装', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', bz;
+EXEC sp_addextendedproperty 'MS_Description', '整件数量', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', zjsl;
+EXEC sp_addextendedproperty 'MS_Description', '散件数量', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', sjsl;
+EXEC sp_addextendedproperty 'MS_Description', '运输方式', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', ysfs;
+EXEC sp_addextendedproperty 'MS_Description', '打印批号', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', dyph;
+EXEC sp_addextendedproperty 'MS_Description', '打印效期', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', dyxq;
+EXEC sp_addextendedproperty 'MS_Description', '打印生产日期', 'user', dbo, 'table', t_bjsl_yunsjlmx, 'column', dyscrq;
+
+DROP TABLE t_bjsl_shjlmx;
+CREATE TABLE t_bjsl_shjlmx(
+    wlzx INT NOT NULL,
+    shdh nvarchar(50) NOT NULL,
+    tzdh nvarchar(50) NOT NULL,
+    ordr INT NOT NULL,
+    hpbh NVARCHAR(50) NOT NULL,
+    pcbh NVARCHAR(50) NOT NULL,
+    id INT NOT NULL,
+    date DATETIME NOT NULL,
+    wlzxmc NVARCHAR(200),
+    hz Nvarchar(50),
+    hzmc NVARCHAR(200),
+    khbh NVARCHAR(50),
+    khmc NVARCHAR(200),
+    shrq DATETIME,
+    rklx NVARCHAR(50),
+    ywy NVARCHAR(50),
+    shy NVARCHAR(200),
+    shy2 NVARCHAR(200),
+    spbh NVARCHAR(50),
+    pm NVARCHAR(200),
+    gg NVARCHAR(100),
+    cd NVARCHAR(256),
+    sccj NVARCHAR(256),
+    jldw VARCHAR(60),
+    bz DECIMAL(18,4),
+    cctj NVARCHAR(50),
+    zczh NVARCHAR(100),
+    xkzh NVARCHAR(100),
+    hpdl NVARCHAR(200),
+    hpsx NVARCHAR(200),
+    yxrq DATETIME,
+    scrq DATETIME,
+    shtxph NVARCHAR(50),
+    cyfs NVARCHAR(50),
+    wtysdh NVARCHAR(50),
+    fydd NVARCHAR(50),
+    ysdw NVARCHAR(50),
+    ysfs VARCHAR(50),
+    ysgj NVARCHAR(50),
+    yscph NVARCHAR(50),
+    qysj NVARCHAR(50),
+    dhsj DATETIME,
+    shjl NVARCHAR(50),
+    sm NVARCHAR(250),
+    jhsl DECIMAL(18,4),
+    sssl DECIMAL(18,4),
+    jssl DECIMAL(18,4),
+    bzsl DECIMAL(18,4),
+    zhl DECIMAL(18,6),
+    tiji DECIMAL(18,9),
+    dyph NVARCHAR(50),
+    dyxq NVARCHAR(20),
+    dyscrq NVARCHAR(20),
+    jx NVARCHAR(50),
+    PRIMARY KEY (wlzx,shdh,tzdh,ordr,hpbh,pcbh,id,date)
+)
+
+EXEC sp_addextendedproperty 'MS_Description', '北京索林收货记录', 'user', dbo, 'table', t_bjsl_shjlmx, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', wlzx;
+EXEC sp_addextendedproperty 'MS_Description', '收货单号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shdh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单号;对应要货单号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', tzdh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单行号;对应要货单行号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', ordr;
+EXEC sp_addextendedproperty 'MS_Description', '货品编号（索林）', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', hpbh;
+EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', pcbh;
+EXEC sp_addextendedproperty 'MS_Description', 'id', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', id;
+EXEC sp_addextendedproperty 'MS_Description', 'date', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', date;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心名称', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', wlzxmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', hz;
+EXEC sp_addextendedproperty 'MS_Description', '货主名称', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', hzmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户编号;分店编号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', khbh;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户名称;分店名称', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', khmc;
+EXEC sp_addextendedproperty 'MS_Description', '收货日期', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shrq;
+EXEC sp_addextendedproperty 'MS_Description', '入库类型', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', rklx;
+EXEC sp_addextendedproperty 'MS_Description', '业务员', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', ywy;
+EXEC sp_addextendedproperty 'MS_Description', '收货员', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shy;
+EXEC sp_addextendedproperty 'MS_Description', '收货员2', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shy2;
+EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', spbh;
+EXEC sp_addextendedproperty 'MS_Description', '货品名称', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', pm;
+EXEC sp_addextendedproperty 'MS_Description', '规格', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', gg;
+EXEC sp_addextendedproperty 'MS_Description', '产地', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', cd;
+EXEC sp_addextendedproperty 'MS_Description', '生产厂商', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', sccj;
+EXEC sp_addextendedproperty 'MS_Description', '单位', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', jldw;
+EXEC sp_addextendedproperty 'MS_Description', '包装', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', bz;
+EXEC sp_addextendedproperty 'MS_Description', '储存条件', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', cctj;
+EXEC sp_addextendedproperty 'MS_Description', '注册证号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', zczh;
+EXEC sp_addextendedproperty 'MS_Description', '生产企业许可证号或备案凭证号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', xkzh;
+EXEC sp_addextendedproperty 'MS_Description', '货品大类', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', hpdl;
+EXEC sp_addextendedproperty 'MS_Description', '货品属性', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', hpsx;
+EXEC sp_addextendedproperty 'MS_Description', '有效期至', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', yxrq;
+EXEC sp_addextendedproperty 'MS_Description', '生产日期', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', scrq;
+EXEC sp_addextendedproperty 'MS_Description', '随货同行票号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shtxph;
+EXEC sp_addextendedproperty 'MS_Description', '承运方式', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', cyfs;
+EXEC sp_addextendedproperty 'MS_Description', '委托运输单号;收货时间', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', wtysdh;
+EXEC sp_addextendedproperty 'MS_Description', '发运地点', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', fydd;
+EXEC sp_addextendedproperty 'MS_Description', '运输单位', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', ysdw;
+EXEC sp_addextendedproperty 'MS_Description', '运输方式', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', ysfs;
+EXEC sp_addextendedproperty 'MS_Description', '运输工具', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', ysgj;
+EXEC sp_addextendedproperty 'MS_Description', '运输车牌号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', yscph;
+EXEC sp_addextendedproperty 'MS_Description', '启运时间', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', qysj;
+EXEC sp_addextendedproperty 'MS_Description', '到货时间', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', dhsj;
+EXEC sp_addextendedproperty 'MS_Description', '收货结论', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', shjl;
+EXEC sp_addextendedproperty 'MS_Description', '说明', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', sm;
+EXEC sp_addextendedproperty 'MS_Description', '计划数量', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', jhsl;
+EXEC sp_addextendedproperty 'MS_Description', '实收数量', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', sssl;
+EXEC sp_addextendedproperty 'MS_Description', '拒收数量', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', jssl;
+EXEC sp_addextendedproperty 'MS_Description', '包装数量', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', bzsl;
+EXEC sp_addextendedproperty 'MS_Description', '重量', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', zhl;
+EXEC sp_addextendedproperty 'MS_Description', '体积', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', tiji;
+EXEC sp_addextendedproperty 'MS_Description', '打印批号', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', dyph;
+EXEC sp_addextendedproperty 'MS_Description', '打印效期', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', dyxq;
+EXEC sp_addextendedproperty 'MS_Description', '打印生产日期', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', dyscrq;
+EXEC sp_addextendedproperty 'MS_Description', '剂型', 'user', dbo, 'table', t_bjsl_shjlmx, 'column', jx;
+
+DROP TABLE t_bjsl_pdjlmx;
+CREATE TABLE t_bjsl_pdjlmx(
+    wlzx INT NOT NULL,
+    pddh nvarchar(50) NOT NULL,
+    tzdh nvarchar(50) NOT NULL,
+    ordr INT NOT NULL,
+    hpbh NVARCHAR(50) NOT NULL,
+    pcbh NVARCHAR(50) NOT NULL,
+    kqbh NVARCHAR(50) NOT NULL,
+    hwbh NVARCHAR(50) NOT NULL,
+    pdrq DATETIME,
+    id INT,
+    wlzxmc NVARCHAR(200),
+    hz Nvarchar(50),
+    hzmc NVARCHAR(200),
+    khbh NVARCHAR(50),
+    khmc NVARCHAR(200),
+    pdlx NVARCHAR(50),
+    czy NVARCHAR(200),
+    zybm NVARCHAR(200),
+    spbh NVARCHAR(50),
+    pm NVARCHAR(200),
+    gg NVARCHAR(100),
+    cd NVARCHAR(256),
+    sccj NVARCHAR(256),
+    jldw VARCHAR(60),
+    bzsl DECIMAL(18,4),
+    cctj NVARCHAR(50),
+    zczh NVARCHAR(100),
+    xkzh NVARCHAR(100),
+    hpdl NVARCHAR(200),
+    hpsx NVARCHAR(200),
+    kqmc NVARCHAR(200),
+    hwmc NVARCHAR(200),
+    yxrq DATETIME,
+    scrq DATETIME,
+    pdsl DECIMAL(18,4),
+    zhaiyao NVARCHAR(200),
+    bz NVARCHAR(200),
+    dyph NVARCHAR(50),
+    dyxq NVARCHAR(20),
+    dyscrq NVARCHAR(20),
+    PRIMARY KEY (wlzx,pddh,tzdh,ordr,hpbh,pcbh,kqbh,hwbh)
+)
+
+EXEC sp_addextendedproperty 'MS_Description', '北京索林盘点记录明细', 'user', dbo, 'table', t_bjsl_pdjlmx, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', wlzx;
+EXEC sp_addextendedproperty 'MS_Description', '盘点单号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pddh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单号;对应要货单号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', tzdh;
+EXEC sp_addextendedproperty 'MS_Description', '通知单行号;对应要货单行号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', ordr;
+EXEC sp_addextendedproperty 'MS_Description', '货品编号(索林)', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hpbh;
+EXEC sp_addextendedproperty 'MS_Description', '批号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pcbh;
+EXEC sp_addextendedproperty 'MS_Description', '库区编号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', kqbh;
+EXEC sp_addextendedproperty 'MS_Description', '货位编号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hwbh;
+EXEC sp_addextendedproperty 'MS_Description', '盘点日期', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pdrq;
+EXEC sp_addextendedproperty 'MS_Description', 'id', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', id;
+EXEC sp_addextendedproperty 'MS_Description', '物流中心名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', wlzxmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hz;
+EXEC sp_addextendedproperty 'MS_Description', '货主名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hzmc;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户编号;分店编号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', khbh;
+EXEC sp_addextendedproperty 'MS_Description', '货主方客户名称;分店名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', khmc;
+EXEC sp_addextendedproperty 'MS_Description', '盘点类型', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pdlx;
+EXEC sp_addextendedproperty 'MS_Description', '操作员', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', czy;
+EXEC sp_addextendedproperty 'MS_Description', '职员部门', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', zybm;
+EXEC sp_addextendedproperty 'MS_Description', '货号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', spbh;
+EXEC sp_addextendedproperty 'MS_Description', '货品名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pm;
+EXEC sp_addextendedproperty 'MS_Description', '规格', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', gg;
+EXEC sp_addextendedproperty 'MS_Description', '产地', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', cd;
+EXEC sp_addextendedproperty 'MS_Description', '生产厂商', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', sccj;
+EXEC sp_addextendedproperty 'MS_Description', '单位', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', jldw;
+EXEC sp_addextendedproperty 'MS_Description', '包装', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', bzsl;
+EXEC sp_addextendedproperty 'MS_Description', '储存条件', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', cctj;
+EXEC sp_addextendedproperty 'MS_Description', '注册证号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', zczh;
+EXEC sp_addextendedproperty 'MS_Description', '生产企业许可证号或备案凭证号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', xkzh;
+EXEC sp_addextendedproperty 'MS_Description', '货品大类', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hpdl;
+EXEC sp_addextendedproperty 'MS_Description', '货品属性', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hpsx;
+EXEC sp_addextendedproperty 'MS_Description', '库区名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', kqmc;
+EXEC sp_addextendedproperty 'MS_Description', '货位名称', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', hwmc;
+EXEC sp_addextendedproperty 'MS_Description', '有效期至', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', yxrq;
+EXEC sp_addextendedproperty 'MS_Description', '生产日期', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', scrq;
+EXEC sp_addextendedproperty 'MS_Description', '盘点数量;收货时间', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', pdsl;
+EXEC sp_addextendedproperty 'MS_Description', '摘要', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', zhaiyao;
+EXEC sp_addextendedproperty 'MS_Description', '备注', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', bz;
+EXEC sp_addextendedproperty 'MS_Description', '打印批号', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', dyph;
+EXEC sp_addextendedproperty 'MS_Description', '打印效期', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', dyxq;
+EXEC sp_addextendedproperty 'MS_Description', '打印生产日期', 'user', dbo, 'table', t_bjsl_pdjlmx, 'column', dyscrq;
 
 
 
