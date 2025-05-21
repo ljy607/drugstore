@@ -1,7 +1,7 @@
 -- 入出库数据异常处理 2024年11月18日 10:49:25
-select * -- UPDATE a SET scbz = 0,scsbyy = ''   -- delete a
+select TOP 10 * -- UPDATE a SET scbz = 0,scsbyy = ''   -- delete a
 FROM t_bjyj_rck a 
-WHERE scbz = -1
+--WHERE scbz = -1
 ORDER BY a.created_time DESC
 
 select MAX(a.created_time)
@@ -30,9 +30,9 @@ JOIN t_bjyj_rckmx b ON b.spbh = c.spbh AND b.pcbh = c.pcbh AND (b.exprie_date IS
 JOIN t_bjyj_rck r ON r.bill_code = b.bill_code
 
 ----------------- 当日库存信息 ------------------------
-select * -- UPDATE a SET scbz = 0,scsbyy = ''
+select TOP 10 * -- UPDATE a SET scbz = 0,scsbyy = ''
 FROM t_bjyj_drkc a 
-WHERE scbz = -1
+--WHERE scbz = -1
 ORDER BY a.created_time DESC
 
 select MAX(a.created_time)
@@ -57,9 +57,9 @@ FROM t_bjyj_drkc a
 --AND a.pzwh = '医药产品注册证号:HC20150044'
 
 ----------------- 零售单据信息 ------------------------
-select * -- UPDATE a SET scbz = 0,scsbyy = ''
+select TOP 10 * -- UPDATE a SET scbz = 0,scsbyy = ''
 FROM t_bjyj_lsd a 
-WHERE scbz = -1
+--WHERE scbz = -1
 ORDER BY a.created_time DESC
 
 select MAX(a.created_time)

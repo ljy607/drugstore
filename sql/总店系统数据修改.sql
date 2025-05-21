@@ -1,3 +1,22 @@
+----- 删除进货单 2025年5月21日 09:07:18
+SELECT *  -- delete a
+FROM t_jhdzb a
+WHERE jhdbh IN ('JH24001567','JH24001653','JH25000682')
+
+SELECT *  -- delete a
+FROM t_jhdmxb a
+WHERE jhdbh IN ('JH24001567','JH24001653','JH25000682')
+
+---- 删除损益单 2025年5月21日 09:06:39
+SELECT *  -- delete a
+FROM t_bsdzb  a
+WHERE bsdbh = 'BS24000060'
+
+SELECT *  -- delete a
+FROM t_bsdmxb a
+WHERE bsdbh = 'BS24000060'
+
+
 SELECT *
 FROM t_bjdzb 
 WHERE bjdbh IN ('BJ24000233','','')

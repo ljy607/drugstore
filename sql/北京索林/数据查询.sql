@@ -40,7 +40,7 @@ WHERE 货主='010013'
 
 SELECT *  -- delete 
 FROM Pass_出库返回接口表_wait
-WHERE 货主='010013'
+WHERE 货主='010013' and 出库类型=11
 
 SELECT *   -- delete 
 FROM Pass_出库返回接口表_each

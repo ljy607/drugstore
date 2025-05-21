@@ -1,12 +1,32 @@
----- 出库单主表增加是否上传三方系统标识 2025年4月10日 15:08:28
-ALTER TABLE t_ckdzb 
-ADD isdone NVARCHAR(1) DEFAULT  'N'
+------- 出库单、要货单、退库单、退货单 增加委外标识，用于上传索林数据的控制
+alter TABLE T_CKDZB
+ADD wwbz tinyint DEFAULT  0 ;
+EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_CKDZB, 'column', wwbz;
 
-EXEC sp_addextendedproperty 'MS_Description', '是否上传三方系统', 'user', dbo, 'table', T_CKDZB, 'column', isdone;
 
----- 要货单明细增加进货日期 2024年12月20日 13:28:27
-ALTER TABLE t_yhjhmx
-ADD jhrq DATETIME NULL
+alter TABLE T_YHJHZB
+ADD wwbz tinyint DEFAULT  0 ;
+EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_YHJHZB, 'column', wwbz;
+
+alter TABLE T_TKDZB
+ADD wwbz tinyint DEFAULT  0 ;
+EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_TKDZB, 'column', wwbz;
+
+
+alter TABLE T_THDZB
+ADD wwbz tinyint DEFAULT  0 ;
+EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_THDZB, 'column', wwbz;
+
+
+------ 出库单主表增加是否上传三方系统标识 2025年4月10日 15:08:28
+--ALTER TABLE t_ckdzb 
+--ADD isdone NVARCHAR(1) DEFAULT  'N'
+
+--EXEC sp_addextendedproperty 'MS_Description', '是否上传三方系统', 'user', dbo, 'table', T_CKDZB, 'column', isdone;
+
+------ 要货单明细增加进货日期 2024年12月20日 13:28:27
+--ALTER TABLE t_yhjhmx
+--ADD jhrq DATETIME NULL
 
 --ALTER TABLE T_SPXX
 --ALTER COLUMN cd NVARCHAR(50)

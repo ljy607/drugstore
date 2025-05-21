@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.4",
   "createdTime": "2021-9-4 07:01:05",
-  "updatedTime": "2025-4-22 14:45:36",
+  "updatedTime": "2025-5-21 10:10:27",
   "dbConns": [],
   "profile": {
     "default": {
@@ -6458,6 +6458,24 @@
           "uiHint": "",
           "id": "E03F4A1A-D819-433D-AF2B-2EE3B598509E",
           "baseType": ""
+        },
+        {
+          "defKey": "wwbz",
+          "defName": "是否委外（索林）",
+          "comment": "委外单据需要发送委托方，默认不委外",
+          "type": "tinyint",
+          "len": 1,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "0",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "",
+          "extProps": {},
+          "domain": "",
+          "id": "41EA7D9E-60A6-41D0-960D-B4510C3F4CE8"
         }
       ],
       "indexes": [
@@ -6563,7 +6581,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "T_CKMX",
@@ -30381,6 +30400,33 @@
           "baseType": ""
         },
         {
+          "defKey": "wwbz",
+          "defName": "是否委外（索林）",
+          "comment": "委外单据需要发送委托方，默认不委外",
+          "type": "tinyint",
+          "len": 1,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "0",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "98BAF4EE-8A40-4896-A458-62381EA901C3",
+          "baseType": ""
+        },
+        {
           "rowNo": 12,
           "defKey": "delflag",
           "defName": "",
@@ -30507,7 +30553,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "T_TJSP",
@@ -31458,6 +31505,33 @@
           "baseType": ""
         },
         {
+          "defKey": "wwbz",
+          "defName": "是否委外（索林）",
+          "comment": "委外单据需要发送委托方，默认不委外",
+          "type": "tinyint",
+          "len": 1,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "0",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "F6E9E606-2696-4E60-97EA-697722B1B331",
+          "baseType": ""
+        },
+        {
           "rowNo": 11,
           "defKey": "delflag",
           "defName": "",
@@ -31584,7 +31658,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "T_UMSGS",
@@ -34262,6 +34337,33 @@
           "uiHint": "",
           "id": "3A9263CC-480A-47FB-8F1E-E95EC533DFD7",
           "baseType": ""
+        },
+        {
+          "defKey": "wwbz",
+          "defName": "是否委外（索林）",
+          "comment": "委外单据需要发送委托方，默认不委外",
+          "type": "tinyint",
+          "len": 1,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "0",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "916FC84D-34B1-47C6-A198-0C0D612B3ACD",
+          "baseType": ""
         }
       ],
       "indexes": [
@@ -34367,7 +34469,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "T_YHJLMX",
