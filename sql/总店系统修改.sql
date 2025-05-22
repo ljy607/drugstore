@@ -9,12 +9,12 @@ ADD wwbz tinyint DEFAULT  0 ;
 EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_YHJHZB, 'column', wwbz;
 
 alter TABLE T_TKDZB
-ADD wwbz tinyint DEFAULT  0 ;
+ADD wwbz tinyint DEFAULT  1 ;
 EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_TKDZB, 'column', wwbz;
 
 
 alter TABLE T_THDZB
-ADD wwbz tinyint DEFAULT  0 ;
+ADD wwbz tinyint DEFAULT  1 ;
 EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_THDZB, 'column', wwbz;
 
 
