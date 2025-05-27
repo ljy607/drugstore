@@ -1,21 +1,26 @@
-------- 出库单、要货单、退库单、退货单 增加委外标识，用于上传索林数据的控制
-alter TABLE T_CKDZB
-ADD wwbz tinyint DEFAULT  0 ;
-EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_CKDZB, 'column', wwbz;
+------- 增加索林验收结果核对功能  2025年5月26日 10:00:31
+INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+VALUES('13','索林验收结果核对',5,2,'索林验收结果核对','image\tom_wap.gif','w_jhd4wwysd',1,1,0);
 
 
-alter TABLE T_YHJHZB
-ADD wwbz tinyint DEFAULT  0 ;
-EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_YHJHZB, 'column', wwbz;
-
-alter TABLE T_TKDZB
-ADD wwbz tinyint DEFAULT  1 ;
-EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_TKDZB, 'column', wwbz;
+--------- 出库单、要货单、退库单、退货单 增加委外标识，用于上传索林数据的控制
+--alter TABLE T_CKDZB
+--ADD wwbz tinyint DEFAULT  0 ;
+--EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_CKDZB, 'column', wwbz;
 
 
-alter TABLE T_THDZB
-ADD wwbz tinyint DEFAULT  1 ;
-EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_THDZB, 'column', wwbz;
+--alter TABLE T_YHJHZB
+--ADD wwbz tinyint DEFAULT  0 ;
+--EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_YHJHZB, 'column', wwbz;
+
+--alter TABLE T_TKDZB
+--ADD wwbz tinyint DEFAULT  1 ;
+--EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_TKDZB, 'column', wwbz;
+
+
+--alter TABLE T_THDZB
+--ADD wwbz tinyint DEFAULT  1 ;
+--EXEC sp_addextendedproperty 'MS_Description', '是否委外（索林）;委外单据需要发送委托方，默认不委外', 'user', dbo, 'table', T_THDZB, 'column', wwbz;
 
 
 ------ 出库单主表增加是否上传三方系统标识 2025年4月10日 15:08:28

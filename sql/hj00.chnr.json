@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.4",
   "createdTime": "2021-9-4 07:01:05",
-  "updatedTime": "2025-5-21 10:10:27",
+  "updatedTime": "2025-5-26 09:57:17",
   "dbConns": [],
   "profile": {
     "default": {
@@ -17695,6 +17695,33 @@
           "baseType": ""
         },
         {
+          "defKey": "wwysd",
+          "defName": "委外验收单",
+          "comment": "委外验收单，逗号分隔，用户与委外验收单核对数据的一致性",
+          "type": "nvarchar",
+          "len": 255,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "A5A4430F-55A6-4131-8CD4-CB042773D764",
+          "baseType": ""
+        },
+        {
           "rowNo": 18,
           "defKey": "fdckd",
           "defName": "",
@@ -17885,7 +17912,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "t_jhpfd",
