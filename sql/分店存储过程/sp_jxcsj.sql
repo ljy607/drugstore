@@ -1,6 +1,16 @@
-DECLARE @rq1 DATETIME,@rq2 DATETIME
-SET @rq1 = '2020.1.1 00:00:00'
-SET @rq2 = '2020.12.31 23:59:59' 
+/******************* 过程说明 *****************************************************************
+  查询药品进销存数据
+  参数	@rq1	开始日期 2025.1.1 00:00:00
+        @rq2	结束日期 2025.12.31 23:59:59
+  结果	药品进销存数据，台码 1、3、4 开头
+  修改		
+**********************************************************************************************/
+create PROCEDURE sp_jxcsj @rq1 DATETIME,@rq2 DATETIME AS
+begin
+
+--DECLARE @rq1 DATETIME,@rq2 DATETIME
+--SET @rq1 = '2020.1.1 00:00:00'
+--SET @rq2 = '2020.12.31 23:59:59' 
 
 create table #t
 (	
@@ -136,3 +146,5 @@ ORDER BY e.SPBH
 DROP TABLE #t    
 DROP TABLE #tt
 DROP TABLE #t1
+
+END

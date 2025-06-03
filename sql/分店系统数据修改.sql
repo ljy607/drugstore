@@ -1,3 +1,26 @@
+
+------- 要货单删除  2025年6月3日 09:05:53
+SELECT *  -- delete a
+FROM t_yhjhzb a
+WHERE yhdbh IN ('YH16000046','YH16000035')
+
+SELECT *   -- delete a
+FROM t_yhjhmx a
+WHERE yhdbh IN ('YH16000046','YH16000035')
+
+SELECT *  -- delete a
+FROM t_yhjhzb a
+WHERE 1=1 
+and a.jsbz = 0
+--AND yhdbh IN ('YH18000008','YH17000047')
+
+SELECT DISTINCT a.yhdbh   -- delete a
+FROM t_yhjhmx a 
+JOIN t_yhjhzb b ON b.YHDBH = a.YHDBH
+WHERE 1=1 
+AND b.JSBZ = 0
+--and yhdbh IN ('YH16000046','YH16000035')
+
 --损益单
 SELECT *  -- delete m
 FROM t_bsdzb z
@@ -23,14 +46,14 @@ JOIN t_ckdmxb m ON m.SPBH = s.SPBH AND m.PCBH = s.PCBH
 WHERE s.scrq IS NULL
 
 -- 调拨单状态修改 
-SELECT *  -- update a set a.yxbz = 0
+SELECT *  -- update a set a.yxbz = 0  -- delete a
 FROM t_dbdzb a  
 WHERE 1=1 
 --and yxbz = 1
 AND dbdbh = 'DB107250008'
 
-SELECT *
-FROM t_dbdmxb 
+SELECT *   -- delete a
+FROM t_dbdmxb a
 WHERE 1=1 
 --and spbh = '423311'
 and dbdbh = 'DB107250008'
@@ -38,6 +61,13 @@ and dbdbh = 'DB107250008'
 -- 退库单状态修改
 SELECT * -- update a set a.flag = 5
 FROM t_tkdzb a WHERE FLAG = 2
+
+SELECT * -- delete a
+FROM t_tkdzb a WHERE tkdbh IN ('TK22000525')
+
+SELECT * -- delete a
+FROM t_tkdmxb a WHERE tkdbh IN ('TK22000525')
+
 
 
 -- 删除美团订单 2022年10月9日 11:38:04

@@ -1,3 +1,12 @@
+
+------ 删除退货单  2025年6月3日 09:00:07
+SELECT *   -- delete a
+FROM t_thdzb a
+WHERE thdbh IN ('TH24000377')
+
+SELECT *   -- delete a
+FROM t_thdmxb a WHERE  thdbh IN ('TH24000377')
+
 ----- 删除进货单 2025年5月21日 09:07:18
 SELECT *  -- delete a
 FROM t_jhdzb a
