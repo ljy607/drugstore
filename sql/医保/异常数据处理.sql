@@ -1,8 +1,4 @@
-SELECT *  -- update a set a.scsbyy = '',scbz = 0
-FROM t_ybjk_spxx a
-WHERE scbz = -1
-ORDER BY a.CJSJ DESC
-
+------ 第一步 处理异常数据中不在医保范围内的数据 
 SELECT ybbm,spbh, pm,yblx,ybscbz  -- update a  set ybscbz = 0
 FROM t_yb_spxx a
 WHERE 1=1
@@ -13,18 +9,22 @@ AND ybbm IN( 'XR05CBA101E012010100066','XR05XXA191A017010103864','ZA06CBX0358010
 ,'XD01ACT058F002010100107','XH02ABD085A001010100443','XA02ABF438A001010100290','ZD02AAK0029010104158'
 ,'XA09AXF117A012010101742','XA02AXF386A001010100290','ZD02AAK0029010104158','XA12AXW012A005010178178'
 ,'ZA16CAL0048010100290','ZD02AAK0029010104158','XA09AXF117A012010101742','XA02ADL183A001010101814'
-,'XA11CAW031E002010100429')
+,'XA11CAW031E002010100429','')
 AND ybscbz = 1
 
-SELECT ybbm,spbh, pm,yblx,ybscbz  -- update a  set ybscbz = 0
-FROM t_yb_spxx a
-WHERE 1=1
---and yblx = 1 AND LEN(ybbm) > 25
-AND ybbm IN('ZA16CAL0048010100290')
 
+------ 第二步 删除不在医保范围内的数据 
 SELECT m.*,s.ybbm,s.yblx,s.ybscbz   -- delete m
 FROM t_ybjk_spxxmx m
 JOIN t_ybjk_spxx z ON z.ID = m.ID AND z.scbz = -1
 JOIN t_yb_spxx s ON s.YBBM = m.YBBM
 WHERE s.ybscbz = 0
+
+------ 第三步 更新上传标识
+SELECT *  -- update a set a.scsbyy = '',scbz = 0
+FROM t_ybjk_spxx a
+WHERE scbz = -1
+ORDER BY a.CJSJ DESC
+
+
 
