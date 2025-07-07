@@ -21,9 +21,9 @@ JOIN t_yb_spxx s ON s.YBBM = m.YBBM
 WHERE s.ybscbz = 0
 
 ------ 第三步 更新上传标识
-SELECT *  -- update a set a.scsbyy = '',scbz = 0
+SELECT TOP 50 *  -- update a set a.scsbyy = '',scbz = 0
 FROM t_ybjk_spxx a
-WHERE scbz = -1
+--WHERE scbz = -1
 ORDER BY a.CJSJ DESC
 
 

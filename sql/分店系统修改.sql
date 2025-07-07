@@ -1,6 +1,10 @@
------- 增加药品进销存报表查询，用于医保局检查用 2025年6月3日 14:30:31
-INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
-VALUES('24','药品进销存报表',2,1,'药品进销存报表','image\tom_wap.gif','w_jxcsj',1,1,0)
+----- 修改调拨单明细表 批号长度 2025年7月7日 15:23:32 
+ALTER TABLE t_dbdmxb 
+ALTER COLUMN pcbh NVARCHAR(20) NOT NULL
+
+-------- 增加药品进销存报表查询，用于医保局检查用 2025年6月3日 14:30:31
+--INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
+--VALUES('24','药品进销存报表',2,1,'药品进销存报表','image\tom_wap.gif','w_jxcsj',1,1,0)
 
 
 ----损益单增加生产日期 2024年11月8日 10:11:59

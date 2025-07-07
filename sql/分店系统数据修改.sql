@@ -1,4 +1,14 @@
 
+------- 更新退货、退库单 委外上传标志 2025年6月23日 10:44:46
+SELECT *   --  update tt set wwbz = 1
+FROM T_TkDZB tt
+WHERE tkdbh = 'TK10225000050'
+
+SELECT *   --  update tt set wwbz = 1
+FROM T_THDZB tt
+WHERE thdbh = 'TH25000140'
+
+
 ------- 要货单删除  2025年6月3日 09:05:53
 SELECT *  -- delete a
 FROM t_yhjhzb a
