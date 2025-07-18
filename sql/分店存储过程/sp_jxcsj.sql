@@ -2,10 +2,10 @@
   查询药品进销存数据
   参数	@rq1	开始日期 2025.1.1 00:00:00
         @rq2	结束日期 2025.12.31 23:59:59
-  结果	药品进销存数据，台码 1、3、4 开头
+  结果	药品进销存数据，商品信息的lb为 药品、器械类
   修改		
 **********************************************************************************************/
-create PROCEDURE sp_jxcsj @rq1 DATETIME,@rq2 DATETIME AS
+alter PROCEDURE sp_jxcsj @rq1 DATETIME,@rq2 DATETIME AS
 begin
 
 --DECLARE @rq1 DATETIME,@rq2 DATETIME
@@ -39,7 +39,10 @@ CREATE TABLE #t1
 
 -- 查找时间段内的全部商品 
 INSERT INTO #t(spbh)
-SELECT DISTINCT spbh FROM t_ckmx WHERE fxrq BETWEEN @rq1 AND @rq2  -- and LEFT(spbh,1) IN('1','3','4')
+SELECT DISTINCT a.spbh 
+FROM t_ckmx a
+-- JOIN t_spxx b ON b.SPBH = a.SPBH
+WHERE a.fxrq BETWEEN @rq1 AND @rq2  -- and b.lb IN('药品','器械类')
 
 INSERT INTO #tt(spbh) SELECT spbh FROM #t
 
@@ -59,9 +62,9 @@ TRUNCATE TABLE #t1
 ------ 计算截至日期到当前的进数量
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
-FROM t_ckmx a
+FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
 wHERE fxrq > @rq2
-AND LEFT(a.spbh,1) IN('1','3','4')
+AND b.lb IN('药品','器械类')
 AND a.YWTP > 0
 GROUP BY a.spbh
 
@@ -74,9 +77,9 @@ TRUNCATE TABLE #t1
 ------ 计算截至日期到当前的出数量
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
-FROM t_ckmx a
+FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
 wHERE fxrq > @rq2
-AND LEFT(a.spbh,1) IN('1','3','4')
+AND b.lb IN('药品','器械类')
 AND a.YWTP < 0
 GROUP BY a.spbh
 
@@ -100,9 +103,9 @@ JOIN #tt ON #tt.SPBH = #t.SPBH
 ---- 进数量
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
-FROM t_ckmx a
+FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
 wHERE fxrq BETWEEN @rq1 AND @rq2
-AND LEFT(a.spbh,1) IN('1','3','4')
+AND b.lb IN('药品','器械类')
 AND a.YWTP > 0
 GROUP BY a.spbh
 
@@ -117,9 +120,9 @@ TRUNCATE TABLE #t1
 ---- 销数量
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
-FROM t_ckmx a
+FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
 wHERE fxrq BETWEEN @rq1 AND @rq2
-AND LEFT(a.spbh,1) IN('1','3','4')
+AND b.lb IN('药品','器械类')
 AND a.YWTP < 0
 GROUP BY a.spbh
 
@@ -135,9 +138,9 @@ UPDATE #t
 SET qcsl = csl - jsl + xsl
 
 SELECT e.spbh,e1.pm,e1.gg,e1.cjmc,e1.jldw,e.qcsl,e.jsl,e.xsl,e.csl
-FROM #t e
+FROM #t e 
 JOIN v_spxx e1 ON e1.SPBH = e.SPBH
-where LEFT(e.spbh,1) IN('1','3','4')
+where  e1.lb IN('药品','器械类')
 ORDER BY e.SPBH
 
 --SELECT * from #tt

@@ -19,11 +19,14 @@ WHERE a.lsdbh = '2506160057'
 
 SELECT *  -- update a set a.bz = '补丢失的医保数据',a.tradeno = '072000160A250616000016',a.personcountpay=361.50,a.cash=0,a.fund=0
 FROM t_lsdzb a
-WHERE lsdbh = '2506160040'    -- 2502110050
+WHERE lsdbh = '2507050009'    -- 2502110050
 
-SELECT *   ---  update e set e.lsdbh = '2506160040'
+SELECT *   ---  update e set e.lsdbh = '2507050009'
 FROM t_lsdmxb e
-WHERE lsdbh = '2506160057'
+WHERE lsdbh = '2507050009'
+
+select *  -- DELETE 
+FROM t_lsdzb WHERE lsdbh = '2507050012'
 
 ---- 新增医保分解主表数据，用于对账，不做明细数据的的分解
 INSERT INTO t_yb_divide(tradeno, ic_no, feeno,  tradedate, feeall, fund,
@@ -79,4 +82,4 @@ WHERE tydi.tradeno = '072000160A250616000016'
 
 SELECT *
 FROM T_yb_divide tyd
-WHERE tyd.feeno like '072000160A250616000016'
+WHERE tyd.feeno like '2507050009'
