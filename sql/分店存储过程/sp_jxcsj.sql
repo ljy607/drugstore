@@ -1,11 +1,11 @@
 /******************* 过程说明 *****************************************************************
   查询药品进销存数据
-  参数	@rq1	开始日期 2025.1.1 00:00:00
-        @rq2	结束日期 2025.12.31 23:59:59
+  参数	@rq1	开始日期 2025.1.1
+        @rq2	结束日期 2025.12.31
   结果	药品进销存数据，商品信息的lb为 药品、器械类
   修改		
 **********************************************************************************************/
-alter PROCEDURE sp_jxcsj @rq1 DATETIME,@rq2 DATETIME AS
+alter PROCEDURE sp_jxcsj @rq1 DATE,@rq2 DATE AS
 begin
 
 --DECLARE @rq1 DATETIME,@rq2 DATETIME
@@ -42,7 +42,7 @@ INSERT INTO #t(spbh)
 SELECT DISTINCT a.spbh 
 FROM t_ckmx a
 -- JOIN t_spxx b ON b.SPBH = a.SPBH
-WHERE a.fxrq BETWEEN @rq1 AND @rq2  -- and b.lb IN('药品','器械类')
+WHERE convert(date,a.fxrq) BETWEEN @rq1 AND @rq2  -- and b.lb IN('药品','器械类')
 
 INSERT INTO #tt(spbh) SELECT spbh FROM #t
 
@@ -63,7 +63,7 @@ TRUNCATE TABLE #t1
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
 FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
-wHERE fxrq > @rq2
+wHERE convert(date,fxrq) > @rq2
 AND b.lb IN('药品','器械类')
 AND a.YWTP > 0
 GROUP BY a.spbh
@@ -78,7 +78,7 @@ TRUNCATE TABLE #t1
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
 FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
-wHERE fxrq > @rq2
+wHERE convert(date,fxrq) > @rq2
 AND b.lb IN('药品','器械类')
 AND a.YWTP < 0
 GROUP BY a.spbh
@@ -104,7 +104,7 @@ JOIN #tt ON #tt.SPBH = #t.SPBH
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
 FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
-wHERE fxrq BETWEEN @rq1 AND @rq2
+wHERE convert(date,fxrq) BETWEEN @rq1 AND @rq2
 AND b.lb IN('药品','器械类')
 AND a.YWTP > 0
 GROUP BY a.spbh
@@ -121,7 +121,7 @@ TRUNCATE TABLE #t1
 insert into #t1(spbh,sl)
 SELECT a.spbh,sum(isnull(a.SL,0)) as sl
 FROM t_ckmx a JOIN t_spxx b ON b.SPBH = a.SPBH
-wHERE fxrq BETWEEN @rq1 AND @rq2
+wHERE convert(date,fxrq) BETWEEN @rq1 AND @rq2
 AND b.lb IN('药品','器械类')
 AND a.YWTP < 0
 GROUP BY a.spbh
