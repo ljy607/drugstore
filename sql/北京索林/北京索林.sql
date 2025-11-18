@@ -48,16 +48,18 @@ INSERT INTO bjsl.中间库.dbo.Assign_客户接口表
 (货主,编号,客户类型,guid,名称,查询码,原编号,地址,收货地址,联系人,电话,货主名称,经营范围,企业类型,许可证类别
 ,发证机关,统一社会信用代码,经营许可证号有效期至,经营许可证号,营业执照号,营业执照有效期至,颁发日期,状态)
 SELECT '010013',dwbh,1,guid,dwmc,jc,dwbh,dwdz,dwdz,'',DH,'北京市弘济药店有限公司',jyfw,'经营企业',xkzlb
-,xkzfzjg,sh,ypjyxkzyxrq,ypjyxkzh,sh,yyzzyxrq,yyzzfzrq,CASE flag WHEN 1 THEN '启用' ELSE '禁用' end
+,xkzfzjg,sh,ypjyxkzyxrq,ypjyxkzh,sh,yyzzyxrq,yyzzfzrq,CASE dwbh WHEN '105' THEN '启用' ELSE '禁用' end
+--,CASE flag WHEN 1 THEN '启用' ELSE '禁用' end
 FROM t_dwxx 
-WHERE dwbh LIKE '1%' AND FLAG = 1 AND dwbh = '100'
+WHERE dwbh LIKE '1%' AND FLAG = 1 AND dwbh IN('105','106')
+--AND dwbh = '100'
 
 -- 客户收货地址接口表
 INSERT INTO bjsl.中间库.dbo.Assign_客户收货地址接口表
 (货主,客户编号,客户类型,地址编号,guid,收货地址,货主名称,客户名称,联系人,联系电话)
 SELECT '010013',dwbh,1,dwbh,guid,dwdz,dwmc,dwmc,'',DH
 FROM t_dwxx 
-WHERE dwbh LIKE '1%' AND FLAG = 1
+WHERE dwbh LIKE '1%' AND FLAG = 1 AND dwbh IN('105','106')
 
 INSERT INTO bjsl.中间库.dbo.Assign_客户收货地址接口表_each
 (货主,客户编号,客户类型,地址编号,guid,收货地址,货主名称,客户名称,联系人,联系电话)
