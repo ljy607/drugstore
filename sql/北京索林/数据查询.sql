@@ -1,3 +1,6 @@
+中间库账号：ZJK 密码：BJXSKH2025!@#()yyds
+端口号：1533
+
 SELECT *  -- delete 
 FROM Assign_货品接口表_each
 WHERE 货主='010013' and 编号 in('100816','400426','11787','4074110','409978')
@@ -50,7 +53,7 @@ SELECT *   -- delete
 FROM book_查验记录返回接口表_each
 WHERE 货主编号='010013' and 通知单号 = 'YH24001087_00338' 
 
-SELECT *   -- delete 
+SELECT *  -- select distinct 通知单号 -- delete 
 FROM book_复核记录返回接口表_each
 WHERE 货主编号='010013'
 

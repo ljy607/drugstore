@@ -1,3 +1,5 @@
+SELECT * FROM t_ckdzb WHERE ckdbh = 'CK24001836'
+
 
 ------ 删除退货单  2025年6月3日 09:00:07
 SELECT *   -- delete a
@@ -19,11 +21,11 @@ WHERE jhdbh IN ('JH24001567','JH24001653','JH25000682')
 ---- 删除损益单 2025年5月21日 09:06:39
 SELECT *  -- delete a
 FROM t_bsdzb  a
-WHERE bsdbh = 'BS24000060'
+WHERE bsdbh = 'BS10925000021'
 
 SELECT *  -- delete a
 FROM t_bsdmxb a
-WHERE bsdbh = 'BS24000060'
+WHERE bsdbh = 'BS10925000021'
 
 
 SELECT *

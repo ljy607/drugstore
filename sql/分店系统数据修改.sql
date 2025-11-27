@@ -1,3 +1,12 @@
+----------- 删除出库单
+SELECT m.*   -- delete m
+FROM t_ckdzb z
+JOIN t_ckdmxb m ON m.CKDBH = z.CKDBH
+WHERE z.ckdbh = 'CK25001214'
+
+SELECT *  -- delete z   -- update z set jsdw = '105',yxbz = 10
+FROM t_ckdzb z
+WHERE z.ckdbh = 'CK25001214'
 
 ------- 更新退货、退库单 委外上传标志 2025年6月23日 10:44:46
 SELECT *   --  update tt set wwbz = 1
@@ -35,11 +44,11 @@ AND b.JSBZ = 0
 SELECT *  -- delete m
 FROM t_bsdzb z
 JOIN t_bsdmxb m ON m.BSDBH = z.BSDBH
-WHERE z.yxbz < 10
+WHERE z.yxbz >0 AND yxbz < 10
 
 SELECT *  -- delete z
 FROM t_bsdzb z
-WHERE z.yxbz < 10
+WHERE z.yxbz >0 AND yxbz < 10
 
 SELECT *  -- update s set s.scrq = '2023-02-02 00:00:00.000'
 FROM t_bsdmxb s
@@ -47,7 +56,7 @@ WHERE bsdbh = 'BS24000032' AND spbh = '306635' AND pcbh = '230201'
 
 SELECT *  -- update s set s.scrq = '2024-06-27 00:00:00.000'
 FROM t_bsdzb s
-WHERE bsdbh = 'BS25000010' 
+WHERE bsdbh = 'BS25000021' 
 
 SELECT s.spbh,s.pcbh,s.scrq,m.scrq   -- update s set s.scrq = m.scrq
 FROM t_bsdmxb s
