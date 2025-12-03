@@ -1,5 +1,5 @@
-中间库账号：ZJK 密码：BJXSKH2025!@#()yyds
-端口号：1533
+--中间库账号：ZJK 密码：BJXSKH2025!@#()yyds
+--端口号：1533
 
 SELECT *  -- delete 
 FROM Assign_货品接口表_each
@@ -245,7 +245,7 @@ WHERE  货主编号=:a and 配送结果确认单号 = :b
 
 
 -- 养护记录头信息 2025年4月21日 16:47:55
-SELECT DISTINCT 养护记录单号
+SELECT DISTINCT 养护记录单号 dh,养护日期 yhrq
 FROM book_养护记录返回接口表_each
 WHERE 货主编号 = :a
 
@@ -253,9 +253,14 @@ SELECT 养护记录单号 dh,库区编号 kqbh,货位编号 hwbh,生产批号或序列号 pcbh
 ,养护日期 yhrq,养护类型 yhlx,养护员 yhy,货主方货品编号 spbh,货主方货品名称 pm
 ,规格或型号 gg,产地 cd,生产厂商 sccj,单位 jldw,包装 bzsl,储存条件 cctj,注册证号 zczh
 ,生产企业许可证号或备案凭证号 xkzh,货品大类 hpdl,货品属性 hpsx,库区名称 kqmc,货位名称 hwmc,有效期至 yxrq
-,生产日期 scrq,养护数量 yhsl,质量状况 zlzk,处理意见 clyj,养护结论 yhjl,说明 sm
+,生产日期 scrq,养护数量 yhsl,质量状况 zlzk,处理意见 clyj,养护结论 yhjl,说明 sm,_date dt,_id id
+,物流中心ID wlzx,物流中心名称 wlzxmc,货主编号 hzbh,货主名称 hzmc,货品编号 hpbh 
+,打印批号 dyph,打印效期 dyxq,打印生产日期 dyscrq
 FROM book_养护记录返回接口表_each
-WHERE 货主编号=:a and 养护记录单号 like '%'+:b+'%'
+--WHERE 货主编号=:a and 养护记录单号 = :b
+where 货主编号='010013'
+
+select * FROM book_养护记录返回接口表_each WHERE 货主编号 = '010013' and 养护记录单号 = 'HPYH2025060316'
 
 
 
