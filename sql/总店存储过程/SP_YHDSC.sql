@@ -8,11 +8,12 @@
   结果  向出库明细表中插入一条有效的记录
   变更	供应商证照过期的供应商禁止进货 2019年4月6日 20:59:52
 		增加进货日期 2024年12月20日 14:22:23
+		增加产地 2025年12月8日 09:41:59
 ************************************************/
 ALTER PROCEDURE [dbo].[SP_YHDSC] @sspbh varchar(15),@ckdbh varchar(15),@decyhsl decimal(8,2), @ordr int ,@sbz varchar(32)AS
 begin
 	DECLARE @decjhj decimal(8,2), @declsj decimal(8,2),@deckcl decimal(8,2),@decfgskc decimal(8,2)
-	DECLARE @gysbh varchar(15),@jhrq datetime
+	DECLARE @gysbh varchar(15),@jhrq DATETIME,@cd NVARCHAR(100)
 
 
 	-- 将进货价、零售价、库存量置为特殊标志
@@ -50,10 +51,16 @@ begin
 	FROM t_jhdzb z
 	JOIN t_jhdmxb m ON m.JHDBH = z.JHDBH
 	WHERE z.jhrq > '2020.1.1' AND spbh = @sspbh
+	
+	--查找产地 2025年12月8日 09:43:27
+	IF LEFT(@sspbh,1) = '7' 
+	BEGIN	
+		SELECT @cd = cd FROM t_spxx WHERE spbh = @sspbh
+	END
 
 	-- 向要货单明细表插入一条记录
-	INSERT INTO T_YHJHMX (YHDBH,ORDR,SPBH,GYSBH,DCL,YHSL,LSJ,JHJ,FLAG,BZ,fgskc,jhrq)
-		  VALUES(@ckdbh, @ordr, @sspbh, @gysbh, @deckcl, @decyhsl, @declsj,@decjhj,0,@sbz,cast(@decfgskc as varchar(20)),@jhrq)
+	INSERT INTO T_YHJHMX (YHDBH,ORDR,SPBH,GYSBH,DCL,YHSL,LSJ,JHJ,FLAG,BZ,fgskc,jhrq,cd)
+		  VALUES(@ckdbh, @ordr, @sspbh, @gysbh, @deckcl, @decyhsl, @declsj,@decjhj,0,@sbz,cast(@decfgskc as varchar(20)),@jhrq,@cd)
 end 
 
 GO
