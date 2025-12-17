@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.4",
   "createdTime": "2021-9-4 07:01:05",
-  "updatedTime": "2025-12-15 13:52:02",
+  "updatedTime": "2025-12-17 15:03:35",
   "dbConns": [],
   "profile": {
     "default": {
@@ -14315,7 +14315,7 @@
           "defName": "仓库地址",
           "comment": "",
           "type": "NVARCHAR",
-          "len": 100,
+          "len": 300,
           "scale": "",
           "primaryKey": false,
           "notNull": false,
@@ -20978,7 +20978,7 @@
     },
     {
       "defKey": "T_LSRB",
-      "defName": null,
+      "defName": "零售日报",
       "comment": "",
       "properties": {},
       "fields": [
@@ -21165,6 +21165,42 @@
           "uiHint": "",
           "id": "E6C62507-4E1E-4097-BB65-41831D55B6AA",
           "baseType": "35715CD6-C0E7-4B86-8DEF-A0199F82C1D9"
+        },
+        {
+          "defKey": "gysbh",
+          "defName": "供应商编号",
+          "comment": "",
+          "type": "NVARCHAR",
+          "len": 10,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "",
+          "extProps": {},
+          "domain": "",
+          "id": "EA5E3FE1-9B41-4500-B86B-F960771B3B87"
+        },
+        {
+          "defKey": "gysmc",
+          "defName": "供应商名称",
+          "comment": "",
+          "type": "NVARCHAR",
+          "len": "60",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "",
+          "extProps": {},
+          "domain": "",
+          "id": "F2F6E236-A304-4328-AB8E-4B9179347076"
         }
       ],
       "indexes": [
@@ -21280,7 +21316,8 @@
       "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
-      }
+      },
+      "notes": {}
     },
     {
       "defKey": "t_member",

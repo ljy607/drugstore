@@ -1,33 +1,43 @@
----------- 供应商经营范围分开，增加器械供应范围、食品供应范围、其他供应范围，原供应范围默认药品供应范围 ---------------
-ALTER TABLE t_gysxx 
-ADD qxgyfw NVARCHAR(200) NULL,spgyfw NVARCHAR(200) NULL,qtgyfw NVARCHAR(200) NULL;
-EXEC sp_addextendedproperty 'MS_Description', '药品供应范围', 'user', dbo, 'table', T_GYSXX, 'column', gyfw;
-EXEC sp_addextendedproperty 'MS_Description', '器械供应范围', 'user', dbo, 'table', T_GYSXX, 'column', qxgyfw;
-EXEC sp_addextendedproperty 'MS_Description', '食品供应范围', 'user', dbo, 'table', T_GYSXX, 'column', spgyfw;
-EXEC sp_addextendedproperty 'MS_Description', '其他供应范围', 'user', dbo, 'table', T_GYSXX, 'column', qtgyfw;
+---------------零售日报增加供应商信息 2025年12月17日 15:05:11 --------------------
+alter TABLE T_LSRB
+add gysbh NVARCHAR(10),
+    gysmc NVARCHAR(60)  
 
------ 分店信息增加执业药师信息 2025年12月2日 14:11:08
-alter TABLE T_DWXX
-ADD ys_xm VARCHAR(60),ys_zczbh VARCHAR(60),
-    ys_zgzsh VARCHAR(60),
-    ys_zydq VARCHAR(60),
-    ys_zylb VARCHAR(60),
-    ys_zyfw VARCHAR(60),
-    ys_zydw VARCHAR(60),
-    ys_yxqz DATETIME,
-    ys_fzjg VARCHAR(60),
-    ys_zcrq DATETIME;
+EXEC sp_addextendedproperty 'MS_Description', '零售日报', 'user', dbo, 'table', T_LSRB, null, null;
+EXEC sp_addextendedproperty 'MS_Description', '供应商编号', 'user', dbo, 'table', T_LSRB, 'column', gysbh;
+EXEC sp_addextendedproperty 'MS_Description', '供应商名称', 'user', dbo, 'table', T_LSRB, 'column', gysmc;
 
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_注册证编号', 'user', dbo, 'table', T_DWXX, 'column', ys_zczbh;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_资格证书号', 'user', dbo, 'table', T_DWXX, 'column', ys_zgzsh;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业地区', 'user', dbo, 'table', T_DWXX, 'column', ys_zydq;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业类别', 'user', dbo, 'table', T_DWXX, 'column', ys_zylb;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业范围', 'user', dbo, 'table', T_DWXX, 'column', ys_zyfw;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业单位', 'user', dbo, 'table', T_DWXX, 'column', ys_zydw;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_有效期至', 'user', dbo, 'table', T_DWXX, 'column', ys_yxqz;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_发证机关', 'user', dbo, 'table', T_DWXX, 'column', ys_fzjg;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_注册日期', 'user', dbo, 'table', T_DWXX, 'column', ys_zcrq;
-EXEC sp_addextendedproperty 'MS_Description', '执业药师_姓名', 'user', dbo, 'table', T_DWXX, 'column', ys_xm;
+
+------------ 供应商经营范围分开，增加器械供应范围、食品供应范围、其他供应范围，原供应范围默认药品供应范围 ---------------
+--ALTER TABLE t_gysxx 
+--ADD qxgyfw NVARCHAR(200) NULL,spgyfw NVARCHAR(200) NULL,qtgyfw NVARCHAR(200) NULL;
+--EXEC sp_addextendedproperty 'MS_Description', '药品供应范围', 'user', dbo, 'table', T_GYSXX, 'column', gyfw;
+--EXEC sp_addextendedproperty 'MS_Description', '器械供应范围', 'user', dbo, 'table', T_GYSXX, 'column', qxgyfw;
+--EXEC sp_addextendedproperty 'MS_Description', '食品供应范围', 'user', dbo, 'table', T_GYSXX, 'column', spgyfw;
+--EXEC sp_addextendedproperty 'MS_Description', '其他供应范围', 'user', dbo, 'table', T_GYSXX, 'column', qtgyfw;
+
+------- 分店信息增加执业药师信息 2025年12月2日 14:11:08
+--alter TABLE T_DWXX
+--ADD ys_xm VARCHAR(60),ys_zczbh VARCHAR(60),
+--    ys_zgzsh VARCHAR(60),
+--    ys_zydq VARCHAR(60),
+--    ys_zylb VARCHAR(60),
+--    ys_zyfw VARCHAR(60),
+--    ys_zydw VARCHAR(60),
+--    ys_yxqz DATETIME,
+--    ys_fzjg VARCHAR(60),
+--    ys_zcrq DATETIME;
+
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_注册证编号', 'user', dbo, 'table', T_DWXX, 'column', ys_zczbh;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_资格证书号', 'user', dbo, 'table', T_DWXX, 'column', ys_zgzsh;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业地区', 'user', dbo, 'table', T_DWXX, 'column', ys_zydq;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业类别', 'user', dbo, 'table', T_DWXX, 'column', ys_zylb;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业范围', 'user', dbo, 'table', T_DWXX, 'column', ys_zyfw;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_执业单位', 'user', dbo, 'table', T_DWXX, 'column', ys_zydw;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_有效期至', 'user', dbo, 'table', T_DWXX, 'column', ys_yxqz;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_发证机关', 'user', dbo, 'table', T_DWXX, 'column', ys_fzjg;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_注册日期', 'user', dbo, 'table', T_DWXX, 'column', ys_zcrq;
+--EXEC sp_addextendedproperty 'MS_Description', '执业药师_姓名', 'user', dbo, 'table', T_DWXX, 'column', ys_xm;
 
 --------- 增加索林验收结果核对功能  2025年5月26日 10:00:31
 --INSERT INTO T_FUNCS(FUNCID,	FUNNM,FUNTP,GRPID,FUNMS,TPLJ,FUNFM,FLAG,UFLAG,parameter)
