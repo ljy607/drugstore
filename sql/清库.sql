@@ -1,3 +1,28 @@
+TRUNCATE TABLE CODENO
+TRUNCATE TABLE t_bhgmxb
+TRUNCATE TABLE t_bhgzb
+TRUNCATE TABLE t_bjyj_drkc
+TRUNCATE TABLE t_bjyj_drkcmx
+TRUNCATE TABLE t_bjyj_lsd
+TRUNCATE TABLE t_bjyj_lsdmx
+TRUNCATE TABLE t_bjyj_pzxx
+TRUNCATE TABLE t_bjyj_rck
+TRUNCATE TABLE t_bjyj_rckmx
+TRUNCATE TABLE t_chxx_lock_log
+TRUNCATE TABLE t_chxx_tbjl
+TRUNCATE TABLE t_dwxx_jyfw
+TRUNCATE TABLE t_GongGao
+TRUNCATE TABLE T_JKYPDJB
+TRUNCATE TABLE t_jz
+TRUNCATE TABLE t_jzmx
+TRUNCATE TABLE T_LSDMXB_W
+TRUNCATE TABLE t_lsdmxb_yjcx
+TRUNCATE TABLE T_LSDZB_W
+TRUNCATE TABLE t_spxx_lb
+TRUNCATE TABLE T_SYS_LOG
+TRUNCATE TABLE T_TJSP
+TRUNCATE TABLE t_yb_spxx
+
 truncate table t_bjdmxb;
 truncate table t_bjdzb;
 
@@ -75,7 +100,6 @@ truncate table t_sccj;
 truncate table t_spxx;
 truncate table t_spys;
 truncate table t_spysxx;
--- truncate table t_hosts;
 
 TRUNCATE TABLE t_chxx_tbjl;
 TRUNCATE TABLE T_JCDZB;
@@ -112,8 +136,82 @@ TRUNCATE TABLE t_yb_rxdiagnosisinfo_items;
 --truncate table t_gysxx;
 --truncate table t_jgxx_fd;
 
+TRUNCATE TABLE ifCheckAcctptFb
+TRUNCATE TABLE ifCheckFb
+TRUNCATE TABLE ifClientDoc
+TRUNCATE TABLE ifGoodsDoc
+TRUNCATE TABLE ifinventoryCheckFb
+TRUNCATE TABLE ifPurin
+TRUNCATE TABLE ifPurinfb
+TRUNCATE TABLE ifReceivingFb
+TRUNCATE TABLE ifSaleOut
+TRUNCATE TABLE ifSaleOutFb
+TRUNCATE TABLE ifStockChkFb 
+TRUNCATE TABLE ifSupplyDoc
+TRUNCATE TABLE ifTransStatusFb
+truncate table jg
+truncate TABLE t_bjsl_ckmx
+TRUNCATE TABLE t_bjsl_fhjlmx
+TRUNCATE TABLE t_bjsl_jhrkmx
+TRUNCATE TABLE t_bjsl_pdjlmx
+TRUNCATE TABLE t_bjsl_shjlmx
+TRUNCATE TABLE t_bjsl_tkmx
+TRUNCATE TABLE t_bjsl_yhjlmx
+TRUNCATE TABLE t_bjsl_ysjlmx
+TRUNCATE TABLE t_bjsl_yunsjlmx
+truncate TABLE t_bjyj_drkc
+TRUNCATE TABLE t_bjyj_drkcmx
+TRUNCATE TABLE t_bjyj_lsd
+TRUNCATE TABLE t_bjyj_lsdmx
+TRUNCATE TABLE t_bjyj_pzxx
+TRUNCATE TABLE t_bjyj_rck
+TRUNCATE TABLE t_bjyj_rckmx
+TRUNCATE TABLE t_chxx_lock_log
+TRUNCATE TABLE t_gysxx_log
+TRUNCATE TABLE t_jhdmxb_jg
+TRUNCATE TABLE t_jhdzb_jg
+TRUNCATE TABLE T_SYS_LOG
+TRUNCATE TABLE wms_spxx
+TRUNCATE TABLE wms_wldwxx
+TRUNCATE TABLE t_ysjl
+TRUNCATE TABLE T_ZLXXFK
+TRUNCATE TABLE t_xjdzb
+TRUNCATE TABLE t_xjdmxb
+TRUNCATE TABLE T_TJSP
+TRUNCATE TABLE t_syqyspb_temp
+TRUNCATE TABLE T_SYPZSPB
+TRUNCATE TABLE T_SYQYSPB
+TRUNCATE TABLE t_spxx_yb
+TRUNCATE TABLE t_spxx_wangshou
+TRUNCATE TABLE T_spxx_jybg
+TRUNCATE TABLE t_spxx_fk
+TRUNCATE TABLE t_spxx_fkjl
+TRUNCATE TABLE t_spxx_fkjlmx
+TRUNCATE TABLE t_skjl
+TRUNCATE TABLE T_R_SP_GYS
+TRUNCATE TABLE t_member_fd
+TRUNCATE TABLE T_LSDZB_W
+TRUNCATE TABLE T_LSDMXB_W
+TRUNCATE TABLE t_jz
+TRUNCATE TABLE T_JKYPDJB
+DELETE FROM  t_jhpfd
+TRUNCATE TABLE t_jhpfdmx
+TRUNCATE TABLE T_GYSXX_JYLB
+TRUNCATE TABLE t_gysxx_del
+TRUNCATE TABLE t_GongGaoDW
+DELETE FROM t_GongGao
+TRUNCATE TABLE T_FYSP
+TRUNCATE TABLE t_bjddw
+
+
 DELETE FROM t_zgxx WHERE bh <> '001';
 delete from t_usrfunc where zgbh <> '001';
+
+/*
+
+insert into t_splb
+select *
+from hj06.dbo.t_splb
 
 --SELECT * FROM t_dwxx_jyfw
 SELECT * FROM t_sphw 
@@ -158,4 +256,7 @@ JOIN hj00.zddb.dbo.t_spxx b ON a.spbh=b.spbh
 INSERT INTO t_sccj(CJBH, JC, CJMC, DZ, GXRQ, GXZ, FLAG)
 SELECT CJBH, JC, CJMC, DZ, GXRQ, GXZ, FLAG
 FROM hj00.zddb.dbo.t_sccj
+
+*/
+
 

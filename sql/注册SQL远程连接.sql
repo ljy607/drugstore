@@ -1,5 +1,5 @@
 ---- 删除链接服务器语法 
----- exec sp_dropserver 'hjkf', 'droplogins '
+---- exec sp_dropserver 'hj01', 'droplogins '
 
 EXEC  sp_addlinkedserver
       @server='hjgs',--被访问的服务器别名 
