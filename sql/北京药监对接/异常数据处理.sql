@@ -1,5 +1,5 @@
 -- 入出库数据异常处理 2024年11月18日 10:49:25
-select TOP 10 * -- UPDATE a SET scbz = 0,scsbyy = ''   -- delete a
+select TOP 100 * -- UPDATE a SET scbz = 0,scsbyy = ''   -- delete a
 FROM t_bjyj_rck a 
 --WHERE scbz = -1
 ORDER BY a.created_time DESC
