@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.4",
   "createdTime": "2022-6-2 10:13:05",
-  "updatedTime": "2024-12-20 10:16:19",
+  "updatedTime": "2026-7-26 18:31:24",
   "profile": {
     "default": {
       "db": "9FCB2F9E-B5E1-4FEE-B23E-F22E45BDB5D8",
@@ -747,9 +747,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "5036E2C2-258E-46DD-991F-5C400A438ADE",
@@ -910,9 +908,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F95D6384-C143-489E-82EC-68E27348E341",
@@ -1264,9 +1260,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "DDD1C055-3EB2-4D9E-80AB-17E302CC01A2",
@@ -1552,9 +1546,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "BCFDD75D-1556-4375-B981-693F499FB6A5",
@@ -2021,9 +2013,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "6804B04D-B171-44BD-8BE4-4C8DC3804EA5",
@@ -2265,9 +2255,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "74F922D5-5DF7-4AC1-8D5F-D27AAC8267E5",
@@ -2465,9 +2453,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F77B4D35-D80B-4CDC-B2EC-11DF087CE2D2",
@@ -2846,9 +2832,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "71C1C65D-85FF-4D38-B3CC-7F99FF3B332D",
@@ -3112,9 +3096,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "6569C1D3-C43E-4656-8756-59430ADE45D2",
@@ -3542,9 +3524,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8EA6FF93-5F77-4044-B573-DCE181CA0DDD",
@@ -3749,9 +3729,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "4B743783-1049-4936-9681-3B4ED421FC8E",
@@ -4059,9 +4037,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "3B25E9DF-4186-420A-A4DF-736D246E1264",
@@ -4354,9 +4330,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "217CD04B-A904-4989-869F-ED3A1110B8B9",
@@ -4532,9 +4506,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "25D7DAF6-9F55-442D-953D-106970956FDD",
@@ -5045,9 +5017,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "1F41AD56-8ED3-47B1-88D9-63EDE699D44E",
@@ -5421,9 +5391,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "9C8ACFEC-708D-44C1-A121-77F00CB6E5F9",
@@ -5758,9 +5726,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "91E5947B-C879-4C81-BEC4-57DE6B761A0D",
@@ -6046,9 +6012,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "637A235F-0813-4C2C-8A59-2159D79D34AC",
@@ -6246,9 +6210,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "2D7B66EC-2DA4-4807-8965-C50454C871EC",
@@ -6495,9 +6457,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "391F4F82-54D1-4C8C-8EEF-2AF00DAFD82D",
@@ -6761,9 +6721,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "3CB930D7-B9C4-4ADC-8496-02D0DA8EF8BB",
@@ -7027,9 +6985,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "139B081F-8477-4EC3-8F32-7610D1BF31FA",
@@ -7364,9 +7320,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "C397DAF3-502E-40AE-A8B0-B4C8E2AEE2BE",
@@ -7674,9 +7628,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "6DD85FD6-6ECE-45BC-AB76-4DD7F9CC21A6",
@@ -7918,9 +7870,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "5A6FD157-234B-4779-A77B-6F01B12C048C",
@@ -8335,9 +8285,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "5F891BED-890A-42F2-A089-195804FCB3DC",
@@ -8535,9 +8483,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "5F870D00-45E2-4A4C-BDE2-46DD6EDBA3F0",
@@ -8757,9 +8703,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8D6D79B4-7A06-44B5-990B-88AC3FD2DE0E",
@@ -9116,9 +9060,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "CF5F6E1F-CE62-4F46-874A-DC6A98607F0D",
@@ -9404,9 +9346,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A9A156FF-020C-453B-997D-86A67F8D720D",
@@ -9648,9 +9588,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "516E1FD3-A644-44AC-9AB1-59D61F60A293",
@@ -9958,9 +9896,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "69A1D880-1922-420F-BD4F-6E7D15E642C3",
@@ -10334,9 +10270,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "37836B21-C2BF-4C3B-8C68-07879A9DCE4E",
@@ -10666,9 +10600,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "98F83112-2AE2-4FFB-AAF1-02B3E1931EDC",
@@ -11064,9 +10996,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "4A46B6F1-02D7-4D97-915B-C66797EDF11F",
@@ -11286,9 +11216,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A0C53BC9-6854-4D8B-87BF-81CF6ED9E3AE",
@@ -11596,9 +11524,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "999E7B66-AF62-41B9-B0DB-FC6F621130B2",
@@ -11977,9 +11903,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "621AFA9D-0228-4613-85EF-2C80130A07B6",
@@ -12375,9 +12299,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "7EF9DB9E-1AD7-46D7-9420-ADFEA29ED098",
@@ -12559,9 +12481,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "2B4F5F85-A443-4463-A61D-6F371EA8D9EF",
@@ -12700,9 +12620,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "81763827-3E49-44BC-84CC-0A6A7022FF64",
@@ -13336,9 +13254,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A01ED6C0-C5F3-4066-A99D-4C4449EA1020",
@@ -13580,9 +13496,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A6E55AD0-3CD4-4418-9574-FD6CBCCEBECB",
@@ -13780,9 +13694,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F503EB93-AEB8-4087-866E-7911BAE8F984",
@@ -14343,9 +14255,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "47A9EE91-3684-4626-AAB7-B5D76CF840D5",
@@ -14724,9 +14634,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A3AE950E-0326-4E3A-9ED7-A3E81D7D2EA3",
@@ -15053,9 +14961,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "49158FFE-829A-43A3-91D2-C116255C8101",
@@ -15568,9 +15474,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "44215CB4-DAE4-4E02-8F3C-89AC561FF706",
@@ -16134,9 +16038,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "BA8B41C2-8FBC-403B-BD90-77C745E55DB6",
@@ -16576,9 +16478,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "07D57ED4-FEEA-43DA-B7B1-BD2DE7623A1B",
@@ -17113,9 +17013,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "200C2112-475D-426A-A10F-02739A8D5F94",
@@ -17291,9 +17189,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "861EB6BD-5E18-4016-81C2-8EE289AB2517",
@@ -17491,9 +17387,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8AABE76A-53DA-4093-AFDF-E6724997A722",
@@ -17823,9 +17717,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "BBC52215-C7FA-47D3-8CEF-FF5A08F8893A",
@@ -18067,9 +17959,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F42F2BB8-9C22-4479-B77C-FA6B9BDC6ABD",
@@ -18311,9 +18201,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "0C0F0A4C-676E-449A-AB6B-444EEB2F088D",
@@ -18496,9 +18384,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "B45DAF35-B39B-4CB3-8867-5D75A48907F3",
@@ -18762,9 +18648,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F49CA0A5-5D18-43DC-9151-D56143A81180",
@@ -18940,9 +18824,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "B4900F0C-3B7E-45A2-865F-265C0E17B59D",
@@ -19260,9 +19142,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "0BC290C7-9C53-4DEE-8DEA-2F520329AF45",
@@ -19504,9 +19384,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "45331524-F66A-49DD-8C29-D769DAE202D9",
@@ -19770,9 +19648,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "C81DB8C3-7940-4205-BC0F-027116153866",
@@ -19948,9 +19824,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "75CEE78A-E5EE-4E3B-899B-C6D89843690F",
@@ -20290,9 +20164,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8D5B1E62-E0E5-4C83-8D01-D246AA4C5F5C",
@@ -20632,9 +20504,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "CACC4F96-37E8-4A42-9588-57B1B44A3F42",
@@ -20832,9 +20702,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "F3F7513E-A632-44BC-B04C-C52F2A953269",
@@ -21017,9 +20885,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "187F743E-856C-4EC7-AE3C-C3CCD2E6BC71",
@@ -22093,9 +21959,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "3F22DF48-3BFD-4666-9710-F108F6C2D2D3",
@@ -22234,9 +22098,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "C23212AE-EC7D-405D-851B-FBE55C6554D1",
@@ -22368,9 +22230,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8F24A2E4-6865-4307-AD3D-D5DE9296EA6C",
@@ -23125,9 +22985,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "10B3A2CC-7C0D-4C64-A224-ACAF234A08D1",
@@ -23288,9 +23146,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "022A0FE3-7C3C-4FF9-8814-72A8E484D610",
@@ -23473,9 +23329,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "BFF01AE8-9FA7-44DD-96E8-BAD42A6B7E43",
@@ -23656,9 +23510,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A816FD1D-F136-4397-A7C4-FD81563EF258",
@@ -23856,9 +23708,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "DC3DD392-5ED7-440C-866D-9493BD8EE6C7",
@@ -24100,9 +23950,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "6E1B4252-7BA3-44D6-97D2-03077BA2CE3D",
@@ -24344,9 +24192,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "FFFDFC0F-07BE-4157-937A-F76D04C71E65",
@@ -24522,9 +24368,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "AC041A9A-4862-42A7-9B50-71266E3CBDD2",
@@ -24766,9 +24610,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8FF32725-4003-4BA0-8990-F14A06D71D06",
@@ -25169,9 +25011,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "480537C0-2AA9-42F0-A44A-94B86C1C30DF",
@@ -25435,9 +25275,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "C6FF0051-77F1-42FE-AD6E-C2A645E800D6",
@@ -25745,9 +25583,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "7D6248C1-0C50-4E32-AE0D-8D917F87A78D",
@@ -25933,9 +25769,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "69039626-9E1C-4C2A-B57A-FF98B612BFE2",
@@ -26265,9 +26099,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "DB543306-0AD5-40C5-946D-BC283466DA6A",
@@ -26553,9 +26385,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "74F2CB93-DA3E-4A8E-82E5-D98866B170B9",
@@ -26723,9 +26553,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "A4F7FED1-C6EF-4474-A43C-D102A6E1F9E1",
@@ -27885,9 +27713,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "07FD5F8C-E379-4056-A818-41F0AD72E9E2",
@@ -28437,9 +28263,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "062538C6-6C69-4487-AE4C-C793682E7CB4",
@@ -28945,9 +28769,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "9EE43B69-9A7D-4247-9034-B5DCC68034B3",
@@ -29387,9 +29209,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "E9360D07-BA20-4E6C-8DD8-DBD649CA348E",
@@ -30043,9 +29863,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "BD9FF2E1-23FE-44DE-BDAB-C4DB792F4E00",
@@ -30617,9 +30435,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "40EF832E-58A7-4AB5-8D74-818CEFF9F69F",
@@ -31191,9 +31007,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "6DC21620-69B9-4EC5-97F0-2F02BF0F8AD8",
@@ -31225,52 +31039,8 @@
           "baseType": ""
         },
         {
-          "rowNo": 2,
-          "defKey": "zdlxbm",
-          "defName": "字典类型编码",
-          "comment": "",
-          "domain": "",
-          "type": "nvarchar",
-          "len": 20,
-          "scale": "",
-          "primaryKey": false,
-          "notNull": false,
-          "autoIncrement": false,
-          "defaultValue": "",
-          "hideInGraph": false,
-          "typeFullName": "nvarchar(8)",
-          "primaryKeyName": "",
-          "notNullName": "√",
-          "autoIncrementName": "",
-          "refDict": "",
-          "id": "4BA277A5-04A3-4C02-8828-A748B3F52289",
-          "baseType": ""
-        },
-        {
-          "rowNo": 3,
-          "defKey": "zdlxmc",
-          "defName": "字典类型名称",
-          "comment": "",
-          "domain": "",
-          "type": "nvarchar",
-          "len": 40,
-          "scale": "",
-          "primaryKey": false,
-          "notNull": false,
-          "autoIncrement": false,
-          "defaultValue": "",
-          "hideInGraph": false,
-          "typeFullName": "nvarchar(8)",
-          "primaryKeyName": "",
-          "notNullName": "",
-          "autoIncrementName": "",
-          "refDict": "",
-          "id": "BCB7E914-3C5D-4193-AC61-456DC58ACC1F",
-          "baseType": ""
-        },
-        {
           "rowNo": 4,
-          "defKey": "zdbm",
+          "defKey": "code",
           "defName": "字典编码",
           "comment": "",
           "domain": "",
@@ -31292,17 +31062,17 @@
         },
         {
           "rowNo": 5,
-          "defKey": "zdmc",
-          "defName": "字典名称",
+          "defKey": "pcode",
+          "defName": "父字典编码",
           "comment": "",
           "domain": "",
           "type": "nvarchar",
-          "len": 40,
+          "len": 100,
           "scale": "",
           "primaryKey": false,
           "notNull": false,
           "autoIncrement": false,
-          "defaultValue": "(0)",
+          "defaultValue": "",
           "hideInGraph": false,
           "typeFullName": "int(10)",
           "primaryKeyName": "",
@@ -31310,6 +31080,40 @@
           "autoIncrementName": "",
           "refDict": "",
           "id": "62CD4861-CC9A-4A79-AE6C-539BEFAAD458",
+          "baseType": ""
+        },
+        {
+          "defKey": "codevalue",
+          "defName": "字典名称",
+          "comment": "拼音码",
+          "type": "NVARCHAR",
+          "len": 30,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "DEDE0BB7-D47E-49D0-9BE5-4933FD9957E9",
+          "baseType": ""
+        },
+        {
+          "defKey": "sort",
+          "defName": "排序",
+          "comment": "",
+          "type": "NVARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "4ECD5E5D-BE15-4BE3-92BB-5F324D943B34",
           "baseType": ""
         }
       ],
@@ -31413,9 +31217,8 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {},
+      "notes": {}
     },
     {
       "id": "9B250D56-61D7-4A2C-9138-4440EFCA58BD",
@@ -31833,9 +31636,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "343798C4-8EEC-4F8D-9EDD-3FAEB41CACF9",
@@ -32214,9 +32015,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "98D732E8-8F2E-4239-9D5B-3CB791A97FAF",
@@ -32421,9 +32220,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "46041AD5-CBE4-4A5C-9A29-0E4E21F32A94",
@@ -32819,9 +32616,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "8C114A41-2577-40FD-B20D-9435808A6E04",
@@ -33019,9 +32814,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "AD6E25A4-4646-412C-BC72-AA8D5AE6A416",
@@ -33241,9 +33034,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "CFBDF756-EC0B-4496-BB63-2F0A1C0B918D",
@@ -33595,9 +33386,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "2919A3B6-F916-4E3E-A8A5-8DE1F1EF1EFC",
@@ -33839,9 +33628,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "513BD4AF-86A8-44B2-801A-D0F408E8BF35",
@@ -34127,9 +33914,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "4391ADF4-9E14-4A8D-878E-175F9F384AE8",
@@ -34349,9 +34134,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "AA8353C5-2FC2-4224-9D1F-A888CB73C5B7",
@@ -34519,9 +34302,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "84E9637E-D20D-4115-99F2-1E44A380027E",
@@ -35159,9 +34940,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "920ED5FC-CE12-4E45-B0C9-D892E4D838A3",
@@ -35469,9 +35248,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "16FE0AE8-59E8-4026-915B-DBC8A4A44669",
@@ -35639,9 +35416,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "D1A7662A-E564-4C9E-9752-3B5CC5A712C2",
@@ -36085,9 +35860,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "2FF7C8AB-E8D6-43F6-8287-C1698F5AD9EF",
@@ -36565,9 +36338,7 @@
       ],
       "correlations": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "4D866165-C6D4-4E6B-BFB8-1C8B779844D2",
@@ -36759,9 +36530,7 @@
       "correlations": [],
       "indexes": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "7A33D9DD-9A56-4C2F-AF5A-BE8CF55CBF2C",
@@ -36942,9 +36711,7 @@
       "correlations": [],
       "indexes": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      },
+      "sysProps": {},
       "notes": {}
     },
     {
@@ -37176,9 +36943,7 @@
       "correlations": [],
       "indexes": [],
       "type": "P",
-      "sysProps": {
-        "nameTemplate": "{defKey}[{defName}]"
-      }
+      "sysProps": {}
     },
     {
       "id": "5F9759C9-96F7-4161-9662-B8BD966713CA",
@@ -37358,10 +37123,1737 @@
       "correlations": [],
       "indexes": [],
       "type": "P",
+      "sysProps": {},
+      "notes": {}
+    },
+    {
+      "id": "1B9CEAB9-1234-40F2-8EA3-D34DDECEE510",
+      "defKey": "t_yb_fsi_encounter_dtos",
+      "defName": "医保事前提醒就诊信息（fsi_encounter_dtos）",
+      "comment": "",
+      "properties": {},
+      "headers": [
+        {
+          "freeze": true,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "hideInGraph": true,
+          "freeze": false
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "mdtrt_id",
+          "defName": "业务流程号",
+          "comment": "药店就诊业务流水号，该流水号需在药店业务系统内部保持唯一不可重复；必填；零售单编号LSDBH",
+          "type": "VARCHAR",
+          "len": 15,
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "A34B4287-8356-4260-8CBA-3F700560DEA5",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "icno",
+          "defName": "社保号",
+          "comment": "本地参保人传入“医保应用号”，异地参保人传入“个人管理码Person_manage”。",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 30,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "4E0B8AF2-03B3-4C4F-B515-648C24E83CD1",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "idNo",
+          "defName": "身份证号",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 18,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "7608C17B-E430-48D8-8B43-D8D425D9D4CA",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "patn_name",
+          "defName": "姓名",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "A973C2C5-C3D8-4B76-9C3B-C6113EBDD7FF",
+          "baseType": "611A4466-ACBB-40BD-90B7-67D27588516B"
+        },
+        {
+          "defKey": "gend",
+          "defName": "性别",
+          "comment": "1：男，2：女，9：未说明性别",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "3BCB6223-76C6-4955-A8CF-437F8072D256",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "brdy",
+          "defName": "出生日期",
+          "comment": "格式：yyyy-MM-dd",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 10,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "1A05DD29-E4CE-4BCD-A303-D2678420D575",
+          "baseType": "611A4466-ACBB-40BD-90B7-67D27588516B"
+        },
+        {
+          "defKey": "AreaCode",
+          "defName": "参保地行政区划代码",
+          "comment": "本地参保人，此字段固定传入“110000” 异地参保人传入“参保地行政区划代码”",
+          "type": "VARCHAR",
+          "len": 6,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "23C37D79-B730-4080-A2D1-F2424D594B16",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "recipedate",
+          "defName": "处方日期",
+          "comment": "格式：yyyy-MM-dd HH:mm:ss",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "8A1D74D8-595D-4A6E-A36A-BB26BE0319E7",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "dscg_main_dise_codg",
+          "defName": "主诊断编码",
+          "comment": "市医保中心发布的《医疗保障疾病诊断分类与代码》、《医疗保障中医诊断分类与代码》",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "DAD75E2D-D87F-4D4C-B22A-942CDBD745FD",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "dscg_main_dise_name",
+          "defName": "主诊断名称",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "C85B5A59-BF6B-4597-8072-134C8AB1EA35",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "drord_dr_codg",
+          "defName": "开处方医生编码",
+          "comment": "国家医保医师代码，必填",
+          "type": "VARCHAR",
+          "len": 30,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "4EDDD049-55D5-47CF-ABAD-2C57929A1E40",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "drord_dr_name",
+          "defName": "开处方医生姓名",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 30,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "AAED8749-BF6F-4624-9EF5-112493507457",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "drord_dr_profttl",
+          "defName": "开处方医职称",
+          "comment": "231：主任医师，\t232：副主任医师，233：主治医师，234：医师，235：医士\t\t",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "8587B54E-13C3-4D33-936F-637F83C90751",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "sectioncode",
+          "defName": "就诊科别代码",
+          "comment": "按照处方上实际科室信息传入； 如获取不到科室信息可传“LD-99”；",
+          "type": "VARCHAR",
+          "len": 4,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "797380C1-AFD2-4262-A806-36D0D602A3B0",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "sectionname",
+          "defName": "就诊科别名称",
+          "comment": "按照处方上实际科室信息传入； 如获取不到科室信息可传“LD-99”；",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "CB548FA0-46B8-479D-B123-33F9C15F506F",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "med_mdtrt_type",
+          "defName": "就诊类别",
+          "comment": "3：购药 固定传入“3”",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "C03614D4-5964-4A9D-9CBA-571E74CB5E96",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "med_type",
+          "defName": "医疗类别",
+          "comment": "11：药店/门诊，19：急诊",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "6066314E-C31C-4276-8A2E-0EBC22A04FFE",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "matn_stas",
+          "defName": "生育状态",
+          "comment": "0：未知，1：非妊娠期或哺乳期，2：近期有生育计划，3：妊娠期，4：哺乳期",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "EFE5CC24-9ED1-4A38-86D2-24D821F8C4C5",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "medfee_sumamt",
+          "defName": "总费用",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 16,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "AC802081-8143-4804-8105-C35EEE6BE520",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        },
+        {
+          "defKey": "insutype",
+          "defName": "险种",
+          "comment": "4：工伤保险，31：离休，5：生育保险，32：医照，91：城乡居民保险-学生儿童，93：城乡居民保险-无业人员，92：城乡居民保险-无保障老年人，33：超转人员医疗保险，42：职伤保险，3：城镇职工，80：军休\t\t",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "B29026EB-1BCE-4192-A671-2A53998451F7",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "scbz",
+          "defName": "上传标志",
+          "comment": "-1：上传失败，0：待上传，1：上传成功，可结算，2：有违规",
+          "type": "INT",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "58B820E1-E113-4FAE-A437-A6FF106DDF1A",
+          "extProps": {},
+          "domain": "",
+          "id": "14A0DB2A-4E80-46EC-A464-98B4F9A78C8E"
+        },
+        {
+          "defKey": "out_setl_flag",
+          "defName": "异地结算标识",
+          "comment": "必填；0：否，1：是",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "FC9B6D8A-9E96-41DD-9FAA-9F0D8C6C87CB",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P",
       "sysProps": {
         "nameTemplate": "{defKey}[{defName}]"
       },
       "notes": {}
+    },
+    {
+      "id": "8168E26B-7F7E-4AB8-965E-310631BC7818",
+      "defKey": "t_yb_fsi_diagnose_dtos",
+      "defName": "医保事前提醒诊断信息（fsi_diagnose_dtos）",
+      "comment": "",
+      "properties": {},
+      "headers": [
+        {
+          "freeze": true,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "hideInGraph": true,
+          "freeze": false
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "id",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "247C8F04-6D7C-4136-9EF4-2942E6D62B2F",
+          "refDict": "",
+          "uiHint": "",
+          "id": "561DA80D-6C90-46E2-BBEE-11C125C55642",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "mdtrt_id",
+          "defName": "业务流程号",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 15,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "33072066-1D69-45B8-A806-47A45958456D",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "diagnoseno",
+          "defName": "诊断序号",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 9,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "DB224F7E-557E-4A69-A0C3-5D99DC54B2E4",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "maindise_flag",
+          "defName": "主诊断标志",
+          "comment": "必填；0：否，1：是",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "0F40A51F-698D-460E-94BB-8A5F93A9E3E0",
+          "baseType": "611A4466-ACBB-40BD-90B7-67D27588516B"
+        },
+        {
+          "defKey": "dise_codg",
+          "defName": "诊断编码",
+          "comment": "市医保中心发布的《医疗保障疾病诊断分类与代码》、《医疗保障中医诊断分类与代码》,必填",
+          "type": "VARCHAR",
+          "len": 30,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "id": "9489F2B6-29AF-4707-A0BA-61F846EC269C",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "dise_name",
+          "defName": "诊断名称",
+          "comment": "诊断编码对应的名称，必填",
+          "type": "VARCHAR",
+          "len": 200,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "id": "EAA69632-8F31-4786-88F9-FDE61D65716D",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "dise_date",
+          "defName": "诊断日期",
+          "comment": "格式：yyyy-MM-dd HH:mm:ss，必填",
+          "type": "VARCHAR",
+          "len": 19,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "id": "7F7A2371-CD0C-4BA3-B5F5-38C7CE03001B",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P",
+      "sysProps": {
+        "nameTemplate": "{defKey}[{defName}]"
+      }
+    },
+    {
+      "id": "01282F5F-F6AB-4244-B513-2CDD50B143D1",
+      "defKey": "t_yb_fsi_order_dtos",
+      "defName": "医保事前提醒处方信息（fsi_order_dtos）",
+      "comment": "",
+      "properties": {},
+      "headers": [
+        {
+          "freeze": true,
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "defName",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "primaryKey",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "notNull",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "autoIncrement",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "domain",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "type",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "len",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "scale",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "comment",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "refDict",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "defaultValue",
+          "hideInGraph": true
+        },
+        {
+          "freeze": false,
+          "refKey": "isStandard",
+          "hideInGraph": false
+        },
+        {
+          "freeze": false,
+          "refKey": "uiHint",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "hideInGraph": true,
+          "freeze": false
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "id",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "247C8F04-6D7C-4136-9EF4-2942E6D62B2F",
+          "id": "01C99062-8C12-489B-8435-B962BD035F17",
+          "baseType": "58B820E1-E113-4FAE-A437-A6FF106DDF1A"
+        },
+        {
+          "defKey": "mdtrt_id",
+          "defName": "业务流程号",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 15,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "id": "484EF2EB-9BEE-47B5-B2D7-75339E496BFC",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "rxno",
+          "defName": "处方号",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "27B3691B-C1B5-4940-BD28-92AA94628D1D",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "item_type",
+          "defName": "项目类别",
+          "comment": "必填；0：药品，3：医用器械/耗材",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "20115E21-FFFD-4B2F-AA6A-8960BC9AE8F7",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "fee_type",
+          "defName": "收费类别",
+          "comment": "0100：西药类，0101：甲类西药，0102：乙类西药，0103：其它类西药，0200：\t中成药类，0201：甲类中成药，0202：乙类中成药，0203：其它类中成药，0204：民族药，0300：中草药类，0301：复方可报，0302：单方可报，0303：其它类草药",
+          "type": "VARCHAR",
+          "len": 4,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "5A0267AB-90D9-46BB-859E-DDF5EE7A3456",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "nation_sub_code",
+          "defName": "医保目录代码",
+          "comment": "贯标的医保项目编码，必填 当项目类别为“医用器械/耗材”时，传入27位国家贯标耗材编码；",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "1841EE01-5B18-4467-9E5B-DB3DC17949F3",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "hilist_name",
+          "defName": "医保目录名称",
+          "comment": "贯标的医保项目名称，必填",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "E2413A32-CE08-495B-9D51-A4FA5BD59EB4",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "hiscode",
+          "defName": "药店系统项目代码",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "91882927-7709-43BF-AB34-340C5048FF6E",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "itemname",
+          "defName": "药店系统项目名称",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "DF34BAC3-7D93-4792-B554-66FBAD5BD33B",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "dose",
+          "defName": "剂型",
+          "comment": "数据字典",
+          "type": "VARCHAR",
+          "len": 6,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "7BBBC739-BBEA-4BFF-819D-3CAC9BC784E6",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "count",
+          "defName": "数量",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 6,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "DC3B5B3D-C6F0-43A3-9FB5-43FB96CAF8FD",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        },
+        {
+          "defKey": "unitprice",
+          "defName": "单价",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 16,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "A6EAD7E4-8226-485E-8A4A-AC8C910DAFCF",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        },
+        {
+          "defKey": "fee",
+          "defName": "总费用",
+          "comment": "",
+          "type": "DECIMAL",
+          "len": 16,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "854361CD-2752-4D52-8D7D-9AE11F233E12",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        },
+        {
+          "defKey": "specification",
+          "defName": "规格",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 100,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "567A762D-0656-4E03-AF04-E7EBF77ABB8F",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "unit",
+          "defName": "单位",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 20,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "domain": "",
+          "id": "8DD7AAD5-9562-48BC-B807-C452EEFC0DA0",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P",
+      "sysProps": {
+        "nameTemplate": "{defKey}[{defName}]"
+      }
+    },
+    {
+      "id": "8B84D8C1-0E52-4B49-99D9-FA2322E6BC75",
+      "env": {
+        "base": {
+          "nameSpace": "",
+          "codeRoot": ""
+        }
+      },
+      "defKey": "t_yb_sqtx_fh",
+      "defName": "医保事前提醒返回违规信息",
+      "comment": "",
+      "properties": {},
+      "sysProps": {
+        "nameTemplate": "{defKey}[{defName}]"
+      },
+      "notes": {},
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "freeze": false,
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "jrid",
+          "defName": "违规标识",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "2F0C9E07-CF2F-4B83-B131-86DBF7F24F54",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "ruleid",
+          "defName": "规则id",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "28BA911A-FF31-4393-8BE7-0F512802958E",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "rulename",
+          "defName": "规则名称",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 200,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "226D228E-F8D2-4D81-B64C-BC9F1F6770DD",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "volacont",
+          "defName": "违规内容",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 500,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "DD3A00DF-F9AC-49FA-9E8E-130C44F63D07",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "mdtrtid",
+          "defName": "就诊id",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "F4BC9B66-D6F7-419A-A988-99B72DA7452C",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "volaamt",
+          "defName": "违规金额",
+          "comment": "",
+          "domain": "",
+          "type": "DECIMAL",
+          "len": 16,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "9FEBFC3D-7326-4786-BBB5-327EEA0CFCB8",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        },
+        {
+          "defKey": "volaamtstas",
+          "defName": "违规金额计算状态",
+          "comment": "0：异常，1：正常",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB",
+          "extProps": {},
+          "domain": "",
+          "id": "6EA2D3FE-29EB-42ED-BB37-84EB7ACF84C6"
+        },
+        {
+          "defKey": "sevdeg",
+          "defName": "严重程度",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB",
+          "extProps": {},
+          "domain": "",
+          "id": "D20F59C9-7010-43A0-9969-72C9629F301C"
+        },
+        {
+          "defKey": "volaevid",
+          "defName": "违规依据",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 500,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB",
+          "extProps": {},
+          "domain": "",
+          "id": "37642996-CDD1-4564-931E-A85F6626D192"
+        },
+        {
+          "defKey": "volabhvrtype",
+          "defName": "违规行为分类",
+          "comment": "参见字典：违规行为分类",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB",
+          "extProps": {},
+          "domain": "",
+          "id": "3D8A549C-5F93-4AAC-9F69-AC01A843B5EA"
+        },
+        {
+          "defKey": "taskid",
+          "defName": "任务id",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 40,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB",
+          "extProps": {},
+          "domain": "",
+          "id": "CFAF895D-C27B-4BD8-8BE8-4BAB948B4896"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P"
+    },
+    {
+      "id": "73B27E67-1AC9-4226-B739-C86E305B3329",
+      "env": {
+        "base": {
+          "nameSpace": "",
+          "codeRoot": ""
+        }
+      },
+      "defKey": "t_yb_sqtx_fhmx",
+      "defName": "医保事前提醒返回违规明细",
+      "comment": "",
+      "properties": {},
+      "sysProps": {
+        "nameTemplate": "{defKey}[{defName}]"
+      },
+      "notes": {},
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "freeze": false,
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "jrid",
+          "defName": "违规标识",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "0147ADE9-FEDD-402D-BC78-5FF73F1589FA",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "mdtrtid",
+          "defName": "就诊标识",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "extProps": {},
+          "notes": {},
+          "attr1": "",
+          "attr2": "",
+          "attr3": "",
+          "attr4": "",
+          "attr5": "",
+          "attr6": "",
+          "attr7": "",
+          "attr8": "",
+          "attr9": "",
+          "id": "D180A908-E11C-4462-8EC2-C6A95FF7731E",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "rxid",
+          "defName": "处方（医嘱）标识",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "5899F382-1B7B-4AF8-A708-003467756778",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "volaitemtype",
+          "defName": "违规明细类型",
+          "comment": "参见字典：违规项目类型",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 3,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "8EF1E5DF-A49C-4722-97F0-DFEE9FF0086C",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "volaamt",
+          "defName": "违规金额",
+          "comment": "",
+          "domain": "",
+          "type": "DECIMAL",
+          "len": 16,
+          "scale": 2,
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "F48607AA-1FE7-4272-A469-68027ECA9110",
+          "baseType": "9F68DABC-66A9-45C4-A08F-EFC32EBDD765"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P"
+    },
+    {
+      "id": "537F70E2-8525-4579-8A3F-7A31D1CA94E7",
+      "env": {
+        "base": {
+          "nameSpace": "",
+          "codeRoot": ""
+        }
+      },
+      "defKey": "T_YB_JBZDFL",
+      "defName": "医保疾病诊断与分类代码",
+      "comment": "",
+      "properties": {},
+      "sysProps": {
+        "nameTemplate": "{defKey}[{defName}]"
+      },
+      "notes": {},
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "freeze": false,
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "id",
+          "comment": "",
+          "type": "INT",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": true,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "58B820E1-E113-4FAE-A437-A6FF106DDF1A",
+          "extProps": {},
+          "domain": "",
+          "id": "711B9A20-24B9-442D-82E6-3B2E4E0571C8"
+        },
+        {
+          "defKey": "zdbm",
+          "defName": "诊断编码",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 100,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "A435F367-70A7-47D0-9EAF-E7F98E7EF5DD",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "zdmc",
+          "defName": "诊断名称",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 300,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "786B8330-9590-48A7-ABFF-37C5909C4279",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        },
+        {
+          "defKey": "jc",
+          "defName": "拼音简称",
+          "comment": "",
+          "domain": "",
+          "type": "VARCHAR",
+          "len": 50,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "refDict": "",
+          "uiHint": "",
+          "id": "A07DF3B0-5C4E-40DD-B93E-0424BE1B1344",
+          "baseType": "37D9396C-CB22-4538-ADB3-24A2CD97FAEB"
+        }
+      ],
+      "correlations": [],
+      "indexes": [],
+      "type": "P"
     }
   ],
   "views": [],

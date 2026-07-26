@@ -2,14 +2,14 @@
  --exec sp_dropserver 'hj07', 'droplogins '
 
 EXEC  sp_addlinkedserver
-      @server='hjgs',--被访问的服务器别名 
+      @server='hj3d',--被访问的服务器别名 
       @srvproduct='',
       @provider='SQLOLEDB',
-      @datasrc='192.168.15.254'   --要访问的服务器
+      @datasrc='192.168.14.100'   --要访问的服务器
 
 
 EXEC sp_addlinkedsrvlogin
-     'hjgs', --被访问的服务器别名
+     'hj3d', --被访问的服务器别名
      'false',
      NULL,
      'sa', --帐号
@@ -17,7 +17,6 @@ EXEC sp_addlinkedsrvlogin
 
 go
 
-select * from hjgs.zddb.dbo.t_hosts
+select * from hj3d.hjdb07.dbo.t_hosts
 
 go
-

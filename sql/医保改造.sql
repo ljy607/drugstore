@@ -1,3 +1,10 @@
+-----医保改造 2026年7月18日 ----------
+-- 费用分解增加 事前提醒标识preverifyflag,0：否，不需要事前提醒；1：是，需要事前提醒; 
+ALTER TABLE T_yb_divide
+ADD preverifyflag NVARCHAR(4) DEFAULT '0';
+
+
+
 ------ 医保增加异地结算 2022年8月24日 14:55:20
 -- 参保人信息增加字段 2023年2月24日 11:37:08
 alter TABLE [dbo].[t_yb_personinfo]

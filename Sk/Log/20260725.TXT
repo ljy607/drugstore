@@ -1,0 +1,20 @@
+------------------------- 2026-07-25 20:57:04 -------------------------
+调用打开读卡设备接口
+输入参数：无
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="5004" info="tPK/qsnosbjKp7Dco7pDMDAwMDA0RSC87LLpv827p7v60r2xo7rL0MTX6bz+sOaxvrj80MLKsbeiyfrS4s3itO3O805ldHdvcmsuY3BwOjEsMjI0OiBJY2U6OkNvbm5lY3RGYWlsZWRFeGNlcHRpb246CmNvbm5lY3QgZmFpbGVkOiBXU0FFVElNRURPVVQ="></error></state></root>
+
+调用返回状态：失败
+调用返回错误：编号 [5004] -- 描述 [打开设备失败：C000004E 检查客户机医保核心组件版本更新时发生意外错误Network.cpp:1,224: Ice::ConnectFailedException:
+connect failed: WSAETIMEDOUT]
+
+调用获取个人信息接口
+输入参数：
+<?xml version="1.0" encoding="utf-16" standalone="yes" ?> <root version="2.003" sender="HJYD"> <input>   <buymode>1</buymode>   <multiclass>2</multiclass>   <QRcode>4243993985761712614401110000</QRcode>   <businessType>01302</businessType>   <termId>123</termId>   <termIp>123</termIp>   <operatorId>067</operatorId>   <operatorName>wfW728+8</operatorName>   <officeId>107</officeId>   <officeName>yP216g==</officeName> </input> </root>
+输出数据：
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<root version="1.00.0132"><state success="false"><error no="2021" info="R2V0UGVyc29uUmVkTGlzdLf+zvHG98O7z+zTpqOhTmV0d29yay5jcHA6MSwyMTg6IEljZTo6Q29ubmVjdGlvblJlZnVzZWRFeGNlcHRpb246CmNvbm5lY3Rpb24gcmVmdXNlZDogV1NBRUNPTk5SRUZVU0VE"></error></state></root>
+调用返回状态：失败
+调用返回错误：编号 [2021] -- 描述 [GetPersonRedList服务器没响应！Network.cpp:1,218: Ice::ConnectionRefusedException:
+connection refused: WSAECONNREFUSED]
